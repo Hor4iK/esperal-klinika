@@ -1,0 +1,112 @@
+.header{
+	width: 100%;
+	font-size: 16px;
+
+	&__attention{
+		padding: 8px 15px;
+    background-color: $green-back;
+    min-height: 50px;
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+
+		p{
+			color: $white;
+    	font-size: 17px;
+    	text-align: center;
+		}
+	}
+
+	&__row{
+		display: flex;
+		justify-content:space-between;
+
+		&_info{
+			padding: 4px 0;
+		}
+	}
+
+	&__col{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		&_phones, &_address{
+			gap: 4px;
+		}
+
+		&_address{
+			a{
+				color: $red;
+				transition: 0.3s;
+				text-decoration: underline;
+	
+				&:hover{
+					color: $black;
+				}
+			}
+			div{
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				p{
+					font-weight: 700;
+				}
+			}
+		}
+
+		&_buttons{
+			padding: 5px 0;
+			gap: 5px;
+		}
+	}
+
+	&__phone{
+		display: flex;
+		gap: 10px;
+		align-items: center;
+
+		picture{
+			flex-shrink: 0;
+			width: 17px;
+			height: 17px;
+		}
+
+		span{
+			font-weight: 700;
+    	color: $black;
+    	text-decoration: none;
+		}
+	}
+
+	&__address{
+		font-weight: 700;
+		color: $red;
+	}
+
+	&__sub-row{
+		display: flex;
+		gap: 5px;
+	}
+
+	&__search{
+		display: flex;
+		gap: 5px;
+		input{
+			padding: 7px 10px;
+			border-radius: 27px;
+			padding: 5px 10px;
+    	border-radius: 27px;
+    	border: 2px solid $green;
+		}
+		input[type="submit"]{
+			border: none;
+    	background-color: #d4fbf2;
+			color: #259886;
+			font-weight: 700;
+			cursor: pointer;
+		}
+	}
+}

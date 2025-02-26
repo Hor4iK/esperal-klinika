@@ -1,0 +1,21 @@
+$font-stack: "Segoe UI", sans-serif;
+$red: #c80018;
+$white: #fff;
+$black: #000;
+$green-back: #026060;
+$green: #166d6d;
+
+
+@import 'vendor/fonts.scss';
+@import 'vendor/_normalize';
+@import 'vendor/header';
+
+body{
+	font-family: $font-stack;
+}
+
+.content{
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 12px;
+}
