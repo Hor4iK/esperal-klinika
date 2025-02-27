@@ -913,6 +913,15 @@ body {
   gap: 20px;
   justify-content: space-between;
 }
+.footer__row_center {
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.footer__socials p {
+  color: #fff;
+  margin-bottom: 15px;
+}
 .footer__attention {
   background-color: #0a5555;
   padding: 8px 15px;

@@ -13,9 +13,25 @@
 		display: flex;
 		gap: 20px;
 		justify-content: space-between;
+
+		&_center{
+			flex-direction: column;
+			align-items: center;
+			gap: 30px;
+		}
 	}
 
-	
+	&__socials{
+		p{
+			color: $white;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__social-buttons{
+		
+	}
+
 
 	&__attention {
 		background-color: $dark-green;
