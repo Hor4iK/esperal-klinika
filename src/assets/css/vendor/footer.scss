@@ -5,33 +5,101 @@
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 
+	@media(max-width: 800px){
+		background-image: none;
+	}
 	.content {
 		padding: 50px 15px;
 	}
 
-	&__row{
+	&__row {
 		display: flex;
 		gap: 20px;
+		row-gap: 30px;
+		flex-wrap: wrap;
 		justify-content: space-between;
 
-		&_center{
+		&_center {
 			flex-direction: column;
 			align-items: center;
 			gap: 30px;
+			margin-bottom: 25px;
+		}
+
+		&_info {
+			@media(min-width: 1000px) {
+				>* {
+					flex: 1;
+				}
+			}
+
+			.footer__col:last-child {
+				text-align: right;
+			}
+
+			@media(max-width: 850px) {
+				flex-wrap: wrap;
+			}
+
+			@media(max-width: 1000px) {
+				.footer__col_info {
+					order: 3;
+					flex-basis: 100%;
+					max-width: 100%;
+				}
+
+				.footer__col:first-child {
+					order: 1;
+				}
+
+				.footer__col:last-child {
+					order: 2;
+				}
+			}
+		}
+
+		&:first-child {
+			margin-bottom: 25px;
+		}
+
+		@media(max-width: 600px) {
+			justify-content: center;
 		}
 	}
 
-	&__socials{
-		p{
+	&__socials {
+		p {
 			color: $white;
 			margin-bottom: 15px;
 		}
 	}
 
-	&__social-buttons{
-		
+	&__social-buttons {
+		display: flex;
+		gap: 10px;
+		justify-content: center;
 	}
 
+	&__social-button {
+		padding: 8px;
+		border: solid 1px $white;
+		border-radius: 5px;
+
+		svg {
+			width: 18px;
+			height: 18px;
+			display: block;
+		}
+
+		&:hover {
+			background-color: $white;
+
+			svg {
+				fill: $green;
+				stroke: $green;
+			}
+		}
+	}
 
 	&__attention {
 		background-color: $dark-green;
@@ -60,6 +128,10 @@
 		flex-direction: column;
 		gap: 15px;
 		max-width: 300px;
+
+		&_info {
+			text-align: center;
+		}
 
 		div.footer__item {
 			display: flex;
@@ -110,10 +182,25 @@
 		&_links {
 			width: 100%;
 			max-width: 650px;
+
+			@media(max-width: 1275px) {
+				max-width: 100%;
+				order: 0;
+			}
 		}
 
 		&_buttons {
 			align-items: center;
+
+			@media(max-width: 1275px) {
+				order: 2;
+			}
+		}
+
+		&_contacts {
+			@media(max-width: 1275px) {
+				order: 1
+			}
 		}
 	}
 
@@ -139,6 +226,15 @@
 		display: flex;
 		justify-content: center;
 		gap: 20px;
+
+		@media(max-width: 600px) {
+			flex-wrap: wrap;
+
+			.footer__sub-col {
+				flex-basis: 100%;
+				text-align: center;
+			}
+		}
 
 		&_links {
 			width: 100%;
