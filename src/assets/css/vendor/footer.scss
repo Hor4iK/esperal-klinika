@@ -1,0 +1,176 @@
+.footer {
+	background-color: $green;
+	background-image: url("../img/footer/footer-back.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+	.content {
+		padding: 50px 15px;
+	}
+
+	&__row{
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+	}
+
+	
+
+	&__attention {
+		background-color: $dark-green;
+		padding: 8px 15px;
+		text-align: center;
+		color: $white;
+		font-size: 17px;
+
+		@media(max-width: 1150px) {
+			font-size: 14px;
+		}
+
+		line-height: 1.5;
+
+		span {
+			display: inline-block;
+			padding: 3px;
+			border-radius: 3px;
+			border: solid $white 1px;
+			line-height: 1;
+		}
+	}
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		max-width: 300px;
+
+		div.footer__item {
+			display: flex;
+			gap: 7px;
+			align-items: center;
+
+			picture {
+				width: 20px;
+				height: 24px;
+
+				img {
+					height: 100%;
+					width: auto;
+				}
+			}
+
+			span {
+				color: $white;
+				font-size: 18px;
+				font-weight: 600;
+			}
+
+			&.footer__pay {
+				gap: 5px;
+
+				span {
+					padding-top: 15px;
+					font-size: 13px;
+				}
+
+				picture {
+					height: 80px;
+					width: 80px;
+
+					img {
+						filter: none;
+					}
+				}
+			}
+		}
+
+		p {
+			color: $white;
+			font-size: 14px;
+			line-height: 1.2;
+		}
+
+		&_links {
+			width: 100%;
+			max-width: 650px;
+		}
+
+		&_buttons {
+			align-items: center;
+		}
+	}
+
+	&__tel {
+		color: $white;
+		display: flex;
+		gap: 7px;
+		font-size: 24px;
+		font-weight: 700;
+		align-items: center;
+	}
+
+	picture {
+		width: 16px;
+		height: 16px;
+
+		img {
+			filter: brightness(100)
+		}
+	}
+
+	&__sub-row {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+
+		&_links {
+			width: 100%;
+			color: $white;
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+	}
+
+	a {
+		text-decoration: underline;
+		color: $white;
+		transition: 0.3s;
+
+		&:hover {
+			color: $red;
+			transition: 0.3s;
+		}
+	}
+
+	&__sub-col {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	&__spec-btn {
+		align-self: flex-start;
+
+		padding: 11px 7px;
+		border: 2px solid rgba(255, 255, 255, 1);
+		border-radius: 5px;
+		width: 40px;
+		height: 40px;
+		opacity: 0.6;
+		transition: 0.3s;
+
+		&:hover {
+			transition: 0.3s;
+			opacity: 1;
+		}
+
+		picture {
+			width: 100%;
+
+			img {
+				filter: invert(1);
+			}
+		}
+	}
+}

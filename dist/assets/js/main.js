@@ -1,2 +1,2 @@
-let menuAccordionButtons=document.querySelectorAll(".menu__sub-open");menuAccordionButtons.forEach(e=>{e.addEventListener("click",()=>{e.classList.toggle("active"),e.closest("li").classList.toggle("active")})});
+let menuAccordionButtons=document.querySelectorAll(".menu__sub-open"),burger=(menuAccordionButtons&&menuAccordionButtons.forEach(t=>{t.addEventListener("click",()=>{t.classList.toggle("active");var e=t.closest("li");e&&e.classList.toggle("active")})}),document.querySelector(".ham"));burger&&burger.addEventListener("click",()=>{var e=document.querySelector(".header");e&&e.classList.toggle("active")});
 //# sourceMappingURL=main.js.map

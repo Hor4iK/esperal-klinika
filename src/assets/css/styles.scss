@@ -6,6 +6,7 @@ $green-back: #026060;
 $green: #166d6d;
 $dark-green:#0a5555;
 $gray: #f0f0f0;
+$dark-gray: #5b5b5b;
 
 @import 'vendor/fonts.scss';
 @import 'vendor/_normalize';
@@ -72,6 +73,15 @@ body{
 		background: linear-gradient(0deg, #c80018 0%, #df001a 50%, #9e0618 100%);
 	}
 
+	&_transparent{
+		color: $white;
+		border: solid 1px $white;
+
+		picture img{
+			filter:brightness(100);
+		}
+	}
+
 	&_icon{
 		display: flex;
 		gap: 7px;
@@ -83,5 +93,21 @@ body{
 			height: 25px;
 		}
 	}
+
+	&_medium{
+		padding: 12px 20px;
+		font-size: 16px;
+		text-align: center;
+	}
+
+	&_fill{
+		width: 100%;
+		span{
+			width: 100%;
+		}
+	}
+
+	
 }
 
+@import 'vendor/footer';
