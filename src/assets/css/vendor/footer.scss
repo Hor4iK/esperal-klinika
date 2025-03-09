@@ -286,3 +286,197 @@
 		}
 	}
 }
+
+.converse__card-wrapper {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.converse__card-wrapper_hidden {
+	bottom: -130px;
+}
+.converse__card {
+	position: relative;
+	max-width: 1280px;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+			justify-content: space-around;
+	background-color: #259886B2;
+	padding: 16px;
+	border-radius: 14px 14px 0 0;
+	gap: 12px;
+	-webkit-box-shadow: 0px 4px 64px 0px #00000012;
+					box-shadow: 0px 4px 64px 0px #00000012;
+	-webkit-backdrop-filter: blur(50px);
+					backdrop-filter: blur(50px);
+}
+.converse__item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+					flex-direction: column;
+	gap: 12px;
+	-webkit-box-align: center;
+			-ms-flex-align: center;
+					align-items: center;
+	-webkit-box-flex: 1;
+			-ms-flex: 1;
+					flex: 1;
+	background-color: #FFFFFF;
+	padding: 20px;
+	border-radius: 14px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.converse__item:hover {
+	background-color: transparent;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.converse__icon {
+	width: 54px;
+	height: 54px;
+	background-color: #17706E;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	border-radius: 50%;
+	padding: 10px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.converse__item:hover .converse__icon {
+	background-color: #FFF;
+}
+.converse__icon img {
+	-webkit-filter: brightness(100);
+					filter: brightness(100);
+	margin: auto;
+	width: 100%;
+	height: auto;
+}
+.converse__item:hover .converse__icon img {
+	-webkit-filter: none;
+					filter: none;
+}
+.converse__text {
+	margin: 0;
+	font-family: 'Segoe UI';
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 700;
+	text-align: center;
+	color: #000;
+}
+.converse__item:hover .converse__text {
+	color: #FFF;
+}
+.converse__close {
+	cursor: pointer;
+	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 30px;
+	height: 30px;
+	right: -30px;
+	top: -27px;
+	background-color: #63B1A2;
+	border-radius: 50%;
+}
+.converse__close::before {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: auto;
+	z-index: 2;
+	background-image: url("../img/icons/close-button-x.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.converse__close_hidden {
+	background-color: #DF001A;
+	padding: 9px;
+	-webkit-transform: 0.3s;
+			-ms-transform: 0.3s;
+					transform: 0.3s;
+}
+.converse__close_hidden::before {
+	background-image: url("../img/icons/close-button-arrow.svg");
+	height: 18px;
+	width: 12px;
+}
+@media(max-width:1350px) {
+	.converse__close {
+			top: -35px;
+			right: 10px;
+ }
+}
+@media(max-width: 800px) {
+	.converse__card-wrapper_hidden {
+			bottom: -85px;
+ }
+	.converse__card {
+			padding: 10px;
+ }
+	.converse__item {
+			padding: 10px;
+ }
+	.converse__icon {
+			width: 44px;
+			height: 44px;
+ }
+	.converse__text {
+			font-size: 14px;
+			line-height: 16px;
+ }
+}
+@media(max-width: 500px) {
+	.converse__card {
+			-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+			gap: 8px;
+ }
+	.converse__card-wrapper_hidden {
+			bottom: -90px;
+ }
+	.converse__item {
+			gap: 8px;
+ }
+	.converse__icon {
+			width: 36px;
+			height: 36px;
+			padding: 7px;
+ }
+}
+@media(max-width: 400px) {
+	.converse__item {
+			padding: 8px;
+ }
+	.converse__text {
+			font-size: 13px;
+ }
+}
+@media(max-width: 360px) {
+	.converse__item {
+			padding: 6px;
+ }
+	.converse__text {
+			font-size: 12px;
+ }
+}
