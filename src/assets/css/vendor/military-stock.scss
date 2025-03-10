@@ -1,0 +1,54 @@
+.military-stock{
+	margin: 50px 0;
+
+	&__content{
+		padding: 30px 40px;
+		display: flex;
+		justify-content: space-between;
+		background-color: $green;
+		border-radius: 15px;
+
+		@media(max-width: 960px){
+			justify-content: center;
+		}
+	}
+
+	&__title{
+		color: $white;
+		font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 10px;
+
+		&::after{
+			content: "";
+			display: block;
+			width: 117px;
+			height: 2px;
+			background-color: $light-green;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+	}
+
+	&__des{
+		color:rgba(255, 255, 255, 0.60);
+		font-size: 16px;
+		text-align: center;
+
+		span{
+			color: $white;
+		}
+	}
+
+	svg{
+		width: 65px;
+		height: 65px;
+
+		@media(max-width: 960px){
+			display: none;
+		}
+	}
+}

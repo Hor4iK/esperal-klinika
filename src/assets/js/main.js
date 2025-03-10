@@ -40,3 +40,31 @@ if (converseCardWrapper) {
 		converseCardWrapper.classList.toggle("converse__card-wrapper_hidden");
 	})
 }
+
+Fancybox.bind("[data-fancybox]");
+
+const trustSliderCheck = document.querySelectorAll('.trust');
+if (trustSliderCheck.length > 0) {
+	trustSliderCheck.forEach((slider) => {
+		const trustSlider = new Swiper(slider.querySelector('.trust__video'), {
+			direction: 'horizontal',
+			slidesPerView: 1.1,
+			grabCursor: true,
+			spaceBetween: 10,
+			navigation: {
+				nextEl: slider.querySelector('nextButton'),
+				prevEl: slider.querySelector('prevButton'),
+			},
+			breakpoints: {
+				360: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+				950: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				}
+			}
+		});
+	})
+}
