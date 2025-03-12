@@ -1,0 +1,20 @@
+.text-block{
+	font-size: 21px;
+  color: $light-text-gray;
+
+p{
+	margin-bottom: 36px;
+}
+
+ul{
+	margin: 20px 0;
+}
+
+@media(max-width: 960px){
+	font-size: 18px;
+}
+
+p{
+	margin-bottom: 18px
+}
+}

@@ -1,0 +1,61 @@
+.stocks{
+	&__inner{
+		display: flex;
+		gap: 25px;
+
+		@media(max-width: 760px){
+			flex-direction: column;
+		}
+	}
+
+	&__card{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		padding: 10px;
+		padding-bottom: 20px;
+		align-items: flex-start;
+		border: 2px solid #166d6d;
+		border-radius: 20px;
+
+		@media(max-width: 1060px){
+			flex-direction: column;
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__photo{
+		padding: 5px;
+		flex-basis: calc(50% - 10px);
+		
+		
+		picture{
+			border: 2px solid $green;
+			border-radius: 20px;
+			overflow: hidden;
+		}
+	}
+
+	&__text{
+		flex-basis: calc(50% - 10px);
+	}
+
+	&__button{
+		display: block;
+		margin-top: auto;
+	}
+
+	&__title{
+		margin-bottom: 4px;
+    color: #9e0618;
+    font-size: 20px;
+    font-weight: 600;
+		line-height: 1.5;
+	}
+
+	&__des{
+		color: $green;
+		line-height: 1.5;
+		font-size: 14px;
+	}
+}

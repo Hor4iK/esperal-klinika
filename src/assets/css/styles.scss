@@ -3,18 +3,22 @@ $red: #c80018;
 $dark-red: #9e0618;
 $white: #fff;
 $black: #000;
+$green: #166d6d;
 $light-green: #27C798;
+$forest-green: #14493a;
+$green-medium: #115d5d;
 $green-back: #026060;
 $text-gray: #404040;
+$light-text-gray: #545454;
 $text-gray-light: #a7a7a7;
-$green: #166d6d;
 $dark-green: #0a5555;
 $gray: #f0f0f0;
 $dark-gray: #5b5b5b;
 
-@import 'vendor/fonts.scss';
+@import 'vendor/fonts';
 @import 'vendor/_normalize';
 @import 'vendor/header';
+@import 'vendor/text-block';
 
 body {
 	font-family: $font-stack;
@@ -69,7 +73,7 @@ body {
 }
 
 .section-offset {
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 }
 
 .section-title {
@@ -81,10 +85,16 @@ body {
 	position: relative;
 	margin-bottom: 45px;
 
+	@media(max-width: 760px){
+		font-size: 28px;
+	}
+
 	span{
 		padding: 0 20px;
 		background-color: $white;
 		margin: 0 auto;
+		position: relative;
+		z-index: 1;
 	}
 
 	&::after {
@@ -95,7 +105,7 @@ body {
 		width: 100%;
 		border-top: 2px solid #9e0618;
 		border-bottom: 2px solid #9e0618;
-		z-index: -1;
+		z-index: 0;
 	}
 }
 
@@ -111,7 +121,6 @@ body {
 		color: $white;
 		font-weight: 700;
 		font-size: 13px;
-		line-height: 13px;
 		background: linear-gradient(0deg, #c80018 0%, #df001a 50%, #9e0618 100%);
 	}
 
@@ -172,3 +181,13 @@ body {
 @import 'vendor/military-stock.scss';
 
 @import 'vendor/trust.scss';
+
+@import 'vendor/consult.scss';
+
+@import 'vendor/our-services.scss';
+
+@import 'vendor/faq.scss';
+
+@import 'vendor/stocks.scss';
+
+@import 'vendor/advantages.scss';
