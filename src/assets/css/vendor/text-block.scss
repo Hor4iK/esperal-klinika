@@ -1,20 +1,124 @@
-.text-block{
+.text-section {
+	background-color: #f8f8f8;
+	padding-top: 20px;
+	padding-bottom: 80px;
+}
+
+.text-block {
 	font-size: 21px;
-  color: $light-text-gray;
+	color: $light-text-gray;
 
-p{
-	margin-bottom: 36px;
-}
+	h2 {
+		font-size: 36px;
+		font-weight: 800;
+		text-align: center;
+		color: $black;
+		display: flex;
+		position: relative;
+		margin-top: 40px;
+		margin-bottom: 40px;
 
-ul{
-	margin: 20px 0;
-}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			height: 6px;
+			width: 100%;
+			border-top: 2px solid #9e0618;
+			border-bottom: 2px solid #9e0618;
+			z-index: 0;
+		}
 
-@media(max-width: 960px){
-	font-size: 18px;
-}
+		span {
+			background-color: #f8f8f8;
+			padding: 0 20px;
+			margin: 0 auto;
+			position: relative;
+			z-index: 1;
+		}
+	}
 
-p{
-	margin-bottom: 18px
-}
+	ul {
+		margin-top: 15px;
+		margin-bottom: 25px;
+		padding-left: 15px;
+		display: flex;
+		gap: 12px;
+		flex-direction: column;
+
+		li {
+			&::before {
+				content: "";
+				width: 6px;
+				margin-right: 6px;
+				height: 6px;
+				border-radius: 50%;
+				display: inline-block;
+				flex-shrink: 0;
+				background-color: $dark-red;
+				margin-bottom: 3px;
+			}
+		}
+	}
+
+	b {
+		font-weight: 700;
+	}
+
+	p {
+		margin-bottom: 36px;
+	}
+
+	@media(max-width: 960px) {
+		font-size: 18px;
+	}
+
+	p {
+		margin-bottom: 18px
+	}
+
+	blockquote{
+		padding: 20px;
+		padding-left: 35px;
+		background-color: $white;
+		margin-bottom: 30px;
+		border: 4px outset #3dd9ab;
+    border-radius: 10px;
+    font-style: italic;
+		position: relative;
+		border: 4px outset #3dd9ab;
+		border-radius: 30px;
+
+		&::before{
+			width: 20px;
+			height: 20px;
+			content: "";
+			display: block;
+			background-image: url("../img/icons/info.svg");
+			background-size: contain;
+			top: 8px;
+			left: 12px;
+			position: absolute;
+			z-index: 1;
+		}
+	}
+
+	a{
+		font-weight: 700;
+		text-decoration: underline;
+		transition: 0.3s;
+
+		&:hover{
+			color: $text-gray-light;
+		}
+	}
+
+	@media(max-width: 600px){
+		h2{
+		font-size: 28px;
+		span{
+			padding: 0 5px;
+		}
+	}
+	}
 }

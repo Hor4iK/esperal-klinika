@@ -92,6 +92,7 @@ if (questions && answers) {
 	};
 }
 
+//Слайдер блока доверия
 const trustSliderCheck = document.querySelectorAll('.trust');
 if (trustSliderCheck.length > 0) {
 	trustSliderCheck.forEach((slider) => {
@@ -141,6 +142,41 @@ if (advantagesSwiperCheck) {
 				advantagesSwiper = false
 			}
 		})
+	})
+}
+
+//Слайдер врачей
+const doctorsSliderCheck = document.querySelectorAll('.doctors');
+if (doctorsSliderCheck.length > 0) {
+	doctorsSliderCheck.forEach((slider) => {
+		const doctorsSlider = new Swiper(slider.querySelector('.doctors__slider'), {
+			direction: 'horizontal',
+			slidesPerView: 1.1,
+			grabCursor: true,
+			spaceBetween: 10,
+			navigation: {
+				nextEl: slider.querySelector('.nav-btn_next'),
+				prevEl: slider.querySelector('.nav-btn_prev'),
+			},
+			breakpoints: {
+				360: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+				680:{
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				950: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+				1160: {
+					slidesPerView: 4,
+					spaceBetween: 35,
+				}
+			}
+		});
 	})
 }
 
