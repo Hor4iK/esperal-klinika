@@ -1,6 +1,7 @@
 $font-stack: "Segoe UI", sans-serif;
 $red: #c80018;
 $dark-red: #9e0618;
+$more-dark-red: #4b0e0e;
 $white: #fff;
 $black: #000;
 $green: #166d6d;
@@ -112,6 +113,7 @@ body {
 .button {
 	border-radius: 27px;
 	padding: 10px 16px;
+	cursor: pointer;
 
 	span {
 		display: block;
@@ -122,6 +124,12 @@ body {
 		font-weight: 700;
 		font-size: 13px;
 		background: linear-gradient(0deg, #c80018 0%, #df001a 50%, #9e0618 100%);
+		transition: 0.3s;
+		
+		&:hover{
+			background: linear-gradient(0deg, #9e0618 0%, #9e0618);
+			box-shadow: #9e0618 0px 1px 5px;
+		}
 	}
 
 	&_green {
@@ -130,11 +138,25 @@ body {
 		font-size: 13px;
 		line-height: 13px;
 		background-image: linear-gradient(to top, #3dd9ab, #07ac7c);
+		transition: 0.3s;
+
+		&:hover{
+			background: linear-gradient( #07ac7c, #07ac7c);
+			box-shadow: #07ac7c 0px 1px 5px;
+		}
 	}
 
 	&_transparent {
 		color: $white;
 		border: solid 1px $white;
+		opacity: 0.8;
+		transition: 0.3s;
+		
+
+		&:hover{
+			opacity: 1;
+			box-shadow: $white 0px 1px 5px;
+		}
 
 		picture img {
 			filter: brightness(100);
@@ -191,6 +213,14 @@ body {
 	cursor: pointer;
 }
 
+.nav-btn_next{
+	transform: rotate(180deg);
+}
+
+b{
+	font-weight: 700;
+}
+
 @import 'vendor/footer';
 
 @import 'vendor/intro.scss';
@@ -214,3 +244,7 @@ body {
 @import 'vendor/price.scss';
 
 @import 'vendor/galery.scss';
+
+@import 'vendor/red-form.scss';
+
+@import 'vendor/popups.scss'

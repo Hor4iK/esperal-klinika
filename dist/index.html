@@ -91,7 +91,7 @@
     			</div>
     			<div class="header__col header__col_address">
     				<p class="header__address">Адрес колл-центра:</p>
-    				<a data-path="select-city" class="popup-btn select_city">Екатеринбург</a>
+    				<span class="popup-btn" data-path="popup-city">Екатеринбург</span>
     				<div>
     					<picture>
     						<img src="assets/img/icons/placeholder-icon.png" alt="плейсхолдер">
@@ -105,7 +105,7 @@
     						<input type="search" placeholder="Поиск по сайту">
     						<input type="submit" value="Найти">
     					</form>
-    					<button class="popup-btn button button_red button_icon">
+    					<button class="popup-btn button button_red button_icon" data-path="popup-call">
     						<span>
     							Вызвать врача
     						</span>
@@ -279,10 +279,10 @@
     			</li>
     		</ul>
     		<div class="intro__bottom-btns">
-    			<button class="button button_green button_large">
+    			<button class="button button_green button_large popup-btn" data-path="popup-call">
     				Сопровождение после лечения
     			</button>
-    			<button class="button button_red button_large">
+    			<button class="button button_red button_large popup-btn" data-path="popup-call">
     				Бесплатная консультация
     			</button>
     		</div>
@@ -539,7 +539,7 @@
     			</span>
     	</h2>
     	<div class="stocks__inner">
-    		<div class="stocks__card">
+    		<div class="stocks__card change-item">
     			<div class="stocks__photo">
     				<picture>
     					<source srcset="assets/img/stocks/sale5.webp" type="image/webp">
@@ -547,16 +547,16 @@
     				</picture>
     			</div>
     			<div class="stocks__text">
-    				<p class="stocks__title">
+    				<p class="stocks__title change-title">
     					Значительные скидки при разовой оплате полугодового курса реабилитации
     				</p>
     				<p class="stocks__des">
     					При единоразовой оплате курса реабилитации сроком 6 месяцев в нашем центре, вы получите значительную скидку(до 20 процентов)
     				</p>
     			</div>
-    			<button class="stocks__button button button_red button_large button_fill">Заказать</button>
+    			<button class="stocks__button button button_red button_large button_fill popup-btn" data-path="popup-change">Заказать</button>
     		</div>
-    		<div class="stocks__card">
+    		<div class="stocks__card change-item">
     			<div class="stocks__photo">
     				<picture>
     					<source srcset="assets/img/stocks/sale1.webp" type="image/webp">
@@ -564,14 +564,14 @@
     				</picture>
     			</div>
     			<div class="stocks__text">
-    				<p class="stocks__title">
+    				<p class="stocks__title change-title">
     					Значительные скидки при разовой оплате полугодового курса реабилитации
     				</p>
     				<p class="stocks__des">
     					При единоразовой оплате курса реабилитации сроком 6 месяцев в нашем центре, вы получите значительную скидку(до 20 процентов)
     				</p>
     			</div>
-    			<button class="stocks__button button button_red button_large button_fill">Заказать</button>
+    			<button class="stocks__button button button_red button_large button_fill popup-btn" data-path="popup-change">Заказать</button>
     		</div>
     	</div>
     	</div>
@@ -680,7 +680,7 @@
     		</p>
     		<div class="doctors__inner doctors__slider">
     			<div class="swiper-wrapper">
-    				<a class="doctors__card swiper-slide">
+    				<a href="#" class="doctors__card swiper-slide change-item">
     					<div class="doctors__photo">
     						<picture>
     							<source srcset="assets/img/doctors/korotkov.jpg" type="image/webp">
@@ -688,18 +688,18 @@
     						</picture>
     					</div>
     					<div class="doctors__info">
-    						<p class="doctors__name">
+    						<p class="doctors__name change-title">
     							Чернов Александр Александрович
     						</p>
     						<p class="doctors__spec">
     							психиатр, нарколог, психотерапевт
     						</p>
     					</div>
-    					<div class="doctors__button">
+    					<div class="doctors__button popup-btn change-doctor" data-path="popup-change">
     						Обратиться
     					</div>
     				</a>
-    				<a class="doctors__card swiper-slide">
+    				<a href="#" class="doctors__card swiper-slide change-item">
     					<div class="doctors__photo">
     						<picture>
     							<source srcset="assets/img/doctors/korotkov.jpg" type="image/webp">
@@ -707,18 +707,18 @@
     						</picture>
     					</div>
     					<div class="doctors__info">
-    						<p class="doctors__name">
+    						<p class="doctors__name change-title">
     							Чернов Александр Александрович
     						</p>
     						<p class="doctors__spec">
     							психиатр, нарколог, психотерапевт
     						</p>
     					</div>
-    					<div class="doctors__button">
+    					<div class="doctors__button popup-btn change-doctor" data-path="popup-change">
     						Обратиться
     					</div>
     				</a>
-    				<a class="doctors__card swiper-slide">
+    				<a href="#" class="doctors__card swiper-slide change-item">
     					<div class="doctors__photo">
     						<picture>
     							<source srcset="assets/img/doctors/korotkov.jpg" type="image/webp">
@@ -726,18 +726,18 @@
     						</picture>
     					</div>
     					<div class="doctors__info">
-    						<p class="doctors__name">
+    						<p class="doctors__name change-title">
     							Чернов Александр Александрович
     						</p>
     						<p class="doctors__spec">
     							психиатр, нарколог, психотерапевт
     						</p>
     					</div>
-    					<div class="doctors__button">
+    					<div class="doctors__button popup-btn change-doctor" data-path="popup-change">
     						Обратиться
     					</div>
     				</a>
-    				<a class="doctors__card swiper-slide">
+    				<a href="#" class="doctors__card swiper-slide change-item">
     					<div class="doctors__photo">
     						<picture>
     							<source srcset="assets/img/doctors/korotkov.jpg" type="image/webp">
@@ -745,18 +745,18 @@
     						</picture>
     					</div>
     					<div class="doctors__info">
-    						<p class="doctors__name">
+    						<p class="doctors__name change-title">
     							Чернов Александр Александрович
     						</p>
     						<p class="doctors__spec">
     							психиатр, нарколог, психотерапевт
     						</p>
     					</div>
-    					<div class="doctors__button">
+    					<div class="doctors__button popup-btn change-doctor" data-path="popup-change">
     						Обратиться
     					</div>
     				</a>
-    				<a class="doctors__card swiper-slide">
+    				<a href="#" class="doctors__card swiper-slide change-item">
     					<div class="doctors__photo">
     						<picture>
     							<source srcset="assets/img/doctors/korotkov.jpg" type="image/webp">
@@ -764,14 +764,14 @@
     						</picture>
     					</div>
     					<div class="doctors__info">
-    						<p class="doctors__name">
+    						<p class="doctors__name change-title">
     							Чернов Александр Александрович
     						</p>
     						<p class="doctors__spec">
     							психиатр, нарколог, психотерапевт
     						</p>
     					</div>
-    					<div class="doctors__button">
+    					<div class="doctors__button popup-btn change-doctor" data-path="popup-change">
     						Обратиться
     					</div>
     				</a>
@@ -794,12 +794,12 @@
     			</span>
     		</h2>
     		<div class="price__inner">
-    			<div class="price__item">
+    			<div class="price__item change-item">
     				<div class="price__header">
     					<p class="price__category">
     						Алкоголизм
     					</p>
-    					<p class="price__name">
+    					<p class="price__name change-title">
     						Вывод из запоя
     					</p>
     				</div>
@@ -814,17 +814,17 @@
     					<p>3 500 руб.</p>
     					<p>1 500 руб.</p>
     				</div>
-    				<button class="button button_red button_medium price__button">
+    				<button class="button button_red button_medium price__button popup-btn" data-path="popup-change">
     					Начать лечение
     				</button>
     			</div>
     
-    			<div class="price__item">
+    			<div class="price__item change-item">
     				<div class="price__header">
     					<p class="price__category">
     						Алкоголизм
     					</p>
-    					<p class="price__name">
+    					<p class="price__name change-title">
     						Вывод из запоя
     					</p>
     				</div>
@@ -844,17 +844,17 @@
     					<p>3 500 руб.</p>
     					<p>1 500 руб.</p>
     				</div>
-    				<button class="button button_red button_medium price__button">
+    				<button class="button button_red button_medium price__button popup-btn popup-change" data-path="popup-change">
     					Начать лечение
     				</button>
     			</div>
     
-    			<div class="price__item">
+    			<div class="price__item change-item">
     				<div class="price__header">
     					<p class="price__category">
     						Алкоголизм
     					</p>
-    					<p class="price__name">
+    					<p class="price__name change-title">
     						Вывод из запоя
     					</p>
     				</div>
@@ -869,17 +869,17 @@
     					<p>3 500 руб.</p>
     					<p>1 500 руб.</p>
     				</div>
-    				<button class="button button_red button_medium price__button">
+    				<button class="button button_red button_medium price__button popup-btn" data-path="popup-change">
     					Начать лечение
     				</button>
     			</div>
     
-    			<div class="price__item">
+    			<div class="price__item change-item">
     				<div class="price__header">
     					<p class="price__category">
     						Алкоголизм
     					</p>
-    					<p class="price__name">
+    					<p class="price__name change-title">
     						Вывод из запоя
     					</p>
     				</div>
@@ -899,7 +899,7 @@
     					<p>3 500 руб.</p>
     					<p>1 500 руб.</p>
     				</div>
-    				<button class="button button_red button_medium price__button">
+    				<button class="button button_red button_medium price__button popup-btn popup-change" data-path="popup-change">
     					Начать лечение
     				</button>
     			</div>
@@ -1002,16 +1002,115 @@
     	</div>
     </section><section class="galery section-offset">
     	<div class="content galery__content">
-    		<div class="galery__column">
+    		<div class="galery__column license">
     			<p class="section-title">
     				<span>Лицензии</span>
     			</p>
+    			<div class="license__inner swiper">
+    				<div class="swiper-wrapper">
+    					<a href="assets/img/license/lic-1.png" class="license__item swiper-slide" data-fancybox="lic">
+    						<picture>
+    							<source srcset="assets/img/license/lic-1.webp" type="image/webp">
+    							<img src="assets/img/license/lic-1.png" alt="Лицензия">
+    						</picture>
+    					</a>
+    					<a href="assets/img/license/lic-1.png" class="license__item swiper-slide" data-fancybox="lic">
+    						<picture>
+    							<source srcset="assets/img/license/lic-1.webp" type="image/webp">
+    							<img src="assets/img/license/lic-1.png" alt="Лицензия">
+    						</picture>
+    					</a>
+    					<a href="assets/img/license/lic-1.png" class="license__item swiper-slide" data-fancybox="lic">
+    						<picture>
+    							<source srcset="assets/img/license/lic-1.webp" type="image/webp">
+    							<img src="assets/img/license/lic-1.png" alt="Лицензия">
+    						</picture>
+    					</a>
+    				</div>
+    			</div>
+    			<div class="nav-btns license__nav-btns">
+    				<div class="nav-btn nav-btn_prev">
+    					<img src="assets/img/icons/arrow-button.png" alt="кнопка со стрелкой">
+    				</div>
+    				<div class="nav-btn nav-btn_next">
+    					<img src="assets/img/icons/arrow-button.png" alt="кнопка со стрелкой">
+    				</div>
+    			</div>
     		</div>
-    		<div class="galery__column">
+    		<div class="galery__column photos">
     			<p class="section-title">
     				<span>Фото клиники</span>
     			</p>
+    			<div class="photos__inner swiper">
+    				<div class="swiper-wrapper">
+    					<div class="photos__item swiper-slide">
+    						<a href="assets/img/photos/klinika3.jpg" data-fancybox="photos">
+    							<source srcset="assets/img/photos/klinika3_min.webp" type="image/webp">
+    							<img src="assets/img/photos/klinika3_min.jpg" alt="Фото клиники">
+    						</a>
+    						<a href="assets/img/photos/klinika3.jpg" data-fancybox="photos">
+    							<source srcset="assets/img/photos/klinika3_min.webp" type="image/webp">
+    							<img src="assets/img/photos/klinika3_min.jpg" alt="Фото клиники">
+    						</a>
+    					</div>
+    					<div class="photos__item swiper-slide">
+    						<a href="assets/img/photos/klinika3.jpg" data-fancybox="photos">
+    							<source srcset="assets/img/photos/klinika3_min.webp" type="image/webp">
+    							<img src="assets/img/photos/klinika3_min.jpg" alt="Фото клиники">
+    						</a>
+    						<a href="assets/img/photos/klinika3.jpg" data-fancybox="photos">
+    							<source srcset="assets/img/photos/klinika3_min.webp" type="image/webp">
+    							<img src="assets/img/photos/klinika3_min.jpg" alt="Фото клиники">
+    						</a>
+    					</div>
+    					<div class="photos__item swiper-slide">
+    						<a href="assets/img/photos/klinika3.jpg" data-fancybox="photos">
+    							<source srcset="assets/img/photos/klinika3_min.webp" type="image/webp">
+    							<img src="assets/img/photos/klinika3_min.jpg" alt="Фото клиники">
+    						</a>
+    						<a href="assets/img/photos/klinika3.jpg" data-fancybox="photos">
+    							<source srcset="assets/img/photos/klinika3_min.webp" type="image/webp">
+    							<img src="assets/img/photos/klinika3_min.jpg" alt="Фото клиники">
+    						</a>
+    					</div>
+    					<div class="photos__item swiper-slide">
+    						<a href="assets/img/photos/klinika3.jpg" data-fancybox="photos">
+    							<source srcset="assets/img/photos/klinika3_min.webp" type="image/webp">
+    							<img src="assets/img/photos/klinika3_min.jpg" alt="Фото клиники">
+    						</a>
+    						<a href="assets/img/photos/klinika3.jpg" data-fancybox="photos">
+    							<source srcset="assets/img/photos/klinika3_min.webp" type="image/webp">
+    							<img src="assets/img/photos/klinika3_min.jpg" alt="Фото клиники">
+    						</a>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="nav-btns photos__nav-btns">
+    				<div class="nav-btn nav-btn_prev">
+    					<img src="assets/img/icons/arrow-button.png" alt="кнопка со стрелкой">
+    				</div>
+    				<div class="nav-btn nav-btn_next">
+    					<img src="assets/img/icons/arrow-button.png" alt="кнопка со стрелкой">
+    				</div>
+    			</div>
     		</div>
+    	</div>
+    </section><section class="consult red-form">
+    	<div class="content">
+    		<p class="red-form__title">
+    			Остались вопросы?
+    		</p>
+    		<p class="red-form__subtitle">
+    			Просто оставьте заявку и <b>мы вам перезвоним</b>
+    		</p>
+    		<form class="consult__form">
+    			<input type="text" placeholder="Ваше имя">
+    			<input type="tel" placeholder="Номер телефона">
+    		</form>
+    		<button class="consult__button button button_red button_medium">
+    			Записаться
+    		</button>
+    		</p>
     	</div>
     </section></main>
     <div class="converse__card-wrapper">
@@ -1096,7 +1195,7 @@
     					</picture>
     				</div>
     				<p>
-    					Наркологическая клиника «Трезвый путь»- коммерческое наименование ООО «Детокс» <br>
+    					Наркологическая клиника «Трезвый путь» - коммерческое наименование ООО «Детокс» <br>
     					ИНН 2312268085 <br>
     					ОГРН – 1182375001511, <br>
     					мед. лицензия Л041-01177-91/00561129 от 02.02.2022 г. <br>
@@ -1150,7 +1249,7 @@
     						Звонок в клинику
     					</span>
     				</div>
-    				<div class="button button_medium button_transparent button_fill">
+    				<div class="button button_medium button_transparent button_fill popup-btn" data-path="popup-call">
     					<span>
     						Бесплатная консультация
     					</span>
@@ -1249,19 +1348,130 @@
     						2312268085 ОГРН – 1182375001511, мед лицензия Л041-01177-91/00561129 от 02.02.2022 г.</noindex>
     				</p>
     				<p>
-    					<noindex><br>Все предложения на сайте носят исключительно информационный характер и ни при каких условиях не являются публичной офертой определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации. Она не служит для постановки диагноза и назначения лечения.</noindex>
+    					<noindex><br>Все предложения на сайте носят исключительно информационный характер и ни при каких условиях не
+    						являются публичной офертой определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации.
+    						Она не служит для постановки диагноза и назначения лечения.</noindex>
     				</p>
     				<p>ООО «ДЕТОКС»<br>
-              ОРГН 1182375001511,<br>
-              ИНН 2312268085<br>
-              Медицинской лицензии Л041-01177-91/00561129 от 02.02.2022 г</p>
+    					ОРГН 1182375001511,<br>
+    					ИНН 2312268085<br>
+    					Медицинской лицензии Л041-01177-91/00561129 от 02.02.2022 г</p>
     			</div>
     			<div class="footer__col">
     				<a href="#">Мурманск→</a>
     			</div>
     		</div>
     	</div>
+    </footer>
     
-    </footer></div>
+    <div class="popup" data-target="popup-call">
+    	<div class="popup__body">
+    		<div class="popup__content">
+    			<picture class="close-popup">
+    				<img src="assets/img/icons/close-popup.svg" alt="close_popup">
+    			</picture>
+    
+    			<p class="popup__title">
+    				Оставьте заявку!
+    			</p>
+    			<p class="popup__subtitle">
+    				И мы перезвоним Вам в кратчайшие сроки
+    			</p>
+    			<form>
+    				<input type="text" placeholder="Ваше имя">
+    				<input type="tel" placeholder="Ваш номер телефона">
+    				<input type="submit" value="Записаться" class="button button_green button_large popup__button">
+    			</form>
+    			<p class="popup__attention">
+    				Нажимая кнопку «Записаться» Вы соглашаетесь с <a href="/politika-konfidentsialnosti/">политикой
+    					конфиденциальности</a>
+    			</p>
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="popup" data-target="popup-change">
+    	<div class="popup__body">
+    		<div class="popup__content">
+    			<picture class="close-popup">
+    				<img src="assets/img/icons/close-popup.svg" alt="close_popup">
+    			</picture>
+    
+    			<p class="popup__title original-title">
+    				Оставьте заявку!
+    			</p>
+    			<p class="popup__subtitle">
+    				Оставьте заявку, и мы перезвоним Вам в кратчайшие сроки
+    			</p>
+    			<form>
+    				<input type="text" placeholder="Ваше имя">
+    				<input type="tel" placeholder="Ваш номер телефона">
+    				<input type="submit" value="Записаться" class="button button_green button_large popup__button">
+    			</form>
+    			<p class="popup__attention">
+    				Нажимая кнопку «Записаться» Вы соглашаетесь с <a href="/politika-konfidentsialnosti/">политикой
+    					конфиденциальности</a>
+    			</p>
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="popup" data-target="popup-city">
+    	<div class="popup__body">
+    		<div class="popup__content popup__content_city">
+    			<picture class="close-popup">
+    				<img src="assets/img/icons/close-popup.svg" alt="close_popup">
+    			</picture>
+    
+    			<p class="popup__title">
+    				Выберите Ваш город
+    			</p>
+    			<form>
+    				<input type="text" placeholder="Введите Ваш город">
+    			</form>
+    			<p class="popup__subtitle">
+    				Или выберите из списка
+    			</p>
+    			<ul>
+    				<li>
+    					<a href="#">
+    						Ростов-на-Дону
+    					</a>
+    				</li>
+    				<li>
+    					<a href="#">
+    						Ростов-на-Дону
+    					</a>
+    				</li>
+    				<li>
+    					<a href="#">
+    						Ростов-на-Дону
+    					</a>
+    				</li>
+    				<li>
+    					<a href="#">
+    						Ростов-на-Дону
+    					</a>
+    				</li>
+    				<li>
+    					<a href="#">
+    						Ростов-на-Дону
+    					</a>
+    				</li>
+    				<li>
+    					<a href="#">
+    						Ростов-на-Дону
+    					</a>
+    				</li>
+    				<li>
+    					<a href="#">
+    						Ростов-на-Дону
+    					</a>
+    				</li>
+    			</ul>
+    
+    		</div>
+    	</div>
+    </div></div>
 </body>
 </html>

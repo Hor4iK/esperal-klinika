@@ -163,7 +163,8 @@
 		}
 
 		&_address {
-			a {
+			span {
+				cursor: pointer;
 				color: $red;
 				transition: 0.3s;
 				text-decoration: underline;
