@@ -235,6 +235,53 @@ if (photosSliderCheck.length > 0) {
 	})
 }
 
+//Слайдер отзывов
+const reviewsSliderCheck = document.querySelectorAll('.reviews__inner.swiper');
+if (reviewsSliderCheck.length > 0) {
+	reviewsSliderCheck.forEach((slider) => {
+		const reviewsSwiper = new Swiper(slider, {
+			direction: 'horizontal',
+			slidesPerView: 1,
+			grabCursor: true,
+			spaceBetween: 10,
+			navigation: {
+				nextEl: slider.querySelector('.nav-btn_next'),
+				prevEl: slider.querySelector('.nav-btn_prev'),
+			},
+			breakpoints: {
+				500:{
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				950: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1150: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				}
+			}
+		});
+	})
+}
+
+//Добавляем звёзды в отзывы
+const marks = document.querySelectorAll(".reviews__mark");
+if(marks.length > 0){
+	marks.forEach(mark => {
+		stars = mark.querySelectorAll("span")
+		if(stars.length < 5){
+			for(i = 0; i < 5 - stars.length; i++){
+				star = document.createElement('span');
+				star.classList.add("dis")
+				mark.append(star)
+			}
+		}
+	});
+}
+
+//Попапы
 document.addEventListener("DOMContentLoaded", function () {
 	function popupClose(popupActive) {
 		popupActive.classList.remove('open');

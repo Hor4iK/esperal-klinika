@@ -1,0 +1,69 @@
+.price-table {
+	width: 100%;
+
+	thead {
+		tr {
+			th {
+				padding: 20px 25px;
+				background-color: $green;
+				color: $white;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 24px;
+				text-align: center;
+
+				@media(max-width: 760px){
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			td {
+				padding: 7px 15px;
+				border-bottom: 2px solid #9e0618;
+			}
+		}
+	}
+
+	&__name, &__cost{
+		font-weight: 700;
+		color: $black;
+	}
+
+	&__button{
+		display: block;
+		max-width: 200px;
+		margin-left: auto;
+	}
+
+	@media(max-width: 600px){
+		tbody{
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+			tr{
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				gap: 20px;
+				padding: 15px;
+				border-bottom: 2px solid #9e0618;
+
+				td{
+					border: none;
+
+					&:last-child{
+						flex-basis: 100%;
+					}
+				}
+			}
+		}
+		&__button{
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}
