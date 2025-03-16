@@ -40,7 +40,11 @@
 	}
 
 	&__video{
-
+		display: flex;
+		gap: 20px;
+		@media(max-width: 760px){
+			flex-direction: column;
+		}
 		a{
 			position: relative;
 			display: block;

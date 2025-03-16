@@ -6,8 +6,6 @@
 	}
 	&__question-wrapper{
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		margin-bottom: 20px;
-		padding-bottom: 12px;
 		&.active{
 			border-bottom: none;
 
@@ -34,7 +32,7 @@
 		justify-content: space-between;
 		align-items: center;
 		color: $black;
-		margin-bottom: 6px;
+		margin-bottom: 10px;
 	}
 
 	&__button{
@@ -77,7 +75,9 @@
 		font-family: "Segoe UI";
 		font-weight: 400;
 		font-size: 18px;
-		color: rgba(0, 0, 0, 0.8)
+		color: rgba(0, 0, 0, 0.8);
+		margin-bottom: 20px;
+		padding-bottom: 12px;
 	}
 
 	&__answer{

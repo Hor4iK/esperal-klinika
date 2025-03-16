@@ -15,6 +15,7 @@ $text-gray-light: #a7a7a7;
 $dark-green: #0a5555;
 $gray: #f0f0f0;
 $dark-gray: #5b5b5b;
+$blue: #0a58ca;
 
 @import 'vendor/fonts';
 @import 'vendor/_normalize';
@@ -211,6 +212,11 @@ body {
 	height: 37px;
 	flex-shrink: 0;
 	cursor: pointer;
+
+	img{
+		width: 100%;
+		height: 100%;
+	}
 }
 
 .nav-btn_next{
@@ -247,4 +253,14 @@ b{
 
 @import 'vendor/red-form.scss';
 
-@import 'vendor/popups.scss'
+@import 'vendor/popups.scss';
+
+@import 'vendor/content-table.scss';
+
+@import 'vendor/price-table.scss';
+
+@import 'vendor/search-more.scss';
+
+@import 'vendor/calc.scss';
+
+@import 'vendor/reviews.scss'

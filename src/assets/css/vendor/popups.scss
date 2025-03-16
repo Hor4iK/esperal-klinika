@@ -60,14 +60,11 @@
   width: 25px;
   cursor: pointer;
   height: 25px;
-  transition: width 0.3s linear, height 0.3s linear, top 0.3s linear, right 0.3s linear;
+  transition: 0.3s;
 }
 @media (hover: hover) {
   .close-popup:hover {
-    width: 30px;
-    height: 30px;
-    top: 2px;
-    right: 8px;
+    transform: rotate(180deg);
   }
 }
 

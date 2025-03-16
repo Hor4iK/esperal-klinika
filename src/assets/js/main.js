@@ -44,10 +44,11 @@ if (converseCardWrapper) {
 //Табы для услуг
 const serviceTabsBtns = document.querySelectorAll(".our-services__tabs-list li")
 const serviceTabContents = document.querySelectorAll(".our-services__tab-content");
-if (serviceTabsBtns && serviceTabContents) {
-	if (window.innerWidth > 960) {
+if (serviceTabsBtns.length > 0 && serviceTabContents.length > 0) {
 		serviceTabsBtns[0].classList.add("active");
 		serviceTabContents[0].classList.add("active");
+	if (window.innerWidth < 960) {
+		serviceTabContents[0].style.maxHeight = serviceTabContents[0].scrollHeight + 40 + "px";
 	}
 	for (let i = 0; i < serviceTabContents.length; i++) {
 		serviceTabContents[i].style.order = i * 2 + 1;
@@ -93,31 +94,31 @@ if (questions && answers) {
 }
 
 //Слайдер блока доверия
-const trustSliderCheck = document.querySelectorAll('.trust');
-if (trustSliderCheck.length > 0) {
-	trustSliderCheck.forEach((slider) => {
-		const trustSlider = new Swiper(slider.querySelector('.trust__video'), {
-			direction: 'horizontal',
-			slidesPerView: 1.1,
-			grabCursor: true,
-			spaceBetween: 10,
-			navigation: {
-				nextEl: slider.querySelector('.trust__nav-btn_next'),
-				prevEl: slider.querySelector('.trust__nav-btn_prev'),
-			},
-			breakpoints: {
-				0: {
-					slidesPerView: 1,
-					spaceBetween: 20,
-				},
-				950: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				}
-			}
-		});
-	})
-}
+// const trustSliderCheck = document.querySelectorAll('.trust');
+// if (trustSliderCheck.length > 0) {
+// 	trustSliderCheck.forEach((slider) => {
+// 		const trustSlider = new Swiper(slider.querySelector('.trust__video'), {
+// 			direction: 'horizontal',
+// 			slidesPerView: 1.1,
+// 			grabCursor: true,
+// 			spaceBetween: 10,
+// 			navigation: {
+// 				nextEl: slider.querySelector('.trust__nav-btn_next'),
+// 				prevEl: slider.querySelector('.trust__nav-btn_prev'),
+// 			},
+// 			breakpoints: {
+// 				0: {
+// 					slidesPerView: 1,
+// 					spaceBetween: 20,
+// 				},
+// 				950: {
+// 					slidesPerView: 3,
+// 					spaceBetween: 20,
+// 				}
+// 			}
+// 		});
+// 	})
+// }
 
 //Слайдер, который вырубается при ресайзе
 advantagesSwiperCheck = document.querySelector(".advantages__swiper");
@@ -263,7 +264,7 @@ if(popups.length > 0){
 			}
 		});
 	});
-}  
+}
 popupOpenBtns.forEach(function (el) {
 		el.addEventListener('click', function (e) {
 				e.preventDefault();
@@ -297,6 +298,55 @@ popupOpenBtns.forEach(function (el) {
 		});
 });
 });
+
+//Динамическое формирование содержания
+const articleNavigation = document.querySelector('.content-table__navigation');
+if (articleNavigation) {
+
+	const jsScrollBlockList = document.querySelectorAll('.text-block h1, .text-block h2');
+
+	if (jsScrollBlockList.length > 0) {
+		for (let i = 0; i < jsScrollBlockList.length; i += 1) {
+			const jsScrollBlock = jsScrollBlockList[i];
+			const titleBlock = jsScrollBlock.textContent;
+			const articleNavigationList = document.querySelector('.content-table__navigation');
+			const articleNavigationItem = document.createElement('li');
+			const articleNavigationLink = document.createElement('a');
+			articleNavigationItem.classList.add('navigation__list-item');
+			if (jsScrollBlock.tagName == 'H1') {
+				articleNavigationItem.classList.add('title-h1');
+			}
+			if (jsScrollBlock.tagName == 'H2') {
+				articleNavigationItem.classList.add('title-h2');
+			}
+			articleNavigationLink.classList.add('navigation__link');
+			jsScrollBlock.setAttribute('id', i)
+			articleNavigationLink.setAttribute('href', '#' + i);
+			articleNavigationLink.textContent = ' ' + titleBlock;
+			articleNavigationItem.append(articleNavigationLink);
+			articleNavigationList.append(articleNavigationItem);
+		}
+		document.querySelectorAll('a[href^="#"').forEach(link => {
+
+			link.addEventListener('click', function (e) {
+				e.preventDefault();
+
+				let href = this.getAttribute('href').substring(1);
+				const scrollTarget = document.getElementById(href);
+				const topOffset = 180;
+				const elementPosition = scrollTarget.getBoundingClientRect().top;
+				const offsetPosition = elementPosition - topOffset;
+
+				window.scrollBy({
+					top: offsetPosition,
+					behavior: 'smooth'
+				});
+			});
+		});
+	} else {
+		articleNavigation.querySelector('.navigation__item').remove();
+	}
+}
 
 //Просмотр для фотографий
 Fancybox.bind("[data-fancybox]");

@@ -1,4 +1,5 @@
 .doctors {
+
 	&__title{
 		span{
 			background-color: #f8f8f8;
@@ -18,7 +19,7 @@
 		transition: 0.3s;
 
 		&:hover {
-			transform: translateY(-20px) !important;
+			transform: scale(104%) translateY(-2%) !important;
 		}
 	}
 

@@ -27,6 +27,23 @@
 		flex: 1;
 		flex-basis: calc(25% - 23px);
 		min-width: 260px;
+
+		&_hit{
+			.price__header{
+				background: linear-gradient(to top, #c80018, #df001a, #9e0618);
+				position: relative;
+
+				&::after{
+					content: "Хит";
+					text-transform: uppercase;
+					font-size: 15px;
+					font-weight: 700;
+					position: absolute;
+					top: 10px;
+					left: 10px;
+				}
+			}
+		}
 	}
 
 	&__header{
