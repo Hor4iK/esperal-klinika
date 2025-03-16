@@ -114,3 +114,21 @@
 		margin: 0 auto;
 	}
 }
+
+.prices-page{
+	padding-top: 20px;
+
+	&__subtitle{
+		color: $light-text-gray;
+		margin-bottom: 30px;
+		font-size: 21px;
+	}
+
+	.price-table{
+		margin-bottom: 30px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}

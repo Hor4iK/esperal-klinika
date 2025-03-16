@@ -331,6 +331,21 @@
 			margin-left: 15px;
 		}
 	}
+
+	&_fixed{
+		position: fixed;
+		animation: header 0.3s;
+		top: 0;
+	}
+}
+
+@keyframes header{
+	from{
+		top: -200px;
+	}
+	to{
+		top: 0;
+	}
 }
 
 .active {

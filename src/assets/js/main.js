@@ -1,3 +1,18 @@
+//Фиксирование шапки сверху при скролле
+const header = document.querySelector(".header")
+const main = document.querySelector("main")
+if (header) {
+	window.onscroll = function () {
+		if (window.scrollY >= header.offsetTop + header.scrollHeight) {
+			header.classList.add("header_fixed")
+			main.style.marginTop = header.scrollHeight + "px"
+		} else {
+			header.classList.remove("header_fixed")
+			main.removeAttribute("style")
+		}
+	}
+}
+
 //Открывашка аккордеонов в шапке мобильной версии
 const menuAccordionButtons = document.querySelectorAll('.menu__sub-open');
 if (menuAccordionButtons) {
@@ -45,8 +60,8 @@ if (converseCardWrapper) {
 const serviceTabsBtns = document.querySelectorAll(".our-services__tabs-list li")
 const serviceTabContents = document.querySelectorAll(".our-services__tab-content");
 if (serviceTabsBtns.length > 0 && serviceTabContents.length > 0) {
-		serviceTabsBtns[0].classList.add("active");
-		serviceTabContents[0].classList.add("active");
+	serviceTabsBtns[0].classList.add("active");
+	serviceTabContents[0].classList.add("active");
 	if (window.innerWidth < 960) {
 		serviceTabContents[0].style.maxHeight = serviceTabContents[0].scrollHeight + 40 + "px";
 	}
@@ -138,7 +153,7 @@ if (advantagesSwiperCheck) {
 					},
 				});
 			}
-			if (window.innerWidth >= 650 && advantagesSwiper){
+			if (window.innerWidth >= 650 && advantagesSwiper) {
 				advantagesSwiper.destroy(true, true);
 				advantagesSwiper = false
 			}
@@ -164,7 +179,7 @@ if (doctorsSliderCheck.length > 0) {
 					slidesPerView: 1,
 					spaceBetween: 20,
 				},
-				680:{
+				680: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
@@ -275,7 +290,7 @@ if (reviewsSliderCheck.length > 0) {
 				prevEl: slider.querySelector('.nav-btn_prev'),
 			},
 			breakpoints: {
-				500:{
+				500: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
@@ -294,11 +309,11 @@ if (reviewsSliderCheck.length > 0) {
 
 //Добавляем звёзды в отзывы
 const marks = document.querySelectorAll(".reviews__mark");
-if(marks.length > 0){
+if (marks.length > 0) {
 	marks.forEach(mark => {
 		stars = mark.querySelectorAll("span")
-		if(stars.length < 5){
-			for(i = 0; i < 5 - stars.length; i++){
+		if (stars.length < 5) {
+			for (i = 0; i < 5 - stars.length; i++) {
 				star = document.createElement('span');
 				star.classList.add("dis")
 				mark.append(star)
@@ -312,64 +327,64 @@ document.addEventListener("DOMContentLoaded", function () {
 	function popupClose(popupActive) {
 		popupActive.classList.remove('open');
 		setTimeout(() => {
-				popupActive.classList.contains("open") || popupActive.classList.remove("active");
+			popupActive.classList.contains("open") || popupActive.classList.remove("active");
 		}, 400);
 		document.body.classList.remove('lock');
 		document.querySelector('html').style.paddingRight = 0;
 		document.querySelector('html').classList.remove('lock');
 		document.querySelector('header').removeAttribute('style');
-}
-const popupOpenBtns = document.querySelectorAll('.popup-btn');
-const popups = document.querySelectorAll('.popup');
-const closePopupBtns = document.querySelectorAll('.close-popup');
-closePopupBtns.forEach(function (el) {
+	}
+	const popupOpenBtns = document.querySelectorAll('.popup-btn');
+	const popups = document.querySelectorAll('.popup');
+	const closePopupBtns = document.querySelectorAll('.close-popup');
+	closePopupBtns.forEach(function (el) {
 		el.addEventListener('click', function (e) {
-				popupClose(e.target.closest('.popup'));
+			popupClose(e.target.closest('.popup'));
 		});
-});
-if(popups.length > 0){
-	popups.forEach(function (popup) {
-		popupClose(popup);
-		popup.addEventListener('click', function (e) {
-			if (!e.target.closest('.popup__content')) {
-			
+	});
+	if (popups.length > 0) {
+		popups.forEach(function (popup) {
+			popupClose(popup);
+			popup.addEventListener('click', function (e) {
+				if (!e.target.closest('.popup__content')) {
+
 					popupClose(e.target.closest('.popup'));
+				}
+			});
+		});
+	}
+	popupOpenBtns.forEach(function (el) {
+		el.addEventListener('click', function (e) {
+			e.preventDefault();
+			const path = e.currentTarget.dataset.path;
+			const currentPopup = document.querySelector(`[data-target="${path}"]`);
+			if (currentPopup) {
+				currentPopup.classList.add('active');
+				setTimeout(() => {
+					currentPopup.classList.add("open");
+				}, 10);
+				if (currentPopup.getAttribute("data-target") == 'popup-change') {
+					let currentItem = el.closest('.change-item');
+					let originalTop = currentPopup.querySelector('.original-title');
+					let title = currentItem.querySelector('.change-title');
+					let subtitle = currentItem.querySelector('.change-subtitle');
+					if (title && subtitle) {
+						var newTitle = title.innerHTML + ' ' + subtitle.innerHTML;
+					} else if (title) {
+						var newTitle = title.innerHTML;
+					} else {
+						var newTitle = subtitle.innerHTML;
+					}
+					if (el.classList.contains('change-doctor')) {
+						newTitle = 'Записаться на приём к врачу: ' + newTitle;
+					}
+					originalTop.innerHTML = newTitle;
+				};
+				// scrollWidthFunc();
+				document.querySelector('html').classList.add('lock');
 			}
 		});
 	});
-}
-popupOpenBtns.forEach(function (el) {
-		el.addEventListener('click', function (e) {
-				e.preventDefault();
-				const path = e.currentTarget.dataset.path;
-				const currentPopup = document.querySelector(`[data-target="${path}"]`);
-				if (currentPopup) {
-						currentPopup.classList.add('active');
-						setTimeout(() => {
-								currentPopup.classList.add("open");
-						}, 10);
-						if (currentPopup.getAttribute("data-target") == 'popup-change') {
-							let currentItem = el.closest('.change-item');
-							let originalTop = currentPopup.querySelector('.original-title');
-							let title = currentItem.querySelector('.change-title');
-							let subtitle = currentItem.querySelector('.change-subtitle');
-							if (title && subtitle) {
-									var newTitle = title.innerHTML + ' ' + subtitle.innerHTML;
-							} else if (title) {
-									var newTitle = title.innerHTML;
-							} else {
-									var newTitle = subtitle.innerHTML;
-							}
-							if (el.classList.contains('change-doctor')) {
-									newTitle = 'Записаться на приём к врачу: ' + newTitle;
-							}
-							originalTop.innerHTML = newTitle;
-					};
-					 // scrollWidthFunc();
-						document.querySelector('html').classList.add('lock');
-				}
-		});
-});
 });
 
 //Динамическое формирование содержания
