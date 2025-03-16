@@ -235,6 +235,32 @@ if (photosSliderCheck.length > 0) {
 	})
 }
 
+const documentsSliderCheck = document.querySelectorAll('.doctors-docs__inner.swiper');
+if (documentsSliderCheck.length > 0) {
+	documentsSliderCheck.forEach((slider) => {
+		const documentSlider = new Swiper(slider, {
+			direction: 'horizontal',
+			slidesPerView: 1,
+			grabCursor: true,
+			spaceBetween: 10,
+			navigation: {
+				nextEl: slider.querySelector('.nav-btn_next'),
+				prevEl: slider.querySelector('.nav-btn_prev'),
+			},
+			breakpoints: {
+				600: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				950: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				}
+			}
+		});
+	})
+}
+
 //Слайдер отзывов
 const reviewsSliderCheck = document.querySelectorAll('.reviews__inner.swiper');
 if (reviewsSliderCheck.length > 0) {
