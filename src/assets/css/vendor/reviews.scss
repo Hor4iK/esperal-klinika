@@ -1,60 +1,137 @@
-.reviews{
-	&__title{
+.reviews {
+	&__title {
 		margin-bottom: 30px;
 	}
 
-	&__inner{
-		.swiper-wrapper{
+	&__inner {
+		.swiper-wrapper {
 			margin-bottom: 20px;
 		}
 	}
 
-	&__item{
+	&__item {
 		display: flex;
 		padding: 20px;
-    background-color: rgba(248, 248, 248, 1);
+		background-color: rgba(248, 248, 248, 1);
 	}
 
-	&__text{
+	&__text {
 		font-size: 14px;
-    font-weight: 400;
-    line-height: 1.4;
+		font-weight: 400;
+		line-height: 1.4;
 		margin-bottom: 25px;
 	}
 
-	&__mark{
+	&__mark {
 		margin-top: auto;
 		margin-bottom: 10px;
 		display: flex;
 		gap: 3px;
 
-		span{
+		span {
 			display: block;
 			width: 22px;
 			height: 22px;
 			background: url("../img/icons/star.svg") no-repeat;
 
-			&.dis{
+			&.dis {
 				opacity: 0.4;
 			}
 		}
 	}
 
-	&__name{
+	&__name {
 		font-size: 18px;
-    font-weight: 600;
+		font-weight: 600;
 		color: $black;
 		margin-bottom: 5px;
 	}
 
-	&__info{
+	&__info {
 		font-style: italic;
 		display: flex;
 		gap: 10px;
 	}
 
-	&__age{
+	&__age {
 		padding-right: 10px;
 		border-right: 1px solid rgba(0, 0, 0, 0.5);
+	}
+}
+
+.reviews-page {
+	padding-top: 20px;
+
+	&__des {
+		font-size: 21px;
+		line-height: 26px;
+		color: $light-text-gray;
+		margin-bottom: 30px;
+	}
+
+	.trust__video {
+		margin-bottom: 30px;
+	}
+
+	&__inner {
+		display: flex;
+		gap: 20px;
+
+		@media(max-width: 1080px){
+			flex-direction: column;
+		}
+	}
+
+	&__tab-content {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__item {
+		padding: 20px;
+		border-radius: 5px;
+		background-color: rgba(248, 248, 248, 1);
+	}
+
+	&__text {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.4;
+		margin-bottom: 10px;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media(max-width: 430px){
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__name {
+		font-style: normal;
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 0;
+		color: $black;
+		margin-bottom: 5px;
+	}
+
+	&__info {
+		p {
+			font-style: italic;
+			display: flex;
+			gap: 10px;
+
+			.city {
+				padding-left: 10px;
+				border-left: solid 2px black;
+			}
+		}
+		p.reviews-page__name{
+			font-style: normal;
+		}
 	}
 }

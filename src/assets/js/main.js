@@ -102,7 +102,7 @@ if (questions && answers) {
 			if (answers[i].style.maxHeight) {
 				answers[i].removeAttribute("style");
 			} else {
-				answers[i].style.maxHeight = document.querySelector(".faq__answer").scrollHeight + "px";
+				answers[i].style.maxHeight = "1000px";
 			}
 		})
 	};
@@ -434,6 +434,87 @@ if (articleNavigation) {
 	} else {
 		articleNavigation.querySelector('.navigation__item').remove();
 	}
+}
+
+//Табы для faq и отзывов
+//Сколько элементов внутри контента таба показать
+const paginationNumber = 5
+
+function countHiddenItems(tabContent){
+	elements = Array.from(tabContent.children)
+	hiddenElements = elements.filter(element => {
+		return !element.classList.contains("show")
+	})
+	return hiddenElements.length
+}
+
+function HiddenElementsInit(tabContent, paginationNumber){
+	if(countHiddenItems(tabContent) > paginationNumber){
+		elements = tabContent.children
+		for(let i = 0; i < paginationNumber; i++){
+			elements[i].classList.add("show")
+		}
+		document.querySelector(".tab__show-more-btn").classList.add("active");
+	} else{
+		elements.forEach(element => {
+			element.classList.add('show');
+		});
+		document.querySelector(".tab__show-more-btn").classList.remove("active");
+	}
+}
+
+function tabsShowMore(paginationNumber) {
+	tabContent = document.querySelector(".tab-content.active")
+	elements = Array.from(tabContent.children)
+	hiddenElements = elements.filter(element => {
+		return !element.classList.contains("show")
+	})
+	if(hiddenElements.length > paginationNumber){
+		for(let i = 0; i < paginationNumber; i++){
+			hiddenElements[i].classList.add("show")
+		}
+	} else{
+		hiddenElements.forEach(element => {
+			element.classList.add("show")
+		});
+		document.querySelector(".tab__show-more-btn").classList.remove("active");
+	}
+}
+
+const tabBtns = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content")
+if(tabBtns.length > 0 && tabContents.length > 0){
+	tabBtns[0].classList.add("active")
+	tabContents[0].classList.add("active")
+	HiddenElementsInit(tabContents[0], paginationNumber)
+	for(let i = 0; i < tabBtns.length; i++){
+		tabBtns[i].addEventListener("click", (e)=>{
+			if(e.currentTarget.classList.contains("active")){
+				e.currentTarget.closest(".tab-btns-wrapper").classList.toggle("active")
+			} else{
+				e.currentTarget.closest(".tab-btns-wrapper").classList.remove("active")
+				document.querySelectorAll(".tab-btn.active").forEach(el => {
+					el.classList.remove("active")
+				});
+				document.querySelectorAll(".tab-content.active").forEach(el => {
+					Array.from(el.children).forEach(el =>{
+						el.classList.remove('show')
+					})
+					el.classList.remove("active")
+				});
+				e.currentTarget.classList.add("active")
+				tabContents[i].classList.add("active")
+				HiddenElementsInit(tabContents[i], paginationNumber)
+			}
+		})
+	}
+}
+
+showMoreBtn = document.querySelector(".tab__show-more-btn")
+if(showMoreBtn){
+	showMoreBtn.addEventListener("click", () => {
+		tabsShowMore(paginationNumber)
+	})
 }
 
 //Просмотр для фотографий

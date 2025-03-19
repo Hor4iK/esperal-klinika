@@ -540,6 +540,7 @@
 
 				&::after {
 					content: "";
+					background: none;
 					display: block;
 					width: 4px;
 					height: 4px;
@@ -549,7 +550,12 @@
 					border-bottom: 1px solid #ddd;
 					border-right: 1px solid #ddd;
 					transform: rotate(-45deg);
+					transition: 0.3s;
 				}
+			}
+
+			&:hover::after{
+				transform: rotate(45deg);
 			}
 		}
 
