@@ -1,13 +1,55 @@
 .articles{
 	padding: 30px 0;
 
+	&__tabs{
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+	}
+
+	&__tab{
+		background-color: #166d6dad;
+		cursor: pointer;
+		padding: 10px 15px;
+		border-radius: 30px;
+		color: $white;
+		transition: 0.3s;
+
+		&:hover{
+			background-color: #166d6d;
+		}
+
+		&.active{
+			background-color: #166d6d;
+		}
+	}
+
 	&__inner{
 		display: flex;
 		flex-wrap: wrap;
 		gap: 30px;
 	}
 
+	@keyframes articles{
+		from{
+			scale: 1.1;
+		}
+		to{
+			scale: 1;
+		}
+	}
+
 	&__card{
+		transition: 0.3s;
+		&:hover{
+			transform: scale(1.02);
+		}
+		&.active{
+			display: block;
+			animation: articles 0.3s;
+		}
+
 		@media(max-width: 1080px){
 			aspect-ratio: 7/4;
 		}
@@ -20,15 +62,11 @@
 			aspect-ratio: 4/3;
 		}
 
-		display: block;
+		display: none;
 		aspect-ratio: 3/1;
 		position: relative;
 		box-shadow: 0 2px 7px 0 hsla(0, 0%, 4%, .05), 3px 27px 54px -34px rgba(0, 0, 0, .47);
 		flex-basis: calc(50% - 15px);
-
-		&:first-child{
-			flex-basis: 100%;
-		}
 
 		picture{
 			width: 100%;
@@ -48,7 +86,26 @@
 		left: 0;
 		width: 100%;
 		padding: 20px;
-		background-color: rgb(253 253 253 / 45%);;
+		background-color: rgb(253 253 253 / 45%);
+	}
+
+	&__categories{
+		display: flex;
+		gap: 5px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding:10px;
+
+		span{
+			display: block;
+			padding: 10px;
+			border-radius: 30px;
+			background-color: rgb(253 253 253 / 45%);
+		}
+
+
 	}
 
 	&__title{
@@ -93,4 +150,6 @@
 			font-size: 32px;
 		}
 	}
+
+
 }
