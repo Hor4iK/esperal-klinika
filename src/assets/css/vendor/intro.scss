@@ -89,8 +89,11 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		max-width: 950px;
+		@media(max-width: 600px){
+			gap: 10px;
+		}
 
-		@media(max-width: 660px) {
+		@media(max-width: 380px) {
 			gap: 10px;
 			margin-bottom: 15px;
 			flex-direction: column;
@@ -119,7 +122,7 @@
 		cursor: pointer;
 		display: block;
 		text-align: center;
-		border-radius: 31.5px;
+		border-radius: 60px;
 		border: 2px solid #166d6d;
 
 		&:hover {
@@ -170,6 +173,9 @@
 				height: 20px;
 				border: 1px solid gray;
 				border-radius: 50%;
+				@media(max-width: 450px){
+					margin-left: auto;
+				}
 
 				span {
 					text-align: center;

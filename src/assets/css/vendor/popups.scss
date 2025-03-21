@@ -159,6 +159,7 @@ input.popup__button{
 
 		a{
 			color: $dark-green;
+      text-decoration: underline;
 			transition: 0.3s;
 			&:hover{
 				color: $light-green;

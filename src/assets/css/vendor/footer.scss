@@ -185,7 +185,7 @@
 
 			@media(max-width: 1275px) {
 				max-width: 100%;
-				order: 0;
+				order: 2;
 			}
 		}
 
@@ -193,13 +193,13 @@
 			align-items: center;
 
 			@media(max-width: 1275px) {
-				order: 2;
+				order: 1;
 			}
 		}
 
 		&_contacts {
 			@media(max-width: 1275px) {
-				order: 1
+				order: 0
 			}
 		}
 	}
@@ -262,7 +262,7 @@
 	}
 
 	&__spec-btn {
-		align-self: flex-start;
+		align-self: center;
 
 		padding: 11px 7px;
 		border: 2px solid rgba(255, 255, 255, 1);

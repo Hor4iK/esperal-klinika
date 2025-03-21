@@ -839,6 +839,15 @@ input[type=search]::-webkit-search-results-decoration {
   padding-top: 20px;
   padding-bottom: 80px;
 }
+.text-section .text-block h1 span,
+.text-section .text-block h2 span {
+  background-color: #f8f8f8;
+}
+
+.text-section.text-block h1 span,
+.text-section.text-block h2 span {
+  background-color: #f8f8f8;
+}
 
 .text-block {
   font-size: 21px;
@@ -848,11 +857,24 @@ input[type=search]::-webkit-search-results-decoration {
   float: left;
   margin-right: 20px;
 }
+@media (max-width: 700px) {
+  .text-block .right {
+    margin: 0;
+    float: none;
+  }
+}
 .text-block .left {
   float: right;
   margin-left: 20px;
 }
-.text-block h1, .text-block h2 {
+@media (max-width: 700px) {
+  .text-block .left {
+    float: none;
+    margin: 0;
+  }
+}
+.text-block h1,
+.text-block h2 {
   font-size: 36px;
   font-weight: 800;
   text-align: center;
@@ -862,7 +884,8 @@ input[type=search]::-webkit-search-results-decoration {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.text-block h1::after, .text-block h2::after {
+.text-block h1::after,
+.text-block h2::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -872,8 +895,9 @@ input[type=search]::-webkit-search-results-decoration {
   border-bottom: 2px solid #9e0618;
   z-index: 0;
 }
-.text-block h1 span, .text-block h2 span {
-  background-color: #f8f8f8;
+.text-block h1 span,
+.text-block h2 span {
+  background-color: #fff;
   padding: 0 20px;
   margin: 0 auto;
   position: relative;
@@ -1315,7 +1339,7 @@ b {
 @media (max-width: 1275px) {
   .footer__col_links {
     max-width: 100%;
-    order: 0;
+    order: 2;
   }
 }
 .footer__col_buttons {
@@ -1323,12 +1347,12 @@ b {
 }
 @media (max-width: 1275px) {
   .footer__col_buttons {
-    order: 2;
+    order: 1;
   }
 }
 @media (max-width: 1275px) {
   .footer__col_contacts {
-    order: 1;
+    order: 0;
   }
 }
 .footer__tel {
@@ -1381,7 +1405,7 @@ b {
   gap: 15px;
 }
 .footer__spec-btn {
-  align-self: flex-start;
+  align-self: center;
   padding: 11px 7px;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 5px;
@@ -1659,7 +1683,12 @@ b {
   justify-content: center;
   max-width: 950px;
 }
-@media (max-width: 660px) {
+@media (max-width: 600px) {
+  .intro__buttons {
+    gap: 10px;
+  }
+}
+@media (max-width: 380px) {
   .intro__buttons {
     gap: 10px;
     margin-bottom: 15px;
@@ -1686,7 +1715,7 @@ b {
   cursor: pointer;
   display: block;
   text-align: center;
-  border-radius: 31.5px;
+  border-radius: 60px;
   border: 2px solid #166d6d;
 }
 .intro__button:hover {
@@ -1735,6 +1764,11 @@ b {
   height: 20px;
   border: 1px solid gray;
   border-radius: 50%;
+}
+@media (max-width: 450px) {
+  .intro .intro__pluses li .intro__hint {
+    margin-left: auto;
+  }
 }
 .intro .intro__pluses li .intro__hint span {
   text-align: center;
@@ -2386,16 +2420,13 @@ b {
 .stocks__photo {
   padding: 5px;
   flex-basis: calc(50% - 10px);
-}
-@media (max-width: 760px) {
-  .stocks__photo {
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 }
 .stocks__photo picture {
   border: 2px solid #166d6d;
   border-radius: 20px;
   overflow: hidden;
+  max-height: 185px;
 }
 .stocks__text {
   flex-basis: calc(50% - 10px);
@@ -3245,6 +3276,7 @@ input.popup__button {
 }
 .popup__attention a {
   color: #0a5555;
+  text-decoration: underline;
   transition: 0.3s;
 }
 .popup__attention a:hover {
@@ -3288,6 +3320,7 @@ input.popup__button {
 }
 .content-table__navigation li::before {
   content: "";
+  flex-shrink: 0;
   display: block;
   width: 15px;
   height: 3px;
@@ -3397,6 +3430,7 @@ input.popup__button {
 
 .price-table {
   width: 100%;
+  border-collapse: collapse;
 }
 .price-table thead tr th {
   padding: 20px 25px;
@@ -4039,6 +4073,8 @@ input.popup__button {
 .rating-area:not(:checked) > label:hover,
 .rating-area:not(:checked) > label:hover ~ label {
   color: #FEB700;
+  text-shadow: #FEB700 0px 0px 10px;
+  transition: 0.3s;
 }
 
 .rating-area > input:checked + label:hover,
@@ -4047,6 +4083,7 @@ input.popup__button {
 .rating-area > input:checked ~ label:hover ~ label,
 .rating-area > label:hover ~ input:checked ~ label {
   color: #FEB700;
+  text-shadow: #FEB700 0px 0px 10px;
 }
 
 .rate-area > label:active {
@@ -4079,3 +4116,45 @@ input.popup__button {
     font-size: 40px;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+#myBtn {
+  pointer-events: none;
+  position: fixed;
+  bottom: 160px;
+  left: -70px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  transition: 0.3s;
+}
+@media (max-width: 1300px) {
+  #myBtn {
+    left: 5px;
+  }
+}
+@media (max-width: 930px) {
+  #myBtn {
+    left: 5px;
+    bottom: 180px;
+  }
+}
+@media (max-width: 800px) {
+  #myBtn {
+    left: 5px;
+    bottom: 150px;
+  }
+}
+
+#myBtn.is-visible {
+  pointer-events: all;
+  left: 30px;
+}
+
+/* /GO TO TOP BUTTON */

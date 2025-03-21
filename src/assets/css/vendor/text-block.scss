@@ -2,23 +2,52 @@
 	background-color: #f8f8f8;
 	padding-top: 20px;
 	padding-bottom: 80px;
+
+	.text-block {
+		h1,
+		h2 {
+			span {
+				background-color: #f8f8f8;
+			}
+		}
+	}
+}
+
+.text-section.text-block{
+	h1,
+		h2 {
+			span {
+				background-color: #f8f8f8;
+			}
+		}
 }
 
 .text-block {
 	font-size: 21px;
 	color: $light-text-gray;
 
-	.right{
+	.right {
 		float: left;
 		margin-right: 20px;
+
+		@media(max-width: 700px) {
+			margin: 0;
+			float: none;
+		}
 	}
 
-	.left{
+	.left {
 		float: right;
 		margin-left: 20px;
+
+		@media(max-width: 700px) {
+			float: none;
+			margin: 0;
+		}
 	}
 
-	h1, h2 {
+	h1,
+	h2 {
 		font-size: 36px;
 		font-weight: 800;
 		text-align: center;
@@ -40,7 +69,7 @@
 		}
 
 		span {
-			background-color: #f8f8f8;
+			background-color: $white;
 			padding: 0 20px;
 			margin: 0 auto;
 			position: relative;
@@ -48,7 +77,7 @@
 		}
 	}
 
-	ol{
+	ol {
 		margin-top: 15px;
 		margin-bottom: 25px;
 		padding-left: 15px;
@@ -56,8 +85,8 @@
 		gap: 12px;
 		flex-direction: column;
 
-		li{
-			&::marker{
+		li {
+			&::marker {
 				color: $red;
 				font-weight: 700;
 			}
@@ -103,19 +132,19 @@
 		margin-bottom: 18px
 	}
 
-	blockquote{
+	blockquote {
 		padding: 20px;
 		padding-left: 35px;
 		background-color: $white;
 		margin-bottom: 30px;
 		border: 4px outset #3dd9ab;
-    border-radius: 10px;
-    font-style: italic;
+		border-radius: 10px;
+		font-style: italic;
 		position: relative;
 		border: 4px outset #3dd9ab;
 		border-radius: 30px;
 
-		&::before{
+		&::before {
 			width: 20px;
 			height: 20px;
 			content: "";
@@ -129,23 +158,24 @@
 		}
 	}
 
-	a{
+	a {
 		font-weight: 700;
 		color: #04a3bb;
 		text-decoration: underline;
 		transition: 0.3s;
 
-		&:hover{
+		&:hover {
 			color: $dark-red;
 		}
 	}
 
-	@media(max-width: 600px){
-		h2{
-		font-size: 28px;
-		span{
-			padding: 0 5px;
+	@media(max-width: 600px) {
+		h2 {
+			font-size: 28px;
+
+			span {
+				padding: 0 5px;
+			}
 		}
-	}
 	}
 }

@@ -271,4 +271,43 @@ b{
 
 @import 'vendor/contacts.scss';
 
-@import 'vendor/review-form.scss'
+@import 'vendor/review-form.scss';
+
+html {
+		scroll-behavior: smooth;
+}
+#myBtn {
+		pointer-events: none;
+		position: fixed;
+		bottom: 160px;
+		left: -70px;
+		z-index: 99;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		width: 60px;
+		height: 60px;
+		padding: 5px;
+		transition: .3s;
+
+		@media(max-width:1300px){
+			left: 5px;
+		} 
+
+		@media(max-width:930px){
+			left: 5px;
+			bottom: 180px
+		}
+
+		@media(max-width:800px){
+			left: 5px;
+			bottom: 150px
+		}
+
+		
+}
+#myBtn.is-visible{
+		pointer-events: all;
+		left: 30px;
+}
+/* /GO TO TOP BUTTON */

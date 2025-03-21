@@ -42,15 +42,13 @@ if (burger) {
 let converseCardWrapper = document.querySelector(".converse__card-wrapper");
 if (converseCardWrapper) {
 	let converseClose = document.querySelector(".converse__close");
-	//let getUpButton = document.querySelector("#toTop");
-	//getUpButton.style.bottom = "160px";
-	//getUpButton.style.transition = "0.3s";
+	let getUpButton = document.querySelector("#myBtn");
 	converseClose.addEventListener("click", () => {
-		// if (getUpButton.style.bottom == "160px") {
-		// 	getUpButton.style.bottom = "45px";
-		// } else {
-		// 	getUpButton.style.bottom = "160px";
-		// }
+		if (getUpButton.style.bottom == "40px") {
+		 	getUpButton.removeAttribute("style");
+		} else {
+		 	getUpButton.style.bottom = "40px";
+		}
 		converseClose.classList.toggle("converse__close_hidden");
 		converseCardWrapper.classList.toggle("converse__card-wrapper_hidden");
 	})
@@ -440,7 +438,7 @@ if (articleNavigation) {
 //Сколько элементов внутри контента таба показать
 const paginationNumber = 5
 
-function countHiddenItems(tabContent){
+function countHiddenItems(tabContent) {
 	elements = Array.from(tabContent.children)
 	hiddenElements = elements.filter(element => {
 		return !element.classList.contains("show")
@@ -448,14 +446,14 @@ function countHiddenItems(tabContent){
 	return hiddenElements.length
 }
 
-function HiddenElementsInit(tabContent, paginationNumber){
-	if(countHiddenItems(tabContent) > paginationNumber){
+function HiddenElementsInit(tabContent, paginationNumber) {
+	if (countHiddenItems(tabContent) > paginationNumber) {
 		elements = tabContent.children
-		for(let i = 0; i < paginationNumber; i++){
+		for (let i = 0; i < paginationNumber; i++) {
 			elements[i].classList.add("show")
 		}
 		document.querySelector(".tab__show-more-btn").classList.add("active");
-	} else{
+	} else {
 		elements.forEach(element => {
 			element.classList.add('show');
 		});
@@ -469,11 +467,11 @@ function tabsShowMore(paginationNumber) {
 	hiddenElements = elements.filter(element => {
 		return !element.classList.contains("show")
 	})
-	if(hiddenElements.length > paginationNumber){
-		for(let i = 0; i < paginationNumber; i++){
+	if (hiddenElements.length > paginationNumber) {
+		for (let i = 0; i < paginationNumber; i++) {
 			hiddenElements[i].classList.add("show")
 		}
-	} else{
+	} else {
 		hiddenElements.forEach(element => {
 			element.classList.add("show")
 		});
@@ -483,21 +481,21 @@ function tabsShowMore(paginationNumber) {
 
 const tabBtns = document.querySelectorAll(".tab-btn");
 const tabContents = document.querySelectorAll(".tab-content")
-if(tabBtns.length > 0 && tabContents.length > 0){
+if (tabBtns.length > 0 && tabContents.length > 0) {
 	tabBtns[0].classList.add("active")
 	tabContents[0].classList.add("active")
 	HiddenElementsInit(tabContents[0], paginationNumber)
-	for(let i = 0; i < tabBtns.length; i++){
-		tabBtns[i].addEventListener("click", (e)=>{
-			if(e.currentTarget.classList.contains("active")){
+	for (let i = 0; i < tabBtns.length; i++) {
+		tabBtns[i].addEventListener("click", (e) => {
+			if (e.currentTarget.classList.contains("active")) {
 				e.currentTarget.closest(".tab-btns-wrapper").classList.toggle("active")
-			} else{
+			} else {
 				e.currentTarget.closest(".tab-btns-wrapper").classList.remove("active")
 				document.querySelectorAll(".tab-btn.active").forEach(el => {
 					el.classList.remove("active")
 				});
 				document.querySelectorAll(".tab-content.active").forEach(el => {
-					Array.from(el.children).forEach(el =>{
+					Array.from(el.children).forEach(el => {
 						el.classList.remove('show')
 					})
 					el.classList.remove("active")
@@ -511,10 +509,73 @@ if(tabBtns.length > 0 && tabContents.length > 0){
 }
 
 showMoreBtn = document.querySelector(".tab__show-more-btn")
-if(showMoreBtn){
+if (showMoreBtn) {
 	showMoreBtn.addEventListener("click", () => {
 		tabsShowMore(paginationNumber)
 	})
+}
+
+//Маска для номера телефона (удалить при интеграции заявок)
+[].forEach.call(
+	document.querySelectorAll('input[type=tel]'),
+	function (input) {
+		let keyCode
+		function mask(event) {
+			event.keyCode && (keyCode = event.keyCode)
+			let pos = this.selectionStart
+			if (pos < 3) event.preventDefault()
+			let matrix = '+7 (___) ___-__-__',
+				i = 0,
+				def = matrix.replace(/\D/g, ''),
+				val = this.value.replace(/\D/g, ''),
+				new_value = matrix.replace(/[_\d]/g, function (a) {
+					return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+				})
+			i = new_value.indexOf('_')
+			if (i != -1) {
+				i < 5 && (i = 3)
+				new_value = new_value.slice(0, i)
+			}
+			let reg = matrix
+				.substr(0, this.value.length)
+				.replace(/_+/g, function (a) {
+					return '\\d{1,' + a.length + '}'
+				})
+				.replace(/[+()]/g, '\\$&')
+			reg = new RegExp('^' + reg + '$')
+			if (
+				!reg.test(this.value) ||
+				this.value.length < 5 ||
+				(keyCode > 47 && keyCode < 58)
+			)
+				this.value = new_value
+			if (event.type == 'blur' && this.value.length < 5) this.value = ''
+		}
+		input.addEventListener('input', mask, false)
+		input.addEventListener('focus', mask, false)
+		input.addEventListener('blur', mask, false)
+		input.addEventListener('keydown', mask, false)
+	}
+)
+
+//Кнопка наверх
+mybutton = document.getElementById("myBtn");
+
+if (mybutton) {
+	window.onscroll = function () { scrollFunction() };
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.classList.add('is-visible');
+		} else {
+			mybutton.classList.remove('is-visible');
+		}
+	}
+
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
 }
 
 //Просмотр для фотографий

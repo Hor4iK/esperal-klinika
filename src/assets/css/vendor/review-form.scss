@@ -135,6 +135,8 @@
 .rating-area:not(:checked)>label:hover,
 .rating-area:not(:checked)>label:hover~label {
 	color: #FEB700;
+	text-shadow:#FEB700 0px 0px 10px;
+	transition: 0.3s;
 }
 
 .rating-area>input:checked+label:hover,
@@ -143,6 +145,7 @@
 .rating-area>input:checked~label:hover~label,
 .rating-area>label:hover~input:checked~label {
 	color: #FEB700;
+	text-shadow:#FEB700 0px 0px 10px ;
 }
 
 .rate-area>label:active {

@@ -38,6 +38,7 @@
 
 			&::before{
 				content: "";
+				flex-shrink: 0;
 				display: block;
 				width: 15px;
 				height: 3px;
