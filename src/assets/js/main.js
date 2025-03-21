@@ -440,7 +440,7 @@ if (articleNavigation) {
 //Сколько элементов внутри контента таба показать
 const paginationNumber = 5
 
-function countHiddenItems(tabContent){
+function countHiddenItems(tabContent) {
 	elements = Array.from(tabContent.children)
 	hiddenElements = elements.filter(element => {
 		return !element.classList.contains("show")
@@ -448,14 +448,14 @@ function countHiddenItems(tabContent){
 	return hiddenElements.length
 }
 
-function HiddenElementsInit(tabContent, paginationNumber){
-	if(countHiddenItems(tabContent) > paginationNumber){
+function HiddenElementsInit(tabContent, paginationNumber) {
+	if (countHiddenItems(tabContent) > paginationNumber) {
 		elements = tabContent.children
-		for(let i = 0; i < paginationNumber; i++){
+		for (let i = 0; i < paginationNumber; i++) {
 			elements[i].classList.add("show")
 		}
 		document.querySelector(".tab__show-more-btn").classList.add("active");
-	} else{
+	} else {
 		elements.forEach(element => {
 			element.classList.add('show');
 		});
@@ -469,11 +469,11 @@ function tabsShowMore(paginationNumber) {
 	hiddenElements = elements.filter(element => {
 		return !element.classList.contains("show")
 	})
-	if(hiddenElements.length > paginationNumber){
-		for(let i = 0; i < paginationNumber; i++){
+	if (hiddenElements.length > paginationNumber) {
+		for (let i = 0; i < paginationNumber; i++) {
 			hiddenElements[i].classList.add("show")
 		}
-	} else{
+	} else {
 		hiddenElements.forEach(element => {
 			element.classList.add("show")
 		});
@@ -483,21 +483,21 @@ function tabsShowMore(paginationNumber) {
 
 const tabBtns = document.querySelectorAll(".tab-btn");
 const tabContents = document.querySelectorAll(".tab-content")
-if(tabBtns.length > 0 && tabContents.length > 0){
+if (tabBtns.length > 0 && tabContents.length > 0) {
 	tabBtns[0].classList.add("active")
 	tabContents[0].classList.add("active")
 	HiddenElementsInit(tabContents[0], paginationNumber)
-	for(let i = 0; i < tabBtns.length; i++){
-		tabBtns[i].addEventListener("click", (e)=>{
-			if(e.currentTarget.classList.contains("active")){
+	for (let i = 0; i < tabBtns.length; i++) {
+		tabBtns[i].addEventListener("click", (e) => {
+			if (e.currentTarget.classList.contains("active")) {
 				e.currentTarget.closest(".tab-btns-wrapper").classList.toggle("active")
-			} else{
+			} else {
 				e.currentTarget.closest(".tab-btns-wrapper").classList.remove("active")
 				document.querySelectorAll(".tab-btn.active").forEach(el => {
 					el.classList.remove("active")
 				});
 				document.querySelectorAll(".tab-content.active").forEach(el => {
-					Array.from(el.children).forEach(el =>{
+					Array.from(el.children).forEach(el => {
 						el.classList.remove('show')
 					})
 					el.classList.remove("active")
@@ -511,10 +511,56 @@ if(tabBtns.length > 0 && tabContents.length > 0){
 }
 
 showMoreBtn = document.querySelector(".tab__show-more-btn")
-if(showMoreBtn){
+if (showMoreBtn) {
 	showMoreBtn.addEventListener("click", () => {
 		tabsShowMore(paginationNumber)
 	})
+}
+
+//Табы для статей
+articlesTabs = document.querySelectorAll(".articles__tab")
+articles = document.querySelectorAll(".articles__card")
+
+if (articlesTabs.length > 0 && articles.length > 0) {
+	articlesTabs.forEach(tab => {
+		if (tab.classList.contains("articles__tab_all")) {
+			tab.classList.add("active")
+			articles.forEach(article => {
+				article.classList.add("active")
+			})
+			tab.addEventListener("click", (e)=>{
+				document.querySelectorAll(".articles__tab.active").forEach(tab => {
+					tab.classList.remove("active")
+				})
+				e.currentTarget.classList.add("active")
+				articles.forEach(article => {
+					article.classList.remove("active")
+					setTimeout(() => {
+						article.classList.add("active")
+					});
+				})
+			})
+		} else {
+			tab.addEventListener("click", (e) => {
+				document.querySelectorAll(".articles__tab.active").forEach(tab => {
+					tab.classList.remove("active")
+				})
+				e.currentTarget.classList.add("active")
+				articles.forEach(article => {
+					article.classList.remove("active")
+				})
+				articles.forEach(article => {
+					article.querySelectorAll(".articles__categories span").forEach(tag => {
+						if (tag.innerHTML.trim() == e.currentTarget.innerHTML.trim()) {
+							setTimeout(() => {
+								article.classList.add("active")
+							});
+						}
+					})
+				});
+			})
+		}
+	});
 }
 
 //Просмотр для фотографий

@@ -3635,17 +3635,53 @@ input.popup__button {
 .articles {
   padding: 30px 0;
 }
+.articles__tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.articles__tab {
+  background-color: rgba(22, 109, 109, 0.6784313725);
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 30px;
+  color: #fff;
+  transition: 0.3s;
+}
+.articles__tab:hover {
+  background-color: #166d6d;
+}
+.articles__tab.active {
+  background-color: #166d6d;
+}
 .articles__inner {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
+@keyframes articles {
+  from {
+    scale: 1.1;
+  }
+  to {
+    scale: 1;
+  }
+}
 .articles__card {
-  display: block;
+  transition: 0.3s;
+  display: none;
   aspect-ratio: 3/1;
   position: relative;
   box-shadow: 0 2px 7px 0 hsla(0, 0%, 4%, 0.05), 3px 27px 54px -34px rgba(0, 0, 0, 0.47);
   flex-basis: calc(50% - 15px);
+}
+.articles__card:hover {
+  transform: scale(1.02);
+}
+.articles__card.active {
+  display: block;
+  animation: articles 0.3s;
 }
 @media (max-width: 1080px) {
   .articles__card {
@@ -3661,9 +3697,6 @@ input.popup__button {
   .articles__card {
     aspect-ratio: 4/3;
   }
-}
-.articles__card:first-child {
-  flex-basis: 100%;
 }
 .articles__card picture {
   width: 100%;
@@ -3681,6 +3714,21 @@ input.popup__button {
   left: 0;
   width: 100%;
   padding: 20px;
+  background-color: rgba(253, 253, 253, 0.45);
+}
+.articles__categories {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+.articles__categories span {
+  display: block;
+  padding: 10px;
+  border-radius: 30px;
   background-color: rgba(253, 253, 253, 0.45);
 }
 .articles__title {
