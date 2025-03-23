@@ -45,9 +45,9 @@ if (converseCardWrapper) {
 	let getUpButton = document.querySelector("#myBtn");
 	converseClose.addEventListener("click", () => {
 		if (getUpButton.style.bottom == "40px") {
-		 	getUpButton.removeAttribute("style");
+			getUpButton.removeAttribute("style");
 		} else {
-		 	getUpButton.style.bottom = "40px";
+			getUpButton.style.bottom = "40px";
 		}
 		converseClose.classList.toggle("converse__close_hidden");
 		converseCardWrapper.classList.toggle("converse__card-wrapper_hidden");
@@ -516,25 +516,43 @@ if (showMoreBtn) {
 }
 
 //Табы для статей
-articlesTabs = document.querySelectorAll(".articles__tab")
 articles = document.querySelectorAll(".articles__card")
+articlesInner = document.querySelector(".articles__inner")
+articlesTabs = document.querySelector(".articles__tabs")
 
-if (articlesTabs.length > 0 && articles.length > 0) {
+if (articles.length > 0 && articlesInner && articlesTabs) {
+	tagsNames = new Array;
+	articles.forEach(article => {
+		article.querySelectorAll(".articles__categories span").forEach(tag => {
+			if (tagsNames.indexOf(tag.innerHTML.trim()) == -1) {
+				tagsNames.push(tag.innerHTML.trim())
+				newTab = document.createElement('div')
+				newTab.innerHTML = tag.innerHTML.trim()
+				newTab.classList.add("articles__tab")
+				articlesTabs.appendChild(newTab)
+			}
+		})
+	});
+
+	articlesTabs = document.querySelectorAll(".articles__tab")
+
 	articlesTabs.forEach(tab => {
 		if (tab.classList.contains("articles__tab_all")) {
 			tab.classList.add("active")
 			articles.forEach(article => {
 				article.classList.add("active")
 			})
-			tab.addEventListener("click", (e)=>{
+			tab.addEventListener("click", (e) => {
 				document.querySelectorAll(".articles__tab.active").forEach(tab => {
 					tab.classList.remove("active")
 				})
 				e.currentTarget.classList.add("active")
+				articlesInner.style.minHeight = "100vh";
 				articles.forEach(article => {
 					article.classList.remove("active")
 					setTimeout(() => {
 						article.classList.add("active")
+						articlesInner.removeAttribute("style")
 					});
 				})
 			})
@@ -544,6 +562,7 @@ if (articlesTabs.length > 0 && articles.length > 0) {
 					tab.classList.remove("active")
 				})
 				e.currentTarget.classList.add("active")
+				articlesInner.style.minHeight = "100vh";
 				articles.forEach(article => {
 					article.classList.remove("active")
 				})
@@ -555,6 +574,9 @@ if (articlesTabs.length > 0 && articles.length > 0) {
 							});
 						}
 					})
+				});
+				setTimeout(() => {
+					articlesInner.removeAttribute("style")
 				});
 			})
 		}

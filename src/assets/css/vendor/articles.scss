@@ -33,21 +33,23 @@
 
 	@keyframes articles{
 		from{
+			opacity: 0.8;
 			scale: 1.1;
 		}
 		to{
+			opacity: 1;
 			scale: 1;
 		}
 	}
 
 	&__card{
-		transition: 0.3s;
+		transition: 1s;
 		&:hover{
 			transform: scale(1.02);
 		}
 		&.active{
 			display: block;
-			animation: articles 0.3s;
+			animation: articles 1s;
 		}
 
 		@media(max-width: 1080px){
