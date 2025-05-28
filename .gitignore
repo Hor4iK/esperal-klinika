@@ -3,3 +3,4 @@ gulp
 gulpfile.js
 package-lock.json
 package.json
+.editorconfig

@@ -1,23 +1,8 @@
 @font-face {
-	font-family: "Segoe UI";
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: local("Segoe UI"), url("../fonts/SegoeUI.woff2") format("woff2"), url("../fonts/SegoeUI.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Segoe UI";
-	font-style: normal;
-	font-weight: 600;
-	font-display: swap;
-	src:local("Segoe UI Semi-Bold"), url("../fonts/SegoeUI-SemiBold.woff2") format("woff2"), url("../fonts/SegoeUI-SemiBold.woff") format("woff");
-}
-
-@font-face {
-	font-family: "Segoe UI";
-	font-style: normal;
-	font-weight: 700;
-	font-display: swap;
-	src:local("Segoe UI Bold"), url("../fonts/SegoeUI-Bold.woff2") format("woff2"), url("../fonts/SegoeUI-Bold.woff") format("woff");
+  font-family: 'InterTight';
+  src:
+    url(../fonts/InterTight-Regular.woff) format('woff supports variations'),
+	url(../fonts/InterTight-Regular.woff2) format('woff2 supports variations');
+  font-weight: 400 600;
+  font-display: swap;
 }

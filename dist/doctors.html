@@ -7,7 +7,7 @@
     <head>
     	<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<title>Преправки</title>
+    	<title>Esperal-klinika</title>
     	<link rel="stylesheet" href="assets/css/styles.css">
     	<link rel="stylesheet" href="assets/css/build/fancybox.min.css">
     	<link rel="stylesheet" href="assets/css/build/swiper.css">
@@ -17,335 +17,55 @@
     </head></head>
 <body>
 <div class="page">
-    <div class="header__attention">
-    	<p>Мы работаем круглосуточно, в выходные и праздники бригады работают в усиленном режиме. В праздничные дни
-    		количество бригад увеличено.</p>
-    </div>
     <header class="header">
     	<div class="content">
-    		<div class="header__row header__row_info">
-    			<div class="header__mobile-row">
-    				<a href="/" class="header__logo">
-    					<picture>
-    						<source srcset="assets/img/header/logo.webp" type="image/webp">
-    						<img src="assets/img/header/logo.png" alt="логотип клиники">
-    					</picture>
-    				</a>
-    				<div class="header__social-buttons_mobile">
-    					<div class="header__social-button popup-btn" data-path="popup-call">
-    						<picture>
-    							<img src="assets/img/icons/car-icon.png" alt="иконка машины">
-    						</picture>
-    					</div>
-    					<div class="header__social-button">
-    						<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-    							<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-    							<g id="SVGRepo_iconCarrier">
-    								<path
-    									d="M6.014 8.00613C6.12827 7.1024 7.30277 5.87414 8.23488 6.01043L8.23339 6.00894C9.14051 6.18132 9.85859 7.74261 10.2635 8.44465C10.5504 8.95402 10.3641 9.4701 10.0965 9.68787C9.7355 9.97883 9.17099 10.3803 9.28943 10.7834C9.5 11.5 12 14 13.2296 14.7107C13.695 14.9797 14.0325 14.2702 14.3207 13.9067C14.5301 13.6271 15.0466 13.46 15.5548 13.736C16.3138 14.178 17.0288 14.6917 17.69 15.27C18.0202 15.546 18.0977 15.9539 17.8689 16.385C17.4659 17.1443 16.3003 18.1456 15.4542 17.9421C13.9764 17.5868 8 15.27 6.08033 8.55801C5.97237 8.24048 5.99955 8.12044 6.014 8.00613Z"
-    									fill="#fff"></path>
-    								<path fill-rule="evenodd" clip-rule="evenodd"
-    									d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z"
-    									fill="#fff"></path>
-    							</g>
-    						</svg>
-    					</div>
-    					<div class="header__social-button">
-    						<svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
-    							<path fill-rule="evenodd" clip-rule="evenodd"
-    								d="M11.3048 15.8686C11.5765 13.8522 25.9775 2.84943 22.5882 4.68322L13.4356 10.0969C8.02277 13.4576 8.41605 12.9243 9.56011 16.9207C9.66737 17.3079 10.1178 19.4485 10.4754 19.8869C11.1118 20.6686 11.2977 15.9197 11.3048 15.8686ZM6.23517 13.6914C6.75 13.9033 6.64274 13.8302 6.81435 14.4439C7.20047 15.7955 7.60805 17.0449 8.00132 18.3891C9.3456 22.9407 9.17399 22.97 11.0832 21.3846C14.2293 18.7691 13.9433 18.5133 15.7452 19.8138L20.9579 23.7006C22.438 24.8476 22.5167 22.5316 22.7741 21.2896L26.9571 0.927967C27.05 0.533446 26.9928 0.285045 26.8498 0.153538C26.5495 -0.131393 25.8559 0.0512549 25.2982 0.277739L3.08898 9.02294C-3.56806 11.58 1.98066 11.9745 6.23517 13.6914Z"
-    								fill="white"></path>
-    						</svg>
-    					</div>
-    					<div class="header__social-button">
-    						<picture>
-    							<svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80"
-    								onclick="this.classList.toggle('active')">
-    								<path class="line top"
-    									d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
-    								<path class="line middle" d="m 30,50 h 40" />
-    								<path class="line bottom"
-    									d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
-    							</svg>
-    					</div>
+    		<div class="header__row">
+    			<div class="header__address">
+    				<div class="point-mark point-map">
     				</div>
+    				<p class="header__address__container">
+    					<span class="header__address__title">Саратов</span>,<span
+    						class="header__address__caption">Московская 34</span>
+    				</p>
     			</div>
-    			<div class="header__col header__col_phones">
-    				<a href="tel:8 (800) 511-53-86" class="header__phone">
-    					<picture>
-    						<img src="assets/img/icons/phone-icon.png" alt="Иконка телефона">
-    					</picture>
-    					<span>
-    						8 (800) 511-53-86
-    					</span>
-    				</a>
-    				<a href="tel:8 (800) 511-53-86" class="header__phone">
-    					<picture>
-    						<img src="assets/img/icons/phone-icon.png" alt="Иконка телефона">
-    					</picture>
-    					<span>
-    						8 (800) 511-53-86
-    					</span>
-    				</a>
+    			<div class="header__logo__wrapper logo">
+    				<picture class="logo__picture">
+    					<source srcset="/assets/img/header/logo.webp" type="image/webp">
+    					<source srcset="/assets/img/header/logo.svg" type="image/svg+xml">
+    					<img src="/assets/img/header/logo.png" alt="Логотип">
+    				</picture>
+    				<span class="header__logo__title">Эспераль-Клиник</span>
     			</div>
-    			<div class="header__col header__col_address">
-    				<p class="header__address">Адрес колл-центра:</p>
-    				<span class="popup-btn" data-path="popup-city">Екатеринбург</span>
-    				<div>
-    					<picture>
-    						<img src="assets/img/icons/placeholder-icon.png" alt="плейсхолдер">
-    					</picture>
-    					<p>ул. Норильская, стр. 77</p>
+    			<div class="header__btns-container">
+    				<div class="point-mark point-tel">
     				</div>
-    			</div>
-    			<div class="header__col header__col_buttons">
-    				<div class="header__sub-row">
-    					<form class="header__search">
-    						<input type="search" placeholder="Поиск по сайту">
-    						<input type="submit" value="Найти">
-    					</form>
-    					<button class="popup-btn button button_red button_icon" data-path="popup-call">
-    						<span>
-    							Вызвать врача
-    						</span>
-    						<picture>
-    							<img src="assets/img/icons/car-icon.png" alt="Иконка скорой">
-    						</picture>
-    					</button>
+    				<div class="point-mark point-tg">
     				</div>
-    				<div class="header__sub-row header__social-buttons">
-    					<a href="#" class="header__social header__social_wa">
-    						<picture>
-    							<img src="assets/img/icons/wa-icon.svg" alt="WA иконка">
-    						</picture>
-    						<span>
-    							WhatsApp
-    						</span>
-    					</a>
-    					<a href="#" class="header__social header__social_tg">
-    						<picture>
-    							<img src="assets/img/icons/tg-icon.svg" alt="иконка tg">
-    						</picture>
-    						<span>
-    							Telegram
-    						</span>
-    					</a>
-    					<p class="header__social">
-    						Наркология: 24/7
-    					</p>
-    				</div>
+    				<button class="btn btn_accent btn-popup">записаться на прием</button>
     			</div>
     		</div>
-    	</div>
-    	<div class="header__row header__row_menu">
-    		<div class="content">
-    			<ul class="header__menu menu">
-    				<li class="menu__element menu__element_sub">
-    					<a href="#">О клинике</a>
-    					<span class="menu__sub-open"></span>
-    					<ul class="menu__submenu">
-    						<li><a href="">Элемент подменю</a></li>
-    						<li><a href="">Элемент подменю</a></li>
-    						<li><a href="">Элемент подменю</a></li>
-    						<li><a href="">Элемент подменю</a></li>
-    						<li><a href="">Элемент подменю</a></li>
-    						<li><a href="">Элемент подменю</a></li>
-    					</ul>
-    				</li>
-    				<li class="menu__element menu__element_sub">
-    					<a href="">Услуги</a>
-    					<span class="menu__sub-open"></span>
-    					<ul class="menu__submenu">
-    						<li class="menu__element have-sub">
-    							<a href="">Элемент подменю</a>
-    							<span class="menu__sub-open"></span>
-    							<ul class="menu__submenu menu__submenu_second">
-    								<li><a href="">Элемент подменю</a></li>
-    								<li><a href="">Элемент подменю</a></li>
-    								<li><a href="">Элемент подменю</a></li>
-    								<li><a href="">Элемент подменю</a></li>
-    								<li><a href="">Элемент подменю</a></li>
-    								<li><a href="">Элемент подменю</a></li>
-    							</ul>
-    						</li>
-    					</ul>
-    				</li>
-    				<li class="menu__element"><a href="">Цены</a></li>
-    				<li class="menu__element"><a href="">Акции</a></li>
-    				<li class="menu__element"><a href="">Вопросы и ответы</a></li>
-    				<li class="menu__element"><a href="">Отзывы</a></li>
-    				<li class="menu__element"><a href="">Контакты</a></li>
-    			</ul>
-    			<button class="header__spec-btn">
-    				<picture>
-    					<img src="assets/img/icons/glaz-icon.svg" alt="иконка глаза">
-    				</picture>
-    			</button>
-    			<div class="header__contacts_mobile">
-    				<a data-path="popup-city" class="popup-btn select_city">Екатеринбург</a>
-    				<a href="tel:8 (800) 511-53-86" class="header__phone">
-    					<picture>
-    						<img src="assets/img/icons/phone-icon.png" alt="Иконка телефона">
-    					</picture>
-    					<span>
-    						8 (800) 511-53-86
-    					</span>
-    				</a>
-    				<a href="tel:8 (800) 511-53-86" class="header__phone">
-    					<picture>
-    						<img src="assets/img/icons/phone-icon.png" alt="Иконка телефона">
-    					</picture>
-    					<span>
-    						8 (800) 511-53-86
-    					</span>
-    				</a>
-    				<div class="header__phone">
-    					<picture>
-    						<img src="assets/img/icons/placeholder-icon.png" alt="плейсхолдер">
-    					</picture>
-    					<span>ул. Норильская, стр. 77</span>
-    				</div>
-    				<div class="header__phone">
-    					<picture>
-    						<img src="assets/img/icons/time-icon.svg" alt="иконка часов">
-    					</picture>
-    					<span>Наркология: 24/7</span>
-    				</div>
+    		<div class="header__row">
+    			<a class="header__phone-link" href="+799999999999">+7 999 999-99-99</a>
+    			<menu class="header__menu">
+    				<ul class="header__menu__list">
+    					<li class="header__menu__item">Услуги</li>
+    					<li class="header__menu__item">О центре</li>
+    					<li class="header__menu__item">Врачи</li>
+    					<li class="header__menu__item">Цены</li>
+    					<li class="header__menu__item">Акции</li>
+    					<li class="header__menu__item">Отзывы</li>
+    					<li class="header__menu__item">Контакты</li>
+    				</ul>
+    			</menu>
+    			<div class="header__search search">
+    				<form action="" class="search__form">
+    					<input type="text" class="input search-input">
+    				</form>
     			</div>
     		</div>
     	</div>
     </header><main class="main">
-    <section class="doctors">
-    	<div class="content">
-    		<div class="intro__breadcrambs content">
-    			<ul>
-    				<li><a href="/">Главная</a></li>
-    				<li><a href="/">Вывод из запоя</a></li>
-    				<li><span>Капельница от похмелья</span></li>
-    			</ul>
-    		</div>
-    		<h1 class="section-title doctors__title">
-    			<span>Врачи клиники</span>
-    		</h1>
-    		<div class="doctors__inner doctors__inner_page">
-    			<a href="#" class="doctors__card change-item">
-    				<div class="doctors__photo">
-    					<picture>
-    						<source srcset="assets/img/doctors/korotkov.jpg" type="image/webp">
-    						<img src="assets/img/doctors/korotkov.jpg" alt="Фотография доктора">
-    					</picture>
-    				</div>
-    				<div class="doctors__info">
-    					<p class="doctors__name change-title">
-    						Чернов Александр Александрович
-    					</p>
-    					<p class="doctors__spec">
-    						психиатр, нарколог, психотерапевт
-    					</p>
-    				</div>
-    				<div class="doctors__button popup-btn change-doctor" data-path="popup-change">
-    					Обратиться
-    				</div>
-    			</a>
-    			<a href="#" class="doctors__card change-item">
-    				<div class="doctors__photo">
-    					<picture>
-    						<source srcset="assets/img/doctors/korotkov.jpg" type="image/webp">
-    						<img src="assets/img/doctors/korotkov.jpg" alt="Фотография доктора">
-    					</picture>
-    				</div>
-    				<div class="doctors__info">
-    					<p class="doctors__name change-title">
-    						Чернов Александр Александрович
-    					</p>
-    					<p class="doctors__spec">
-    						психиатр, нарколог, психотерапевт
-    					</p>
-    				</div>
-    				<div class="doctors__button popup-btn change-doctor" data-path="popup-change">
-    					Обратиться
-    				</div>
-    			</a>
-    			<a href="#" class="doctors__card change-item">
-    				<div class="doctors__photo">
-    					<picture>
-    						<source srcset="assets/img/doctors/korotkov.jpg" type="image/webp">
-    						<img src="assets/img/doctors/korotkov.jpg" alt="Фотография доктора">
-    					</picture>
-    				</div>
-    				<div class="doctors__info">
-    					<p class="doctors__name change-title">
-    						Чернов Александр Александрович
-    					</p>
-    					<p class="doctors__spec">
-    						психиатр, нарколог, психотерапевт
-    					</p>
-    				</div>
-    				<div class="doctors__button popup-btn change-doctor" data-path="popup-change">
-    					Обратиться
-    				</div>
-    			</a>
-    			<a href="#" class="doctors__card change-item">
-    				<div class="doctors__photo">
-    					<picture>
-    						<source srcset="assets/img/doctors/korotkov.jpg" type="image/webp">
-    						<img src="assets/img/doctors/korotkov.jpg" alt="Фотография доктора">
-    					</picture>
-    				</div>
-    				<div class="doctors__info">
-    					<p class="doctors__name change-title">
-    						Чернов Александр Александрович
-    					</p>
-    					<p class="doctors__spec">
-    						психиатр, нарколог, психотерапевт
-    					</p>
-    				</div>
-    				<div class="doctors__button popup-btn change-doctor" data-path="popup-change">
-    					Обратиться
-    				</div>
-    			</a>
-    			<a href="#" class="doctors__card change-item">
-    				<div class="doctors__photo">
-    					<picture>
-    						<source srcset="assets/img/doctors/korotkov.jpg" type="image/webp">
-    						<img src="assets/img/doctors/korotkov.jpg" alt="Фотография доктора">
-    					</picture>
-    				</div>
-    				<div class="doctors__info">
-    					<p class="doctors__name change-title">
-    						Чернов Александр Александрович
-    					</p>
-    					<p class="doctors__spec">
-    						психиатр, нарколог, психотерапевт
-    					</p>
-    				</div>
-    				<div class="doctors__button popup-btn change-doctor" data-path="popup-change">
-    					Обратиться
-    				</div>
-    			</a>
-    			<a href="#" class="doctors__card change-item">
-    				<div class="doctors__photo">
-    					<picture>
-    						<source srcset="assets/img/doctors/korotkov.jpg" type="image/webp">
-    						<img src="assets/img/doctors/korotkov.jpg" alt="Фотография доктора">
-    					</picture>
-    				</div>
-    				<div class="doctors__info">
-    					<p class="doctors__name change-title">
-    						Чернов Александр Александрович
-    					</p>
-    					<p class="doctors__spec">
-    						психиатр, нарколог, психотерапевт
-    					</p>
-    				</div>
-    				<div class="doctors__button popup-btn change-doctor" data-path="popup-change">
-    					Обратиться
-    				</div>
-    			</a>
-    		</div>
-    	</div>
-    </section>
+    
 </main>
     <div class="converse__card-wrapper">
     	<div class="converse__card">

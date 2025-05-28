@@ -173,6 +173,7 @@ button {
     margin: 0;
     padding: 0;
     font-size: inherit;
+    border: none;
 }
 
 textarea {
@@ -183,6 +184,16 @@ textarea {
 
 textarea:focus {
     outline-width: 0;
+}
+
+button,
+input,
+textarea,
+a {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 input,
