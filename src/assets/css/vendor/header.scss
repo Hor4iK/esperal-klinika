@@ -1,26 +1,174 @@
+@import './mixins.scss';
+
 .header {
-	background-color: $color-white;
-	border-radius: 30px;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
+	@include container;
+	margin-block: $margin;
+
+	.content {
+		background-color: $color-white;
+		border-radius: 30px;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+	}
 
 	&__row {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+
+		&:first-of-type {
+			padding-block-end: 20px;
+		}
+
+		&:last-of-type {
+			padding-block-start: 20px;
+			position: relative;
+
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				height: 1px;
+				background-color: #dbe5f2;
+			}
+		}
 	}
 
-	&__picture img {
-		max-width: 35px;
-		object-fit: contain;
-		aspect-ratio: 1 / 1;
-		object-position: center;
+	&__phone-link {
+		display: block;
+		padding: 18px 20px 17px;
+		background-color: $light-color;
+		border-radius: 10px;
+		color: $accent-color;
+		font-weight: 600;
+		line-height: 1.4;
+		font-size: inherit;
+		outline: 1px solid transparent;
+		transition: outline 300ms ease-out;
+
+		&:hover {
+			outline: 1px solid $accent-color;
+		}
 	}
 
-	&__menu__list {
+	&__menu {
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+		align-items: center;
+		justify-content: center;
+
+		&__list {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 30px;
+
+
+		}
+
+		&__item {
+			color: inherit;
+			line-height: 1.2;
+			transition: color 400ms;
+
+			&:hover {
+				color: $accent-color;
+			}
+		}
+
+		&_point {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			&::before {
+				content: '';
+				display: block;
+				background-image: url(/assets/img/icons/cuboid.svg);
+				background-position: center center;
+				background-repeat: no-repeat;
+				width: 13px;
+				aspect-ratio: 1/1;
+				transition: transform 400ms ease-in-out;
+			}
+
+			&:hover::before {
+				transform: rotate(135deg);
+			}
+
+			&:active::before {
+				transform: rotate(135deg);
+			}
+		}
+	}
+
+	&__btns-container {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+
+	&__address {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+
+		&__container {
+			font-size: 20px;
+			line-height: 1.4;
+			font-weight: 400;
+			color: $color;
+		}
+
+		&__title {
+			font-weight: 600;
+			color: $accent-color;
+		}
+
+		&__caption {
+			opacity: 0.65;
+		}
+	}
+
+	&__search {
+		.search__input {
+			background-color: $light-color;
+		}
+	}
+}
+
+.search {
+	
+	&__form {
+		position: relative;
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: calc(50% - 9px);
+			right: 20px;
+			width: 18px;
+			aspect-ratio: 1/1;
+			background-image: url(/assets/img/icons/search.svg);
+		}
+	}
+
+	&__input {
+		outline: 1px solid $light-color;
+		padding: 14px 16px;
+		border-radius: 10px;
+		font-size: 16px;
+		line-height: 1.4;
+		color: rgb(19, 58, 102, .5);
+		position: relative;
+		transition: outline 300ms;
+
+		&:focus, &:active {
+			outline: 1px solid $accent-color;
+		}
 	}
 }

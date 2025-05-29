@@ -1,0 +1,27 @@
+$margin: 20px;
+
+@mixin container {
+    max-width: calc(1920px - $margin * 2);
+    margin-inline: $margin;
+}
+
+@mixin point-mark-psevdo {
+    content: '';
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+
+@mixin inline-gradient {
+    background: linear-gradient(134.71deg, rgb(73, 149, 236) 0%, rgb(131, 202, 232) 99.866%);
+}
+
+@mixin content-block {
+    background-color: $color-white;
+    border-radius: 30px;
+    padding: 100px;
+}
