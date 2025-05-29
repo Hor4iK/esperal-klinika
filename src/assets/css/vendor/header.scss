@@ -18,7 +18,9 @@
 		justify-content: space-between;
 
 		&:first-of-type {
-			padding-block-end: 20px;
+			@media screen and (width>700px) {
+				padding-block-end: 20px;
+			}
 		}
 
 		&:last-of-type {
@@ -35,6 +37,14 @@
 				height: 1px;
 				background-color: #dbe5f2;
 			}
+
+			@media screen and (width<=1170px) {
+				justify-content: center;
+			}
+
+			@media screen and (width<=700px) {
+				display: none;
+			}
 		}
 	}
 
@@ -50,8 +60,25 @@
 		outline: 1px solid transparent;
 		transition: outline 300ms ease-out;
 
-		&:hover {
+		&:hover,
+		&:focus,
+		&:active {
 			outline: 1px solid $accent-color;
+		}
+
+		@media screen and (width<=1170px) {
+			display: none;
+		}
+
+		&_mobile {
+			display: none;
+			font-size: clamp(1rem, 0.6618rem + 1.5686vw, 1.25rem);
+			padding: 11px 20px;
+			font-weight: 500;
+
+			@media screen and (width<=700px) {
+				display: block;
+			}
 		}
 	}
 
@@ -65,8 +92,6 @@
 			flex-direction: row;
 			justify-content: space-between;
 			gap: 30px;
-
-
 		}
 
 		&__item {
@@ -103,12 +128,67 @@
 				transform: rotate(135deg);
 			}
 		}
+
+		&__btn_mobile {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50px;
+			aspect-ratio: 1 / 1;
+			background-color: #f3f9ff;
+			border-radius: 10px;
+			position: relative;
+			transition: background-color 350ms ease-in-out, outline 300ms;
+
+			svg {
+				width: 19px;
+				aspect-ratio: 1/1;
+				transform: rotate3d(0, 0, 0, 0deg);
+				transition:
+					transform 500ms ease-in-out,
+					fill 300ms;
+			}
+
+			&:hover,
+			&:active {
+				background-color: $accent-color;
+
+				svg {
+
+					transform: rotate3d(1, 1, 1, 360deg);
+
+					path {
+						fill: #fff;
+					}
+				}
+			}
+
+			&:focus {
+				outline: 1px solid $accent-color;
+			}
+
+			@media screen and (width>700px) {
+				display: none;
+			}
+		}
 	}
 
 	&__btns-container {
 		display: flex;
 		align-items: center;
 		gap: 5px;
+
+		@media screen and (width<=700px) {
+			gap: 10px;
+
+			.btn_social {
+				display: none;
+			}
+
+			.btn-popup {
+				display: none;
+			}
+		}
 	}
 
 	&__address {
@@ -117,7 +197,7 @@
 		gap: 15px;
 
 		&__container {
-			font-size: 20px;
+			font-size: inherit;
 			line-height: 1.4;
 			font-weight: 400;
 			color: $color;
@@ -131,17 +211,31 @@
 		&__caption {
 			opacity: 0.65;
 		}
+
+		@media screen and (width<=950px) {
+			display: none;
+		}
 	}
 
 	&__search {
 		.search__input {
 			background-color: $light-color;
 		}
+
+		@media screen and (width<=1170px) {
+			display: none;
+		}
+	}
+
+	.logo__title {
+		@media screen and (width<=700px) {
+			display: none;
+		}
 	}
 }
 
 .search {
-	
+
 	&__form {
 		position: relative;
 
@@ -167,7 +261,8 @@
 		position: relative;
 		transition: outline 300ms;
 
-		&:focus, &:active {
+		&:focus,
+		&:active {
 			outline: 1px solid $accent-color;
 		}
 	}
