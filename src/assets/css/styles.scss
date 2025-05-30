@@ -9,7 +9,9 @@ $gradient-color-light: #83cae8;
 $color-white: #fff;
 $max-width: 1880px;
 $font-size: clamp(1rem, 0.7143rem + 0.5714vw, 1.25rem);
+$margin: clamp(0.625rem, -0.4688rem + 2.5vw, 1.25rem);
 
+@import "vendor/mixins";
 @import "vendor/fonts";
 @import "vendor/_normalize";
 @import "vendor/header";
@@ -31,6 +33,11 @@ body {
   font-weight: 400;
   background-color: $bg-color;
   color: $color;
+  overflow-x: hidden;
+}
+
+.page {
+  padding-inline: $margin;
 }
 
 @supports (font-variation-settings: normal) {
@@ -68,6 +75,7 @@ body {
   border-radius: 10px;
   padding: 12px 16px 15px;
   transition: background-color 400ms, color 400ms, outline 300ms ease-out;
+  outline: 2px solid transparent;
 
   &_social {
     cursor: pointer;
@@ -83,9 +91,9 @@ body {
   &_accent {
     background-color: $accent-color;
     color: $color-white;
-    outline: 1px solid transparent;
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $light-color;
       outline: 1px solid $accent-color;
       color: $accent-color;
@@ -95,12 +103,33 @@ body {
   &_light {
     background-color: $color-white;
     color: $accent-color;
-    outline: 2px solid transparent;
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: $light-color;
       outline: 1px solid $accent-color;
       color: $accent-color;
+    }
+  }
+
+  span {
+    margin-inline-start: 20px;
+    font-weight: 600;
+    font-size: clamp(1rem, 0.2553rem + 1.7021vw, 1.5rem);
+    line-height: 1.4;
+  }
+
+  .point-mark {
+    background-color: #ffffff33;
+  }
+
+  .point-mark::before {
+    transition: transform 300ms ease-in-out;
+  }
+
+  &:hover {
+    .point-mark::before {
+      transform: rotate(90deg);
     }
   }
 }
@@ -146,6 +175,11 @@ body {
   background-image: url(/assets/img/icons/cuboid.svg);
 }
 
+.point-card::before {
+  @include point-mark-psevdo;
+  background-image: url(/assets/img/icons/user-card.svg);
+}
+
 .social-container {
   display: flex;
   align-items: center;
@@ -167,6 +201,7 @@ body {
     background-color: $color-white;
     border-radius: 50%;
   }
+
   &:hover {
     &__point {
       outline: 2px solid $accent-color;
@@ -182,10 +217,7 @@ body {
 }
 
 .social-tg {
-  padding: clamp(0.5rem, 0.0346rem + 1.0638vw, 0.8125rem)
-    clamp(0.5rem, 0.0346rem + 1.0638vw, 0.8125rem)
-    clamp(0.4375rem, -0.0279rem + 1.0638vw, 0.75rem)
-    clamp(0.25rem, -0.2154rem + 1.0638vw, 0.5625rem);
+  padding: clamp(0.5rem, 0.0346rem + 1.0638vw, 0.8125rem) clamp(0.5rem, 0.0346rem + 1.0638vw, 0.8125rem) clamp(0.4375rem, -0.0279rem + 1.0638vw, 0.75rem) clamp(0.25rem, -0.2154rem + 1.0638vw, 0.5625rem);
 }
 
 @import "vendor/footer";

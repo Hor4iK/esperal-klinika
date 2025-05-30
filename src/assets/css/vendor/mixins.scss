@@ -1,8 +1,6 @@
-$margin: clamp(0.625rem, -0.4688rem + 2.5vw, 1.25rem);
-
 @mixin container {
     max-width: calc(1920px - $margin * 2);
-    margin-inline: $margin;
+    margin: 0 auto;
 }
 
 @mixin point-mark-psevdo {

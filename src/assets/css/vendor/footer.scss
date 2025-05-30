@@ -1,202 +1,187 @@
-@import './mixins.scss';
-
 .footer {
-    @include container;
-    margin-block: $margin;
-    color: $color-white;
+  @include container;
+  margin-block: $margin;
+  color: $color-white;
 
-    .content {
-        @include inline-gradient;
-        border-radius: clamp(1.5rem, -1.8511rem + 7.6596vw, 3.75rem);
-        padding: clamp(1.5rem, -3.7128rem + 11.9149vw, 5rem) clamp(1.25rem, -2.4813rem + 11.9403vw, 6.25rem) 0;
+  .content {
+    @include inline-gradient;
+    border-radius: clamp(1.5rem, -1.8511rem + 7.6596vw, 3.75rem);
+    padding: clamp(1.5rem, -3.7128rem + 11.9149vw, 5rem) clamp(1.25rem, -2.4813rem + 11.9403vw, 6.25rem) 0;
+  }
+
+  &__container {
+    display: flex;
+    gap: 18px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-block-end: clamp(2.5rem, -3.0851rem + 12.766vw, 6.25rem);
+
+    &:last-of-type {
+      align-items: center;
+      margin: 0;
+      padding-block: 35px 34px;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 1px;
+        background-color: #ffffff80;
+      }
+
+      @media screen and (width<=800px) {
+        padding-block: 40px 31px;
+      }
     }
 
-    &__container {
-        display: flex;
-        gap: 18px;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-block-end: clamp(2.5rem, -3.0851rem + 12.766vw, 6.25rem);
+    &:first-of-type {
+      @media screen and (width<=1150px) {
+        flex-wrap: wrap;
+      }
 
-        &:last-of-type {
-            align-items: center;
-            margin: 0;
-            padding-block: 35px 34px;
-            position: relative;
-
-            &::before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                height: 1px;
-                background-color: #ffffff80;
-            }
-
-            @media screen and (width<=800px) {
-                padding-block: 40px 31px;
-            }
-        }
-
-        &:first-of-type {
-            @media screen and (width<=1150px) {
-                flex-wrap: wrap;
-            }
-
-            @media screen and (width<=800px) {
-                display: grid;
-                row-gap: 40px;
-                grid-template-areas: "logo ." "links links2" "contact .";
-                justify-items: start;
-                justify-content: start;
-            }
-        }
+      @media screen and (width<=800px) {
+        display: grid;
+        row-gap: 40px;
+        grid-template-areas: "logo ." "links links2" "contact .";
+        justify-items: start;
+        justify-content: start;
+      }
     }
+  }
 
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__link {
+    font-size: clamp(0.875rem, 0.5027rem + 0.8511vw, 1.125rem);
+    line-height: 1.2;
+    transition: color 200ms;
+
+    &:hover {
+      color: #b1d5ff;
     }
+  }
 
-    &__link {
-        font-size: clamp(0.875rem, 0.5027rem + 0.8511vw, 1.125rem);
-        line-height: 1.2;
-        transition: color 200ms;
+  a {
+    transition: color 200ms;
 
-        &:hover {
-            color: #b1d5ff;
-        }
+    &:hover {
+      color: #b1d5ff;
     }
+  }
 
-    a {
-        transition: color 200ms;
+  &__title {
+    display: block;
+    font-size: clamp(1rem, 0.2553rem + 1.7021vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-block-end: 20px;
+  }
 
-        &:hover {
-            color: #b1d5ff;
-        }
+  &__logo {
+    grid-area: logo;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    .logo__title {
+      color: $color-white;
+    }
+  }
+
+  &_services {
+    grid-area: links;
+  }
+
+  &_about {
+    grid-area: links2;
+  }
+
+  &_contacts {
+    grid-area: contact;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    .footer__caption {
+      font-size: clamp(1.25rem, 0.8777rem + 0.8511vw, 1.5rem);
+      font-weight: 600;
+      line-height: 1.2;
     }
 
     &__title {
-        display: block;
-        font-size: clamp(1rem, 0.2553rem + 1.7021vw, 1.5rem);
-        font-weight: 600;
-        line-height: 1.2;
-        margin-block-end: 20px;
+      color: #ffffff80;
+      font-size: clamp(0.875rem, 0.5027rem + 0.8511vw, 1.125rem);
+      margin-block-end: 10px;
     }
 
-    &__logo {
-        grid-area: logo;
-        grid-column-start: 1;
-        grid-column-end: 3;
+    .footer__list {
+      gap: 30px;
+    }
+  }
 
-        .logo__title {
-            color: $color-white;
+  &__button {
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin-block-start: 40px;
+
+    .point-mark {
+      background-color: $light-color;
+    }
+  }
+
+  &__description {
+    font-size: clamp(0.875rem, 0.7817rem + 0.2985vw, 1rem);
+    line-height: 1.2;
+    opacity: .5;
+  }
+
+  &__social {
+    display: flex;
+    gap: clamp(1.25rem, -0.6117rem + 4.2553vw, 2.5rem);
+    color: $color-white;
+
+    .social-container {
+      transition:
+        background-color 400ms,
+        color 200ms;
+
+      &__point {
+        cursor: pointer;
+        outline: 2px solid transparent;
+        transition: outline 400ms ease-out;
+      }
+
+      &:hover {
+        .social-container__point {
+          outline: 1px solid $accent-color;
+          outline-offset: -1px;
         }
+
+        color: #b1d5ff;
+      }
     }
 
-    &_services {
-        grid-area: links;
+    @media screen and (width<=1024px) {
+      display: none;
     }
 
-    &_about {
-        grid-area: links2;
-    }
+    &_mobile {
+      margin-block-start: 30px;
+      display: none;
 
-    &_contacts {
-        grid-area: contact;
-        grid-column-start: 1;
-        grid-column-end: 3;
-
-        .footer__caption {
-            font-size: clamp(1.25rem, 0.8777rem + 0.8511vw, 1.5rem);
-            font-weight: 600;
-            line-height: 1.2;
-        }
-
-        &__title {
-            color: #ffffff80;
-            font-size: clamp(0.875rem, 0.5027rem + 0.8511vw, 1.125rem);
-            margin-block-end: 10px;
-        }
-
-        .footer__list {
-            gap: 30px;
-        }
-    }
-
-    &__button {
+      @media screen and (width<=1024px) {
         display: flex;
-        gap: 40px;
-        flex-direction: row;
-        align-items: center;
-        padding: 10px;
-        margin-block-start: 40px;
-
-        span {
-            margin-inline-start: 20px;
-            font-weight: 600;
-            font-style: 24px;
-            line-height: 1.4;
-        }
-
-        .point-mark::before {
-            transition: transform 300ms ease-in-out;
-        }
-
-        &:hover {
-            .point-mark::before {
-                transform: rotate(90deg);
-            }
-        }
+        flex-wrap: wrap;
+      }
     }
-
-    &__description {
-        font-size: clamp(0.875rem, 0.7817rem + 0.2985vw, 1rem);
-        line-height: 1.2;
-        opacity: .5;
-    }
-
-    &__social {
-        display: flex;
-        gap: clamp(1.25rem, -0.6117rem + 4.2553vw, 2.5rem);
-        color: $color-white;
-
-        .social-container {
-            transition:
-                background-color 400ms,
-                color 200ms;
-
-            &__point {
-                cursor: pointer;
-                outline: 2px solid transparent;
-                transition: outline 400ms ease-out;
-            }
-
-            &:hover {
-                .social-container__point {
-                    outline: 1px solid $accent-color;
-                    outline-offset: -1px;
-                }
-
-                color: #b1d5ff;
-            }
-        }
-
-        @media screen and (width<=1024px) {
-            display: none;
-        }
-
-        &_mobile {
-            margin-block-start: 30px;
-            display: none;
-
-            @media screen and (width<=1024px) {
-                display: flex;
-                flex-wrap: wrap;
-            }
-        }
-    }
+  }
 }

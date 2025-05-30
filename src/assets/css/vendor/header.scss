@@ -1,5 +1,3 @@
-@import "./mixins.scss";
-
 .header {
   @include container;
   margin-block: $margin;

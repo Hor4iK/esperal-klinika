@@ -1,0 +1,211 @@
+.intro {
+  @include container;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  min-height: 300px;
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background: linear-gradient(134.71deg, rgb(73, 149, 236) 0%, rgb(131, 202, 232) 99.741%);
+  overflow: hidden;
+
+  &_main {
+    padding: clamp(0.625rem, -1.2367rem + 4.2553vw, 1.875rem);
+    position: relative;
+  }
+
+  &_service {
+    padding: clamp(0.875rem, -5.2686rem + 14.0426vw, 5rem) clamp(1.5rem, -5.5745rem + 16.1702vw, 6.25rem) clamp(1.5rem, -5.5745rem + 16.1702vw, 6.25rem);
+  }
+
+  &__content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding-block: clamp(1.25rem, -0.1493rem + 4.4776vw, 3.125rem) clamp(0.875rem, -1.7369rem + 8.3582vw, 4.375rem);
+    padding-inline: clamp(0.875rem, -1.7369rem + 8.3582vw, 4.375rem);
+    background-color: $color-white;
+    border-radius: 30px;
+
+    @media screen and (width<=700px) {
+      border-radius: 24px;
+    }
+  }
+
+  &__title {
+    font-size: clamp(2rem, -0.0922rem + 5.3372vw, 4.75rem);
+    font-weight: 600;
+    line-height: 100%;
+    margin-block-end: clamp(1rem, -0.1194rem + 3.5821vw, 2.5rem);
+
+    span {
+      color: $accent-color;
+    }
+  }
+
+  &__caption {
+    margin-block-end: clamp(3.125rem, -2.0313rem + 16.3333vw, 11.375rem);
+  }
+
+  &__button {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-block-start: 40px;
+
+    .point-mark {
+      width: 80px;
+
+      span {
+        background-color: $color-white;
+        border-radius: 3px;
+        transition: background-color 300ms;
+        position: absolute;
+        margin: 0;
+      }
+
+      span:first-of-type {
+        width: 16px;
+        height: 3px;
+        position: absolute;
+        top: calc(50% - 3px);
+        left: calc(50% - 6px);
+      }
+
+      span:last-of-type {
+        width: 3px;
+        height: 16px;
+        top: calc(50% - 9px);
+        left: calc(50%);
+      }
+    }
+
+    &:hover,
+    &:active {
+      .point-mark {
+        span {
+          background-color: $accent-color;
+        }
+      }
+
+      box-shadow: 1px 3px 10px -4px $accent-color;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-block-end: 40px;
+
+    .point-mark {
+      width: 80px;
+
+      &::before {
+        width: 32px;
+        height: 24px;
+        left: calc(50% - 16px);
+        top: calc(50% - 12px);
+        aspect-ratio: auto;
+      }
+    }
+  }
+
+  &__description {
+    line-height: 1.2;
+    font-weight: 600;
+    font-size: clamp(1rem, 0.2553rem + 1.7021vw, 1.5rem);
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+
+    picture {
+      position: absolute;
+      bottom: -37px;
+
+      img {
+        position: relative;
+        z-index: 2;
+        object-fit: contain;
+        height: 100%;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -28%;
+        left: -132px;
+        width: 130%;
+        aspect-ratio: 1 / 1;
+        background: url(/assets/img/intro/circles-text.webp) no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+  }
+
+  @media screen and (width<=1365px) {
+    gap: 10px;
+
+    &__image {
+      width: 90%;
+
+      picture {
+        &::before {
+          bottom: -134px;
+          left: -55px;
+          width: 130%;
+          background: url(/assets/img/intro/circles-mini.webp) no-repeat;
+          background-position: center center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+
+  @media screen and (width<=1170px) {
+    &__block {
+      display: none;
+    }
+
+    &__button {
+      margin-block-start: 50px;
+
+      .point-mark {
+        width: 48px;
+      }
+    }
+  }
+
+  @media screen and (width<=600px) {
+    padding-block-end: 0;
+    flex-direction: column;
+
+    &__image {
+      width: 100%;
+      max-height: 350px;
+
+      picture {
+        position: relative;
+        bottom: auto;
+
+        img {
+          object-fit: cover;
+          object-position: center top;
+        }
+
+        &::before {
+          bottom: -25%;
+          left: -10%;
+          width: 121%;
+        }
+      }
+    }
+  }
+}
