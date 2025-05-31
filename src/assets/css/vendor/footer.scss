@@ -6,7 +6,8 @@
   .content {
     @include inline-gradient;
     border-radius: clamp(1.5rem, -1.8511rem + 7.6596vw, 3.75rem);
-    padding: clamp(1.5rem, -3.7128rem + 11.9149vw, 5rem) clamp(1.25rem, -2.4813rem + 11.9403vw, 6.25rem) 0;
+    padding: clamp(1.5rem, -3.7128rem + 11.9149vw, 5rem)
+      clamp(1.25rem, -2.4813rem + 11.9403vw, 6.25rem) 0;
   }
 
   &__container {
@@ -23,7 +24,7 @@
       position: relative;
 
       &::before {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         top: 0;
@@ -126,22 +127,13 @@
   }
 
   &__button {
-    display: flex;
-    gap: 40px;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
     margin-block-start: 40px;
-
-    .point-mark {
-      background-color: $light-color;
-    }
   }
 
   &__description {
     font-size: clamp(0.875rem, 0.7817rem + 0.2985vw, 1rem);
     line-height: 1.2;
-    opacity: .5;
+    opacity: 0.5;
   }
 
   &__social {
@@ -150,9 +142,7 @@
     color: $color-white;
 
     .social-container {
-      transition:
-        background-color 400ms,
-        color 200ms;
+      transition: background-color 400ms, color 200ms;
 
       &__point {
         cursor: pointer;

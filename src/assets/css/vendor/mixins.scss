@@ -15,7 +15,7 @@
 }
 
 @mixin inline-gradient {
-    background: linear-gradient(134.71deg, rgb(73, 149, 236) 0%, rgb(131, 202, 232) 99.866%);
+    background: $gradient;
 }
 
 @mixin content-block {

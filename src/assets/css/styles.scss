@@ -5,6 +5,11 @@ $accent-color: #4995ec;
 $light-color: #f3f9ff;
 $gradient-color-accent: #4995ec;
 $gradient-color-light: #83cae8;
+$gradient: linear-gradient(
+  134.71deg,
+  $gradient-color-accent 0%,
+  $gradient-color-light 99.741%
+);
 //base
 $color-white: #fff;
 $max-width: 1880px;
@@ -22,9 +27,6 @@ html {
 
 body {
   font-family: $font-family;
-}
-
-body {
   min-inline-size: 285px;
   margin: 0 auto;
   font-family: sans-serif;
@@ -34,6 +36,17 @@ body {
   background-color: $bg-color;
   color: $color;
   overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $light-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: $accent-color;
+  }
 }
 
 .page {
@@ -100,6 +113,28 @@ body {
     }
   }
 
+  span {
+    margin-inline-start: 20px;
+    font-weight: 600;
+    font-size: clamp(1rem, 0.2553rem + 1.7021vw, 1.5rem);
+    line-height: 1.4;
+  }
+
+  .point-mark {
+    flex-shrink: 0;
+    background-color: #ffffff33;
+  }
+
+  .point-mark::before {
+    transition: transform 300ms ease-in-out;
+  }
+
+  &:hover {
+    .point-mark::before {
+      transform: rotate(90deg);
+    }
+  }
+
   &_light {
     background-color: $color-white;
     color: $accent-color;
@@ -112,24 +147,66 @@ body {
     }
   }
 
-  span {
-    margin-inline-start: 20px;
-    font-weight: 600;
-    font-size: clamp(1rem, 0.2553rem + 1.7021vw, 1.5rem);
-    line-height: 1.4;
+  &_call {
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    .point-mark {
+      background-color: $light-color;
+    }
   }
 
-  .point-mark {
-    background-color: #ffffff33;
-  }
+  &_consult {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 
-  .point-mark::before {
-    transition: transform 300ms ease-in-out;
-  }
+    .point-mark {
+      width: 80px;
 
-  &:hover {
-    .point-mark::before {
-      transform: rotate(90deg);
+      span {
+        background-color: $color-white;
+        border-radius: 3px;
+        transition: background-color 300ms;
+        position: absolute;
+        margin: 0;
+        transition: transform 300ms ease-out;
+      }
+
+      span:first-of-type {
+        width: 16px;
+        height: 3px;
+        position: absolute;
+        top: calc(50% - 3px);
+        left: calc(50% - 6px);
+      }
+
+      span:last-of-type {
+        width: 3px;
+        height: 16px;
+        top: calc(50% - 9px);
+        left: calc(50%);
+      }
+    }
+
+    &:hover,
+    &:active {
+      .point-mark {
+        span {
+          background-color: $accent-color;
+          transform: rotate(90deg);
+        }
+      }
+
+      box-shadow: 1px 3px 10px -4px $accent-color;
     }
   }
 }
@@ -217,7 +294,10 @@ body {
 }
 
 .social-tg {
-  padding: clamp(0.5rem, 0.0346rem + 1.0638vw, 0.8125rem) clamp(0.5rem, 0.0346rem + 1.0638vw, 0.8125rem) clamp(0.4375rem, -0.0279rem + 1.0638vw, 0.75rem) clamp(0.25rem, -0.2154rem + 1.0638vw, 0.5625rem);
+  padding: clamp(0.5rem, 0.0346rem + 1.0638vw, 0.8125rem)
+    clamp(0.5rem, 0.0346rem + 1.0638vw, 0.8125rem)
+    clamp(0.4375rem, -0.0279rem + 1.0638vw, 0.75rem)
+    clamp(0.25rem, -0.2154rem + 1.0638vw, 0.5625rem);
 }
 
 @import "vendor/footer";
