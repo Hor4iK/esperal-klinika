@@ -1,25 +1,53 @@
-@mixin container {
-    max-width: calc(1920px - $margin * 2);
-    margin: 0 auto;
-}
-
-@mixin point-mark-psevdo {
-    content: '';
-    position: absolute;
-    left: calc(50% - 10px);
-    top: calc(50% - 10px);
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 20px;
-    aspect-ratio: 1/1;
+@mixin container($margin-bl: 0) {
+  max-width: calc(1920px - $margin * 2);
+  margin: 0 auto;
+  @if $margin-bl != 0 {
+    @if $margin-bl == 'base' {
+      margin-block: clamp(0.625rem, 0.1042rem + 1.6667vw, 1.25rem);
+    } @else {
+      margin-block: $margin-bl;
+    }
+  }
 }
 
 @mixin inline-gradient {
-    background: $gradient;
+  background: $gradient;
 }
 
-@mixin content-block {
-    background-color: $color-white;
-    border-radius: 30px;
-    padding: 100px;
+// @mixin content-block {
+//   background-color: $color-white;
+//   border-radius: 30px;
+//   padding: 100px;
+// }
+
+.container {
+  @include container;
+}
+
+.container_bl {
+  @include container('base');
+}
+
+@mixin sections($type: '') {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  @if $type {
+    @if $type == "light" {
+      background-color: $color-white;
+    } @else if $type == "linear" {
+      @include inline-gradient;
+    } @else {
+      background-color: $type;
+    }
+  }
+}
+
+@mixin point-mark-psevdo {
+  content: "";
+  position: absolute;
+  left: calc(50% - 10px);
+  top: calc(50% - 10px);
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 20px;
+  aspect-ratio: 1/1;
 }

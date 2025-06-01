@@ -1,7 +1,17 @@
+.main-title {
+  font-size: clamp(2rem, -0.0922rem + 5.3372vw, 4.75rem);
+  font-weight: 600;
+  line-height: 100%;
+  margin-block-end: clamp(1rem, -0.1194rem + 3.5821vw, 2.5rem);
+
+  span {
+    color: $accent-color;
+  }
+}
+
 .intro {
-  @include container;
+  @include sections;
   min-height: 300px;
-  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   overflow: hidden;
 
   &_main {
@@ -190,17 +200,6 @@
 
     @media screen and (width<=700px) {
       border-radius: 24px;
-    }
-  }
-
-  &__title {
-    font-size: clamp(2rem, -0.0922rem + 5.3372vw, 4.75rem);
-    font-weight: 600;
-    line-height: 100%;
-    margin-block-end: clamp(1rem, -0.1194rem + 3.5821vw, 2.5rem);
-
-    span {
-      color: $accent-color;
     }
   }
 
