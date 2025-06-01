@@ -39,6 +39,9 @@ body {
 
   &::-webkit-scrollbar {
     width: 10px;
+    @media screen and (width<=500px) {
+      width: 5px;
+    }
   }
   &::-webkit-scrollbar-track {
     background-color: $light-color;
@@ -298,6 +301,27 @@ body {
     clamp(0.5rem, 0.0346rem + 1.0638vw, 0.8125rem)
     clamp(0.4375rem, -0.0279rem + 1.0638vw, 0.75rem)
     clamp(0.25rem, -0.2154rem + 1.0638vw, 0.5625rem);
+}
+
+.breadcrumbs {
+  &__list {
+    line-height: 1.2;
+  }
+
+  @media screen and (width<=600px) {
+    &__item {
+      gap: 8px;
+    }
+
+    &__item.menu_point {
+      &::before {
+        background-color: $accent-color;
+        background-image: none;
+        border-radius: 50%;
+        width: 6px;
+      }
+    }
+  }
 }
 
 @import "vendor/footer";
