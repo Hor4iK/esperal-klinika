@@ -2,8 +2,12 @@
   max-width: calc(1920px - $margin * 2);
   margin: 0 auto;
   @if $margin-bl != 0 {
-    @if $margin-bl == 'base' {
+    @if $margin-bl == "block" {
       margin-block: clamp(0.625rem, 0.1042rem + 1.6667vw, 1.25rem);
+    } @else if $margin-bl == "top" {
+      margin-block-start: clamp(0.625rem, 0.1042rem + 1.6667vw, 1.25rem);
+    } @else if $margin-bl == "bottom" {
+      margin-block-end: clamp(0.625rem, 0.1042rem + 1.6667vw, 1.25rem);
     } @else {
       margin-block: $margin-bl;
     }
@@ -14,30 +18,44 @@
   background: $gradient;
 }
 
-// @mixin content-block {
-//   background-color: $color-white;
-//   border-radius: 30px;
-//   padding: 100px;
-// }
-
 .container {
   @include container;
 }
 
 .container_bl {
-  @include container('base');
+  @include container("block");
 }
 
-@mixin sections($type: '') {
+.container_t {
+  @include container("top");
+}
+
+.container_b {
+  @include container("bottom");
+}
+
+@mixin sections($type: "", $padding: 0) {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   @if $type {
     @if $type == "light" {
       background-color: $color-white;
     } @else if $type == "linear" {
       @include inline-gradient;
+    } @else if $type == "image" {
+      background: url(/assets/img/section/bg-section.webp), #fff;
+      background-size: cover;
+      background-position: center top;
     } @else {
       background-color: $type;
     }
+  }
+
+  @if $padding == "base" {
+    padding: clamp(1.5rem, -1.4167rem + 9.3333vw, 5rem)
+      clamp(1.5rem, -2.4583rem + 12.6667vw, 6.25rem)
+      clamp(1.25rem, -2.9167rem + 13.3333vw, 6.25rem);
+  } @else {
+    padding: $padding;
   }
 }
 

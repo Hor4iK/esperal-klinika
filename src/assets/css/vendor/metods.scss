@@ -9,9 +9,6 @@
     max-width: 50%;
   }
 
-  &__body {
-  }
-
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -81,9 +78,6 @@
       padding: 16px 14px;
       gap: 14px;
     }
-  }
-
-  &__content-item {
   }
 
   &__subtitle {
