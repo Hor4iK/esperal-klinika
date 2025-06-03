@@ -1,6 +1,10 @@
 .services {
   @include sections("light", "base");
 
+  @media (width<=600px) {
+    padding-inline: 10px;
+  }
+
   &__title {
   }
 
