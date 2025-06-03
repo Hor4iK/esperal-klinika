@@ -1380,7 +1380,7 @@ body::-webkit-scrollbar-thumb {
   background: url(/assets/img/section/bg-section.webp), #fff;
   background-size: cover;
   background-position: center top;
-  padding: clamp(1.5rem, -1.4167rem + 9.3333vw, 5rem) clamp(1.5rem, -2.4583rem + 12.6667vw, 6.25rem) clamp(1.25rem, -2.9167rem + 13.3333vw, 6.25rem);
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
   line-height: 1.2;
 }
 .situation__body {
@@ -1439,7 +1439,7 @@ body::-webkit-scrollbar-thumb {
 .center-lecheniya {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
-  padding: clamp(1.5rem, -1.4167rem + 9.3333vw, 5rem) clamp(1.5rem, -2.4583rem + 12.6667vw, 6.25rem) clamp(1.25rem, -2.9167rem + 13.3333vw, 6.25rem);
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
   position: relative;
   overflow: hidden;
 }
@@ -1643,7 +1643,7 @@ body::-webkit-scrollbar-thumb {
 .services {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -1.4167rem + 9.3333vw, 5rem) clamp(1.5rem, -2.4583rem + 12.6667vw, 6.25rem) clamp(1.25rem, -2.9167rem + 13.3333vw, 6.25rem);
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
 }
 .services__item {
   padding: 20px;
@@ -1879,33 +1879,31 @@ thead .services__table__title th:nth-child(1) {
 .principles__block {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -1.4167rem + 9.3333vw, 5rem) clamp(1.5rem, -2.4583rem + 12.6667vw, 6.25rem) clamp(1.25rem, -2.9167rem + 13.3333vw, 6.25rem);
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding-block-end: 0;
+}
+.principles__content {
+  max-height: 750px;
   overflow: hidden;
-  max-height: 950px;
-}
-.principles__list {
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-  cursor: grab;
-  gap: 20px;
-  max-height: 600px;
-}
-.principles__list::-webkit-scrollbar {
-  display: none;
 }
 .principles__item {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-shrink: 0;
-  height: 450px;
   padding: 30px;
   border-radius: 30px;
   position: relative;
   background-color: #f3f9ff;
   counter-increment: item;
   transition: background-color 300ms, color 300ms;
+}
+@media (width < 1000px) {
+  .principles__item {
+    gap: 74px;
+  }
+}
+.principles__item.swiper-slide {
+  display: flex;
+  max-height: 450px;
 }
 .principles__item::after {
   content: "";
@@ -1920,6 +1918,14 @@ thead .services__table__title th:nth-child(1) {
   border-radius: 12px;
   top: 30px;
   right: 30px;
+  line-height: 1;
+}
+@media (width < 1000px) {
+  .principles__item::after {
+    padding: 14px;
+    top: 16px;
+    right: 14px;
+  }
 }
 .principles__item.active {
   background-color: #4995ec;
@@ -1932,14 +1938,24 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 .principles__subtitle {
-  font-size: clamp(1.25rem, 0.625rem + 2vw, 2rem);
+  font-size: clamp(1.25rem, 0.5938rem + 1.5vw, 2rem);
   font-weight: 600;
   line-height: 1.1;
-  max-width: 40%;
+  max-width: 50%;
 }
 @media (width <= 700px) {
   .principles__description {
     font-size: 14px;
+  }
+}
+@media (width <= 1000px) {
+  .principles {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+    background-color: #fff;
+    padding: 0;
   }
 }
 

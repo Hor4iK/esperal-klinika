@@ -182,27 +182,17 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- SLIDERS  -- */
 
   //Slider INTRO, turns off when resize
-  introSwiper = document.querySelector(".intro__swiper");
+  introSwiper = document.querySelector(".intro");
   if (introSwiper) {
     introSwiperCheck = false;
     ['resize', 'load'].forEach((event) => {
       window.addEventListener(event, function () {
         if (window.innerWidth <= 650 && !introSwiperCheck) {
-          introSwiperCheck = new Swiper(document.querySelector('.intro__swiper'), {
+          introSwiperCheck = new Swiper(introSwiper.querySelector('.intro__swiper'), {
             direction: 'horizontal',
-            slidesPerView: 1,
+            slidesPerView: 1.1,
             grabCursor: true,
-            spaceBetween: 10,
-            navigation: {
-              nextEl: document.querySelector('.intro__nav-btn_next'),
-              prevEl: document.querySelector('.intro__nav-btn_prev'),
-            },
-            breakpoints: {
-              0: {
-                slidesPerView: 1.1,
-                spaceBetween: 10
-              }
-            }
+            spaceBetween: 10
           });
         }
         if (window.innerWidth > 650 && introSwiperCheck) {
@@ -222,15 +212,11 @@ document.addEventListener('DOMContentLoaded', function () {
       window.addEventListener(event, function () {
         if (window.innerWidth <= 1300 && !metodsSwiperCheck) {
           metodsList.classList.add('swiper-wrapper');
-          metodsSwiperCheck = new Swiper(document.querySelector('.metods__swiper'), {
+          metodsSwiperCheck = new Swiper(metodsSwiper.querySelector('.metods__swiper'), {
             direction: 'horizontal',
             slidesPerView: 1,
             grabCursor: true,
             spaceBetween: 10,
-            navigation: {
-              nextEl: document.querySelector('.metods__nav-btn_next'),
-              prevEl: document.querySelector('.metods__nav-btn_prev'),
-            },
             breakpoints: {
               0: {
                 slidesPerView: 1.1,
@@ -261,15 +247,11 @@ document.addEventListener('DOMContentLoaded', function () {
       window.addEventListener(event, function () {
         if (window.innerWidth <= 650 && !situationSwiperCheck) {
           situationList.classList.add('swiper-wrapper');
-          situationSwiperCheck = new Swiper(document.querySelector('.situation__body'), {
+          situationSwiperCheck = new Swiper(situationSwiper.querySelector('.situation__body'), {
             direction: 'vertical',
             slidesPerView: 5,
             grabCursor: true,
             spaceBetween: 10,
-            navigation: {
-              nextEl: document.querySelector('.situation__nav-btn_next'),
-              prevEl: document.querySelector('.situation__nav-btn_prev'),
-            }
           });
         }
         if (window.innerWidth > 650 && situationSwiperCheck) {
@@ -296,15 +278,11 @@ document.addEventListener('DOMContentLoaded', function () {
             })
           }
           centerList.classList.add('swiper-wrapper');
-          centerSwiperCheck = new Swiper(document.querySelector('.center-lecheniya__gallery__wrapper'), {
+          centerSwiperCheck = new Swiper(centerSwiper.querySelector('.center-lecheniya__gallery__wrapper'), {
             direction: 'horizontal',
             slidesPerView: 1.1,
             grabCursor: true,
-            spaceBetween: 10,
-            navigation: {
-              nextEl: document.querySelector('.center-lecheniya__nav-btn_next'),
-              prevEl: document.querySelector('.center-lecheniya__nav-btn_prev'),
-            }
+            spaceBetween: 10
           });
         }
         if (window.innerWidth > 800 && centerSwiperCheck) {
@@ -320,6 +298,29 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       })
     })
+  }
+
+  //Slider Principles, turns off when resize
+  principlesSwiper = document.querySelector(".principles");
+  if (principlesSwiper) {
+    principlesSwiperCheck = new Swiper(principlesSwiper.querySelector('.principles__swiper'), {
+      direction: 'vertical',
+      slidesPerView: 1.2,
+      grabCursor: true,
+      spaceBetween: 20,
+      breakpoints: {
+        0: {
+          direction: 'horizontal',
+          slidesPerView: 1.2,
+          spaceBetween: 10
+        },
+        1000: {
+          direction: 'vertical',
+          slidesPerView: 1.2,
+          spaceBetween: 20
+        }
+      }
+    });
   }
 
 

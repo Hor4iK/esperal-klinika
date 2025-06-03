@@ -5,38 +5,35 @@
 
   &__block {
     @include sections("light", "base");
-    overflow: hidden;
-    max-height: 950px;
+    padding-block-end: 0;
   }
 
   &__content {
+    max-height: 750px;
+    overflow: hidden;
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    cursor: grab;
-    gap: 20px;
-    max-height: 600px;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 
   &__item {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-shrink: 0;
-    height: 450px;
     padding: 30px;
     border-radius: 30px;
     position: relative;
     background-color: $light-color;
     counter-increment: item;
     transition: background-color 300ms, color 300ms;
+
+    @media (width<1000px) {
+      gap: 74px;
+    }
+
+    &.swiper-slide {
+      display: flex;
+      max-height: 450px;
+    }
 
     &::after {
       content: "";
@@ -51,6 +48,13 @@
       border-radius: 12px;
       top: 30px;
       right: 30px;
+      line-height: 1;
+
+      @media (width<1000px) {
+        padding: 14px;
+        top: 16px;
+        right: 14px;
+      }
     }
 
     &.active {
@@ -68,15 +72,22 @@
   }
 
   &__subtitle {
-    font-size: clamp(1.25rem, 0.625rem + 2vw, 2rem);
+    font-size: clamp(1.25rem, 0.5938rem + 1.5vw, 2rem);
     font-weight: 600;
     line-height: 1.1;
-    max-width: 40%;
+    max-width: 50%;
   }
 
   &__description {
     @media (width<=700px) {
       font-size: 14px;
     }
+  }
+
+  @media (width<=1000px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    @include sections('light');
   }
 }
