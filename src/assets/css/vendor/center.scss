@@ -147,6 +147,8 @@
         background-position: center center;
         background-size: 170%;
         background-repeat: no-repeat;
+        box-shadow: 1px 1px 7px 1px rgb(255, 255, 255, 0);
+        transition: box-shadow 300ms ease-out, filter 300ms;
         color: $color-white;
 
         a {
@@ -162,6 +164,11 @@
             font-weight: 600;
             font-size: 24px;
           }
+        }
+
+        &:hover {
+          box-shadow: 1px 1px 7px 1px $accent-color;
+          filter: contrast(1.1);
         }
 
         @media (width<=800px) {
