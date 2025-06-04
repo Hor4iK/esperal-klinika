@@ -1,0 +1,76 @@
+.express {
+  @include sections("linear", "base");
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 610px;
+    color: $color-white;
+    position: relative;
+    z-index: 2;
+  }
+  &__caption {
+    opacity: 0.65;
+    margin-block-end: clamp(2.5rem, -0.5rem + 8vw, 6rem);
+  }
+  &__button {
+    @media screen and (width<=850px) {
+      padding: 6px;
+      & .point-mark {
+        width: 48px;
+
+        &::before {
+          left: calc(50% - 6px);
+          top: calc(50% - 6px);
+          width: 12px;
+        }
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: url(/assets/img/section/test-section.webp) no-repeat center
+      center;
+    background-size: contain;
+    width: 1000px;
+    aspect-ratio: 1 / 1;
+    left: 44%;
+    top: -24%;
+  }
+
+  @media screen and (width<=1150px) {
+    min-height: 780px;
+
+    &::after {
+      width: 70%;
+      left: 17%;
+      top: auto;
+      bottom: -20%;
+    }
+  }
+
+  @media screen and (width<=850px) {
+    &::after {
+      background: url(/assets/img/section/test-section-mini.webp) no-repeat
+        center center;
+      background-size: contain;
+      width: 80%;
+      left: 10%;
+      bottom: 0%;
+    }
+  }
+
+  @media screen and (width<=500px) {
+    &::after {
+      width: 120%;
+      left: -10%;
+      top: auto;
+      bottom: 3%;
+    }
+  }
+}

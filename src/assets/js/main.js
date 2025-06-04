@@ -203,39 +203,45 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  //Slider METODS, turns on when mobile
-  metodsSwiper = document.querySelector(".metods");
-  if (metodsSwiper) {
-    const metodsList = metodsSwiper.querySelector('.metods__list');
-    metodsSwiperCheck = false;
-    ['resize', 'load'].forEach((event) => {
-      window.addEventListener(event, function () {
-        if (window.innerWidth <= 1300 && !metodsSwiperCheck) {
-          metodsList.classList.add('swiper-wrapper');
-          metodsSwiperCheck = new Swiper(metodsSwiper.querySelector('.metods__swiper'), {
-            direction: 'horizontal',
-            slidesPerView: 1,
-            grabCursor: true,
-            spaceBetween: 10,
-            breakpoints: {
-              0: {
-                slidesPerView: 1.1,
-                spaceBetween: 10
-              },
-              650: {
-                slidesPerView: 2,
-                spaceBetween: 15
+  //Slider CARDS, turns on when mobile
+  cardsSwipers = document.querySelectorAll(".cards");
+  if (cardsSwipers && cardsSwipers.length > 0) {
+    swiperCheck = new Array();
+    for (let i = 0; i < cardsSwipers.length; i++) {
+      const cardsList = cardsSwipers[i].querySelector('.cards__list');
+      swiperCheck[i] = false;
+      ['resize', 'load'].forEach((event) => {
+        window.addEventListener(event, function () {
+          if (window.innerWidth <= 1300 && !swiperCheck[i]) {
+            cardsList.classList.add('swiper-wrapper');
+            swiperCheck[i] = new Swiper(cardsSwipers[i].querySelector('.cards__swiper'), {
+              direction: 'horizontal',
+              slidesPerView: 1,
+              grabCursor: true,
+              spaceBetween: 10,
+              breakpoints: {
+                0: {
+                  slidesPerView: 1.1,
+                  spaceBetween: 10
+                },
+                750: {
+                  slidesPerView: 2,
+                  spaceBetween: 15
+                }
               }
-            }
-          });
-        }
-        if (window.innerWidth > 1300 && metodsSwiperCheck) {
-          metodsList.classList.remove('swiper-wrapper');
-          metodsSwiperCheck.destroy(true, true);
-          metodsSwiperCheck = false
-        }
-      })
-    })
+            });
+          }
+          if (window.innerWidth > 1300 && swiperCheck[i]) {
+            cardsList.classList.remove('swiper-wrapper');
+            swiperCheck[i].destroy(true, true);
+            swiperCheck[i] = false
+          }
+        })
+      });
+    }
+    // cardsSwipers.forEach(swiper => {
+
+    // })
   }
 
   //Slider Situations, turns on when mobile
@@ -317,6 +323,29 @@ document.addEventListener('DOMContentLoaded', function () {
         1000: {
           direction: 'vertical',
           slidesPerView: 1.2,
+          spaceBetween: 20
+        }
+      }
+    });
+  }
+
+  //Slider Why-choose, turns off when resize
+  choose = document.querySelector(".choose");
+  if (choose) {
+    chooseCheck = new Swiper(choose.querySelector('.choose__swiper'), {
+      direction: 'horizontal',
+      slidesPerView: 1.2,
+      grabCursor: true,
+      spaceBetween: 10,
+      breakpoints: {
+        600: {
+          direction: 'horizontal',
+          slidesPerView: 2.2,
+          spaceBetween: 15
+        },
+        1100: {
+          direction: 'horizontal',
+          slidesPerView: 3.2,
           spaceBetween: 20
         }
       }
