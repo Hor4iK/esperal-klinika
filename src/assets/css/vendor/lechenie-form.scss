@@ -1,0 +1,55 @@
+.lechenie-accent {
+  @include sections('linear');
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+      content: "";
+      position: absolute;
+      width: 40%;
+      aspect-ratio: 1/1;
+      background: url(/assets/img/intro/circles-mini.png) no-repeat center
+        center;
+      background-size: cover;
+      top: -60%;
+      left: -15%;
+
+      @media (width<=500px) {
+        content: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 40%;
+      aspect-ratio: 1/1;
+      background: url(/assets/img/intro/circles-mini.png) no-repeat center
+        center;
+      background-size: cover;
+      right: -20%;
+      bottom: -50%;
+
+      @media (width<=500px) {
+        content: none;
+      }
+    }
+
+  &__body {
+
+  }
+  &__title {
+
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  &__input {
+
+  }
+  &__button {
+
+  }
+}

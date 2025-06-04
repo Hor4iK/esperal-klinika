@@ -967,6 +967,63 @@ body::-webkit-scrollbar-thumb {
   display: flex;
 }
 
+.input {
+  padding: 28px;
+  border-radius: 16px;
+  font-size: clamp(0.875rem, 0.5536rem + 0.8571vw, 1.25rem);
+}
+.input::-moz-placeholder {
+  opacity: 0.5;
+}
+.input::placeholder {
+  opacity: 0.5;
+}
+@media screen and (width <= 800px) {
+  .input {
+    border-radius: 12px;
+  }
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(0.75rem, 0.5357rem + 0.5714vw, 1rem);
+  opacity: 0.5;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+.checkbox-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: 1px solid #fff;
+  width: 24px;
+  aspect-ratio: 1/1;
+  border-radius: 6px;
+  position: relative;
+}
+.checkbox:checked-mark {
+  content: "";
+  display: block;
+  width: 16px;
+  aspect-ratio: 1/1;
+  background: url(/assets/img/icons/checkbox.svg) no-repeat center center;
+  background-size: cover;
+}
+.checkbox a {
+  opacity: 1;
+}
+
 .main-title {
   font-size: clamp(2rem, -0.0922rem + 5.3372vw, 4.75rem);
   font-weight: 600;
@@ -2593,6 +2650,48 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 
+.lechenie-accent {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.lechenie-accent::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  aspect-ratio: 1/1;
+  background: url(/assets/img/intro/circles-mini.png) no-repeat center center;
+  background-size: cover;
+  top: -60%;
+  left: -15%;
+}
+@media (width <= 500px) {
+  .lechenie-accent::before {
+    content: none;
+  }
+}
+.lechenie-accent::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  aspect-ratio: 1/1;
+  background: url(/assets/img/intro/circles-mini.png) no-repeat center center;
+  background-size: cover;
+  right: -20%;
+  bottom: -50%;
+}
+@media (width <= 500px) {
+  .lechenie-accent::after {
+    content: none;
+  }
+}
+.lechenie-accent__form {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
 .footer {
   margin-block: clamp(0.625rem, -0.4688rem + 2.5vw, 1.25rem);
   color: #fff;

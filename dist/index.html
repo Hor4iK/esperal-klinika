@@ -90,53 +90,26 @@
       </div>
     </header>
 <main class="main">
-    <section class="intro intro_service container">
-      <div class="breadcrumbs">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item menu_point">Кодирование</li>
-        </ul>
-      </div>
-      <div class="intro__body">
-        <div class="intro__title-container">
-          <h1 class="intro__title main-title">Кодирование
-            от алкоголизма <span>в&nbsp;Саратове</span></h1>
-          <p class="intro__price">
-            <span class="intro__price__description">Стоимость:</span>
-            <span class="intro__price__value">3 500 ₽</span>
-          </p>
-        </div>
+    <section class="intro intro_main container">
+      <div class="intro__content">
+        <h1 class="intro__title main-title">Центр кодирования
+          от алкоголизма <span>в&nbsp;Саратове</span></h1>
+        <p class="intro__caption">Мы помогаем вернуться к полноценной жизни, используя инновационные методики и персональный
+          подход к каждому пациенту</p>
         <div class="intro__block">
-          <p>Мы помогаем вернуться к полноценной жизни, используя инновационные методики и персональный подход к каждому
-            пациенту</p>
-          <button class="btn btn_consult intro__button btn-popup btn_accent">
-            <span>бесплатная консультация</span>
-            <div class="point-mark"><span></span><span></span></div>
-          </button>
-          <button class="btn btn_call btn_light btn-popup">
-            <span>обратный звонок</span>
-            <div class="point-mark point-plus"></div>
-          </button>
+          <div class="point-mark point-card"></div>
+          <div class="intro__description">Определим проблему<br>и назначим курс лечения:</div>
         </div>
-        <div class="intro__swiper cards ">
-          <div class="swiper-wrapper intro__cards">
-            <div class="intro__content swiper-slide">
-              <p class="intro__content__title"><span>20+</span>методик кодирования</p>
-              <span class="intro__content__separator"></span>
-              <p>Мы помогаем вернуться к полноценной жизни, используя инновационные методики</p>
-            </div>
-            <div class="intro__content swiper-slide">
-              <p class="intro__content__title"><span>100%</span>анонимность</p>
-              <span class="intro__content__separator"></span>
-              <p>Мы помогаем вернуться к полноценной жизни, используя инновационные методики</p>
-            </div>
-            <div class="intro__content swiper-slide">
-              <p class="intro__content__title"><span>30+</span>опытных специалистов</p>
-              <span class="intro__content__separator"></span>
-              <p>Мы помогаем вернуться к полноценной жизни, используя инновационные методики</p>
-            </div>
-          </div>
-    
-        </div>
+        <button class="btn btn_consult intro__button btn-popup btn_accent">
+          <span>бесплатная консультация</span>
+          <div class="point-mark"><span></span><span></span></div>
+        </button>
+      </div>
+      <div class="intro__image">
+        <picture>
+          <source srcset="/assets/img/intro/doctor.webp" type="image/webp" />
+          <img alt="Доктор Эспераль-Клиник" title="Доктор Эспераль-Клиник" loading="lazy" src="/assets/img/intro/doctor.png" />
+        </picture>
       </div>
     </section>
     <section class="metods cards container_bl">
@@ -976,11 +949,46 @@
         </div>
       </div>
       <div class="principles__block">
-        <div class="principles__svg">
+        <div class="svg_text">
     
         </div>
+       <!-- <div class="principles__svg">
+    
+        </div>-->
       </div>
     </section>
+    <style>
+         .svg_text {
+          width: 800px;
+          height: 800px;
+    
+    transition: 3s ease;
+          mask-image: url('/assets/img/section/brain-opt.svg');
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+        position: relative;
+          &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            width: calc(100% + 80px);
+            height: calc(100% + 80px);
+            left: -40px;
+            top: -40px;
+            animation: test 5s linear forwards;
+            background: radial-gradient(ellipse farthest-corner at top right, #0071f3 13%, #BBC8D7 48%);
+          }
+         }
+         @keyframes test {
+        0% {
+    
+        }
+        100% {
+          transform: rotate(180deg);
+        }
+         }
+    </style>
     <section class="calculator container_b">
       <div class="calculator__block">
         <div class="calculator__content">
@@ -1233,6 +1241,24 @@
         <span>пройти тест</span>
         <div class="point-mark point-plus"></div>
       </button>
+      </div>
+    </div>
+    <div class="lechenie-accent container_b">
+      <div class="lechenie-accent__body">
+        <p class="lechenie-accent__title">Не откладывайте лечение, если приняли решение!</p>
+        <form class="lechenie-accent__form">
+          <input name="tel" type="tel" required class="input lechenie-accent__input">
+          <label class="checkbox">
+            <span class="checkbox-mark"></span>
+            <input type="checkbox" checked="checked" required="">
+            <span>Нажимая на кнопку, я даю согласие на обработку
+              персональных данных согласно <a href="#" rel="nofollow">политики конфиденциальности</a></span>
+          </label>
+          <button class="btn btn_call btn_light lechenie-accent__button btn-popup">
+            <span> бесплатная консультация</span>
+            <div class="point-mark point-plus"></div>
+          </button>
+        </form>
       </div>
     </div>
     
