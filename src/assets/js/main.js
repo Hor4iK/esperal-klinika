@@ -239,9 +239,6 @@ document.addEventListener('DOMContentLoaded', function () {
         })
       });
     }
-    // cardsSwipers.forEach(swiper => {
-
-    // })
   }
 
   //Slider Situations, turns on when mobile
@@ -310,16 +307,11 @@ document.addEventListener('DOMContentLoaded', function () {
   principlesSwiper = document.querySelector(".principles");
   if (principlesSwiper) {
     principlesSwiperCheck = new Swiper(principlesSwiper.querySelector('.principles__swiper'), {
-      direction: 'vertical',
+      direction: 'horizontal',
       slidesPerView: 1.2,
       grabCursor: true,
-      spaceBetween: 20,
+      spaceBetween: 10,
       breakpoints: {
-        0: {
-          direction: 'horizontal',
-          slidesPerView: 1.2,
-          spaceBetween: 10
-        },
         1000: {
           direction: 'vertical',
           slidesPerView: 1.2,
@@ -329,33 +321,155 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  //Slider Why-choose, turns off when resize
-  choose = document.querySelector(".choose");
-  if (choose) {
-    chooseCheck = new Swiper(choose.querySelector('.choose__swiper'), {
-      direction: 'horizontal',
-      slidesPerView: 1.2,
-      grabCursor: true,
-      spaceBetween: 10,
-      breakpoints: {
-        600: {
-          direction: 'horizontal',
-          slidesPerView: 2.2,
-          spaceBetween: 15
+  //Sliders horizontal (3 desktop -> 1 mobile)
+  slidersArray = document.querySelectorAll(".slider-hl");
+  if (slidersArray) {
+    slidersArray.forEach(slider => {
+      sliderCheck = new Swiper(slider.querySelector('.slider-hl__swiper'), {
+        direction: 'horizontal',
+        slidesPerView: 1.2,
+        grabCursor: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: slider.querySelector('.swiper-btn_right'),
+          prevEl: slider.querySelector('.swiper-btn_left'),
         },
-        1100: {
-          direction: 'horizontal',
-          slidesPerView: 3.2,
-          spaceBetween: 20
+        breakpoints: {
+          600: {
+            direction: 'horizontal',
+            slidesPerView: 2.2,
+            spaceBetween: 15
+          },
+          1100: {
+            direction: 'horizontal',
+            slidesPerView: 3.2,
+            spaceBetween: 20
+          }
         }
-      }
-    });
+      });
+    })
   }
 
 
   /* -- END SLIDERS  -- */
 
 
+
+  /* -- POPUPS  -- */
+  function popupClose(popupActive) {
+    popupActive.classList.remove('open');
+    setTimeout(() => {
+      popupActive.classList.contains("open") || popupActive.classList.remove("active");
+    }, 400);
+    document.body.classList.remove('lock');
+    document.querySelector('html').style.paddingRight = 0;
+    document.querySelector('html').classList.remove('lock');
+    document.querySelector('header').removeAttribute('style');
+  }
+  const popupOpenBtns = document.querySelectorAll('.popup-btn');
+  const popups = document.querySelectorAll('.popup');
+  const closePopupBtns = document.querySelectorAll('.close-popup');
+  closePopupBtns.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      popupClose(e.target.closest('.popup'));
+    });
+  });
+  if (popups.length > 0) {
+    popups.forEach(function (popup) {
+      popupClose(popup);
+      popup.addEventListener('click', function (e) {
+        if (!e.target.closest('.popup__content')) {
+
+          popupClose(e.target.closest('.popup'));
+        }
+      });
+    });
+  }
+  popupOpenBtns.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      const path = e.currentTarget.dataset.path;
+      const currentPopup = document.querySelector(`[data-target="${path}"]`);
+      if (currentPopup) {
+        currentPopup.classList.add('active');
+        setTimeout(() => {
+          currentPopup.classList.add("open");
+        }, 10);
+        if (currentPopup.getAttribute("data-target") == 'popup-change') {
+          let currentItem = el.closest('.change-item');
+          let originalTop = currentPopup.querySelector('.original-title');
+          let title = currentItem.querySelector('.change-title');
+          let subtitle = currentItem.querySelector('.change-subtitle');
+          if (title && subtitle) {
+            var newTitle = title.innerHTML + ' ' + subtitle.innerHTML;
+          } else if (title) {
+            var newTitle = title.innerHTML;
+          } else {
+            var newTitle = subtitle.innerHTML;
+          }
+          if (el.classList.contains('change-doctor')) {
+            newTitle = 'Записаться на приём к врачу: ' + newTitle;
+          }
+          originalTop.innerHTML = newTitle;
+        };
+        // scrollWidthFunc();
+        document.querySelector('html').classList.add('lock');
+      }
+    });
+  });
+  /* -- END POPUPS  -- */
+
+
+  /* -- Automatic content  -- */
+  const articleNavigation = document.querySelector('.content-table__navigation');
+  if (articleNavigation) {
+
+    const jsScrollBlockList = document.querySelectorAll('.text-block h1, .text-block h2');
+
+    if (jsScrollBlockList.length > 0) {
+      for (let i = 0; i < jsScrollBlockList.length; i += 1) {
+        const jsScrollBlock = jsScrollBlockList[i];
+        const titleBlock = jsScrollBlock.textContent;
+        const articleNavigationList = document.querySelector('.content-table__navigation');
+        const articleNavigationItem = document.createElement('li');
+        const articleNavigationLink = document.createElement('a');
+        articleNavigationItem.classList.add('navigation__list-item');
+        if (jsScrollBlock.tagName == 'H1') {
+          articleNavigationItem.classList.add('title-h1');
+        }
+        if (jsScrollBlock.tagName == 'H2') {
+          articleNavigationItem.classList.add('title-h2');
+        }
+        articleNavigationLink.classList.add('navigation__link');
+        jsScrollBlock.setAttribute('id', i)
+        articleNavigationLink.setAttribute('href', '#' + i);
+        articleNavigationLink.textContent = ' ' + titleBlock;
+        articleNavigationItem.append(articleNavigationLink);
+        articleNavigationList.append(articleNavigationItem);
+      }
+      document.querySelectorAll('a[href^="#"').forEach(link => {
+
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          let href = this.getAttribute('href').substring(1);
+          const scrollTarget = document.getElementById(href);
+          const topOffset = 180;
+          const elementPosition = scrollTarget.getBoundingClientRect().top;
+          const offsetPosition = elementPosition - topOffset;
+
+          window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        });
+      });
+    } else {
+      articleNavigation.querySelector('.navigation__item').remove();
+    }
+  }
+
+  /* -- END Automatic content   -- */
 
   //view photos fancybox
   Fancybox.bind("[data-fancybox]");

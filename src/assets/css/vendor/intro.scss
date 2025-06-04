@@ -6,6 +6,10 @@
 
   span {
     color: $accent-color;
+
+    @media screen and (width<=350px) {
+      word-wrap: break-word;
+    }
   }
 }
 

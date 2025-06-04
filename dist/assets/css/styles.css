@@ -1024,6 +1024,61 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
 }
 
+.slider-hl {
+  position: relative;
+}
+
+.swiper-btn {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(3.125rem, -2.0313rem + 7.5vw, 5rem);
+  aspect-ratio: 1/1;
+  position: relative;
+  outline: 1px solid transparent;
+  transition: background-color 300ms, outline 300ms;
+}
+.swiper-btn-container {
+  position: absolute;
+  top: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem);
+  right: clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem);
+  display: flex;
+  gap: 14px;
+}
+@media screen and (width <= 1000px) {
+  .swiper-btn-container {
+    display: none;
+  }
+}
+.swiper-btn::before {
+  content: "";
+  width: 18px;
+  aspect-ratio: 1/1;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.swiper-btn_left {
+  rotate: 180deg;
+  background-color: #f3f9ff;
+}
+.swiper-btn_left:hover {
+  outline: 1px solid #4995ec;
+}
+.swiper-btn_left::before {
+  background-image: url(/assets/img/icons/arrow-blue.svg);
+}
+.swiper-btn_right {
+  background-color: #4995ec;
+}
+.swiper-btn_right:hover {
+  outline: 1px solid #4995ec;
+}
+.swiper-btn_right::before {
+  background-image: url(/assets/img/icons/arrow.svg);
+}
+
 .main-title {
   font-size: clamp(2rem, -0.0922rem + 5.3372vw, 4.75rem);
   font-weight: 600;
@@ -1032,6 +1087,11 @@ body::-webkit-scrollbar-thumb {
 }
 .main-title span {
   color: #4995ec;
+}
+@media screen and (width <= 350px) {
+  .main-title span {
+    word-wrap: break-word;
+  }
 }
 
 .intro {
@@ -2205,7 +2265,7 @@ thead .services__table__title th:nth-child(1) {
   background-color: #f3f9ff;
   color: #4995ec;
 }
-@media (width <= 800px) {
+@media (width <= 1000px) {
   .preparation__item__title {
     padding: 18px;
   }
