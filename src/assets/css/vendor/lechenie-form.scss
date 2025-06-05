@@ -1,55 +1,177 @@
 .lechenie-accent {
-  @include sections('linear');
+  @include sections("linear");
+  padding: clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem);
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
 
   &::before {
-      content: "";
-      position: absolute;
-      width: 40%;
-      aspect-ratio: 1/1;
-      background: url(/assets/img/intro/circles-mini.png) no-repeat center
-        center;
-      background-size: cover;
-      top: -60%;
-      left: -15%;
+    content: "";
+    position: absolute;
+    width: 40%;
+    aspect-ratio: 1/1;
+    background: url(/assets/img/intro/circles-mini.png) no-repeat center center;
+    background-size: cover;
+    top: -50%;
+    left: -12%;
 
-      @media (width<=500px) {
-        content: none;
-      }
+    @media (width<=500px) {
+      content: none;
     }
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 40%;
-      aspect-ratio: 1/1;
-      background: url(/assets/img/intro/circles-mini.png) no-repeat center
-        center;
-      background-size: cover;
-      right: -20%;
-      bottom: -50%;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    aspect-ratio: 1/1;
+    background: url(/assets/img/intro/circles-mini.png) no-repeat center center;
+    background-size: cover;
+    right: -12%;
+    bottom: -50%;
 
-      @media (width<=500px) {
-        content: none;
-      }
+    @media (width<=500px) {
+      content: none;
     }
+  }
 
   &__body {
-
+    position: relative;
+    z-index: 2;
+    max-width: 645px;
   }
   &__title {
-
+    font-size: clamp(2rem, 1.0357rem + 2.5714vw, 3.125rem);
+    margin-block-end: 60px;
+    font-weight: 600;
+    text-align: center;
   }
   &__form {
     display: flex;
     flex-direction: column;
     gap: 26px;
+
+    @media screen and (width<=800px) {
+      gap: 20px;
+    }
   }
   &__input {
+    background-color: transparent;
+    border: 1px solid #ffffff80;
 
+    &:active,
+    &:focus {
+      outline: 1px solid $color-white;
+    }
   }
   &__button {
+    @media screen and (width<=800px) {
+      padding: 6px;
 
+      & .point-mark {
+        width: 48px;
+      }
+    }
+  }
+}
+
+.lechenie {
+  @include sections("form");
+  padding: clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem);
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(1.25rem, -9.25rem + 28vw, 11.5rem);
+
+    @media screen and (width<=1000px) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 745px;
+  }
+
+  &__title {
+    margin-block-end: clamp(2.5rem, -0.6071rem + 8.2857vw, 6.125rem);
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .point-mark {
+      padding: 0;
+      background-color: $color-white;
+      outline: 1px solid $light-color;
+      width: 80px;
+
+      & svg {
+        width: 30px;
+      }
+    }
+
+    @media screen and (width<=1000px) {
+      display: none;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    background-color: $light-color;
+    border-radius: 30px;
+    padding: 50px;
+    border: 1px solid #dfeaf6;
+
+    @media screen and (width<=900px) {
+      padding: 24px 14px;
+      border-radius: 20px;
+    }
+  }
+
+  &__input {
+    background-color: $color-white;
+    margin-block-end: 20px;
+
+    @media screen and (width<=900px) {
+      margin-block-end: 10px;
+    }
+  }
+
+  .checkbox {
+    margin-block: 44px 32px;
+    font-size: clamp(0.875rem, 0.7679rem + 0.2857vw, 1rem);
+    color: #133a6680;
+
+    & .checkbox-mark {
+      border: 1px solid $accent-color;
+      &::before {
+        border-radius: 4px;
+        background-color: $accent-color;
+        background-size: 70%;
+        background-position: 2px center;
+      }
+    }
+
+    @media screen and (width<=900px) {
+      margin-block: 24px 16px;
+    }
+  }
+
+  &__button {
+    @media screen and (width<=1200px) {
+      & .point-mark {
+        padding: 6px;
+        width: 48px;
+      }
+    }
   }
 }

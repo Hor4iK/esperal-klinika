@@ -1,0 +1,243 @@
+.contacts {
+  @include sections("light", "base");
+
+  &_s {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    &__block {
+      @include sections("light", "base");
+    }
+    &__description {
+      opacity: 0.65;
+      margin-block-end: 20px;
+
+      @media screen and (width<=950px) {
+        margin-block-end: 8px;
+      }
+
+      &:last-of-type {
+        margin-block-end: 40px;
+
+        @media screen and (width<=950px) {
+          margin-block-end: 24px;
+        }
+      }
+    }
+
+    &__content-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: $color-white;
+      margin-block-end: 142px;
+      border-radius: 20px;
+
+      @media screen and (width<=950px) {
+        margin-block-end: 24px;
+        gap: 10px;
+      }
+    }
+    &__separator {
+      display: block;
+      height: 1px;
+      background-color: #deedff;
+      position: relative;
+
+      @media screen and (width<=950px) {
+        &:not(.contacts .contacts_s__separator) {
+          display: none;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 7px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: $accent-color;
+        left: 0;
+        top: -3px;
+        z-index: 2;
+      }
+    }
+    &__subtitle {
+      margin-block-end: 12px;
+      font-size: 18px;
+      line-height: 1.2;
+      opacity: 0.5;
+
+      @media screen and (width<=950px) {
+        &:not(.contacts .contacts_s__subtitle) {
+          display: none;
+        }
+      }
+    }
+    &__link {
+      padding: 6px;
+      width: 100%;
+      gap: 10px;
+      line-height: 1.2;
+
+      @media screen and (width>950px) {
+        padding: 0;
+        color: inherit;
+        background-color: inherit;
+        &:hover {
+          color: inherit;
+          background-color: inherit;
+          outline: inherit;
+        }
+        & .point-mark {
+          display: none;
+        }
+      }
+
+      & span:not(.point-mark) {
+        margin-inline-start: 14px;
+      }
+
+      & .point-mark {
+        margin: 0;
+        background-color: $color-white;
+
+        & svg {
+          width: 16px;
+        }
+      }
+
+      @media screen and (width<=950px) {
+        background-color: $light-color;
+      }
+    }
+    &__button {
+      & .point-mark {
+        width: 80px;
+        @media (width<=1200px) {
+          padding: 6px;
+          width: 48px;
+        }
+      }
+    }
+    &__block:has(.contacts_s__map) {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: url(/assets/img/section/map-mini.webp);
+      background-size: cover;
+    }
+
+    &_small {
+      @include sections("light", "base");
+      display: block;
+
+      .contacts_s__body {
+        display: flex;
+        justify-content: space-between;
+        gap: 120px;
+
+        @media screen and (width<=950px) {
+          gap: 80px;
+        }
+      }
+
+      .contacts_s__block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+      }
+
+      .contacts_s__content-list {
+        margin: 0;
+      }
+
+      @media screen and (width<=950px) {
+        .contacts_s {
+          &__body {
+            flex-direction: column;
+            gap: 0;
+          }
+          &__block {
+            &:first-of-type {
+              order: 2;
+              margin-block-end: 24px;
+            }
+            &:last-of-type {
+              display: contents;
+            }
+          }
+          &__text {
+            order: 1;
+          }
+          &__button {
+            order: 3;
+          }
+        }
+      }
+    }
+
+    @media screen and (width<=950px) {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: auto;
+      gap: 10px;
+    }
+  }
+
+  .contacts_s {
+    &__title {
+      display: none;
+    }
+
+    &__block {
+      background-color: $light-color;
+      padding: 0;
+
+      &:first-of-type {
+        padding: 45px 50px 50px;
+
+        @media (width<=950px) {
+          padding: 18px 20px 20px;
+        }
+      }
+    }
+
+    &__content-list {
+      background-color: inherit;
+    }
+
+    &__link {
+      font-weight: 400;
+      padding: 0;
+      color: inherit;
+      background-color: inherit;
+      &:hover {
+        color: inherit;
+        background-color: inherit;
+        outline: inherit;
+      }
+      & .point-mark {
+        display: none;
+      }
+      span {
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+
+    @media (width<=950px) {
+      &__content-list {
+        gap: 16px;
+      }
+      &__subtitle {
+        margin-block-end: 8px;
+      }
+    }
+  }
+
+  &__title {
+    margin-block-start: clamp(1.5rem, -1.5rem + 8vw, 5rem);
+  }
+}

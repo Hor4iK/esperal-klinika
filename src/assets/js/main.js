@@ -50,6 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
       tabsShowMore(8, showMoreBtn);
     })
   }
+  const tabContents = document.querySelectorAll(".pag-list");
+    if (tabContents && tabContents.length > 0) {
+      tabContents.forEach(content => {
+        HiddenElementsInit(content, 8, showMoreBtn);
+      })
+    }
   /* -- END PAGINATION  -- */
 
 
@@ -58,13 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const service = document.querySelector('.services');
 
   if (service) {
-
-    const tabContents = service.querySelectorAll(".pag-list");
-    if (tabContents.length > 0) {
-      tabContents.forEach(content => {
-        HiddenElementsInit(content, 8, showMoreBtn);
-      })
-    }
 
     //Services tabs
     const serviceTitle = service.querySelectorAll('.services__top-container');
@@ -78,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (serviceContent[i].style.maxHeight) {
             serviceContent[i].removeAttribute("style");
           } else {
-            serviceContent[i].style.maxHeight = "1000px";
+            serviceContent[i].style.maxHeight = "1500px";
           }
         })
       };

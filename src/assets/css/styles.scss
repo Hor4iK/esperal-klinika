@@ -185,18 +185,31 @@ body {
       }
 
       span:first-of-type {
-        width: 16px;
+        width: 17px;
         height: 3px;
         position: absolute;
-        top: calc(50% - 3px);
-        left: calc(50% - 6px);
+        top: calc(50% - 2px);
+        left: calc(50% - 8px);
+
+        @media screen and (width<=600px) {
+          width: 13px;
+          height: 2px;
+          top: calc(50% - 1px);
+          left: calc(50% - 6px);
+        }
       }
 
       span:last-of-type {
         width: 3px;
         height: 16px;
-        top: calc(50% - 9px);
-        left: calc(50%);
+        top: calc(50% - 8px);
+        left: calc(50% - 1px);
+
+        @media screen and (width<=600px) {
+          width: 2px;
+          height: 12px;
+          top: calc(50% - 6px);
+        }
       }
     }
 
@@ -305,7 +318,36 @@ body {
 
 .breadcrumbs {
   &__list {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(1.625rem, 0.9821rem + 1.7143vw, 2.375rem);
     line-height: 1.2;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:first-child)::before {
+      content: "";
+      display: block;
+      width: 7px;
+      aspect-ratio: 1/1;
+      background-color: $accent-color;
+      border-radius: 50%;
+      position: absolute;
+      left: -18%;
+      top: 30%;
+    }
+
+    &:not(:last-child) {
+      opacity: 0.5;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $accent-color;
+    }
   }
 
   @media screen and (width<=600px) {
@@ -340,9 +382,20 @@ body {
   padding: 28px;
   border-radius: 16px;
   font-size: clamp(0.875rem, 0.5536rem + 0.8571vw, 1.25rem);
+  outline: 1px solid transparent;
+  transition: outline 350ms;
+
+  &:active,
+  &:focus {
+    outline: 1px solid $accent-color;
+  }
 
   &::placeholder {
     opacity: 0.5;
+  }
+
+  @media screen and (width<=1000px) {
+    padding: 20px;
   }
 
   @media screen and (width<=800px) {
@@ -356,7 +409,7 @@ body {
   align-items: center;
   gap: 10px;
   font-size: clamp(0.75rem, 0.5357rem + 0.5714vw, 1rem);
-  opacity: 0.5;
+  color: rgb(255, 255, 255, 0.5);
   position: relative;
   cursor: pointer;
 
@@ -378,21 +431,25 @@ body {
     aspect-ratio: 1/1;
     border-radius: 6px;
     position: relative;
-  }
 
-  &:checked {
-    &-mark {
+    &::before {
       content: "";
       display: block;
       width: 16px;
       aspect-ratio: 1/1;
       background: url(/assets/img/icons/checkbox.svg) no-repeat center center;
       background-size: cover;
+      opacity: 0;
+      transition: opacity 200ms;
     }
   }
 
-  a {
+  input[type="checkbox"]:checked ~ .checkbox-mark::before {
     opacity: 1;
+  }
+
+  a {
+    color: rgb(255, 255, 255, 1);
   }
 }
 
@@ -476,6 +533,8 @@ body {
 @import "vendor/lechenie-form";
 // @import "vendor/baza-znaniy";
 // @import "vendor/faq";
-// @import "vendor/contacts";
+@import "vendor/contacts";
+
+@import "vendor/installment";
 
 @import "vendor/footer";
