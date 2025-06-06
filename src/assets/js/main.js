@@ -1,19 +1,89 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  //search function
-  const searchArray = document.querySelectorAll('.search');
-  if (searchArray) {
-    searchArray.forEach(search => {
+  /* -- SEARCH  -- */
+  const searchBoxArray = document.querySelectorAll('.search__container');
+  if (searchBoxArray && searchBoxArray.length > 0) {
+    searchBoxArray.forEach(searchBox => {
+      const search = searchBox.querySelector('.search');
+      const searchBtn = searchBox.querySelector('.search__button');
       const input = search.querySelector('input');
-      input.addEventListener('focus', evt => {
+
+      input.addEventListener('focus', () => {
         search.classList.add('open');
       })
-      input.addEventListener('blur', evt => {
+
+      input.addEventListener('blur', () => {
         search.classList.remove('open');
+        search.classList.remove('active');
       })
+
+      if (searchBtn) {
+        searchBtn.addEventListener('click', () => {
+          search.classList.add('active');
+        })
+      }
+    })
+  }
+  /* -- END SEARCH  -- */
+
+
+
+  /* -- MENU MOBILE  -- */
+  const burgerMenuArr = document.querySelectorAll('.menu_btn');
+  if (burgerMenuArr && burgerMenuArr.length > 0) {
+    const header = document.querySelector('.header');
+    const headerMobile = header.querySelector('.header__row.mobile');
+
+    burgerMenuArr.forEach(burgerMenu => {
+      burgerMenu.addEventListener("click", () => {
+        if (header.classList.contains('active')) {
+          headerMobile.classList.remove("active");
+          header.classList.remove("active");
+        } else {
+          headerMobile.classList.add("active");
+          header.classList.add("active");
+          let height = header.offsetHeight;
+          // headerMobile.style.height = 'calc(100vh - ' + height + 'px)';
+        }
+        // header.querySelector('.ham').classList.toggle("active");
+        document.querySelector('html').classList.toggle('burger-lock');
+      });
     })
   }
 
+  const hideItems = document.querySelectorAll('.hide-items');
+  if (hideItems.length > 0) {
+    hideItems.forEach((elem) => {
+      const hideItem = elem.querySelectorAll('.hide-item');
+      const hideTitles = elem.querySelectorAll('.hide-item__title');
+      const hideContents = elem.querySelectorAll('.hide-item__height');
+      hideItem.forEach((item) => {
+        let title = item.querySelector('.hide-item__title');
+        let content = item.querySelector('.hide-item__height');
+        title.addEventListener('click', () => {
+          if (title.classList.contains('active')) {
+            title.classList.remove('active');
+            content.classList.remove('active');
+            content.removeAttribute('style');
+          }
+          else {
+            hideTitles.forEach((element) => {
+              element.classList.remove('active');
+            })
+            hideContents.forEach((element) => {
+              element.classList.remove('active');
+              element.removeAttribute("style");
+            })
+            let height = content.querySelector('.hide-item__content').offsetHeight;
+            title.classList.add('active');
+            content.classList.add('active');
+            content.style.height = height + 'px';
+          }
+        })
+      })
+    })
+  }
+  /* -- END MENU MOBILE  -- */
 
 
   /* -- PAGINATION  -- */
@@ -51,11 +121,11 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
   const tabContents = document.querySelectorAll(".pag-list");
-    if (tabContents && tabContents.length > 0) {
-      tabContents.forEach(content => {
-        HiddenElementsInit(content, 8, showMoreBtn);
-      })
-    }
+  if (tabContents && tabContents.length > 0) {
+    tabContents.forEach(content => {
+      HiddenElementsInit(content, 8, showMoreBtn);
+    })
+  }
   /* -- END PAGINATION  -- */
 
 
@@ -348,8 +418,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     })
   }
-
-
   /* -- END SLIDERS  -- */
 
 
@@ -467,8 +535,8 @@ document.addEventListener('DOMContentLoaded', function () {
       articleNavigation.querySelector('.navigation__item').remove();
     }
   }
-
   /* -- END Automatic content   -- */
+
 
   //view photos fancybox
   Fancybox.bind("[data-fancybox]");
