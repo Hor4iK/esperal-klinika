@@ -313,12 +313,6 @@
     }
   }
 
-  .hide-item__height {
-    transition: height 0.3s linear;
-    height: 0;
-    overflow: hidden;
-  }
-
   &__phone-link {
     display: block;
     padding: 18px 20px 17px;
@@ -445,7 +439,7 @@
   }
 
   &__subnav {
-    transition: opacity 0.2s ease, transform 0.3s ease;
+    transition: opacity 0.2s ease, transform 0.3s ease, height 0.3s linear !important;
     transform: scaleY(0);
     transform-origin: 0 0;
     height: auto;

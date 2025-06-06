@@ -599,11 +599,6 @@ input[type=search]::-webkit-search-results-decoration {
     height: 100%;
   }
 }
-.header .hide-item__height {
-  transition: height 0.3s linear;
-  height: 0;
-  overflow: hidden;
-}
 .header__phone-link {
   display: block;
   padding: 18px 20px 17px;
@@ -718,7 +713,7 @@ input[type=search]::-webkit-search-results-decoration {
   transition: color 100ms;
 }
 .menu__subnav {
-  transition: opacity 0.2s ease, transform 0.3s ease;
+  transition: opacity 0.2s ease, transform 0.3s ease, height 0.3s linear !important;
   transform: scaleY(0);
   transform-origin: 0 0;
   height: auto;
@@ -1352,6 +1347,21 @@ html.burger-lock {
 
 .hide {
   display: none !important;
+}
+
+.hide-item__height {
+  transition: height 0.3s linear;
+  overflow: hidden;
+}
+@media (width > 700px) {
+  .hide-item__height:not(.menu__subnav) {
+    height: 0;
+  }
+}
+@media (width <= 700px) {
+  .hide-item__height {
+    height: 0;
+  }
 }
 
 .btn_more {
@@ -3635,6 +3645,237 @@ thead .services__table__title th:nth-child(1) {
   }
   .installment__button .point-mark {
     width: 48px;
+  }
+}
+
+.prices {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background-color: #fff;
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+}
+.prices__item {
+  padding: 20px;
+  transition: padding 300ms;
+  background-color: #f3f9ff;
+  border-radius: 24px;
+}
+.prices__item:not(:last-child) {
+  margin-block-end: 20px;
+}
+.prices__item.active {
+  padding: 20px 20px 50px 50px;
+}
+@media (width <= 800px) {
+  .prices__item {
+    padding: 14px;
+    border-radius: 16px;
+  }
+  .prices__item:not(:last-child) {
+    margin-block-end: 10px;
+  }
+  .prices__item.active {
+    padding: 14px;
+  }
+}
+.prices__top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border-bottom: none;
+  transition: padding 300ms ease-out;
+}
+.prices__top-container.active {
+  padding-block-end: 20px;
+  border-bottom: 1px solid #dde6ee;
+}
+.prices__top-container.active .services__btn_open span:last-of-type {
+  transform: rotate(0);
+}
+@media (width <= 800px) {
+  .prices__top-container {
+    gap: 14px;
+  }
+}
+.prices__subtitle {
+  font-size: clamp(1.25rem, 0.5rem + 2vw, 2rem);
+  font-weight: 600;
+}
+.prices__subtitle__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 22px 42px;
+  gap: 8px;
+  width: 100%;
+}
+.prices__subtitle__wrapper span:not(.services__subtitle) {
+  font-size: clamp(1rem, 0.7917rem + 0.6667vw, 1.25rem);
+  opacity: 0.65;
+}
+@media (width <= 800px) {
+  .prices__subtitle__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.prices__bottom-container {
+  overflow: hidden;
+  transition: max-height 400ms ease-in-out;
+}
+.prices__table {
+  width: 100%;
+}
+.prices__table .hide-item__title {
+  transition: margin 350ms ease-out, color 200ms;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.prices__table .hide-item__title:hover {
+  color: #4995ec;
+}
+.prices__table .hide-item__title::before {
+  content: "";
+  width: 10px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transition: transform 400ms ease-out;
+  transform: rotate(45deg);
+}
+.prices__table .hide-item__title::after {
+  content: "";
+  width: 10px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  transition: transform 400ms ease-out;
+  transform: rotate(-45deg);
+}
+.prices__table .hide-item__title.active {
+  margin-block-end: 24px;
+}
+.prices__table .hide-item__title.active::before {
+  transform: rotate(-45deg);
+}
+.prices__table .hide-item__title.active::after {
+  transform: rotate(45deg);
+}
+.prices__table .hide-item__content p {
+  font-size: 16px;
+  opacity: 0.65;
+}
+.prices__table.active {
+  display: table;
+}
+.prices__table tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  font-size: clamp(1rem, 0.7917rem + 0.6667vw, 1.25rem);
+}
+.prices__table tr:nth-child(even) {
+  background-color: #fff;
+  border-radius: 8px;
+}
+.prices__table tr td:nth-child(1) {
+  flex-basis: 45%;
+}
+@media (width <= 800px) {
+  .prices__table tr td:nth-child(2) {
+    opacity: 0.5;
+  }
+}
+@media (width <= 800px) {
+  .prices__table tr {
+    position: relative;
+    padding: 12px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .prices__table tr .btn-popup {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+  }
+}
+thead .prices__table__title {
+  padding: 25px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+thead .prices__table__title th {
+  font-size: 16px;
+  opacity: 0.65;
+  font-weight: 400;
+  text-align: left;
+}
+thead .prices__table__title th:nth-child(1) {
+  flex-basis: 35%;
+}
+@media (width <= 800px) {
+  thead .prices__table__title {
+    display: none;
+  }
+}
+.prices__table button {
+  font-size: clamp(1rem, 0.7917rem + 0.6667vw, 1.25rem);
+  color: #4995ec;
+  padding: 12px 16px 12px;
+  box-shadow: 1px 1px 5px -1px rgba(255, 255, 255, 0);
+  transition: box-shadow 300ms ease-out;
+}
+.prices__table button:hover {
+  box-shadow: 1px 1px 5px -1px #4995ec;
+}
+.prices__btn_open {
+  width: 80px;
+  background-color: #fff;
+}
+.prices__btn_open span {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #4995ec;
+  transition: transform 400ms ease-in-out;
+}
+.prices__btn_open span:last-of-type {
+  transform: rotate(270deg);
+}
+@media (width <= 800px) {
+  .prices__btn_open {
+    width: 58px;
+  }
+}
+.prices__btn_more {
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+  padding-block-end: 10px;
+  line-height: 1;
+  color: #4995ec;
+  margin-block-start: 20px;
+}
+.prices__btn_more span {
+  font-weight: 400;
+  margin: 0;
+}
+.prices__btn_more svg {
+  width: 10px;
+}
+@media (width > 800px) {
+  .prices__btn_more {
+    display: none;
   }
 }
 
