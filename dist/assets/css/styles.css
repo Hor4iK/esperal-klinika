@@ -779,7 +779,21 @@ input[type=search]::-webkit-search-results-decoration {
     box-shadow: 0px 4px 8px 0px rgb(205, 226, 237);
     border-radius: 10px;
     background-color: #fff;
-    max-height: 600px;
+    max-height: 630px;
+  }
+  .menu__subnav ul {
+    overflow-y: auto;
+    max-height: 630px;
+  }
+  .menu__subnav ul::-webkit-scrollbar {
+    width: 5px;
+  }
+  .menu__subnav ul::-webkit-scrollbar-track {
+    background-color: #f3f9ff;
+  }
+  .menu__subnav ul::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #4995ec;
   }
   .menu__item:hover .menu__subnav {
     opacity: 1;
@@ -1147,19 +1161,33 @@ html.burger-lock {
   top: calc(50% - 2px);
   left: calc(50% - 8px);
 }
-@media screen and (width <= 600px) {
+@media screen and (width <= 1200px) {
   .btn_consult .point-mark span:first-of-type {
-    width: 13px;
+    width: 14px;
     height: 2px;
     top: calc(50% - 1px);
+    left: calc(50% - 7px);
+  }
+}
+@media screen and (width <= 600px) {
+  .btn_consult .point-mark span:first-of-type {
+    width: 12px;
+    height: 2px;
     left: calc(50% - 6px);
   }
 }
 .btn_consult .point-mark span:last-of-type {
   width: 3px;
   height: 16px;
-  top: calc(50% - 8px);
+  top: calc(50% - 9px);
   left: calc(50% - 1px);
+}
+@media screen and (width <= 1200px) {
+  .btn_consult .point-mark span:last-of-type {
+    width: 2px;
+    height: 14px;
+    top: calc(50% - 7px);
+  }
 }
 @media screen and (width <= 600px) {
   .btn_consult .point-mark span:last-of-type {
@@ -1245,6 +1273,11 @@ html.burger-lock {
   width: 20px;
   aspect-ratio: 1/1;
   background-image: url(/assets/img/icons/plus.svg);
+}
+@media screen and (width <= 700px) {
+  .point-plus::before {
+    background-size: 75%;
+  }
 }
 
 .point-menu::before {
@@ -2378,9 +2411,7 @@ html.burger-lock {
     gap: 8px;
   }
   .services__table tr .btn-popup {
-    opacity: 0;
-    position: absolute;
-    inset: 0;
+    display: none;
   }
 }
 thead .services__table__title {
@@ -3728,6 +3759,7 @@ thead .services__table__title th:nth-child(1) {
 }
 .prices__table .hide-item__title {
   transition: margin 350ms ease-out, color 200ms;
+  padding-inline-end: 40px;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
@@ -3742,7 +3774,7 @@ thead .services__table__title th:nth-child(1) {
   height: 1px;
   background-color: #000;
   position: absolute;
-  right: -20px;
+  right: 13px;
   top: 50%;
   transition: transform 400ms ease-out;
   transform: rotate(45deg);
@@ -3753,7 +3785,7 @@ thead .services__table__title th:nth-child(1) {
   height: 1px;
   background-color: #000;
   position: absolute;
-  right: -28px;
+  right: 5px;
   top: 50%;
   transition: transform 400ms ease-out;
   transform: rotate(-45deg);

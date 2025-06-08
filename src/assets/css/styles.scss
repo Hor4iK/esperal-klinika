@@ -195,10 +195,16 @@ html.burger-lock {
         top: calc(50% - 2px);
         left: calc(50% - 8px);
 
-        @media screen and (width<=600px) {
-          width: 13px;
+        @media screen and (width<=1200px) {
+          width: 14px;
           height: 2px;
           top: calc(50% - 1px);
+          left: calc(50% - 7px);
+        }
+
+        @media screen and (width<=600px) {
+          width: 12px;
+          height: 2px;
           left: calc(50% - 6px);
         }
       }
@@ -206,8 +212,14 @@ html.burger-lock {
       span:last-of-type {
         width: 3px;
         height: 16px;
-        top: calc(50% - 8px);
+        top: calc(50% - 9px);
         left: calc(50% - 1px);
+
+        @media screen and (width<=1200px) {
+          width: 2px;
+          height: 14px;
+          top: calc(50% - 7px);
+        }
 
         @media screen and (width<=600px) {
           width: 2px;
@@ -265,6 +277,9 @@ html.burger-lock {
 .point-plus::before {
   @include point-mark-psevdo;
   background-image: url(/assets/img/icons/plus.svg);
+  @media screen and (width<=700px) {
+    background-size: 75%;
+  }
 }
 
 .point-menu::before {

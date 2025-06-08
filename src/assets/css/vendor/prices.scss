@@ -88,6 +88,7 @@
 
     .hide-item__title {
       transition: margin 350ms ease-out, color 200ms;
+      padding-inline-end: 40px;
       position: relative;
       width: fit-content;
       cursor: pointer;
@@ -102,7 +103,7 @@
         height: 1px;
         background-color: #000;
         position: absolute;
-        right: -20px;
+        right: 13px;
         top: 50%;
         transition: transform 400ms ease-out;
         transform: rotate(45deg);
@@ -114,7 +115,7 @@
         height: 1px;
         background-color: #000;
         position: absolute;
-        right: -28px;
+        right: 5px;
         top: 50%;
         transition: transform 400ms ease-out;
         transform: rotate(-45deg);
