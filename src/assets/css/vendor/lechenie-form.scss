@@ -156,8 +156,9 @@
       &::before {
         border-radius: 4px;
         background-color: $accent-color;
-        background-size: 70%;
-        background-position: 2px center;
+        background-size: cover;
+        background-position: center center;
+        border: 2px solid $accent-color;
       }
     }
 

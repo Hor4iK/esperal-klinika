@@ -341,6 +341,11 @@ html.burger-lock {
     flex-direction: row;
     gap: clamp(1.625rem, 0.9821rem + 1.7143vw, 2.375rem);
     line-height: 1.2;
+
+    @media (width<=600px) {
+      flex-direction: column;
+      gap: 6px;
+    }
   }
 
   &__item {
@@ -354,8 +359,12 @@ html.burger-lock {
       background-color: $accent-color;
       border-radius: 50%;
       position: absolute;
-      left: -18%;
+      left: clamp(-1.3125rem, 0.4375rem + 1vw, -1.6875rem);
       top: 30%;
+
+      @media screen and (width<=600px) {
+        left: -10px;
+      }
     }
 
     &:not(:last-child) {
@@ -372,6 +381,10 @@ html.burger-lock {
   @media screen and (width<=600px) {
     &__item {
       gap: 8px;
+
+      &::before {
+        left: -10px;
+      }
     }
 
     &__item.menu_point {
@@ -408,7 +421,7 @@ html.burger-lock {
   display: none;
 
   &.active {
-    display: flex;
+    display: flex !important;
   }
 }
 
@@ -572,5 +585,7 @@ html.burger-lock {
 @import "vendor/installment";
 @import "vendor/prices";
 @import "vendor/text";
+
+@import "vendor/doctor";
 
 @import "vendor/footer";

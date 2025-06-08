@@ -130,73 +130,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  /* -- SERVICES  -- */
-  const service = document.querySelector('.services');
-
-  if (service) {
-
-    //Services tabs
-    const serviceTitle = service.querySelectorAll('.services__top-container');
-    const serviceContent = service.querySelectorAll(".services__bottom-container");
-    if (serviceTitle && serviceContent) {
-      for (let i = 0; i < serviceTitle.length; i++) {
-        serviceTitle[i].addEventListener("click", () => {
-          const item = serviceTitle[i].closest('.services__item');
-          if (item) item.classList.toggle("active");
-          serviceTitle[i].classList.toggle("active");
-          if (serviceContent[i].style.maxHeight) {
-            serviceContent[i].removeAttribute("style");
-          } else {
-            serviceContent[i].style.maxHeight = "1500px";
-          }
-        })
-      };
-    }
-
-    //Services category
-    const serviceItems = service.querySelectorAll('.services__item');
-
-    function categoriesSwitch(categoriesArray, categoriesContentArray) {
-      if (categoriesArray.length > 0 && categoriesContentArray.length > 0) {
-        categoriesArray[0].classList.add("active");
-        categoriesContentArray[0].classList.add("active");
-        categoriesContentArray[0].querySelector('.pag-list').classList.add('pag-active');
-        if (window.innerWidth <= 800) {
-          categoriesContentArray[0].style.maxHeight = categoriesContentArray[0].scrollHeight + 40 + "px";
-        }
-        for (let i = 0; i < categoriesContentArray.length; i++) {
-          categoriesContentArray[i].style.order = i * 2 + 1;
-          categoriesArray[i].style.order = i * 2;
-          categoriesArray[i].addEventListener('click', () => {
-            service.querySelectorAll(".services__category__item.active").forEach(activeBtn => {
-              activeBtn.classList.remove('active');
-            })
-            service.querySelectorAll(".services__table.active").forEach(activeContent => {
-              activeContent.classList.remove('active', "pag-active");
+  /* -- CATEGORIES  -- */
+  function categoriesSwitch(mainContainer = document, categoriesArray, categoriesContentArray, itemSelectorActive, contentSelectorActive, pagination = false) {
+    if (categoriesArray.length > 0 && categoriesContentArray.length > 0) {
+      categoriesArray[0].classList.add("active");
+      categoriesContentArray[0].classList.add("active");
+      if (pagination) categoriesContentArray[0].querySelector('.pag-list').classList.add('pag-active');
+      if (window.innerWidth <= 800) {
+        categoriesContentArray[0].style.maxHeight = categoriesContentArray[0].scrollHeight + 40 + "px";
+      }
+      for (let i = 0; i < categoriesContentArray.length; i++) {
+        categoriesContentArray[i].style.order = i * 2 + 1;
+        categoriesArray[i].style.order = i * 2;
+        categoriesArray[i].addEventListener('click', () => {
+          mainContainer.querySelectorAll(itemSelectorActive).forEach(activeBtn => {
+            activeBtn.classList.remove('active');
+          })
+          mainContainer.querySelectorAll(contentSelectorActive).forEach(activeContent => {
+            activeContent.classList.remove('active');
+            if (pagination) {
+              activeContent.classList.remove("pag-active");
               activeContent.querySelector('.pag-list').classList.remove('pag-active');
-            })
-            categoriesArray[i].classList.add('active');
-            categoriesContentArray[i].classList.add("active");
+            }
+          })
+          categoriesArray[i].classList.add('active');
+          categoriesContentArray[i].classList.add("active");
+          if (pagination) {
             categoriesContentArray[i].querySelector('.pag-list').classList.add('pag-active');
+
             tabContents.forEach(content => {
               HiddenElementsInit(content, 8, showMoreBtn);
             })
-          })
-        }
+          }
+        })
       }
     }
+  }
+  /* -- END CATEGORIES  -- */
 
-    serviceItems.forEach(item => {
-      const categories = item.querySelectorAll('.services__category__item');
-      const categoriesContent = item.querySelectorAll(".services__table");
 
-      categoriesSwitch(categories, categoriesContent);
-    })
-
-    //Swipe lists of category
-    const containersArray = document.querySelectorAll('.services__category__list');
-    containersArray.forEach(container => {
-      let isDown = false;
+  /* -- GRAB LIST  -- */
+  function grabListListeners(container) {
+    let isDown = false;
       let startX;
       let scrollLeft;
 
@@ -241,10 +216,67 @@ document.addEventListener('DOMContentLoaded', function () {
         const walk = (x - startX) * 1.5;
         container.scrollLeft = scrollLeft - walk;
       });
+  }
+  /* -- END GRAB LIST  -- */
+
+
+
+  /* -- SERVICES  -- */
+  const service = document.querySelector('.services');
+
+  if (service) {
+
+    //Services tabs
+    const serviceTitle = service.querySelectorAll('.services__top-container');
+    const serviceContent = service.querySelectorAll(".services__bottom-container");
+    if (serviceTitle && serviceContent) {
+      for (let i = 0; i < serviceTitle.length; i++) {
+        serviceTitle[i].addEventListener("click", () => {
+          const item = serviceTitle[i].closest('.services__item');
+          if (item) item.classList.toggle("active");
+          serviceTitle[i].classList.toggle("active");
+          if (serviceContent[i].style.maxHeight) {
+            serviceContent[i].removeAttribute("style");
+          } else {
+            serviceContent[i].style.maxHeight = "1500px";
+          }
+        })
+      };
+    }
+
+    //Services category
+    const serviceItems = service.querySelectorAll('.services__item');
+
+    serviceItems.forEach(item => {
+      const categories = item.querySelectorAll('.services__category__item');
+      const categoriesContent = item.querySelectorAll(".services__table");
+
+      categoriesSwitch(service, categories, categoriesContent, ".services__category__item.active", ".services__table.active", true);
+    })
+
+    //Swipe lists of category
+    const containersArray = document.querySelectorAll('.services__category__list');
+    containersArray.forEach(container => {
+      grabListListeners(container);
     })
 
   }
   /* -- END SERVICES  -- */
+
+
+
+  /* -- DOCTOR  -- */
+  //Doctor tabs
+  const education = document.querySelector('.doctor-page__education');
+  if (education) {
+    const educationList = education.querySelector('.doctor-page__education-tabs');
+    const educationCategories = education.querySelectorAll('.doctor-page__education-tab');
+    const educationContent = education.querySelectorAll('.doctor-page__education-items');
+
+    grabListListeners(educationList);
+    categoriesSwitch(education, educationCategories, educationContent, ".doctor-page__education-tab.active", ".doctor-page__education-items.active");
+  }
+  /* -- END DOCTOR  -- */
 
 
 
