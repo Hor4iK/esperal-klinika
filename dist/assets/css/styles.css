@@ -3834,9 +3834,7 @@ thead .services__table__title th:nth-child(1) {
     gap: 8px;
   }
   .prices__table tr .btn-popup {
-    opacity: 0;
-    position: absolute;
-    inset: 0;
+    display: none;
   }
 }
 thead .prices__table__title {
