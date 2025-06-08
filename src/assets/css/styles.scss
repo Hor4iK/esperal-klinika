@@ -343,6 +343,7 @@ html.burger-lock {
     line-height: 1.2;
 
     @media (width<=600px) {
+      padding-inline-start: 10px;
       flex-direction: column;
       gap: 6px;
     }
