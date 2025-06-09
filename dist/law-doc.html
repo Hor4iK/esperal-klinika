@@ -14,7 +14,8 @@
     	<script src="assets/js/build/fancybox.min.js" defer></script>
     	<script src="assets/js/build/swiper-bundle.min.js" defer></script>
     	<script src="assets/js/main.js" defer></script>
-    </head></head>
+    </head>
+</head>
 <body>
 <div class="page">
     <header class="header container">
@@ -360,6 +361,38 @@
             </div>
         </div>
     </footer>
+    <div class="popup" data-target="popup-consult">
+      <div class="popup__body">
+        <div class="popup__content">
+          <button class="close-popup"></button>
+    
+          <p class="popup__title main-title">
+            Бесплатная консультация специалиста — <span>это первый шаг!</span>
+          </p>
+          <p class="popup__subtitle">
+            Оставьте заявку, и наш эксперт свяжется с вами, чтобы помочь подобрать решение и обсудить вашу ситуацию
+          </p>
+    
+          <forms class="popup__form">
+            <input type="tel" name="params[phone][]" placeholder="+7(999) 999-99-99" required="">
+            <button type="submit" class="button button_green button_large popup__button">Записаться</button>
+          </forms>
+          <span class="popup__separation"></span>
+          <div class="popup__bottom">
+            <div class="popup__bottom-column">
+              <p>Или свяжитесь с нами самостоятельно</p>
+              <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+            </div>
+            <div class="popup__bottom-column">
+              <a href="#" target="_blank" class="point-mark btn_social point-tg">
+              </a>
+              <a href="+799999999999" class="point-mark btn_social point-tel">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
 </body>
 </html>
