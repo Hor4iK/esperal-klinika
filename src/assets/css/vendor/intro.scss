@@ -384,6 +384,14 @@
 
   &__button {
     margin-block-start: 40px;
+
+    @media screen and (width<=600px) {
+      padding: 6px;
+
+      .point-mark {
+        width: 48px;
+      }
+    }
   }
 
   &__block {

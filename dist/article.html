@@ -43,7 +43,7 @@
             <a href="#" target="_blank" class="point-mark btn_social point-tg">
             </a>
             <a class="header__phone-link header__phone-link_mobile" href="+799999999999">+7 999 999-99-99</a>
-            <button class="btn btn_accent btn-popup">записаться на прием</button>
+            <button class="btn btn_accent popup-btn" data-path="popup-consult">записаться на прием</button>
             <button class="menu__btn_mobile menu_btn">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                 <path fill="#4995EC" d="M.5.5h5v5h-5zM.5 8.5h5v5h-5zM8.5.5h5v5h-5zM8.5 8.5h5v5h-5z" />
@@ -149,7 +149,7 @@
               </div>
             </div>
           </div>
-          <button class="btn btn_consult header_mobile__button mobile__button btn-popup btn_accent">
+          <button class="btn btn_consult header_mobile__button mobile__button popup-btn btn_accent" data-path="popup-consult">
             <span>бесплатная консультация</span>
             <div class="point-mark"><span></span><span></span></div>
           </button>
@@ -214,7 +214,7 @@
               метод кодирования для каждого пациента.</p>
             <p class="contacts_s__description">Мы работаем круглосуточно и без выходных.</p>
           </div>
-          <button class="btn contacts_s__button btn-popup btn_consult btn_accent" data-path="popup-call">
+          <button class="btn contacts_s__button popup-btn btn_consult btn_accent" data-path="popup-consult">
             <span>записаться на прием</span>
             <div class="point-mark"><span></span><span></span></div>
           </button>
@@ -329,7 +329,7 @@
                             <span>WhatsApp</span>
                         </div>
                     </div>
-                    <button class="btn btn_call footer__button btn_light btn-popup">
+                    <button class="btn btn_call footer__button btn_light popup-btn" data-path="popup-consult">
                         <span>обратный звонок</span>
                         <div class="point-mark point-plus"></div>
                     </button>
@@ -374,8 +374,11 @@
           </p>
     
           <forms class="popup__form">
-            <input type="tel" name="params[phone][]" placeholder="+7(999) 999-99-99" required="">
-            <button type="submit" class="button button_green button_large popup__button">Записаться</button>
+            <input type="tel" class="input" name="params[phone][]" placeholder="+7(999) 999-99-99" required="">
+            <button type="submit" class="btn btn_consult popup__button popup-btn btn_accent">
+              <span>записаться</span>
+              <div class="point-mark"><span></span><span></span></div>
+            </button>
           </forms>
           <span class="popup__separation"></span>
           <div class="popup__bottom">

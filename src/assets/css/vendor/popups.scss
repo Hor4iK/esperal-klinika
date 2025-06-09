@@ -7,7 +7,7 @@
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
   width: 100%;
-  z-index: 2000;
+  z-index: 1000;
   transition: opacity 0.4s ease;
   overflow-y: auto;
   background: rgba(0, 8, 84, 0.27);
@@ -36,17 +36,19 @@
 
 .popup__content {
   width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
+  max-width: 900px;
+  border-radius: 30px;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  padding: 50px 60px 60px;
   scale: 0.3;
   transition: scale 0.4s ease;
-  background-color: rgb(243, 246, 251);
+  background-color: $color-white;
   box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.1);
+
+  @media screen and (width<=800px) {
+    border-radius: 24px;
+    padding: 20px;
+  }
 }
 
 .popup.open .popup__content {
@@ -55,114 +57,148 @@
 
 .close-popup {
   position: absolute;
-  top: 4px;
-  right: 10px;
   width: 25px;
-  cursor: pointer;
-  height: 25px;
-  transition: 0.3s;
-}
-@media (hover: hover) {
-  .close-popup:hover {
-    transform: rotate(180deg);
+  aspect-ratio: 1/1;
+  top: 30px;
+  right: 30px;
+  transition: transform 300ms ease-out;
+
+  &:hover {
+    transform: rotateZ(-90deg) scale(1.14);
+  }
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    display: block;
+    background-color: #133a6633;
+    rotate: 45deg;
+  }
+
+  &::after {
+    content: "";
+    width: 30px;
+    height: 1px;
+    display: block;
+    background-color: #133a6633;
+    rotate: -45deg;
+  }
+
+  @media screen and (width<=800px) {
+    top: 20px;
+    right: 20px;
   }
 }
 
-.popup__content{
-	form{
-		width: 100%;
-		max-width: 500px;
-		display: flex;
-		gap: 15px;
-		flex-direction: column;
-	}
+.popup__content {
+}
 
-	input{
-		color: #696969;
-		width: 100%;
-		border-radius: 25px;
-		border: 1px solid #e2e2e2;
-		padding: 20px 25px;
-		text-align: center;
-	}
+.popup__form {
+}
 
-  &_city{
-    align-items: flex-start;
-    max-width: 900px;
+.popup__title {
+  max-width: 700px;
+}
 
-    .popup__title{
-      text-align: left;
-      font-weight: 400;
-      margin-bottom: 30px;
-      padding-left: 15px;
-    }
+.popup__subtitle {
+  max-width: 700px;
+  opacity: 0.65;
+}
 
-    .popup__subtitle{
-      padding-left: 15px;
-      margin-bottom: 25px;
-    }
+.popup__button {
+  padding: 10px;
+  font-size: 20px;
 
-    ul{
-      display: flex;
-      row-gap: 10px;
-      column-gap: 20px;
-      flex-wrap: wrap;
+  .point-mark {
+    width: 60px;
+  }
 
-      li{
-        transition: 0.3s;
-        &:hover{
-          color: $red;
-        }
+  @media screen and (width<=800px) {
+    padding: 5px;
 
-        a{
-          text-decoration: underline;
-        }
-      }
-    }
-
-    form{
-      max-width: 100%;
-      margin-bottom: 20px;
-      input{
-        text-align: left;
-      }
+    .point-mark {
+      width: 50px;
     }
   }
 }
 
-input.popup__button{
-	color: $white;
-	margin-bottom: 8px;
+.popup__form {
+  margin-block: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  input {
+    background-color: $light-color;
+  }
+
+  @media screen and (width<=800px) {
+    margin-block: 30px;
+    grid-template-columns: 1fr;
+  }
 }
 
-.popup__title{
-	font-size: 30px;
-  font-weight: 900;
-  text-align: center;
-	margin-bottom: 5px;
+.popup__separation {
+  display: block;
+  height: 1px;
+  background-color: #deedff;
+  position: relative;
+  margin-block-end: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: $accent-color;
+    left: 0;
+    top: -3px;
+    z-index: 2;
+  }
 }
 
-.popup__subtitle{
-	font-size: 16px;
-	font-weight: 500;
-	color: #696969;
-	margin-bottom: 25px;
-	text-align: center;
-}
+.popup__bottom {
+  display: flex;
+  justify-content: space-between;
 
-.popup__attention{
-	font-size: 16px;
-	line-height: 1.4;
-    font-weight: 700;
-    color: #696969;
-    text-align: center;
+  &-column {
+    display: flex;
+    gap: 8px;
 
-		a{
-			color: $dark-green;
-      text-decoration: underline;
-			transition: 0.3s;
-			&:hover{
-				color: $light-green;
-			}
-		}
+    &:first-child {
+      flex-direction: column;
+
+      p {
+        opacity: 0.65;
+      }
+
+      a {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.1;
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+
+    &:last-child {
+      .point-mark {
+        width: 64px;
+      }
+    }
+  }
+
+  @media screen and (width<=700px) {
+    flex-direction: column;
+    gap: 16px;
+
+    &-column {
+      .point-mark {
+        width: 60px;
+      }
+    }
+  }
 }
