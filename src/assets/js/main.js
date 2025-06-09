@@ -172,52 +172,70 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- GRAB LIST  -- */
   function grabListListeners(container) {
     let isDown = false;
-      let startX;
-      let scrollLeft;
+    let startX;
+    let scrollLeft;
 
-      container.addEventListener('mousedown', (e) => {
-        isDown = true;
-        container.style.cursor = 'grabbing';
-        startX = e.pageX - container.offsetLeft;
-        scrollLeft = container.scrollLeft;
-      });
+    container.addEventListener('mousedown', (e) => {
+      isDown = true;
+      container.style.cursor = 'grabbing';
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
 
-      container.addEventListener('mouseleave', () => {
-        isDown = false;
-        container.style.cursor = 'grab';
-      });
+    container.addEventListener('mouseleave', () => {
+      isDown = false;
+      container.style.cursor = 'grab';
+    });
 
-      container.addEventListener('mouseup', () => {
-        isDown = false;
-        container.style.cursor = 'grab';
-      });
+    container.addEventListener('mouseup', () => {
+      isDown = false;
+      container.style.cursor = 'grab';
+    });
 
-      container.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - container.offsetLeft;
-        const walk = (x - startX) * 1.1;
-        container.scrollLeft = scrollLeft - walk;
-      });
+    container.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 1.1;
+      container.scrollLeft = scrollLeft - walk;
+    });
 
-      container.addEventListener('touchstart', (e) => {
-        isDown = true;
-        startX = e.touches[0].pageX - container.offsetLeft;
-        scrollLeft = container.scrollLeft;
-      });
+    container.addEventListener('touchstart', (e) => {
+      isDown = true;
+      startX = e.touches[0].pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
 
-      container.addEventListener('touchend', () => {
-        isDown = false;
-      });
+    container.addEventListener('touchend', () => {
+      isDown = false;
+    });
 
-      container.addEventListener('touchmove', (e) => {
-        if (!isDown) return;
-        const x = e.touches[0].pageX - container.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        container.scrollLeft = scrollLeft - walk;
-      });
+    container.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      const x = e.touches[0].pageX - container.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      container.scrollLeft = scrollLeft - walk;
+    });
   }
   /* -- END GRAB LIST  -- */
+
+
+  /* -- TABS  -- */
+  function tabs(containerItemSelector, titleArray, contentArray) {
+    for (let i = 0; i < titleArray.length; i++) {
+      titleArray[i].addEventListener("click", () => {
+        const item = titleArray[i].closest(containerItemSelector);
+        if (item) item.classList.toggle("active");
+        titleArray[i].classList.toggle("active");
+        if (contentArray[i].style.maxHeight) {
+          contentArray[i].removeAttribute("style");
+        } else {
+          contentArray[i].style.maxHeight = "1500px";
+        }
+      })
+    };
+  }
+  /* -- END TABS  -- */
 
 
 
@@ -230,18 +248,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const serviceTitle = service.querySelectorAll('.services__top-container');
     const serviceContent = service.querySelectorAll(".services__bottom-container");
     if (serviceTitle && serviceContent) {
-      for (let i = 0; i < serviceTitle.length; i++) {
-        serviceTitle[i].addEventListener("click", () => {
-          const item = serviceTitle[i].closest('.services__item');
-          if (item) item.classList.toggle("active");
-          serviceTitle[i].classList.toggle("active");
-          if (serviceContent[i].style.maxHeight) {
-            serviceContent[i].removeAttribute("style");
-          } else {
-            serviceContent[i].style.maxHeight = "1500px";
-          }
-        })
-      };
+      tabs('.services__item', serviceTitle, serviceContent);
     }
 
     //Services category
@@ -262,6 +269,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
   /* -- END SERVICES  -- */
+
+
+
+  /* -- VACANCIES  -- */
+  const vacancies = document.querySelector('.part-team');
+  if (vacancies) {
+    const titleArray = vacancies.querySelectorAll('.part-team__top-container');
+    const contentArray = vacancies.querySelectorAll('.part-team__bottom-container');
+
+    if (titleArray && contentArray) {
+      tabs('.part-team__item', titleArray, contentArray);
+    }
+  }
+  /* -- END VACANCIES  -- */
 
 
 

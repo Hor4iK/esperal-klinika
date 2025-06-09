@@ -570,7 +570,7 @@ html.burger-lock {
 @import "vendor/services";
 @import "vendor/principles";
 @import "vendor/calculator";
-// @import "vendor/doctors";
+@import "vendor/doctors";
 @import "vendor/preparation";
 @import "vendor/why-choose";
 @import "vendor/brigady";
@@ -588,7 +588,8 @@ html.burger-lock {
 @import "vendor/text";
 
 @import "vendor/doctor";
-@import "vendor/doctors";
+
+@import "vendor/vacancies";
 
 @import "vendor/popups";
 @import "vendor/footer";
