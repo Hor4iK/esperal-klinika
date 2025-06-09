@@ -285,6 +285,19 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END VACANCIES  -- */
 
 
+  /* -- FAQ  -- */
+  const faq = document.querySelector('.faq-section');
+  if(faq) {
+    const titleArray = faq.querySelectorAll('.faq-section__top-container');
+    const contentArray = faq.querySelectorAll('.faq-section__bottom-container');
+
+    if (titleArray && contentArray) {
+      tabs('.faq-section__item', titleArray, contentArray);
+    }
+  }
+  /* -- END FAQ  -- */
+
+
 
   /* -- DOCTOR  -- */
   //Doctor tabs

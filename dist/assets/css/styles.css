@@ -3737,6 +3737,272 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 
+.faq-section {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background-color: #fff;
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+}
+.faq-section__item {
+  padding: 10px 10px 10px 36px;
+  background-color: #f3f9ff;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: max-height 0.5s ease, background-color 300ms ease-out, color 300ms ease-out, padding 300ms;
+  max-height: 1000px;
+}
+.faq-section__item.hidden {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+.faq-section__item.active {
+  background-color: #4995ec;
+  color: #fff;
+}
+.faq-section__item:not(:last-child) {
+  margin-block-end: 20px;
+}
+.faq-section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border-bottom: none;
+  transition: padding 300ms ease-out;
+  cursor: pointer;
+}
+.faq-section__top {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.faq-section__top-text {
+  line-height: 140%;
+  color: rgba(19, 58, 102, 0.65);
+  margin-bottom: 24px;
+  max-width: 262px;
+}
+.faq-section__top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+  transition: padding 300ms ease-out;
+  cursor: pointer;
+}
+.faq-section__top-container.active .faq-section__btn_open span:last-of-type {
+  transform: rotate(0);
+}
+.faq-section__bottom-item {
+  margin-bottom: 20px;
+}
+.faq-section__bottom-item p:first-child {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: rgba(19, 58, 102, 0.5);
+  margin-bottom: 12px;
+}
+.faq-section__bottom-item div {
+  border-bottom: 1px solid #deedff;
+}
+.faq-section__bottom-item div span {
+  border-radius: 100%;
+  background-color: #4995ec;
+  width: 7px;
+  height: 7px;
+  display: block;
+  transform: translateY(3.5px);
+}
+.faq-section__bottom-items {
+  border-top: 1px solid #dbeafc;
+  padding-top: 31px;
+  margin-top: 10px;
+}
+.faq-section__bottom-text {
+  line-height: 120%;
+  margin-bottom: 20px;
+  transition: color 300ms ease-out;
+}
+.faq-section__bottom-name {
+  font-size: 18px;
+  line-height: 120%;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 300ms ease-out;
+}
+.faq-section__bottom-container {
+  max-height: 0;
+  padding-top: 10px;
+  overflow: hidden;
+  transition: max-height 400ms ease-in-out;
+}
+.faq-section__btn_open {
+  width: 80px;
+  background-color: #fff;
+}
+.faq-section__btn_open span {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #4995ec;
+  transition: transform 400ms ease-in-out;
+}
+.faq-section__btn_open span:last-of-type {
+  transform: rotate(270deg);
+}
+.faq-section__subtitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 116%;
+  transition: color 300ms ease-out;
+}
+.faq-section__subtitle__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.faq-section__connection-name {
+  font-size: 18px;
+  line-height: 120%;
+  color: rgba(19, 58, 102, 0.5);
+  margin-bottom: 10px;
+}
+.faq-section__connection-item:first-child {
+  margin-bottom: 24px;
+}
+.faq-section__connection-item a {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  color: #4995ec;
+}
+.faq-section__wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.faq-section__content {
+  width: 50%;
+}
+.faq-section__content-btn {
+  padding: 10px 10px 10px 36px;
+  transition: padding 300ms;
+  background: #f3f9ff;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  border: 1px solid #dfeaf6;
+  background-color: #fff;
+  cursor: pointer;
+  display: none;
+}
+.faq-section__content-btn p {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #4995ec;
+}
+.faq-section__content-btn .faq-section__btn_open {
+  width: 70px;
+  background: #f3f9ff;
+}
+.faq-section__content-btn.active span:last-of-type {
+  transform: rotate(270deg);
+}
+.faq-section__content-btn.active .faq-section__btn_open span:last-of-type {
+  transform: rotate(0);
+}
+.faq-section__forms {
+  max-width: 745px;
+}
+.faq-section__form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f9ff;
+  border-radius: 30px;
+  padding: 50px;
+}
+.faq-section__form-title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+  margin-bottom: 20px;
+}
+.faq-section__form-subtitle {
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 80px;
+}
+@media (width <= 600px) {
+  .faq-section {
+    padding-inline: 10px;
+  }
+}
+@media (width <= 768px) {
+  .faq-section__subtitle {
+    font-size: 18px;
+    line-height: 110%;
+  }
+  .faq-section__item {
+    padding: 10px 10px 10px 20px;
+    border-radius: 16px;
+  }
+  .faq-section__bottom-item {
+    margin-bottom: 16px;
+  }
+  .faq-section__bottom-item p:first-child {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .faq-section__bottom-items {
+    padding-top: 24px;
+  }
+  .faq-section__bottom-text {
+    font-size: 16px;
+    line-height: 136%;
+    margin-bottom: 16px;
+  }
+  .faq-section__btn_open {
+    width: 64px;
+  }
+  .faq-section__content-btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #4995ec;
+  }
+  .faq-section__content-btn .faq-section__btn_open {
+    width: 56px;
+  }
+}
+@media (max-width: 1200px) {
+  .faq-section__wrap {
+    flex-direction: column;
+  }
+  .faq-section__content {
+    width: 100%;
+  }
+  .faq-section__top-text, .faq-section__connection {
+    display: none;
+  }
+  .faq-section__forms {
+    display: none;
+  }
+  .faq-section__top {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 .contacts {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
