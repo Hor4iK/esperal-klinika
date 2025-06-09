@@ -183,3 +183,83 @@
     }
   }
 }
+
+.doctors-slider {
+  @include sections("light", "base");
+  overflow: hidden;
+
+  &__caption {
+    display: flex;
+    gap: clamp(0.75rem, -1.625rem + 6.3333vw, 3.125rem);
+    margin-block-end: clamp(1rem, -0.1194rem + 3.5821vw, 2.5rem);
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    @media screen and (width<=1100px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    p {
+      max-width: 600px;
+      opacity: 0.65;
+
+      @media screen and (width<=600px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 500px;
+    margin: 0;
+  }
+
+  .doctors-page__item {
+    padding-bottom: 10px;
+    height: auto;
+
+    @media screen and (width<=600px) {
+      padding: 6px;
+    }
+
+    &:hover,
+    &:focus {
+      .doctors-page__item-name {
+        color: $accent-color;
+      }
+    }
+
+    &-picture {
+      margin: 0;
+    }
+
+    &-img {
+      margin-block-end: 24px;
+    }
+
+    &-top {
+      overflow: hidden;
+      background-color: $light-color;
+    }
+
+    &-name {
+      padding-block: 0;
+      transition: color 300ms ease-out;
+    }
+
+    &-prof {
+      padding-block: 0;
+      margin-block-end: 10px;
+    }
+
+    &-experience {
+      inset: auto auto 20px 20px;
+    }
+
+    &-detailed {
+      display: none;
+    }
+  }
+}

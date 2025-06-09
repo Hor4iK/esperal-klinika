@@ -5011,6 +5011,76 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 
+.doctors-slider {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background-color: #fff;
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  overflow: hidden;
+}
+.doctors-slider__caption {
+  display: flex;
+  gap: clamp(0.75rem, -1.625rem + 6.3333vw, 3.125rem);
+  margin-block-end: clamp(1rem, -0.1194rem + 3.5821vw, 2.5rem);
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+@media screen and (width <= 1100px) {
+  .doctors-slider__caption {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+.doctors-slider__caption p {
+  max-width: 600px;
+  opacity: 0.65;
+}
+@media screen and (width <= 600px) {
+  .doctors-slider__caption p {
+    font-size: 14px;
+  }
+}
+.doctors-slider__title {
+  max-width: 500px;
+  margin: 0;
+}
+.doctors-slider .doctors-page__item {
+  padding-bottom: 10px;
+  height: auto;
+}
+@media screen and (width <= 600px) {
+  .doctors-slider .doctors-page__item {
+    padding: 6px;
+  }
+}
+.doctors-slider .doctors-page__item:hover .doctors-page__item-name, .doctors-slider .doctors-page__item:focus .doctors-page__item-name {
+  color: #4995ec;
+}
+.doctors-slider .doctors-page__item-picture {
+  margin: 0;
+}
+.doctors-slider .doctors-page__item-img {
+  margin-block-end: 24px;
+}
+.doctors-slider .doctors-page__item-top {
+  overflow: hidden;
+  background-color: #f3f9ff;
+}
+.doctors-slider .doctors-page__item-name {
+  padding-block: 0;
+  transition: color 300ms ease-out;
+}
+.doctors-slider .doctors-page__item-prof {
+  padding-block: 0;
+  margin-block-end: 10px;
+}
+.doctors-slider .doctors-page__item-experience {
+  inset: auto auto 20px 20px;
+}
+.doctors-slider .doctors-page__item-detailed {
+  display: none;
+}
+
 .footer {
   margin-block: clamp(0.625rem, -0.4688rem + 2.5vw, 1.25rem);
   color: #fff;
