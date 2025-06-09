@@ -231,14 +231,14 @@ html.burger-lock {
 
     &:hover,
     &:active {
+      box-shadow: 1px 3px 10px -4px $accent-color;
+
       .point-mark {
         span {
           background-color: $accent-color;
           transform: rotate(90deg);
         }
       }
-
-      box-shadow: 1px 3px 10px -4px $accent-color;
     }
   }
 }
@@ -315,12 +315,12 @@ html.burger-lock {
   }
 
   &:hover {
+    color: #b1d5ff;
+
     &__point {
       outline: 2px solid $accent-color;
       outline-offset: -1px;
     }
-
-    color: #b1d5ff;
   }
 
   svg {
@@ -588,5 +588,6 @@ html.burger-lock {
 @import "vendor/text";
 
 @import "vendor/doctor";
+@import "vendor/doctors";
 
 @import "vendor/footer";

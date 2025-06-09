@@ -151,12 +151,12 @@
       }
 
       &:hover {
+        color: #b1d5ff;
+
         .social-container__point {
           outline: 1px solid $accent-color;
           outline-offset: -1px;
         }
-
-        color: #b1d5ff;
       }
     }
 

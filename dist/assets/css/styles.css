@@ -4848,6 +4848,169 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 
+.doctors-page__container {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background-color: #fff;
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+}
+.doctors-page__title {
+  margin-block-start: clamp(1.5rem, -2rem + 9.3333vw, 5rem);
+  max-width: 600px;
+}
+.doctors-page__items {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-block-end: 40px;
+}
+@media (max-width: 1364px) {
+  .doctors-page__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .doctors-page__items {
+    grid-template-columns: 1fr;
+    margin-block-end: 24px;
+    gap: 10px;
+  }
+}
+.doctors-page__item {
+  align-items: stretch;
+  background: #f3f9ff;
+  border-radius: 30px;
+  padding: 10px 10px 30px 10px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.doctors-page__item:hover .doctors-page__item-detailed {
+  background-color: #4995ec;
+}
+.doctors-page__item:hover .doctors-page__item-detailed span {
+  color: #fff;
+}
+.doctors-page__item:hover .doctors-page__item-detailed .point-mark svg {
+  rotate: 45deg;
+}
+.doctors-page__item:hover .doctors-page__item-picture img {
+  scale: 1.015;
+}
+.doctors-page__item-name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 116%;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.doctors-page__item-prof {
+  font-size: 20px;
+  line-height: 140%;
+  opacity: 0.65;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.doctors-page__item-experience {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: #4995ec;
+  background: #f3f9ff;
+  border-radius: 10px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 146px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.doctors-page__item-detailed {
+  padding: 10px;
+}
+.doctors-page__item-detailed .point-mark {
+  width: 60px;
+}
+.doctors-page__item-detailed .point-mark svg {
+  transition: rotate 300ms ease-out;
+}
+.doctors-page__item-picture {
+  width: 100%;
+  margin-bottom: 24px;
+  max-height: 530px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  display: block;
+  background: #fff;
+  border-radius: 24px;
+}
+.doctors-page__item-picture img {
+  -o-object-position: top;
+  object-position: top;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: scale 300ms ease-out;
+}
+.doctors-page__item-img {
+  position: relative;
+}
+@media (max-width: 1100px) {
+  .doctors-page__item {
+    flex: 0 0 100%;
+    padding-bottom: 14px;
+  }
+  .doctors-page__item-picture {
+    margin-bottom: 16px;
+  }
+  .doctors-page__item-name {
+    padding: 4px;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .doctors-page__item-prof {
+    padding: 4px;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  .doctors-page__item-detailed {
+    padding: 6px;
+  }
+  .doctors-page__item-detailed .point-mark {
+    width: 48px;
+  }
+  .doctors-page__item-experience {
+    padding: 4px;
+    top: auto;
+    right: auto;
+    left: 10px;
+    bottom: 10px;
+    font-size: 14px;
+    line-height: 140%;
+    width: 102px;
+    height: 38px;
+  }
+}
+.doctors-page__btn_more {
+  background-color: #f3f9ff;
+  width: 100%;
+}
+.doctors-page__btn_more .point-mark {
+  background-color: #fff;
+  width: 80px;
+}
+@media (width <= 800px) {
+  .doctors-page__btn_more {
+    padding: 6px;
+  }
+  .doctors-page__btn_more .point-mark {
+    width: 48px;
+  }
+}
+
 .footer {
   margin-block: clamp(0.625rem, -0.4688rem + 2.5vw, 1.25rem);
   color: #fff;

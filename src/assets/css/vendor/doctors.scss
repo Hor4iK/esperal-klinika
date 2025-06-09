@@ -1,0 +1,185 @@
+.doctors-page {
+  &__container {
+    @include sections("light", "base");
+  }
+
+  &__title {
+    margin-block-start: clamp(1.5rem, -2rem + 9.3333vw, 5rem);
+    max-width: 600px;
+  }
+
+  &__items {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-block-end: 40px;
+
+    @media (max-width: 1364px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 760px) {
+      grid-template-columns: 1fr;
+      margin-block-end: 24px;
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    align-items: stretch;
+    background: $light-color;
+    border-radius: 30px;
+    padding: 10px 10px 30px 10px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    &:hover {
+      .doctors-page__item-detailed {
+        background-color: $accent-color;
+
+        span {
+          color: $color-white;
+        }
+
+        .point-mark {
+          svg {
+            rotate: 45deg;
+          }
+        }
+      }
+
+      .doctors-page__item-picture img {
+        scale: 1.015;
+      }
+    }
+
+    &-name {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 116%;
+      margin-bottom: 10px;
+      padding: 20px;
+    }
+
+    &-prof {
+      font-size: 20px;
+      line-height: 140%;
+      opacity: 0.65;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    &-experience {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      color: $accent-color;
+      background: $light-color;
+      border-radius: 10px;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 146px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-detailed {
+      padding: 10px;
+
+      .point-mark {
+        width: 60px;
+
+        svg {
+          transition: rotate 300ms ease-out;
+        }
+      }
+    }
+
+    &-picture {
+      width: 100%;
+      margin-bottom: 24px;
+      max-height: 530px;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      display: block;
+      background: $color-white;
+      border-radius: 24px;
+
+      img {
+        object-position: top;
+        object-fit: cover;
+        transition: scale 300ms ease-out;
+      }
+    }
+
+    &-img {
+      position: relative;
+    }
+
+    @media (max-width: 1100px) {
+      flex: 0 0 100%;
+      padding-bottom: 14px;
+
+      &-picture {
+        margin-bottom: 16px;
+      }
+
+      &-name {
+        padding: 4px;
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      &-prof {
+        padding: 4px;
+        font-size: 14px;
+        line-height: 1.2;
+        margin-bottom: 24px;
+      }
+
+      &-detailed {
+        padding: 6px;
+
+        .point-mark {
+          width: 48px;
+        }
+      }
+
+      &-experience {
+        padding: 4px;
+        top: auto;
+        right: auto;
+        left: 10px;
+        bottom: 10px;
+        font-size: 14px;
+        line-height: 140%;
+        width: 102px;
+        height: 38px;
+      }
+    }
+  }
+
+  &__btn_more {
+    background-color: $light-color;
+    width: 100%;
+
+    .point-mark {
+      background-color: $color-white;
+      width: 80px;
+    }
+
+    @media (width<=800px) {
+      padding: 6px;
+
+      .point-mark {
+        width: 48px;
+      }
+    }
+  }
+}
