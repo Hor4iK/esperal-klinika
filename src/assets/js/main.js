@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  //Slider Principles, turns off when resize
+  //Slider Principles
   principlesSwiper = document.querySelector(".principles");
   if (principlesSwiper) {
     principlesSwiperCheck = new Swiper(principlesSwiper.querySelector('.principles__swiper'), {
@@ -416,6 +416,24 @@ document.addEventListener('DOMContentLoaded', function () {
         1000: {
           direction: 'vertical',
           slidesPerView: 1.2,
+          spaceBetween: 20
+        }
+      }
+    });
+  }
+
+  //Slider Photos on About page
+  gallerySwiper = document.querySelector(".intro_about");
+  if (gallerySwiper) {
+    gallerySwiperCheck = new Swiper(gallerySwiper.querySelector('.gallery__swiper'), {
+      direction: 'horizontal',
+      slidesPerView: 1.02,
+      grabCursor: true,
+      spaceBetween: 10,
+      breakpoints: {
+        1000: {
+          direction: 'horizontal',
+          slidesPerView: 2.4,
           spaceBetween: 20
         }
       }
