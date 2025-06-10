@@ -1,0 +1,136 @@
+.stocks-page {
+  @include sections("light", "base");
+
+  &__title {
+    margin-block-start: clamp(1.5rem, -2rem + 9.3333vw, 5rem);
+  }
+
+  &__body {
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-block-end: 40px;
+    gap: 20px;
+
+    @media screen and (width<=1300px) {
+      grid-template-columns: 1fr;
+      margin-block-end: 24px;
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    @include sections("linear");
+    padding: 30px 40px 40px;
+    color: $color-white;
+    overflow: hidden;
+    position: relative;
+
+    &__content {
+      position: relative;
+      z-index: 2;
+      max-width: 470px;
+    }
+
+    @media screen and (width<=800px) {
+      padding: 24px 17px 0;
+      min-height: 580px;
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 32px;
+    margin-block-end: 24px;
+
+    @media screen and (width<=800px) {
+      margin-block-end: 16px;
+      text-align: center;
+    }
+  }
+
+  &__caption {
+    line-height: 1.3;
+    margin-block-end: 44px;
+
+    @media screen and (width<=800px) {
+      text-align: center;
+      margin-block-end: 24px;
+    }
+  }
+
+  &__button {
+    max-width: 420px;
+    width: 100%;
+    padding: 10px;
+
+    .point-mark {
+      width: 60px;
+    }
+
+    @media screen and (width<=800px) {
+      padding: 6px;
+
+      .point-mark {
+        width: 48px;
+      }
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    right: -30px;
+    top: calc(50% - 100px);
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 500px;
+      aspect-ratio: 1/1;
+      background: url(/assets/img/intro/circles.svg);
+      top: calc(50% - 250px);
+      right: calc(50% - 250px);
+      background-position: center center;
+      background-size: cover;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    @media screen and (width<=700px) {
+      max-width: none;
+      position: absolute;
+      inset: auto -50px -295px;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    @media screen and (width<=400px) {
+      inset: auto -50px -42%;
+    }
+  }
+
+  &__btn_more {
+    background-color: #f3f9ff;
+    width: 100%;
+  }
+}
