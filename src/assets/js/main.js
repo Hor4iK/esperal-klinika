@@ -297,6 +297,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   /* -- END FAQ  -- */
 
+  /* -- LAW-PAGE  -- */
+  const law = document.querySelector('.legal-information');
+  if(law) {
+    const titleArray = law.querySelectorAll('.legal-information__top-container');
+    const contentArray = law.querySelectorAll('.legal-information__bottom-container');
+
+    if (titleArray && contentArray) {
+      tabs('.legal-information__item', titleArray, contentArray);
+    }
+  }
+  /* -- END LAW-PAGE -- */
+
 
 
   /* -- DOCTOR  -- */

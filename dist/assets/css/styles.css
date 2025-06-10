@@ -1643,7 +1643,7 @@ html.burger-lock {
 .intro_service .intro__content__separator {
   display: block;
   height: 1px;
-  background-color: #deedff;
+  background-color: #f3f9ff;
   position: relative;
   margin-block-end: 20px;
 }
@@ -1812,7 +1812,7 @@ html.burger-lock {
 .intro_about .intro__content__separator {
   display: block;
   height: 1px;
-  background-color: #deedff;
+  background-color: #f3f9ff;
   position: relative;
   margin-block-end: 20px;
 }
@@ -2099,7 +2099,7 @@ html.burger-lock {
 .metods__separator {
   display: block;
   height: 1px;
-  background-color: #deedff;
+  background-color: #f3f9ff;
   position: relative;
 }
 .metods__separator::before {
@@ -3160,7 +3160,7 @@ thead .services__table__title th:nth-child(1) {
 .preparation__separator {
   display: block;
   height: 1px;
-  background-color: #deedff;
+  background-color: #f3f9ff;
   position: relative;
 }
 .preparation__separator::before {
@@ -3432,7 +3432,7 @@ thead .services__table__title th:nth-child(1) {
 .brigady__separator {
   display: block;
   height: 1px;
-  background-color: #deedff;
+  background-color: #f3f9ff;
   position: relative;
 }
 .brigady__separator::before {
@@ -3809,7 +3809,7 @@ thead .services__table__title th:nth-child(1) {
   margin-bottom: 12px;
 }
 .faq-section__bottom-item div {
-  border-bottom: 1px solid #deedff;
+  border-bottom: 1px solid #f3f9ff;
 }
 .faq-section__bottom-item div span {
   border-radius: 100%;
@@ -4051,7 +4051,7 @@ thead .services__table__title th:nth-child(1) {
 .contacts_s__separator {
   display: block;
   height: 1px;
-  background-color: #deedff;
+  background-color: #f3f9ff;
   position: relative;
 }
 @media screen and (width <= 950px) {
@@ -5052,7 +5052,7 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 .doctor-page__top-job div, .doctor-page__top-experience div, .doctor-page__top-scientist div {
-  border-bottom: 1px solid #deedff;
+  border-bottom: 1px solid #f3f9ff;
 }
 .doctor-page__top-job div span, .doctor-page__top-experience div span, .doctor-page__top-scientist div span {
   border-radius: 100%;
@@ -5528,7 +5528,7 @@ thead .prices__table__title th:nth-child(1) {
   margin-bottom: 12px;
 }
 .part-team__bottom-item div {
-  border-bottom: 1px solid #deedff;
+  border-bottom: 1px solid #f3f9ff;
 }
 .part-team__bottom-item div span {
   border-radius: 100%;
@@ -5539,7 +5539,7 @@ thead .prices__table__title th:nth-child(1) {
   transform: translateY(3.5px);
 }
 .part-team__bottomitems {
-  border-top: 1px solid #dbeafc;
+  border-top: 1px solid #090b0c;
   padding-top: 31px;
   margin-top: 10px;
 }
@@ -5827,6 +5827,230 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 
+.legal-information {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background-color: #fff;
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+}
+.legal-information__title {
+  max-width: 500px;
+  margin-block-start: clamp(1.5rem, -2rem + 9.3333vw, 5rem);
+}
+.legal-information__item {
+  padding: 10px 10px 10px 36px;
+  transition: padding 300ms;
+  background-color: #f3f9ff;
+  border-radius: 24px;
+}
+.legal-information__item:not(:last-child) {
+  margin-block-end: 20px;
+}
+.legal-information__item.active {
+  padding-bottom: 30px;
+}
+.legal-information-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border-bottom: none;
+  transition: padding 300ms ease-out;
+  cursor: pointer;
+}
+.legal-information__connection {
+  border-radius: 16px;
+  padding: 28px 30px;
+  background: #f3f9ff;
+  max-width: 322px;
+}
+.legal-information__connection-name {
+  font-size: 18px;
+  line-height: 120%;
+  color: rgba(19, 58, 102, 0.5);
+  margin-bottom: 10px;
+}
+.legal-information__connection-item:first-child {
+  margin-bottom: 24px;
+}
+.legal-information__connection-item a {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  color: #4995ec;
+}
+.legal-information__top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border-bottom: none;
+  transition: padding 300ms ease-out;
+  cursor: pointer;
+}
+.legal-information__top-container.active .legal-information__btn_open span:last-of-type {
+  transform: rotate(0);
+}
+.legal-information__top-text {
+  line-height: 140%;
+  color: rgba(19, 58, 102, 0.65);
+  margin-bottom: 24px;
+  max-width: 262px;
+}
+.legal-information__bottom-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease-in-out;
+}
+.legal-information__bottom-title {
+  opacity: 0.65;
+  line-height: 140%;
+  margin-bottom: 30px;
+}
+.legal-information__bottom-items {
+  padding: 34px 40px;
+  background: #fff;
+  border-radius: 30px;
+  width: 50%;
+}
+.legal-information__bottom-item p:first-child {
+  font-size: 18px;
+  line-height: 120%;
+  color: rgba(19, 58, 102, 0.5);
+  margin-bottom: 12px;
+}
+.legal-information__bottom-item div {
+  border-bottom: 1px solid #f3f9ff;
+}
+.legal-information__bottom-text {
+  margin-bottom: 20px;
+}
+.legal-information__bottom-wrap {
+  display: flex;
+  gap: 20px;
+  padding-right: 28px;
+}
+.legal-information__bottom-title {
+  padding-top: 40px;
+  margin-top: 10px;
+  border-top: 1px solid #dde6ee;
+  max-width: 800px;
+}
+.legal-information__bottom-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #4995ec;
+  margin-bottom: 30px;
+}
+.legal-information__btn_open {
+  width: 80px;
+  background-color: #fff;
+}
+.legal-information__btn_open span {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #4995ec;
+  transition: transform 400ms ease-in-out;
+}
+.legal-information__btn_open span:last-of-type {
+  transform: rotate(270deg);
+}
+.legal-information__subtitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 116%;
+}
+.legal-information__subtitle__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+@media (width <= 1200px) {
+  .legal-information__wrap {
+    padding-top: 24px;
+  }
+  .legal-information__content {
+    width: 100%;
+  }
+  .legal-information .legal-information__top-text,
+  .legal-information .legal-information__connection {
+    display: none;
+  }
+}
+@media (width <= 1000px) {
+  .legal-information__bottom-wrap {
+    flex-direction: column;
+  }
+  .legal-information__bottom-items {
+    padding: 34px 40px;
+    background: #fff;
+    border-radius: 30px;
+    width: 100%;
+  }
+  .legal-information__bottom-title {
+    width: 100%;
+  }
+}
+@media (width <= 768px) {
+  .legal-information__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 110%;
+  }
+  .legal-information__wrap {
+    padding-top: 24px;
+  }
+  .legal-information__item {
+    padding: 10px 10px 10px 20px;
+    border-radius: 16px;
+  }
+  .legal-information__btn_open {
+    width: 58px;
+  }
+  .legal-information__bottom-title {
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
+  .legal-information__bottom-items {
+    padding: 14px;
+    width: 100%;
+    margin-bottom: 0px;
+    border-radius: 16px;
+  }
+  .legal-information__bottom-item {
+    margin-bottom: 16px;
+  }
+  .legal-information__bottom-item p:first-child {
+    font-size: 14px;
+    line-height: 120%;
+    color: rgba(19, 58, 102, 0.5);
+    margin-bottom: 8px;
+  }
+  .legal-information__bottom-item.active {
+    padding-bottom: 24px;
+  }
+  .legal-information__bottom-text {
+    line-height: 136%;
+    margin-bottom: 16px;
+  }
+  .legal-information__bottom-subtitle {
+    margin-bottom: 24px;
+  }
+  .legal-information__bottom-wrap {
+    padding-right: 10px;
+  }
+}
+@media (width <= 600px) {
+  .legal-information {
+    padding-inline: 10px;
+  }
+}
+
 .popup {
   height: 100vh;
   left: 50%;
@@ -5963,7 +6187,7 @@ thead .prices__table__title th:nth-child(1) {
 .popup__separation {
   display: block;
   height: 1px;
-  background-color: #deedff;
+  background-color: #f3f9ff;
   position: relative;
   margin-block-end: 30px;
 }

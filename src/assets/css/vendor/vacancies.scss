@@ -30,7 +30,7 @@
       }
 
       div {
-        border-bottom: 1px solid #deedff;
+        border-bottom: 1px solid $light2-color;
 
         span {
           border-radius: 100%;
@@ -44,7 +44,7 @@
     }
 
     &items {
-      border-top: 1px solid #dbeafc;
+      border-top: 1px solid #090b0c;
       padding-top: 31px;
       margin-top: 10px;
     }

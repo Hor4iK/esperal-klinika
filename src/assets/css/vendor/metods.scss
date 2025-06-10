@@ -102,7 +102,7 @@
   &__separator {
     display: block;
     height: 1px;
-    background-color: #deedff;
+    background-color: $light2-color;
     position: relative;
 
     &::before {
