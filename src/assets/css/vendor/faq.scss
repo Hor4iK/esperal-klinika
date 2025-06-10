@@ -9,7 +9,7 @@
     background-color: $light-color;
     border-radius: 24px;
     overflow: hidden;
-    transition: max-height 0.5s ease, background-color 300ms ease-out, color 300ms ease-out, padding 300ms;
+    transition: max-height 0.4s ease-out, background-color 300ms ease-out, color 250ms, padding 300ms;
     max-height: 1000px;
 
     &.hidden {
@@ -22,6 +22,10 @@
     &.active {
       background-color: $accent-color;
       color: $color-white;
+
+      .faq-section__bottom-container {
+            padding-top: 10px;
+      }
     }
 
     &:not(:last-child) {
@@ -101,21 +105,18 @@
     &-text {
       line-height: 120%;
       margin-bottom: 20px;
-      transition: color 300ms ease-out;
     }
 
     &-name {
       font-size: 18px;
       line-height: 120%;
       color: rgba(255, 255, 255, 0.65);
-      transition: color 300ms ease-out;
     }
 
     &-container {
       max-height: 0;
-      padding-top: 10px;
       overflow: hidden;
-      transition: max-height 400ms ease-in-out;
+      transition: max-height 400ms ease-in-out, padding 300ms;
     }
   }
 
@@ -141,7 +142,6 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 116%;
-    transition: color 300ms ease-out;
 
     &__wrapper {
       display: flex;

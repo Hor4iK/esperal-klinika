@@ -3747,7 +3747,7 @@ thead .services__table__title th:nth-child(1) {
   background-color: #f3f9ff;
   border-radius: 24px;
   overflow: hidden;
-  transition: max-height 0.5s ease, background-color 300ms ease-out, color 300ms ease-out, padding 300ms;
+  transition: max-height 0.4s ease-out, background-color 300ms ease-out, color 250ms, padding 300ms;
   max-height: 1000px;
 }
 .faq-section__item.hidden {
@@ -3759,6 +3759,9 @@ thead .services__table__title th:nth-child(1) {
 .faq-section__item.active {
   background-color: #4995ec;
   color: #fff;
+}
+.faq-section__item.active .faq-section__bottom-container {
+  padding-top: 10px;
 }
 .faq-section__item:not(:last-child) {
   margin-block-end: 20px;
@@ -3824,19 +3827,16 @@ thead .services__table__title th:nth-child(1) {
 .faq-section__bottom-text {
   line-height: 120%;
   margin-bottom: 20px;
-  transition: color 300ms ease-out;
 }
 .faq-section__bottom-name {
   font-size: 18px;
   line-height: 120%;
   color: rgba(255, 255, 255, 0.65);
-  transition: color 300ms ease-out;
 }
 .faq-section__bottom-container {
   max-height: 0;
-  padding-top: 10px;
   overflow: hidden;
-  transition: max-height 400ms ease-in-out;
+  transition: max-height 400ms ease-in-out, padding 300ms;
 }
 .faq-section__btn_open {
   width: 80px;
@@ -3857,7 +3857,6 @@ thead .services__table__title th:nth-child(1) {
   font-weight: 500;
   font-size: 24px;
   line-height: 116%;
-  transition: color 300ms ease-out;
 }
 .faq-section__subtitle__wrapper {
   display: flex;
