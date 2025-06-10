@@ -3939,11 +3939,6 @@ thead .services__table__title th:nth-child(1) {
   line-height: 120%;
   margin-bottom: 80px;
 }
-@media (width <= 600px) {
-  .faq-section {
-    padding-inline: 10px;
-  }
-}
 @media (width <= 768px) {
   .faq-section__subtitle {
     font-size: 18px;
@@ -6087,7 +6082,7 @@ thead .prices__table__title th:nth-child(1) {
   max-width: 470px;
 }
 @media screen and (width <= 800px) {
-  .stocks-page__item {
+  .stocks-page__item:not(.swiper-slide) {
     padding: 24px 17px 0;
     min-height: 580px;
   }
@@ -6179,8 +6174,39 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 .stocks-page__btn_more {
-  background-color: #f3f9ff;
+  background-color: #4995ec;
   width: 100%;
+}
+
+.stocks {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background-color: #fff;
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  overflow: hidden;
+}
+.stocks__title {
+  max-width: 500px;
+}
+@media screen and (width > 800px) {
+  .stocks-page__item.swiper-slide {
+    min-width: 800px;
+  }
+}
+@media screen and (width > 800px) and (width <= 1000px) {
+  .stocks-page__item.swiper-slide {
+    min-width: 700px;
+  }
+}
+@media (width <= 800px) and (width >= 600px) {
+  .stocks-page__item.swiper-slide {
+    min-width: 500px;
+  }
+}
+@media screen and (width <= 600px) {
+  .stocks-page__item.swiper-slide {
+    padding: 24px 17px 0;
+    min-height: 580px;
+  }
 }
 
 .popup {

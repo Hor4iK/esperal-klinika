@@ -35,8 +35,10 @@
     }
 
     @media screen and (width<=800px) {
-      padding: 24px 17px 0;
-      min-height: 580px;
+      &:not(.swiper-slide) {
+        padding: 24px 17px 0;
+        min-height: 580px;
+      }
 
       &__content {
         display: flex;
@@ -130,7 +132,39 @@
   }
 
   &__btn_more {
-    background-color: #f3f9ff;
+    background-color: $accent-color;
     width: 100%;
+  }
+}
+
+.stocks {
+  @include sections("light", "base");
+  overflow: hidden;
+
+  &__title {
+    max-width: 500px;
+  }
+
+  &__body {
+  }
+
+  &__list {
+  }
+
+  &-page__item.swiper-slide {
+    @media screen and (width>800px) {
+      min-width: 800px;
+
+      @media screen and (width<=1000px) {
+        min-width: 700px;
+      }
+    }
+    @media (width<=800px) and (width>= 600px) {
+      min-width: 500px;
+    }
+    @media screen and (width<=600px) {
+      padding: 24px 17px 0;
+      min-height: 580px;
+    }
   }
 }
