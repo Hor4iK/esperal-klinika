@@ -390,6 +390,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   /* -- END FAQ  -- */
 
+
+
   /* -- LAW-PAGE  -- */
   const law = document.querySelector('.legal-information');
   if (law) {
@@ -416,6 +418,21 @@ document.addEventListener('DOMContentLoaded', function () {
     categoriesSwitch(education, educationCategories, educationContent, ".doctor-page__education-tab.active", ".doctor-page__education-items.active");
   }
   /* -- END DOCTOR  -- */
+
+
+  /* -- AUTOCONTENT RESIZE  -- */
+  const autocontent = document.querySelector('.autocontent');
+  if (autocontent) {
+    const titleArray = autocontent.querySelectorAll('.autocontent__subtitle__wrapper');
+    const contentArray = autocontent.querySelectorAll('.autocontent__bottom-container');
+
+    if (titleArray && contentArray) {
+      if (window.innerWidth <= 975) {
+        tabs('.autocontent', titleArray, contentArray);
+      }
+    }
+  }
+  /* -- END AUTOCONTENT RESIZE  -- */
 
 
 

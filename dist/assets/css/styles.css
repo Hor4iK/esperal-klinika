@@ -4581,11 +4581,11 @@ thead .prices__table__title th:nth-child(1) {
   padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
   display: flex;
   gap: 20px;
+  font-size: calc(clamp(1rem, 0.7143rem + 0.5714vw, 1.25rem) - 2px);
 }
-@media screen and (width <= 800px) {
+@media screen and (width <= 975px) {
   .text {
     flex-direction: column;
-    align-items: center;
   }
 }
 .text__title {
@@ -4593,6 +4593,11 @@ thead .prices__table__title th:nth-child(1) {
 }
 .text__content {
   flex-basis: 65%;
+}
+@media screen and (width <= 975px) {
+  .text__content {
+    order: 2;
+  }
 }
 .text__content p {
   opacity: 0.65;
@@ -4614,10 +4619,24 @@ thead .prices__table__title th:nth-child(1) {
   line-height: 1.1;
   margin-block: 40px 30px;
 }
+@media screen and (width <= 350px) {
+  .text__content h3 {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
+  }
+}
 .text__content h4 {
   font-size: clamp(1.25rem, 0.75rem + 1.3333vw, 1.75rem);
   font-weight: 500;
   margin-block: 40px 30px;
+}
+@media screen and (width <= 350px) {
+  .text__content h4 {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
+  }
 }
 .text__content ul {
   display: flex;
@@ -4690,6 +4709,12 @@ thead .prices__table__title th:nth-child(1) {
     gap: 20px;
   }
 }
+@media screen and (width <= 800px) {
+  .text__content blockquote {
+    padding: 20px 14px;
+    margin-block: 24px;
+  }
+}
 .text__content table {
   width: 100%;
   padding: 20px;
@@ -4753,6 +4778,11 @@ thead .prices__table__title th:nth-child(1) {
   flex-direction: column;
   gap: 20px;
 }
+@media screen and (width <= 975px) {
+  .text__aside {
+    display: contents;
+  }
+}
 .text__aside-image {
   width: 100%;
   -o-object-fit: cover;
@@ -4773,9 +4803,9 @@ thead .prices__table__title th:nth-child(1) {
   padding: 20px;
   border-radius: 24px;
 }
-@media screen and (width <= 800px) {
+@media screen and (width <= 975px) {
   .text__aside .calculator {
-    display: none;
+    order: 3;
   }
 }
 .text__aside .calculator::after {
@@ -4805,9 +4835,9 @@ thead .prices__table__title th:nth-child(1) {
   border-radius: 24px;
   padding: 30px 38px 40px;
 }
-@media screen and (width <= 800px) {
+@media screen and (width <= 975px) {
   .text__aside .preparation__plashka {
-    display: none;
+    order: 3;
   }
 }
 .text__aside .preparation__plashka p {
@@ -4855,6 +4885,16 @@ thead .prices__table__title th:nth-child(1) {
 .text .blockquote-expert__job {
   opacity: 0.54;
   font-size: calc(clamp(1rem, 0.7143rem + 0.5714vw, 1.25rem) - 2px);
+}
+@media screen and (width <= 800px) {
+  .text .blockquote-expert {
+    gap: 10px;
+  }
+}
+@media screen and (width <= 975px) {
+  .text picture {
+    order: 3;
+  }
 }
 
 .reviewers {
@@ -4917,6 +4957,11 @@ thead .prices__table__title th:nth-child(1) {
   opacity: 0.54;
   font-size: calc(clamp(1rem, 0.7143rem + 0.5714vw, 1.25rem) - 2px);
 }
+@media screen and (width <= 975px) {
+  .reviewers {
+    order: 3;
+  }
+}
 
 .autocontent {
   background-color: #f3f9ff;
@@ -4925,6 +4970,11 @@ thead .prices__table__title th:nth-child(1) {
 }
 .autocontent__top-container {
   margin-block-end: 40px;
+}
+@media screen and (width <= 975px) {
+  .autocontent__top-container {
+    margin-block-end: 0;
+  }
 }
 .autocontent__subtitle {
   font-size: 16px;
@@ -4935,6 +4985,11 @@ thead .prices__table__title th:nth-child(1) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (width <= 975px) {
+  .autocontent__subtitle__wrapper {
+    cursor: pointer;
+  }
 }
 .autocontent__btn_open {
   width: 50px;
@@ -4954,6 +5009,13 @@ thead .prices__table__title th:nth-child(1) {
 @media screen and (width > 800px) {
   .autocontent__btn_open {
     display: none;
+  }
+}
+@media screen and (width <= 975px) {
+  .autocontent__bottom-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 400ms ease-in-out, padding 300ms, margin 300ms;
   }
 }
 .autocontent__list {
@@ -4998,7 +5060,7 @@ thead .prices__table__title th:nth-child(1) {
 }
 .autocontent__item-title::before {
   content: "0" counter(item);
-  font-size: 20px;
+  font-size: inherit;
   line-height: 1.2;
   position: absolute;
   left: 0;
@@ -5015,6 +5077,14 @@ thead .prices__table__title th:nth-child(1) {
   background-size: contain;
   transition: transform 400ms ease-out;
 }
+.autocontent__item-title.active::after {
+  transform: rotate(180deg);
+}
+@media screen and (width <= 450px) {
+  .autocontent__item-title {
+    padding-inline-start: 26px;
+  }
+}
 .autocontent__item-content {
   opacity: 0.65;
   padding-inline-start: 20px;
@@ -5027,9 +5097,28 @@ thead .prices__table__title th:nth-child(1) {
 .autocontent__item-content a.title-h4 {
   padding-inline-start: 15px;
 }
+.autocontent__item a:hover {
+  color: #4995ec;
+}
+@media screen and (width <= 975px) {
+  .autocontent {
+    order: 1;
+    border-radius: 10px;
+  }
+}
 @media screen and (width <= 800px) {
   .autocontent {
+    padding: 5px;
+    transition: padding 300ms;
+  }
+  .autocontent.active {
     padding: 5px 5px 20px 20px;
+  }
+  .autocontent.active .autocontent__btn_open span:last-of-type {
+    transform: rotate(0);
+  }
+  .autocontent.active .autocontent__bottom-container {
+    margin-block-start: 20px;
   }
 }
 

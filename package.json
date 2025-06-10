@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
-    "dev": "gulp --esm"
+    "dev": "gulp --esm",
+    "deploy": "gh-pages -d dist"
   },
   "author": "H4",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "@babel/preset-env": "^7.25.4",
     "browser-sync": "^3.0.2",
     "del": "^7.1.0",
+    "gh-pages": "^6.3.0",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-babel": "^8.0.0",

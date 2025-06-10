@@ -2,10 +2,10 @@
   @include sections("light", "base");
   display: flex;
   gap: 20px;
+  font-size: calc($font-size - 2px);
 
-  @media screen and (width<=800px) {
+  @media screen and (width<=975px) {
     flex-direction: column;
-    align-items: center;
   }
 
   &__title {
@@ -14,6 +14,10 @@
 
   &__content {
     flex-basis: 65%;
+
+    @media screen and (width<=975px) {
+      order: 2;
+    }
 
     p {
       opacity: 0.65;
@@ -36,11 +40,21 @@
       font-weight: 600;
       line-height: 1.1;
       margin-block: 40px 30px;
+
+      @media screen and (width<=350px) {
+        hyphens: auto;
+        word-break: break-word;
+      }
     }
     h4 {
       font-size: clamp(1.25rem, 0.75rem + 1.3333vw, 1.75rem);
       font-weight: 500;
       margin-block: 40px 30px;
+
+      @media screen and (width<=350px) {
+        hyphens: auto;
+        word-break: break-word;
+      }
     }
 
     ul {
@@ -119,6 +133,11 @@
           gap: 20px;
         }
       }
+
+      @media screen and (width<=800px) {
+        padding: 20px 14px;
+        margin-block: 24px;
+      }
     }
 
     table {
@@ -194,6 +213,10 @@
     flex-direction: column;
     gap: 20px;
 
+    @media screen and (width<=975px) {
+      display: contents;
+    }
+
     &-image {
       width: 100%;
       object-fit: cover;
@@ -212,8 +235,8 @@
       padding: 20px;
       border-radius: 24px;
 
-      @media screen and (width<=800px) {
-        display: none;
+      @media screen and (width<=975px) {
+        order: 3;
       }
 
       &::after {
@@ -251,8 +274,8 @@
       border-radius: 24px;
       padding: 30px 38px 40px;
 
-      @media screen and (width<=800px) {
-        display: none;
+      @media screen and (width<=975px) {
+        order: 3;
       }
 
       p {
@@ -307,6 +330,16 @@
     &__job {
       opacity: 0.54;
       font-size: calc($font-size - 2px);
+    }
+
+    @media screen and (width<=800px) {
+      gap: 10px;
+    }
+  }
+
+  @media screen and (width<=975px) {
+    picture {
+      order: 3;
     }
   }
 }
@@ -376,6 +409,10 @@
       font-size: calc($font-size - 2px);
     }
   }
+
+  @media screen and (width<=975px) {
+    order: 3;
+  }
 }
 
 .autocontent {
@@ -385,6 +422,10 @@
 
   &__top-container {
     margin-block-end: 40px;
+
+    @media screen and (width<=975px) {
+      margin-block-end: 0;
+    }
   }
 
   &__subtitle {
@@ -396,6 +437,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @media screen and (width<=975px) {
+        cursor: pointer;
+      }
     }
   }
 
@@ -424,6 +469,11 @@
   }
 
   &__bottom-container {
+    @media screen and (width<=975px) {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 400ms ease-in-out, padding 300ms, margin 300ms;
+    }
   }
 
   &__list {
@@ -476,7 +526,7 @@
 
       &::before {
         content: "0" counter(item);
-        font-size: 20px;
+        font-size: inherit;
         line-height: 1.2;
         position: absolute;
         left: 0;
@@ -494,6 +544,14 @@
         background-size: contain;
         transition: transform 400ms ease-out;
       }
+
+      &.active::after {
+        transform: rotate(180deg);
+      }
+
+      @media screen and (width<=450px) {
+        padding-inline-start: 26px;
+      }
     }
 
     &-content {
@@ -510,9 +568,33 @@
         }
       }
     }
+
+    a {
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+
+  @media screen and (width<=975px) {
+    order: 1;
+    border-radius: 10px;
   }
 
   @media screen and (width<=800px) {
-    padding: 5px 5px 20px 20px;
+    padding: 5px;
+    transition: padding 300ms;
+
+    &.active {
+      padding: 5px 5px 20px 20px;
+
+      .autocontent__btn_open span:last-of-type {
+        transform: rotate(0);
+      }
+
+      .autocontent__bottom-container {
+        margin-block-start: 20px;
+      }
+    }
   }
 }
