@@ -1643,7 +1643,7 @@ html.burger-lock {
 .intro_service .intro__content__separator {
   display: block;
   height: 1px;
-  background-color: #f3f9ff;
+  background-color: #deedff;
   position: relative;
   margin-block-end: 20px;
 }
@@ -1812,7 +1812,7 @@ html.burger-lock {
 .intro_about .intro__content__separator {
   display: block;
   height: 1px;
-  background-color: #f3f9ff;
+  background-color: #deedff;
   position: relative;
   margin-block-end: 20px;
 }
@@ -2099,7 +2099,7 @@ html.burger-lock {
 .metods__separator {
   display: block;
   height: 1px;
-  background-color: #f3f9ff;
+  background-color: #deedff;
   position: relative;
 }
 .metods__separator::before {
@@ -3160,7 +3160,7 @@ thead .services__table__title th:nth-child(1) {
 .preparation__separator {
   display: block;
   height: 1px;
-  background-color: #f3f9ff;
+  background-color: #deedff;
   position: relative;
 }
 .preparation__separator::before {
@@ -3432,7 +3432,7 @@ thead .services__table__title th:nth-child(1) {
 .brigady__separator {
   display: block;
   height: 1px;
-  background-color: #f3f9ff;
+  background-color: #deedff;
   position: relative;
 }
 .brigady__separator::before {
@@ -3747,7 +3747,7 @@ thead .services__table__title th:nth-child(1) {
   background-color: #f3f9ff;
   border-radius: 24px;
   overflow: hidden;
-  transition: max-height 0.4s ease-out, background-color 300ms ease-out, color 250ms, padding 300ms;
+  transition: max-height 0.2s ease-out, background-color 300ms ease-out, color 250ms, padding 300ms;
   max-height: 1000px;
 }
 .faq-section__item.hidden {
@@ -3809,7 +3809,7 @@ thead .services__table__title th:nth-child(1) {
   margin-bottom: 12px;
 }
 .faq-section__bottom-item div {
-  border-bottom: 1px solid #f3f9ff;
+  border-bottom: 1px solid #deedff;
 }
 .faq-section__bottom-item div span {
   border-radius: 100%;
@@ -4046,7 +4046,7 @@ thead .services__table__title th:nth-child(1) {
 .contacts_s__separator {
   display: block;
   height: 1px;
-  background-color: #f3f9ff;
+  background-color: #deedff;
   position: relative;
 }
 @media screen and (width <= 950px) {
@@ -4918,6 +4918,121 @@ thead .prices__table__title th:nth-child(1) {
   font-size: calc(clamp(1rem, 0.7143rem + 0.5714vw, 1.25rem) - 2px);
 }
 
+.autocontent {
+  background-color: #f3f9ff;
+  padding: 28px 30px 30px;
+  border-radius: 30px;
+}
+.autocontent__top-container {
+  margin-block-end: 40px;
+}
+.autocontent__subtitle {
+  font-size: 16px;
+  line-height: 1.2;
+  color: rgba(19, 58, 102, 0.6509803922);
+}
+.autocontent__subtitle__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.autocontent__btn_open {
+  width: 50px;
+  background-color: #fff;
+}
+.autocontent__btn_open span {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #4995ec;
+  transition: transform 400ms ease-in-out;
+}
+.autocontent__btn_open span:last-of-type {
+  transform: rotate(270deg);
+}
+@media screen and (width > 800px) {
+  .autocontent__btn_open {
+    display: none;
+  }
+}
+.autocontent__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  counter-reset: a;
+}
+.autocontent__item {
+  counter-increment: item;
+  position: relative;
+}
+.autocontent__item:not(:last-child)::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  inset: auto 0 0 0;
+  background-color: #deedff;
+}
+.autocontent__item:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 7px;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #4995ec;
+}
+.autocontent__item:last-child .autocontent__item-content {
+  padding-block-end: 0;
+}
+.autocontent__item-title {
+  transition: margin 350ms ease-out, color 200ms;
+  padding-inline-start: 40px;
+  margin-block-end: 16px;
+  position: relative;
+  cursor: pointer;
+}
+.autocontent__item-title::before {
+  content: "0" counter(item);
+  font-size: 20px;
+  line-height: 1.2;
+  position: absolute;
+  left: 0;
+}
+.autocontent__item-title::after {
+  content: "";
+  width: 14px;
+  height: 8px;
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  display: block;
+  background: url(/assets/img/icons/raskrytie.svg) no-repeat center center;
+  background-size: contain;
+  transition: transform 400ms ease-out;
+}
+.autocontent__item-content {
+  opacity: 0.65;
+  padding-inline-start: 20px;
+  padding-block-end: 24px;
+}
+.autocontent__item-content a {
+  display: block;
+  margin-block-end: 8px;
+}
+.autocontent__item-content a.title-h4 {
+  padding-inline-start: 15px;
+}
+@media screen and (width <= 800px) {
+  .autocontent {
+    padding: 5px 5px 20px 20px;
+  }
+}
+
 .doctor-page__top {
   display: flex;
   gap: 20px;
@@ -5047,7 +5162,7 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 .doctor-page__top-job div, .doctor-page__top-experience div, .doctor-page__top-scientist div {
-  border-bottom: 1px solid #f3f9ff;
+  border-bottom: 1px solid #deedff;
 }
 .doctor-page__top-job div span, .doctor-page__top-experience div span, .doctor-page__top-scientist div span {
   border-radius: 100%;
@@ -5523,7 +5638,7 @@ thead .prices__table__title th:nth-child(1) {
   margin-bottom: 12px;
 }
 .part-team__bottom-item div {
-  border-bottom: 1px solid #f3f9ff;
+  border-bottom: 1px solid #deedff;
 }
 .part-team__bottom-item div span {
   border-radius: 100%;
@@ -5914,7 +6029,7 @@ thead .prices__table__title th:nth-child(1) {
   margin-bottom: 12px;
 }
 .legal-information__bottom-item div {
-  border-bottom: 1px solid #f3f9ff;
+  border-bottom: 1px solid #deedff;
 }
 .legal-information__bottom-text {
   margin-bottom: 20px;
@@ -6345,7 +6460,7 @@ thead .prices__table__title th:nth-child(1) {
 .popup__separation {
   display: block;
   height: 1px;
-  background-color: #f3f9ff;
+  background-color: #deedff;
   position: relative;
   margin-block-end: 30px;
 }
