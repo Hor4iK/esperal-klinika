@@ -571,7 +571,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END POPUPS  -- */
 
 
-  /* -- Automatic content  -- */
+  /* -- AUTOMATIC CONTENT -- */
   const articleNavigation = document.querySelector('.content-table__navigation');
   if (articleNavigation) {
 
@@ -619,7 +619,7 @@ document.addEventListener('DOMContentLoaded', function () {
       articleNavigation.querySelector('.navigation__item').remove();
     }
   }
-  /* -- END Automatic content   -- */
+  /* -- END AUTOMATIC CONTENT   -- */
 
 
   //view photos fancybox
