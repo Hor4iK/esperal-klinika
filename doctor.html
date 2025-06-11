@@ -1,0 +1,913 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Esperal-klinika</title>
+    	<link rel="stylesheet" href="assets/css/styles.css">
+    	<link rel="stylesheet" href="assets/css/build/fancybox.min.css">
+    	<link rel="stylesheet" href="assets/css/build/swiper.css">
+    	<script src="assets/js/build/fancybox.min.js" defer></script>
+    	<script src="assets/js/build/swiper-bundle.min.js" defer></script>
+    	<script src="assets/js/main.js" defer></script>
+    </head>
+</head>
+<body>
+<div class="page">
+    <header class="header container">
+      <div class="content">
+        <div class="header__row">
+          <div class="header__address">
+            <div class="point-mark point-map">
+            </div>
+            <p class="header__address__container">
+              <span class="header__address__title">Саратов</span>, <span class="header__address__caption">Московская
+                34</span>
+            </p>
+          </div>
+          <a href="/" class="header__logo logo">
+            <picture class="logo__picture">
+              <source srcset="/assets/img/logo/logo.webp" type="image/webp">
+              <source srcset="/assets/img/logo/logo.svg" type="image/svg+xml">
+              <img src="/assets/img/logo/logo.png" alt="Логотип">
+            </picture>
+            <span class="logo__title">Эспераль-Клиник</span>
+          </a>
+          <div class="header__btns-container">
+            <a href="+799999999999" class="point-mark btn_social point-tel">
+            </a>
+            <a href="#" target="_blank" class="point-mark btn_social point-tg">
+            </a>
+            <a class="header__phone-link header__phone-link_mobile" href="+799999999999">+7 999 999-99-99</a>
+            <button class="btn btn_accent popup-btn" data-path="popup-consult">записаться на прием</button>
+            <button class="menu__btn_mobile menu_btn">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path fill="#4995EC" d="M.5.5h5v5h-5zM.5 8.5h5v5h-5zM8.5.5h5v5h-5zM8.5 8.5h5v5h-5z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="header__row mobile">
+          <a class="header__phone-link" href="tel:+799999999999">+7 999 999-99-99</a>
+          <div class="header__row mobile_top">
+            <a href="/" class="header__logo header__logo_mobile logo">
+              <picture class="logo__picture">
+                <source srcset="/assets/img/logo/logo-vector-accent.webp" type="image/webp">
+                <source srcset="/assets/img/logo/logo-vector-accent.svg" type="image/svg+xml">
+                <img src="/assets/img/logo/logo-vector-accent.png" alt="Логотип">
+              </picture>
+              <span class="logo__title">Эспераль-Клиник</span>
+            </a>
+            <div class="header__btns-container">
+              <div class="search__container">
+                <button class="search__button"></button>
+                <div class="header__search search">
+                  <form class="search__form">
+                    <input placeholder="Поиск по сайту" type="text" class="search__input">
+                  </form>
+                  <div class="search__content">
+                    <div class="search__hints">
+                      <ul>
+                        <li><a href="#">Лечение алкоголизма на дому</a></li>
+                        <li><a href="#">Лечение алкоголизма в стационаре</a></li>
+                        <li><a href="#">Лечение алкоголизма</a></li>
+                      </ul>
+                    </div>
+                    <div class="search__offers">
+                      <p class="search__offers__title">Возможно, вас заинтересует</p>
+                      <ul>
+                        <li><a href="#">как подготовиться к кодированию</a></li>
+                        <li><a href="#">кодирование от алкоголизма на дому</a></li>
+                        <li><a href="#">лечение алкоголизма</a></li>
+                        <li><a href="#">реабилитационный центр</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="menu__btn_mobile menu_btn">
+              </button>
+            </div>
+          </div>
+          <nav class="header__menu menu">
+            <ul class="menu__list hide-items">
+              <li class="menu__item hide-item">
+                <button class="menu__item__button hide-item__title"><a class="menu__link menu_point" href="/service.html">Услуги</a></button>
+                <div class="menu__subnav hide-item__height">
+                  <ul class="hide-item__content">
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Лечение алкоголизма</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Лечение наркомании</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Кодирование</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Кодирование</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Кодирование</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Лечение наркомании</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Лечение алкоголизма</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Лечение алкоголизма</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item hide-item">
+                <button class="menu__item__button hide-item__title"><a class="menu__link menu_point" href="/about.html">О центре</a></button>
+                <div class="menu__subnav hide-item__height">
+                  <ul class="hide-item__content">
+                    <li class="menu__sublink"><a class="menu__link" href="/photos.html">Photos</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/law-page.html">law-page</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/law-doc.html">law-doc</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/stocks.html">stocks</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="/doctors.html">Врачи</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Цены</a></li>
+              <li class="menu__item"><a class="menu__link" href="/stocks.html">Акции</a></li>
+              <li class="menu__item"><a class="menu__link" href="/reviews.html">Отзывы</a></li>
+              <li class="menu__item"><a class="menu__link" href="/contact.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="search__container search_desktop">
+            <div class="header__search search">
+              <form action="" class="search__form">
+                <input placeholder="Поиск по сайту" type="text" class="search__input">
+              </form>
+              <div class="search__content">
+                <div class="search__hints">
+                  <ul>
+                    <li><a href="#">Лечение алкоголизма на дому</a></li>
+                    <li><a href="#">Лечение алкоголизма в стационаре</a></li>
+                    <li><a href="#">Лечение алкоголизма</a></li>
+                  </ul>
+                </div>
+                <div class="search__offers">
+                  <p class="search__offers__title">Возможно, вас заинтересует</p>
+                  <ul>
+                    <li><a href="#">как подготовиться к кодированию</a></li>
+                    <li><a href="#">кодирование от алкоголизма на дому</a></li>
+                    <li><a href="#">лечение алкоголизма</a></li>
+                    <li><a href="#">реабилитационный центр</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn_consult header_mobile__button mobile__button popup-btn btn_accent" data-path="popup-consult">
+            <span>бесплатная консультация</span>
+            <div class="point-mark"><span></span><span></span></div>
+          </button>
+          <div class="mobile_down info">
+            <div class="info__block">
+              <p>Связаться с нами прямо сейчас</p>
+              <a href="tel:+79999999999" class="info__phone">+7 (999) 999-99-99</a>
+            </div>
+            <div class="info__block">
+              <a href="#" target="_blank" class="point-mark btn_social point-tg">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+<main class="main">
+    <div class="doctor-page">
+    <section class="doctor-page__container container_b">
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="/">Главная</a></li>
+          <li class="breadcrumbs__item"><a href="/doctors.html">Врачи</a></li>
+          <li class="breadcrumbs__item">Константинопольский Константин Константинович</li>
+        </ul>
+      </div>
+      <h1 class="doctor-page__title main-title">
+        <span>Константинопольский</span> Константин Константинович
+      </h1>
+      <div class="doctor-page__top">
+        <div class="doctor-page__top-info">
+          <div class="doctor-page__top-text">
+            <p>Наши доктора помогают избавиться пациентам от хронических зависимостей. Повышаем
+              качество жизни
+              клиентов, их родственников, родных и близких. Наши доктора помогают избавиться
+              пациентам от
+              хронических зависимостей. Повышаем качество жизни клиентов, их родственников, родных
+              и близких.
+            </p>
+          </div>
+          <div class="doctor-page__top-job">
+            <p>Должность</p>
+            <p class="top-job__text">Директор клиники, психиатр-нарколог</p>
+            <div><span></span></div>
+          </div>
+          <div class="doctor-page__top-experience">
+            <p>Стаж работы</p>
+            <p class="top-experience__text">13 лет</p>
+            <div><span></span></div>
+          </div>
+          <div class="doctor-page__top-scientist">
+            <p>Ученая степень</p>
+            <p class="top-scientist__text">Доктор медицинских наук</p>
+            <div><span></span></div>
+          </div>
+          <div class="doctor-page__top-price">
+            <p>Стоимость приема</p>
+            <p class="top-price__text">от 2 500 ₽</p>
+          </div>
+          <div class="doctor-page__top-ratings">
+            <div class="doctor-page__top-rating">
+              <div>5.0
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.72253 2.7267C6.73585 0.9089 7.24251 0 8 0C8.75749 0 9.26415 0.9089 10.2775 2.7267L10.5396 3.19699C10.8276 3.71355 10.9716 3.97183 11.196 4.14225C11.4205 4.31266 11.7001 4.37592 12.2593 4.50244L12.7684 4.61762C14.7361 5.06284 15.72 5.28545 15.9541 6.03818C16.1881 6.79092 15.5174 7.57526 14.1759 9.14394L13.8289 9.54978C13.4477 9.99555 13.2571 10.2184 13.1713 10.4942C13.0856 10.7699 13.1144 11.0673 13.172 11.662L13.2245 12.2035C13.4273 14.2965 13.5287 15.343 12.9159 15.8082C12.3031 16.2734 11.3819 15.8492 9.53946 15.0009L9.06281 14.7815C8.53926 14.5404 8.27748 14.4199 8 14.4199C7.72252 14.4199 7.46074 14.5404 6.93719 14.7815L6.46054 15.0009C4.61814 15.8492 3.69694 16.2734 3.08412 15.8082C2.4713 15.343 2.5727 14.2965 2.77552 12.2035L2.82799 11.662C2.88562 11.0673 2.91444 10.7699 2.82869 10.4942C2.74294 10.2184 2.55234 9.99555 2.17113 9.54978L1.82408 9.14394C0.482599 7.57526 -0.18814 6.79092 0.0459368 6.03818C0.280014 5.28545 1.26389 5.06284 3.23163 4.61762L3.74071 4.50244C4.29988 4.37592 4.57947 4.31266 4.80395 4.14225C5.02844 3.97183 5.17242 3.71355 5.46037 3.19699L5.72253 2.7267Z"
+                    fill="#F8BE02" />
+                </svg>
+              </div>
+              <div>
+                <picture class="header-top__picture header__hide">
+                  <source srcset="./assets/img/new/prodoc.svg" type="image/svg+xml">
+                  <img src="./assets/img/new/prodoc.png">
+                </picture>
+              </div>
+            </div>
+            <div class="doctor-page__top-rating">
+              <div>5.0 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.72253 2.7267C6.73585 0.9089 7.24251 0 8 0C8.75749 0 9.26415 0.9089 10.2775 2.7267L10.5396 3.19699C10.8276 3.71355 10.9716 3.97183 11.196 4.14225C11.4205 4.31266 11.7001 4.37592 12.2593 4.50244L12.7684 4.61762C14.7361 5.06284 15.72 5.28545 15.9541 6.03818C16.1881 6.79092 15.5174 7.57526 14.1759 9.14394L13.8289 9.54978C13.4477 9.99555 13.2571 10.2184 13.1713 10.4942C13.0856 10.7699 13.1144 11.0673 13.172 11.662L13.2245 12.2035C13.4273 14.2965 13.5287 15.343 12.9159 15.8082C12.3031 16.2734 11.3819 15.8492 9.53946 15.0009L9.06281 14.7815C8.53926 14.5404 8.27748 14.4199 8 14.4199C7.72252 14.4199 7.46074 14.5404 6.93719 14.7815L6.46054 15.0009C4.61814 15.8492 3.69694 16.2734 3.08412 15.8082C2.4713 15.343 2.5727 14.2965 2.77552 12.2035L2.82799 11.662C2.88562 11.0673 2.91444 10.7699 2.82869 10.4942C2.74294 10.2184 2.55234 9.99555 2.17113 9.54978L1.82408 9.14394C0.482599 7.57526 -0.18814 6.79092 0.0459368 6.03818C0.280014 5.28545 1.26389 5.06284 3.23163 4.61762L3.74071 4.50244C4.29988 4.37592 4.57947 4.31266 4.80395 4.14225C5.02844 3.97183 5.17242 3.71355 5.46037 3.19699L5.72253 2.7267Z"
+                    fill="#F8BE02" />
+                </svg></div>
+              <div>
+                <picture class="header-top__picture header__hide">
+                  <source srcset="./assets/img/new/Vector.svg" type="image/svg+xml">
+                  <img src="./assets/img/new/Vector.png">
+                </picture>
+              </div>
+            </div>
+            <div class="doctor-page__top-rating">
+              <div>5.0 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.72253 2.7267C6.73585 0.9089 7.24251 0 8 0C8.75749 0 9.26415 0.9089 10.2775 2.7267L10.5396 3.19699C10.8276 3.71355 10.9716 3.97183 11.196 4.14225C11.4205 4.31266 11.7001 4.37592 12.2593 4.50244L12.7684 4.61762C14.7361 5.06284 15.72 5.28545 15.9541 6.03818C16.1881 6.79092 15.5174 7.57526 14.1759 9.14394L13.8289 9.54978C13.4477 9.99555 13.2571 10.2184 13.1713 10.4942C13.0856 10.7699 13.1144 11.0673 13.172 11.662L13.2245 12.2035C13.4273 14.2965 13.5287 15.343 12.9159 15.8082C12.3031 16.2734 11.3819 15.8492 9.53946 15.0009L9.06281 14.7815C8.53926 14.5404 8.27748 14.4199 8 14.4199C7.72252 14.4199 7.46074 14.5404 6.93719 14.7815L6.46054 15.0009C4.61814 15.8492 3.69694 16.2734 3.08412 15.8082C2.4713 15.343 2.5727 14.2965 2.77552 12.2035L2.82799 11.662C2.88562 11.0673 2.91444 10.7699 2.82869 10.4942C2.74294 10.2184 2.55234 9.99555 2.17113 9.54978L1.82408 9.14394C0.482599 7.57526 -0.18814 6.79092 0.0459368 6.03818C0.280014 5.28545 1.26389 5.06284 3.23163 4.61762L3.74071 4.50244C4.29988 4.37592 4.57947 4.31266 4.80395 4.14225C5.02844 3.97183 5.17242 3.71355 5.46037 3.19699L5.72253 2.7267Z"
+                    fill="#F8BE02" />
+                </svg></div>
+              <div>
+                <picture class="header-top__picture header__hide">
+                  <source srcset="./assets/img/new/sber.svg" type="image/svg+xml">
+                  <img src="./assets/img/new/sber.png">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <button class="doctor-page__top-button btn btn_consult intro__button popup-btn btn_accent" data-path="popup-consult">
+            <span>записаться на приём</span>
+            <div class="point-mark"><span></span><span></span></div>
+          </button>
+        </div>
+        <div class="doctor-page__top-picture">
+          <picture>
+            <img alt="Доктор Эспераль-Клиник" title="Доктор Эспераль-Клиник" loading="lazy"
+              src="./assets/img/new/portrait-male-doctor-hospital1.png">
+          </picture>
+        </div>
+      </div>
+    </section>
+    <section class="doctor-page__container container_b">
+      <div class="doctor-page__schedule">
+        <h2 class="doctor-page__schedule-title main-title">
+          <span>График</span> работы врача
+        </h2>
+        <div class="doctor-page__schedule-items">
+          <div class="doctor-page__schedule-item">
+            <p class="doctor-page__schedule-day">Понедельник</p>
+            <p class="doctor-page__schedule-work"><span>Выходной</span></p>
+          </div>
+          <div class="doctor-page__schedule-item">
+            <p class="doctor-page__schedule-day">Вторник</p>
+            <p class="doctor-page__schedule-work">08:00-17:00</p>
+          </div>
+          <div class="doctor-page__schedule-item">
+            <p class="doctor-page__schedule-day">Среда</p>
+            <p class="doctor-page__schedule-work">08:00-17:00</p>
+          </div>
+          <div class="doctor-page__schedule-item">
+            <p class="doctor-page__schedule-day">Четверг</p>
+            <p class="doctor-page__schedule-work">08:00-17:00</p>
+          </div>
+          <div class="doctor-page__schedule-item">
+            <p class="doctor-page__schedule-day">Пятница</p>
+            <p class="doctor-page__schedule-work"><span>Выходной</span></p>
+          </div>
+          <div class="doctor-page__schedule-item">
+            <p class="doctor-page__schedule-day">Суббота</p>
+            <p class="doctor-page__schedule-work">08:00-17:00</p>
+          </div>
+          <div class="doctor-page__schedule-item">
+            <p class="doctor-page__schedule-day">Воскресенье</p>
+            <p class="doctor-page__schedule-work">08:00-17:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="doctor-page__container container_b">
+      <div class="doctor-page__education">
+        <h2 class="doctor-page__education-title main-title">
+          <span>Образование</span> врача
+        </h2>
+        <div class="doctor-page__education">
+          <div class="doctor-page__education-tabs-wrapper">
+            <div class="doctor-page__education-tabs" role="tablist">
+              <button class="doctor-page__education-tab active">
+                Базовое образование
+              </button>
+              <button class="doctor-page__education-tab">
+                Профессиональная переподготовка
+              </button>
+              <button class="doctor-page__education-tab">
+                Повышение квалификации
+              </button>
+            </div>
+          </div>
+          <div class="doctor-page__education-content">
+            <div class="doctor-page__education-items pag-list active">
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+            </div>
+            <div class="doctor-page__education-items pag-list">
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология» Первый Московский
+                    государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+            </div>
+            <div class="doctor-page__education-items pag-list">
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+              <div class="doctor-page__education-item">
+                <div class="doctor-page__education-year">
+                  <p>1995-1997 г.</p>
+                  <picture class="doctor-page__education-picture">
+                    <source srcset="./assets/img/new/iconcep.svg" type="image/svg+xml">
+                    <img src="./assets/img/new/iconcep.png">
+                  </picture>
+                </div>
+                <div class="doctor-page__education-text">
+                  <p>Первый Московский государственный медицинский университет имени И. М.
+                    Сеченова по направлению «Клиническая психология»</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="doctor-page__container container_b">
+      <div class="doctor-page__scientific">
+        <h2 class="doctor-page__scientific-title main-title">
+          <span>Профиль работы</span> и научная деятельность
+        </h2>
+        <div class="doctor-page__scientific-wrap">
+          <div class="doctor-page__scientific-items pag-list pag-active">
+            <a href="#" class="doctor-page__scientific-item">
+              <p>лечение алкоголизма</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18.00391" fill="none" viewBox="0 0 18 18.0039">
+                  <path stroke="#4995EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 17 17 1M4.2 1H17v12.79" />
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="doctor-page__scientific-item">
+              <p>лечение алкоголизма</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18.00391" fill="none" viewBox="0 0 18 18.0039">
+                  <path stroke="#4995EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 17 17 1M4.2 1H17v12.79" />
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="doctor-page__scientific-item">
+              <p>лечение алкоголизма</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18.00391" fill="none" viewBox="0 0 18 18.0039">
+                  <path stroke="#4995EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 17 17 1M4.2 1H17v12.79" />
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="doctor-page__scientific-item">
+              <p>лечение алкоголизма</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18.00391" fill="none" viewBox="0 0 18 18.0039">
+                  <path stroke="#4995EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 17 17 1M4.2 1H17v12.79" />
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="doctor-page__scientific-item">
+              <p>лечение алкоголизма</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18.00391" fill="none" viewBox="0 0 18 18.0039">
+                  <path stroke="#4995EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 17 17 1M4.2 1H17v12.79" />
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="doctor-page__scientific-item">
+              <p>лечение алкоголизма</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18.00391" fill="none" viewBox="0 0 18 18.0039">
+                  <path stroke="#4995EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 17 17 1M4.2 1H17v12.79" />
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="doctor-page__scientific-item">
+              <p>лечение алкоголизма</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18.00391" fill="none" viewBox="0 0 18 18.0039">
+                  <path stroke="#4995EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 17 17 1M4.2 1H17v12.79" />
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="doctor-page__scientific-item">
+              <p>лечение алкоголизма</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18.00391" fill="none" viewBox="0 0 18 18.0039">
+                  <path stroke="#4995EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 17 17 1M4.2 1H17v12.79" />
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="doctor-page__scientific-item">
+              <p>лечение алкоголизма</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18.00391" fill="none" viewBox="0 0 18 18.0039">
+                  <path stroke="#4995EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 17 17 1M4.2 1H17v12.79" />
+                </svg>
+              </div>
+            </a>
+            <a href="#" class="doctor-page__scientific-item">
+              <p>лечение алкоголизма</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18.00391" fill="none" viewBox="0 0 18 18.0039">
+                  <path stroke="#4995EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 17 17 1M4.2 1H17v12.79" />
+                </svg>
+              </div>
+            </a>
+            <button class="btn btn_call btn_light doctor-page__scientific-btns btn_more active">
+              <span>смотреть еще</span>
+              <div class="point-mark point-plus"></div>
+            </button>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    </div>
+    <section class="contacts_s contacts_s_small container_b">
+      <h2 class="contacts_s__title main-title">Наши<span> контакты</span></h2>
+      <div class="contacts_s__body">
+        <div class="contacts_s__block">
+          <ul class="contacts_s__content-list">
+            <li class="contacts_s__content-item">
+              <p class="contacts_s__subtitle">Номер телефона</p>
+              <a href="tel:+79009000000" class="btn contacts_s__link btn_light btn_call">
+                <span>+7 (900) 900-00-00</span>
+                <div class="point-mark"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path fill="#4995EC"
+                      d="m6.8 1.48.72 1.3c.66 1.19.4 2.74-.64 3.78 0 0-1.26 1.26 1.02 3.54 2.28 2.28 3.54 1.02 3.54 1.02a3.19 3.19 0 0 1 3.77-.64l1.3.73c1.8 1 2 3.5.44 5.06a5.22 5.22 0 0 1-3.37 1.72c-2.15.08-5.8-.46-9.45-4.12C.47 10.22-.07 6.57 0 4.42a5.22 5.22 0 0 1 1.72-3.37C3.3-.5 5.8-.3 6.79 1.48Z" />
+                  </svg></div>
+              </a>
+            </li>
+            <span class="contacts_s__separator"></span>
+            <li class="contacts_s__content-item">
+              <p class="contacts_s__subtitle">Электронная почта</p>
+              <a href="mail:torpedo.med@med.ru" class="btn contacts_s__link btn_light btn_call">
+                <span>torpedo.med@med.ru</span>
+                <div class="point-mark"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path fill="#4995EC" fill-rule="evenodd"
+                      d="M1 1C0 2 0 3.7 0 7s0 5 1 6 2.6 1 5.8 1h3.4c3.2 0 4.8 0 5.8-1s1-2.7 1-6 0-5-1-6-2.6-1-5.8-1H6.8C3.6 0 2 0 1 1Zm13 2c.3.4.3.8 0 1l-1.9 1.6c-.7.7-1.3 1.2-1.9 1.5a3 3 0 0 1-1.7.6c-.6 0-1.2-.2-1.7-.6-.6-.3-1.2-.8-2-1.5L3 4a.7.7 0 0 1 0-1c.1-.2.5-.2.8 0l1.8 1.6L7.5 6c.4.3.7.4 1 .4.3 0 .6 0 1-.4l1.8-1.4L13.3 3c.3-.2.7-.2.9 0Z" />
+                  </svg></div>
+              </a>
+            </li>
+            <span class="contacts_s__separator"></span>
+            <li class="contacts_s__content-item">
+              <p class="contacts_s__subtitle">Адрес клиники</p>
+              <p class="btn contacts_s__link btn_call btn_light">
+                <span>Саратов, ул. Московская 34</span>
+                <span class="point-mark"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
+                    <path fill="#4995EC" fill-rule="evenodd"
+                      d="M8 0C3.6 0 0 4 0 8.5s2.6 9.3 6.5 11.2c1 .4 2 .4 3 0 4-1.9 6.5-6.7 6.5-11.2C16 4 12.4 0 8 0Zm0 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                      clip-rule="evenodd" />
+                  </svg></span>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts_s__block">
+          <div class="contacts_s__text">
+            <p class="contacts_s__description">Эспераль-Клиник – это современный центр лечения алкогольной зависимости, где мы
+              подбираем максимально эффективный
+              метод кодирования для каждого пациента.</p>
+            <p class="contacts_s__description">Мы работаем круглосуточно и без выходных.</p>
+          </div>
+          <button class="btn contacts_s__button popup-btn btn_consult btn_accent" data-path="popup-consult">
+            <span>записаться на прием</span>
+            <div class="point-mark"><span></span><span></span></div>
+          </button>
+        </div>
+      </div>
+    </section>
+    
+</main>
+    <footer class="footer container">
+        <div class="content">
+            <div class="footer__container">
+                <a class="footer__logo logo">
+                    <picture class="logo__picture">
+                        <source srcset="/assets/img/logo/logo-white.webp" type="image/webp">
+                        <source srcset="/assets/img/logo/logo-white.svg" type="image/svg+xml">
+                        <img src="/assets/img/logo/logo-white.png" alt="Логотип">
+                    </picture>
+                    <span class="logo__title">Эспераль-Клиник</span>
+                </a>
+                <div class="footer__wrapper footer_services">
+                    <a class="footer__title">Услуги</a>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Лечение алкоголизма</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Лечение наркомании</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Кодирование</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Капельницы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Вывод из запоя</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Наркологическая помощь</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Психиатрия</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Реабилитационный центр</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__wrapper footer_about">
+                    <a class="footer__title">О клинике</a>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">О нас</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Врачи</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Цены</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Акции</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Отзывы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">База знаний</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Часто задаваемые вопросы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__wrapper footer_contacts">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <p class="footer_contacts__title">Адрес:</p>
+                            <p class="footer__address footer__caption"><span>г. Саратов</span>, <span>ул. Московская
+                                    34</span></p>
+                        </li>
+                        <li>
+                            <p class="footer_contacts__title">Телефон:</p>
+                            <a class="footer__phone footer__caption" href="tel:+79999999999">+7 999 999-99-99</a>
+                        </li>
+                        <li>
+                            <p class="footer_contacts__title">Почта:</p>
+                            <a class="footer__mail footer__caption"
+                                href="mailto:info@esperal-klinika.ru">info@esperal-klinika.ru</a>
+                        </li>
+                    </ul>
+                    <div class="footer__social footer__social_mobile">
+                        <div class="social-container">
+                            <div class="social-container__point social-tg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                                    <path fill="#4995EC"
+                                        d="m20 .64-3.16 16.61s-.45 1.15-1.66.6l-7.3-5.83-.04-.02c1-.92 8.64-8.08 8.97-8.4.52-.5.2-.8-.4-.43L5.1 10.64.76 9.12s-.69-.26-.76-.8c-.06-.56.78-.86.78-.86L18.54.2S20-.47 20 .64Z" />
+                                </svg>
+                            </div>
+                            <span>Telegram</span>
+                        </div>
+                        <div class="social-container">
+                            <div class="social-container__point social-wa">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 27">
+                                    <path fill="#4995EC"
+                                        d="M22.9 4.08a13.05 13.05 0 0 0-22.32 9.2c.01 2.28.65 4.56 1.75 6.48L.5 26.5l6.95-1.82c1.92 1 4.03 1.55 6.22 1.55 7.23 0 13.08-5.84 13.08-13.04a13.29 13.29 0 0 0-3.84-9.11Zm-2.92 13.85c-.27.73-1.55 1.46-2.2 1.55-.54.1-1.27.1-2-.09-.46-.18-1.1-.36-1.83-.73-3.3-1.37-5.4-4.65-5.58-4.92a5.87 5.87 0 0 1-1.38-3.37C7 8.73 7.82 8 8.1 7.63c.28-.36.64-.36.92-.36h.64c.18 0 .45-.1.73.55.27.63.91 2.27 1 2.36.1.19.1.37 0 .55-.09.18-.18.37-.36.55-.18.18-.37.45-.46.55-.18.18-.36.36-.18.63.18.37.82 1.37 1.83 2.28 1.28 1.1 2.28 1.46 2.65 1.64.37.19.55.1.73-.09a7.8 7.8 0 0 0 1-1.27c.2-.37.46-.28.74-.19.27.1 1.92.91 2.2 1.1.36.18.54.27.63.36.1.28.1.91-.18 1.64Z" />
+                                </svg>
+                            </div>
+                            <span>WhatsApp</span>
+                        </div>
+                    </div>
+                    <button class="btn btn_call footer__button btn_light popup-btn" data-path="popup-consult">
+                        <span>обратный звонок</span>
+                        <div class="point-mark point-plus"></div>
+                    </button>
+                </div>
+            </div>
+            <div class="footer__container">
+                <p class="footer__description">Политика конфиденциальности</p>
+                <div class="footer__social">
+                    <div class="social-container">
+                        <div class="social-container__point social-tg">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                                <path fill="#4995EC"
+                                    d="m20 .64-3.16 16.61s-.45 1.15-1.66.6l-7.3-5.83-.04-.02c1-.92 8.64-8.08 8.97-8.4.52-.5.2-.8-.4-.43L5.1 10.64.76 9.12s-.69-.26-.76-.8c-.06-.56.78-.86.78-.86L18.54.2S20-.47 20 .64Z" />
+                            </svg>
+                        </div>
+                        <span>Telegram</span>
+                    </div>
+                    <div class="social-container">
+                        <div class="social-container__point social-wa">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 27">
+                                <path fill="#4995EC"
+                                    d="M22.9 4.08a13.05 13.05 0 0 0-22.32 9.2c.01 2.28.65 4.56 1.75 6.48L.5 26.5l6.95-1.82c1.92 1 4.03 1.55 6.22 1.55 7.23 0 13.08-5.84 13.08-13.04a13.29 13.29 0 0 0-3.84-9.11Zm-2.92 13.85c-.27.73-1.55 1.46-2.2 1.55-.54.1-1.27.1-2-.09-.46-.18-1.1-.36-1.83-.73-3.3-1.37-5.4-4.65-5.58-4.92a5.87 5.87 0 0 1-1.38-3.37C7 8.73 7.82 8 8.1 7.63c.28-.36.64-.36.92-.36h.64c.18 0 .45-.1.73.55.27.63.91 2.27 1 2.36.1.19.1.37 0 .55-.09.18-.18.37-.36.55-.18.18-.37.45-.46.55-.18.18-.36.36-.18.63.18.37.82 1.37 1.83 2.28 1.28 1.1 2.28 1.46 2.65 1.64.37.19.55.1.73-.09a7.8 7.8 0 0 0 1-1.27c.2-.37.46-.28.74-.19.27.1 1.92.91 2.2 1.1.36.18.54.27.63.36.1.28.1.91-.18 1.64Z" />
+                            </svg>
+                        </div>
+                        <span>WhatsApp</span>
+                    </div>
+                </div>
+                <p class="footer__description">© 2025 Эспераль-Клиник</p>
+            </div>
+        </div>
+    </footer>
+    <div class="popup" data-target="popup-consult">
+      <div class="popup__body">
+        <div class="popup__content">
+          <button class="close-popup"></button>
+    
+          <p class="popup__title main-title">
+            Бесплатная консультация специалиста — <span>это первый шаг!</span>
+          </p>
+          <p class="popup__subtitle">
+            Оставьте заявку, и наш эксперт свяжется с вами, чтобы помочь подобрать решение и обсудить вашу ситуацию
+          </p>
+    
+          <forms class="popup__form">
+            <input type="tel" class="input" name="params[phone][]" placeholder="+7(999) 999-99-99" required="">
+            <button type="submit" class="btn btn_consult popup__button popup-btn btn_accent">
+              <span>записаться</span>
+              <div class="point-mark"><span></span><span></span></div>
+            </button>
+          </forms>
+          <span class="popup__separation"></span>
+          <div class="popup__bottom">
+            <div class="popup__bottom-column">
+              <p>Или свяжитесь с нами самостоятельно</p>
+              <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+            </div>
+            <div class="popup__bottom-column">
+              <a href="#" target="_blank" class="point-mark btn_social point-tg">
+              </a>
+              <a href="+799999999999" class="point-mark btn_social point-tel">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>

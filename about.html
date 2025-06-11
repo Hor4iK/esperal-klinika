@@ -1,0 +1,876 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Esperal-klinika</title>
+    	<link rel="stylesheet" href="assets/css/styles.css">
+    	<link rel="stylesheet" href="assets/css/build/fancybox.min.css">
+    	<link rel="stylesheet" href="assets/css/build/swiper.css">
+    	<script src="assets/js/build/fancybox.min.js" defer></script>
+    	<script src="assets/js/build/swiper-bundle.min.js" defer></script>
+    	<script src="assets/js/main.js" defer></script>
+    </head>
+</head>
+<body>
+<div class="page">
+    <header class="header container">
+      <div class="content">
+        <div class="header__row">
+          <div class="header__address">
+            <div class="point-mark point-map">
+            </div>
+            <p class="header__address__container">
+              <span class="header__address__title">Саратов</span>, <span class="header__address__caption">Московская
+                34</span>
+            </p>
+          </div>
+          <a href="/" class="header__logo logo">
+            <picture class="logo__picture">
+              <source srcset="/assets/img/logo/logo.webp" type="image/webp">
+              <source srcset="/assets/img/logo/logo.svg" type="image/svg+xml">
+              <img src="/assets/img/logo/logo.png" alt="Логотип">
+            </picture>
+            <span class="logo__title">Эспераль-Клиник</span>
+          </a>
+          <div class="header__btns-container">
+            <a href="+799999999999" class="point-mark btn_social point-tel">
+            </a>
+            <a href="#" target="_blank" class="point-mark btn_social point-tg">
+            </a>
+            <a class="header__phone-link header__phone-link_mobile" href="+799999999999">+7 999 999-99-99</a>
+            <button class="btn btn_accent popup-btn" data-path="popup-consult">записаться на прием</button>
+            <button class="menu__btn_mobile menu_btn">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path fill="#4995EC" d="M.5.5h5v5h-5zM.5 8.5h5v5h-5zM8.5.5h5v5h-5zM8.5 8.5h5v5h-5z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="header__row mobile">
+          <a class="header__phone-link" href="tel:+799999999999">+7 999 999-99-99</a>
+          <div class="header__row mobile_top">
+            <a href="/" class="header__logo header__logo_mobile logo">
+              <picture class="logo__picture">
+                <source srcset="/assets/img/logo/logo-vector-accent.webp" type="image/webp">
+                <source srcset="/assets/img/logo/logo-vector-accent.svg" type="image/svg+xml">
+                <img src="/assets/img/logo/logo-vector-accent.png" alt="Логотип">
+              </picture>
+              <span class="logo__title">Эспераль-Клиник</span>
+            </a>
+            <div class="header__btns-container">
+              <div class="search__container">
+                <button class="search__button"></button>
+                <div class="header__search search">
+                  <form class="search__form">
+                    <input placeholder="Поиск по сайту" type="text" class="search__input">
+                  </form>
+                  <div class="search__content">
+                    <div class="search__hints">
+                      <ul>
+                        <li><a href="#">Лечение алкоголизма на дому</a></li>
+                        <li><a href="#">Лечение алкоголизма в стационаре</a></li>
+                        <li><a href="#">Лечение алкоголизма</a></li>
+                      </ul>
+                    </div>
+                    <div class="search__offers">
+                      <p class="search__offers__title">Возможно, вас заинтересует</p>
+                      <ul>
+                        <li><a href="#">как подготовиться к кодированию</a></li>
+                        <li><a href="#">кодирование от алкоголизма на дому</a></li>
+                        <li><a href="#">лечение алкоголизма</a></li>
+                        <li><a href="#">реабилитационный центр</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="menu__btn_mobile menu_btn">
+              </button>
+            </div>
+          </div>
+          <nav class="header__menu menu">
+            <ul class="menu__list hide-items">
+              <li class="menu__item hide-item">
+                <button class="menu__item__button hide-item__title"><a class="menu__link menu_point" href="/service.html">Услуги</a></button>
+                <div class="menu__subnav hide-item__height">
+                  <ul class="hide-item__content">
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Лечение алкоголизма</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Лечение наркомании</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Кодирование</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Кодирование</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Кодирование</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Лечение наркомании</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Лечение алкоголизма</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/service.html">Лечение алкоголизма</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item hide-item">
+                <button class="menu__item__button hide-item__title"><a class="menu__link menu_point" href="/about.html">О центре</a></button>
+                <div class="menu__subnav hide-item__height">
+                  <ul class="hide-item__content">
+                    <li class="menu__sublink"><a class="menu__link" href="/photos.html">Photos</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/law-page.html">law-page</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/law-doc.html">law-doc</a></li>
+                    <li class="menu__sublink"><a class="menu__link" href="/stocks.html">stocks</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="/doctors.html">Врачи</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Цены</a></li>
+              <li class="menu__item"><a class="menu__link" href="/stocks.html">Акции</a></li>
+              <li class="menu__item"><a class="menu__link" href="/reviews.html">Отзывы</a></li>
+              <li class="menu__item"><a class="menu__link" href="/contact.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="search__container search_desktop">
+            <div class="header__search search">
+              <form action="" class="search__form">
+                <input placeholder="Поиск по сайту" type="text" class="search__input">
+              </form>
+              <div class="search__content">
+                <div class="search__hints">
+                  <ul>
+                    <li><a href="#">Лечение алкоголизма на дому</a></li>
+                    <li><a href="#">Лечение алкоголизма в стационаре</a></li>
+                    <li><a href="#">Лечение алкоголизма</a></li>
+                  </ul>
+                </div>
+                <div class="search__offers">
+                  <p class="search__offers__title">Возможно, вас заинтересует</p>
+                  <ul>
+                    <li><a href="#">как подготовиться к кодированию</a></li>
+                    <li><a href="#">кодирование от алкоголизма на дому</a></li>
+                    <li><a href="#">лечение алкоголизма</a></li>
+                    <li><a href="#">реабилитационный центр</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn_consult header_mobile__button mobile__button popup-btn btn_accent" data-path="popup-consult">
+            <span>бесплатная консультация</span>
+            <div class="point-mark"><span></span><span></span></div>
+          </button>
+          <div class="mobile_down info">
+            <div class="info__block">
+              <p>Связаться с нами прямо сейчас</p>
+              <a href="tel:+79999999999" class="info__phone">+7 (999) 999-99-99</a>
+            </div>
+            <div class="info__block">
+              <a href="#" target="_blank" class="point-mark btn_social point-tg">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+<main class="main">
+    <section class="intro intro_about container_b">
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="/">Главная</a></li>
+          <li class="breadcrumbs__item">О клинике</li>
+        </ul>
+      </div>
+      <div class="intro__body">
+        <div class="intro__title-container">
+          <h1 class="intro__title main-title">О клинике<span> ТорпедоМед</span></h1>
+          <p class="intro__caption">
+            Клиника ТорпедоМед – это современный центр лечения алкогольной зависимости, где мы подбираем максимально
+            эффективный метод кодирования для каждого пациента.
+          </p>
+        </div>
+        <div class="intro__block">
+          <div class="intro__gallery__wrapper gallery__swiper">
+            <div class="intro__gallery swiper-wrapper">
+              <div class="intro__gallery__item swiper-slide">
+                <a href="/assets/img/photos/gal3.webp" data-fancybox="gallery">
+                  <picture>
+                    <source srcset="/assets/img/photos/gal1.webp" type="image/webp" />
+                    <img alt="Эспераль-клиник" title="Эспераль-клиник" loading="lazy" src="/assets/img/photos/gal1.jpeg" />
+                  </picture>
+                </a>
+              </div>
+              <div class="intro__gallery__item swiper-slide">
+                <a href="/assets/img/photos/gal3.webp" data-fancybox="gallery">
+                  <picture>
+                    <source srcset="/assets/img/photos/gal2.webp" type="image/webp" />
+                    <img alt="Эспераль-клиник" title="Эспераль-клиник" loading="lazy" src="/assets/img/photos/gal2.jpeg" />
+                  </picture>
+                </a>
+              </div>
+              <div class="intro__gallery__item swiper-slide">
+                <a href="/assets/img/photos/gal3.webp" data-fancybox="gallery">
+                  <picture>
+                    <source srcset="/assets/img/photos/gal3.webp" type="image/webp" />
+                    <img alt="Эспераль-клиник" title="Эспераль-клиник" loading="lazy" src="/assets/img/photos/gal3.jpeg" />
+                  </picture>
+                </a>
+              </div>
+              <div class="intro__gallery__item swiper-slide">
+                <a href="/assets/img/photos/gal3.webp" data-fancybox="gallery">
+                  <picture>
+                    <source srcset="/assets/img/photos/gal3.webp" type="image/webp" />
+                    <img alt="Эспераль-клиник" title="Эспераль-клиник" loading="lazy" src="/assets/img/photos/gal3.jpeg" />
+                  </picture>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="intro__swiper cards ">
+          <div class="swiper-wrapper intro__cards">
+            <div class="intro__content swiper-slide">
+              <p class="intro__content__title"><span>20+</span>методик кодирования</p>
+              <span class="intro__content__separator"></span>
+              <p>Мы помогаем вернуться к полноценной жизни, используя инновационные методики</p>
+            </div>
+            <div class="intro__content swiper-slide">
+              <p class="intro__content__title"><span>100%</span>анонимность</p>
+              <span class="intro__content__separator"></span>
+              <p>Мы помогаем вернуться к полноценной жизни, используя инновационные методики</p>
+            </div>
+            <div class="intro__content swiper-slide">
+              <p class="intro__content__title"><span>30+</span>опытных специалистов</p>
+              <span class="intro__content__separator"></span>
+              <p>Мы помогаем вернуться к полноценной жизни, используя инновационные методики</p>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    <section class="choose slider-hl container_b">
+      <h2 class="choose__title main-title">Почему стоит выбрать <span>наш центр?</span>
+      </h2>
+      <div class="choose__body slider-hl__swiper">
+        <div class="choose__list swiper-wrapper">
+          <div class="choose__item swiper-slide">
+            <div class="choose__item__wrapper-title">
+              <p class="choose__item__title">пробное кодирование</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <path fill="#4995EC" fill-rule="evenodd"
+                    d="M18.25.3a1 1 0 0 1 1.45 0l3.99 3.99a1 1 0 0 1 0 1.45c-.4.4-1.05.4-1.45 0l-1.27-1.27-2.26 2.27 1.15 1.15c1.04 1.04 1.55 1.56 1.77 2.14a2.9 2.9 0 0 1 0 1.93c-.22.59-.73 1.11-1.77 2.14l-.16.16-9.97-9.97.16-.16c1.03-1.04 1.55-1.55 2.14-1.77a2.9 2.9 0 0 1 1.93 0c.58.22 1.1.73 2.14 1.77l1.15 1.15 2.27-2.26-1.27-1.27c-.4-.4-.4-1.05 0-1.45ZM8.28 5.74 4.02 10a7.04 7.04 0 0 0-.68 9.19L.3 22.24a1 1 0 0 0 0 1.45 1 1 0 0 0 1.45 0l3.05-3.04a7.07 7.07 0 0 0 8.12.21l-2.16-2.17a1 1 0 0 1 0-1.45c.4-.4 1.05-.4 1.45 0l2.26 2.26.79-.79-3.96-3.96c-.4-.4-.4-1.05 0-1.46.4-.4 1.05-.4 1.45 0l3.96 3.96 1.54-1.54-9.97-9.97Z" />
+                </svg>
+              </div>
+            </div>
+            <p class="choose__content">Возможность "пробного кодирования" на короткий срок для оценки индивидуальной реакции
+              организма</p>
+          </div>
+          <div class="choose__item swiper-slide">
+            <div class="choose__item__wrapper-title">
+              <p class="choose__item__title">пробное кодирование</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <path fill="#4995EC" fill-rule="evenodd"
+                    d="M18.25.3a1 1 0 0 1 1.45 0l3.99 3.99a1 1 0 0 1 0 1.45c-.4.4-1.05.4-1.45 0l-1.27-1.27-2.26 2.27 1.15 1.15c1.04 1.04 1.55 1.56 1.77 2.14a2.9 2.9 0 0 1 0 1.93c-.22.59-.73 1.11-1.77 2.14l-.16.16-9.97-9.97.16-.16c1.03-1.04 1.55-1.55 2.14-1.77a2.9 2.9 0 0 1 1.93 0c.58.22 1.1.73 2.14 1.77l1.15 1.15 2.27-2.26-1.27-1.27c-.4-.4-.4-1.05 0-1.45ZM8.28 5.74 4.02 10a7.04 7.04 0 0 0-.68 9.19L.3 22.24a1 1 0 0 0 0 1.45 1 1 0 0 0 1.45 0l3.05-3.04a7.07 7.07 0 0 0 8.12.21l-2.16-2.17a1 1 0 0 1 0-1.45c.4-.4 1.05-.4 1.45 0l2.26 2.26.79-.79-3.96-3.96c-.4-.4-.4-1.05 0-1.46.4-.4 1.05-.4 1.45 0l3.96 3.96 1.54-1.54-9.97-9.97Z" />
+                </svg>
+              </div>
+            </div>
+            <p class="choose__content">Возможность "пробного кодирования" на короткий срок для оценки индивидуальной реакции
+              организма</p>
+          </div>
+          <div class="choose__item swiper-slide">
+            <div class="choose__item__wrapper-title">
+              <p class="choose__item__title">пробное кодирование</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <path fill="#4995EC" fill-rule="evenodd"
+                    d="M18.25.3a1 1 0 0 1 1.45 0l3.99 3.99a1 1 0 0 1 0 1.45c-.4.4-1.05.4-1.45 0l-1.27-1.27-2.26 2.27 1.15 1.15c1.04 1.04 1.55 1.56 1.77 2.14a2.9 2.9 0 0 1 0 1.93c-.22.59-.73 1.11-1.77 2.14l-.16.16-9.97-9.97.16-.16c1.03-1.04 1.55-1.55 2.14-1.77a2.9 2.9 0 0 1 1.93 0c.58.22 1.1.73 2.14 1.77l1.15 1.15 2.27-2.26-1.27-1.27c-.4-.4-.4-1.05 0-1.45ZM8.28 5.74 4.02 10a7.04 7.04 0 0 0-.68 9.19L.3 22.24a1 1 0 0 0 0 1.45 1 1 0 0 0 1.45 0l3.05-3.04a7.07 7.07 0 0 0 8.12.21l-2.16-2.17a1 1 0 0 1 0-1.45c.4-.4 1.05-.4 1.45 0l2.26 2.26.79-.79-3.96-3.96c-.4-.4-.4-1.05 0-1.46.4-.4 1.05-.4 1.45 0l3.96 3.96 1.54-1.54-9.97-9.97Z" />
+                </svg>
+              </div>
+            </div>
+            <p class="choose__content">Возможность "пробного кодирования" на короткий срок для оценки индивидуальной реакции
+              организма</p>
+          </div>
+          <div class="choose__item swiper-slide">
+            <div class="choose__item__wrapper-title">
+              <p class="choose__item__title">пробное кодирование</p>
+              <div class="point-mark">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <path fill="#4995EC" fill-rule="evenodd"
+                    d="M18.25.3a1 1 0 0 1 1.45 0l3.99 3.99a1 1 0 0 1 0 1.45c-.4.4-1.05.4-1.45 0l-1.27-1.27-2.26 2.27 1.15 1.15c1.04 1.04 1.55 1.56 1.77 2.14a2.9 2.9 0 0 1 0 1.93c-.22.59-.73 1.11-1.77 2.14l-.16.16-9.97-9.97.16-.16c1.03-1.04 1.55-1.55 2.14-1.77a2.9 2.9 0 0 1 1.93 0c.58.22 1.1.73 2.14 1.77l1.15 1.15 2.27-2.26-1.27-1.27c-.4-.4-.4-1.05 0-1.45ZM8.28 5.74 4.02 10a7.04 7.04 0 0 0-.68 9.19L.3 22.24a1 1 0 0 0 0 1.45 1 1 0 0 0 1.45 0l3.05-3.04a7.07 7.07 0 0 0 8.12.21l-2.16-2.17a1 1 0 0 1 0-1.45c.4-.4 1.05-.4 1.45 0l2.26 2.26.79-.79-3.96-3.96c-.4-.4-.4-1.05 0-1.46.4-.4 1.05-.4 1.45 0l3.96 3.96 1.54-1.54-9.97-9.97Z" />
+                </svg>
+              </div>
+            </div>
+            <p class="choose__content">Возможность "пробного кодирования" на короткий срок для оценки индивидуальной реакции
+              организма</p>
+          </div>
+        </div>
+        <div class="swiper-btn-container">
+          <button class="choose__nav swiper-btn swiper-btn_left">
+          </button>
+          <button class="choose__nav swiper-btn swiper-btn_right">
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="doctors-slider slider-hl container_b">
+      <div class="doctors-slider__caption">
+        <h2 class="doctors-slider__title main-title">Доверьтесь <span>экспертам</span></h2>
+        <p>В клинике работают опытные врачи, которые помогли тысячам пациентов справиться с алкогольной зависимостью. Мы ценим ваше доверие и гарантируем полную анонимность лечения.</p>
+      </div>
+    
+      <div class="doctors-slider__body slider-hl__swiper">
+        <div class="doctors-slider__list swiper-wrapper">
+          <a class="doctors-page__item swiper-slide" href="#">
+            <div class="doctors-page__item-top">
+              <div class="doctors-page__item-img">
+                <picture class="doctors-page__item-picture">
+                  <img src="/assets/img/photos/old-man-test.webp" title="doc" alt="doc" loading="lazy">
+                </picture>
+                <div class="doctors-page__item-experience">
+                  <p>стаж 16 лет</p>
+                </div>
+              </div>
+              <h4 class="doctors-page__item-name">
+                Константинопольский Константин Константинович</h4>
+              <div class="doctors-page__item-prof">Главный врач клиники ТорпедоМед, врач психиатр-нарколог, врач
+                психиатр-нарколог</div>
+            </div>
+          </a>
+          <a class="doctors-page__item swiper-slide" href="#">
+            <div class="doctors-page__item-top">
+              <div class="doctors-page__item-img">
+                <picture class="doctors-page__item-picture">
+                  <img src="/assets/img/photos/doctor-test.webp" title="doc" alt="doc" loading="lazy">
+                </picture>
+                <div class="doctors-page__item-experience">
+                  <p>стаж 16 лет</p>
+                </div>
+              </div>
+              <h4 class="doctors-page__item-name">
+                Miracle Derrick Runolfsson</h4>
+              <div class="doctors-page__item-prof">врач психиатр-нарколог</div>
+            </div>
+          </a>
+          <a class="doctors-page__item swiper-slide" href="#">
+            <div class="doctors-page__item-top">
+              <div class="doctors-page__item-img">
+                <picture class="doctors-page__item-picture">
+                  <img src="/assets/img/photos/old-man-test.webp" title="doc" alt="doc" loading="lazy">
+                </picture>
+                <div class="doctors-page__item-experience">
+                  <p>стаж 16 лет</p>
+                </div>
+              </div>
+              <h4 class="doctors-page__item-name">
+                Константинопольский Константин Константинович</h4>
+              <div class="doctors-page__item-prof">Главный врач клиники ТорпедоМед, врач психиатр-нарколог, врач
+                психиатр-нарколог</div>
+            </div>
+          </a>
+          <a class="doctors-page__item swiper-slide" href="#">
+            <div class="doctors-page__item-top">
+              <div class="doctors-page__item-img">
+                <picture class="doctors-page__item-picture">
+                  <img src="/assets/img/photos/old-man-test.webp" title="doc" alt="doc" loading="lazy">
+                </picture>
+                <div class="doctors-page__item-experience">
+                  <p>стаж 16 лет</p>
+                </div>
+              </div>
+              <h4 class="doctors-page__item-name">
+                Константинопольский Константин Константинович</h4>
+              <div class="doctors-page__item-prof">Главный врач клиники ТорпедоМед, врач психиатр-нарколог, врач
+                психиатр-нарколог</div>
+            </div>
+          </a>
+          <a class="doctors-page__item swiper-slide" href="#">
+            <div class="doctors-page__item-top">
+              <div class="doctors-page__item-img">
+                <picture class="doctors-page__item-picture">
+                  <img src="/assets/img/photos/old-man-test.webp" title="doc" alt="doc" loading="lazy">
+                </picture>
+                <div class="doctors-page__item-experience">
+                  <p>стаж 16 лет</p>
+                </div>
+              </div>
+              <h4 class="doctors-page__item-name">
+                Константинопольский Константин Константинович</h4>
+              <div class="doctors-page__item-prof">Главный врач клиники ТорпедоМед, врач психиатр-нарколог, врач
+                психиатр-нарколог</div>
+            </div>
+          </a>
+          <a class="doctors-page__item swiper-slide" href="#">
+            <div class="doctors-page__item-top">
+              <div class="doctors-page__item-img">
+                <picture class="doctors-page__item-picture">
+                  <img src="/assets/img/photos/old-man-test.webp" title="doc" alt="doc" loading="lazy">
+                </picture>
+                <div class="doctors-page__item-experience">
+                  <p>стаж 16 лет</p>
+                </div>
+              </div>
+              <h4 class="doctors-page__item-name">
+                Константинопольский Константин Константинович</h4>
+              <div class="doctors-page__item-prof">Главный врач клиники ТорпедоМед, врач психиатр-нарколог, врач
+                психиатр-нарколог</div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-btn-container">
+          <button class="choose__nav swiper-btn swiper-btn_left">
+          </button>
+          <button class="choose__nav swiper-btn swiper-btn_right">
+          </button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="faq-section container_b">
+      <div class="faq-section__wrap">
+        <div class="faq-section__top">
+          <h2 class="faq-section__title main-title">Часто задаваемые <span>вопросы</span></h2>
+          <div class="faq-section__forms">
+            <form class="faq-section__form">
+              <p class="faq-section__form-title">Не нашли ответа на свой вопрос?</p>
+              <p class="faq-section__form-subtitle">Свяжитесь с нами, и мы поможем!</p>
+              <input name="params[phone][]" type="tel" required="" class="input lechenie__input"
+                placeholder="+7 (999) 999-99-99">
+              <label class="checkbox">
+                <input type="checkbox" checked="checked" required="">
+                <span class="checkbox-mark"></span>
+                <span>Даю согласие на обработку персональных данных</span>
+              </label>
+              <button type="submit" class="btn btn_consult btn_accent lechenie__button">
+                <span>отправить</span>
+                <div class="point-mark">
+                  <span></span>
+                  <span></span>
+                </div>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="faq-section__content">
+          <ul class="faq-section__list">
+            <li class="faq-section__item">
+              <div class="faq-section__top-container">
+                <div class="faq-section__subtitle__wrapper">
+                  <p class="faq-section__subtitle">Можно ли вылечить алкоголизм?</p>
+                </div>
+                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
+              </div>
+              <div class="faq-section__bottom-container">
+                <div class="faq-section__bottom-text">
+                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
+                    Длительное
+                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
+                    предотвращать
+                    рецидивы.</p>
+                </div>
+                <div class="faq-section__bottom-name">
+                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
+                </div>
+              </div>
+            </li>
+            <li class="faq-section__item">
+              <div class="faq-section__top-container">
+                <div class="faq-section__subtitle__wrapper">
+                  <p class="faq-section__subtitle">Можно ли вылечить алкоголизм?</p>
+                </div>
+                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
+              </div>
+              <div class="faq-section__bottom-container">
+                <div class="faq-section__bottom-text">
+                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
+                    Длительное
+                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
+                    предотвращать
+                    рецидивы.</p>
+                </div>
+                <div class="faq-section__bottom-name">
+                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
+                </div>
+              </div>
+            </li>
+            <li class="faq-section__item">
+              <div class="faq-section__top-container">
+                <div class="faq-section__subtitle__wrapper">
+                  <p class="faq-section__subtitle">Можно ли вылечить алкоголизм?</p>
+                </div>
+                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
+              </div>
+              <div class="faq-section__bottom-container">
+                <div class="faq-section__bottom-text">
+                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
+                    Длительное
+                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
+                    предотвращать
+                    рецидивы.</p>
+                </div>
+                <div class="faq-section__bottom-name">
+                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
+                </div>
+              </div>
+            </li>
+            <li class="faq-section__item">
+              <div class="faq-section__top-container">
+                <div class="faq-section__subtitle__wrapper">
+                  <p class="faq-section__subtitle">Можно ли вылечить алкоголизм?</p>
+                </div>
+                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
+              </div>
+              <div class="faq-section__bottom-container">
+                <div class="faq-section__bottom-text">
+                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
+                    Длительное
+                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
+                    предотвращать
+                    рецидивы.</p>
+                </div>
+                <div class="faq-section__bottom-name">
+                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
+                </div>
+              </div>
+            </li>
+            <li class="faq-section__item">
+              <div class="faq-section__top-container">
+                <div class="faq-section__subtitle__wrapper">
+                  <p class="faq-section__subtitle">Можно ли вылечить алкоголизм?</p>
+                </div>
+                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
+              </div>
+              <div class="faq-section__bottom-container">
+                <div class="faq-section__bottom-text">
+                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
+                    Длительное
+                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
+                    предотвращать
+                    рецидивы.</p>
+                </div>
+                <div class="faq-section__bottom-name">
+                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
+                </div>
+              </div>
+            </li>
+            <li class="faq-section__item">
+              <div class="faq-section__top-container">
+                <div class="faq-section__subtitle__wrapper">
+                  <p class="faq-section__subtitle">Можно ли вылечить алкоголизм?</p>
+                </div>
+                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
+              </div>
+              <div class="faq-section__bottom-container">
+                <div class="faq-section__bottom-text">
+                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
+                    Длительное
+                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
+                    предотвращать
+                    рецидивы.</p>
+                </div>
+                <div class="faq-section__bottom-name">
+                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
+                </div>
+              </div>
+            </li>
+            <li class="faq-section__item">
+              <div class="faq-section__top-container">
+                <div class="faq-section__subtitle__wrapper">
+                  <p class="faq-section__subtitle">Можно ли вылечить алкоголизм?</p>
+                </div>
+                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
+              </div>
+              <div class="faq-section__bottom-container">
+                <div class="faq-section__bottom-text">
+                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
+                    Длительное
+                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
+                    предотвращать
+                    рецидивы.</p>
+                </div>
+                <div class="faq-section__bottom-name">
+                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
+                </div>
+              </div>
+            </li>
+            <li class="faq-section__item">
+              <div class="faq-section__top-container">
+                <div class="faq-section__subtitle__wrapper">
+                  <p class="faq-section__subtitle">Можно ли вылечить алкоголизм?</p>
+                </div>
+                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
+              </div>
+              <div class="faq-section__bottom-container">
+                <div class="faq-section__bottom-text">
+                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
+                    Длительное
+                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
+                    предотвращать
+                    рецидивы.</p>
+                </div>
+                <div class="faq-section__bottom-name">
+                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
+                </div>
+              </div>
+            </li>
+            <li class="faq-section__item">
+              <div class="faq-section__top-container">
+                <div class="faq-section__subtitle__wrapper">
+                  <p class="faq-section__subtitle">Как долго длится лечение алкоголизма?</p>
+                </div>
+                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
+              </div>
+              <div class="faq-section__bottom-container">
+                <div class="faq-section__bottom-text">
+                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
+                    Длительное
+                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
+                    предотвращать
+                    рецидивы.</p>
+                </div>
+                <div class="faq-section__bottom-name">
+                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
+                </div>
+              </div>
+    
+            </li>
+          </ul>
+          <div class="faq-section__content-btn">
+            <p>смотреть еще</p>
+            <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    <section class="contacts_s contacts_s_small container_b">
+      <h2 class="contacts_s__title main-title">Наши<span> контакты</span></h2>
+      <div class="contacts_s__body">
+        <div class="contacts_s__block">
+          <ul class="contacts_s__content-list">
+            <li class="contacts_s__content-item">
+              <p class="contacts_s__subtitle">Номер телефона</p>
+              <a href="tel:+79009000000" class="btn contacts_s__link btn_light btn_call">
+                <span>+7 (900) 900-00-00</span>
+                <div class="point-mark"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path fill="#4995EC"
+                      d="m6.8 1.48.72 1.3c.66 1.19.4 2.74-.64 3.78 0 0-1.26 1.26 1.02 3.54 2.28 2.28 3.54 1.02 3.54 1.02a3.19 3.19 0 0 1 3.77-.64l1.3.73c1.8 1 2 3.5.44 5.06a5.22 5.22 0 0 1-3.37 1.72c-2.15.08-5.8-.46-9.45-4.12C.47 10.22-.07 6.57 0 4.42a5.22 5.22 0 0 1 1.72-3.37C3.3-.5 5.8-.3 6.79 1.48Z" />
+                  </svg></div>
+              </a>
+            </li>
+            <span class="contacts_s__separator"></span>
+            <li class="contacts_s__content-item">
+              <p class="contacts_s__subtitle">Электронная почта</p>
+              <a href="mail:torpedo.med@med.ru" class="btn contacts_s__link btn_light btn_call">
+                <span>torpedo.med@med.ru</span>
+                <div class="point-mark"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path fill="#4995EC" fill-rule="evenodd"
+                      d="M1 1C0 2 0 3.7 0 7s0 5 1 6 2.6 1 5.8 1h3.4c3.2 0 4.8 0 5.8-1s1-2.7 1-6 0-5-1-6-2.6-1-5.8-1H6.8C3.6 0 2 0 1 1Zm13 2c.3.4.3.8 0 1l-1.9 1.6c-.7.7-1.3 1.2-1.9 1.5a3 3 0 0 1-1.7.6c-.6 0-1.2-.2-1.7-.6-.6-.3-1.2-.8-2-1.5L3 4a.7.7 0 0 1 0-1c.1-.2.5-.2.8 0l1.8 1.6L7.5 6c.4.3.7.4 1 .4.3 0 .6 0 1-.4l1.8-1.4L13.3 3c.3-.2.7-.2.9 0Z" />
+                  </svg></div>
+              </a>
+            </li>
+            <span class="contacts_s__separator"></span>
+            <li class="contacts_s__content-item">
+              <p class="contacts_s__subtitle">Адрес клиники</p>
+              <p class="btn contacts_s__link btn_call btn_light">
+                <span>Саратов, ул. Московская 34</span>
+                <span class="point-mark"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
+                    <path fill="#4995EC" fill-rule="evenodd"
+                      d="M8 0C3.6 0 0 4 0 8.5s2.6 9.3 6.5 11.2c1 .4 2 .4 3 0 4-1.9 6.5-6.7 6.5-11.2C16 4 12.4 0 8 0Zm0 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                      clip-rule="evenodd" />
+                  </svg></span>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts_s__block">
+          <div class="contacts_s__text">
+            <p class="contacts_s__description">Эспераль-Клиник – это современный центр лечения алкогольной зависимости, где мы
+              подбираем максимально эффективный
+              метод кодирования для каждого пациента.</p>
+            <p class="contacts_s__description">Мы работаем круглосуточно и без выходных.</p>
+          </div>
+          <button class="btn contacts_s__button popup-btn btn_consult btn_accent" data-path="popup-consult">
+            <span>записаться на прием</span>
+            <div class="point-mark"><span></span><span></span></div>
+          </button>
+        </div>
+      </div>
+    </section>
+    
+</main>
+    <footer class="footer container">
+        <div class="content">
+            <div class="footer__container">
+                <a class="footer__logo logo">
+                    <picture class="logo__picture">
+                        <source srcset="/assets/img/logo/logo-white.webp" type="image/webp">
+                        <source srcset="/assets/img/logo/logo-white.svg" type="image/svg+xml">
+                        <img src="/assets/img/logo/logo-white.png" alt="Логотип">
+                    </picture>
+                    <span class="logo__title">Эспераль-Клиник</span>
+                </a>
+                <div class="footer__wrapper footer_services">
+                    <a class="footer__title">Услуги</a>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Лечение алкоголизма</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Лечение наркомании</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Кодирование</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Капельницы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Вывод из запоя</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Наркологическая помощь</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Психиатрия</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Реабилитационный центр</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__wrapper footer_about">
+                    <a class="footer__title">О клинике</a>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">О нас</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Врачи</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Цены</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Акции</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Отзывы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">База знаний</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Часто задаваемые вопросы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__wrapper footer_contacts">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <p class="footer_contacts__title">Адрес:</p>
+                            <p class="footer__address footer__caption"><span>г. Саратов</span>, <span>ул. Московская
+                                    34</span></p>
+                        </li>
+                        <li>
+                            <p class="footer_contacts__title">Телефон:</p>
+                            <a class="footer__phone footer__caption" href="tel:+79999999999">+7 999 999-99-99</a>
+                        </li>
+                        <li>
+                            <p class="footer_contacts__title">Почта:</p>
+                            <a class="footer__mail footer__caption"
+                                href="mailto:info@esperal-klinika.ru">info@esperal-klinika.ru</a>
+                        </li>
+                    </ul>
+                    <div class="footer__social footer__social_mobile">
+                        <div class="social-container">
+                            <div class="social-container__point social-tg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                                    <path fill="#4995EC"
+                                        d="m20 .64-3.16 16.61s-.45 1.15-1.66.6l-7.3-5.83-.04-.02c1-.92 8.64-8.08 8.97-8.4.52-.5.2-.8-.4-.43L5.1 10.64.76 9.12s-.69-.26-.76-.8c-.06-.56.78-.86.78-.86L18.54.2S20-.47 20 .64Z" />
+                                </svg>
+                            </div>
+                            <span>Telegram</span>
+                        </div>
+                        <div class="social-container">
+                            <div class="social-container__point social-wa">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 27">
+                                    <path fill="#4995EC"
+                                        d="M22.9 4.08a13.05 13.05 0 0 0-22.32 9.2c.01 2.28.65 4.56 1.75 6.48L.5 26.5l6.95-1.82c1.92 1 4.03 1.55 6.22 1.55 7.23 0 13.08-5.84 13.08-13.04a13.29 13.29 0 0 0-3.84-9.11Zm-2.92 13.85c-.27.73-1.55 1.46-2.2 1.55-.54.1-1.27.1-2-.09-.46-.18-1.1-.36-1.83-.73-3.3-1.37-5.4-4.65-5.58-4.92a5.87 5.87 0 0 1-1.38-3.37C7 8.73 7.82 8 8.1 7.63c.28-.36.64-.36.92-.36h.64c.18 0 .45-.1.73.55.27.63.91 2.27 1 2.36.1.19.1.37 0 .55-.09.18-.18.37-.36.55-.18.18-.37.45-.46.55-.18.18-.36.36-.18.63.18.37.82 1.37 1.83 2.28 1.28 1.1 2.28 1.46 2.65 1.64.37.19.55.1.73-.09a7.8 7.8 0 0 0 1-1.27c.2-.37.46-.28.74-.19.27.1 1.92.91 2.2 1.1.36.18.54.27.63.36.1.28.1.91-.18 1.64Z" />
+                                </svg>
+                            </div>
+                            <span>WhatsApp</span>
+                        </div>
+                    </div>
+                    <button class="btn btn_call footer__button btn_light popup-btn" data-path="popup-consult">
+                        <span>обратный звонок</span>
+                        <div class="point-mark point-plus"></div>
+                    </button>
+                </div>
+            </div>
+            <div class="footer__container">
+                <p class="footer__description">Политика конфиденциальности</p>
+                <div class="footer__social">
+                    <div class="social-container">
+                        <div class="social-container__point social-tg">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
+                                <path fill="#4995EC"
+                                    d="m20 .64-3.16 16.61s-.45 1.15-1.66.6l-7.3-5.83-.04-.02c1-.92 8.64-8.08 8.97-8.4.52-.5.2-.8-.4-.43L5.1 10.64.76 9.12s-.69-.26-.76-.8c-.06-.56.78-.86.78-.86L18.54.2S20-.47 20 .64Z" />
+                            </svg>
+                        </div>
+                        <span>Telegram</span>
+                    </div>
+                    <div class="social-container">
+                        <div class="social-container__point social-wa">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 27">
+                                <path fill="#4995EC"
+                                    d="M22.9 4.08a13.05 13.05 0 0 0-22.32 9.2c.01 2.28.65 4.56 1.75 6.48L.5 26.5l6.95-1.82c1.92 1 4.03 1.55 6.22 1.55 7.23 0 13.08-5.84 13.08-13.04a13.29 13.29 0 0 0-3.84-9.11Zm-2.92 13.85c-.27.73-1.55 1.46-2.2 1.55-.54.1-1.27.1-2-.09-.46-.18-1.1-.36-1.83-.73-3.3-1.37-5.4-4.65-5.58-4.92a5.87 5.87 0 0 1-1.38-3.37C7 8.73 7.82 8 8.1 7.63c.28-.36.64-.36.92-.36h.64c.18 0 .45-.1.73.55.27.63.91 2.27 1 2.36.1.19.1.37 0 .55-.09.18-.18.37-.36.55-.18.18-.37.45-.46.55-.18.18-.36.36-.18.63.18.37.82 1.37 1.83 2.28 1.28 1.1 2.28 1.46 2.65 1.64.37.19.55.1.73-.09a7.8 7.8 0 0 0 1-1.27c.2-.37.46-.28.74-.19.27.1 1.92.91 2.2 1.1.36.18.54.27.63.36.1.28.1.91-.18 1.64Z" />
+                            </svg>
+                        </div>
+                        <span>WhatsApp</span>
+                    </div>
+                </div>
+                <p class="footer__description">© 2025 Эспераль-Клиник</p>
+            </div>
+        </div>
+    </footer>
+    <div class="popup" data-target="popup-consult">
+      <div class="popup__body">
+        <div class="popup__content">
+          <button class="close-popup"></button>
+    
+          <p class="popup__title main-title">
+            Бесплатная консультация специалиста — <span>это первый шаг!</span>
+          </p>
+          <p class="popup__subtitle">
+            Оставьте заявку, и наш эксперт свяжется с вами, чтобы помочь подобрать решение и обсудить вашу ситуацию
+          </p>
+    
+          <forms class="popup__form">
+            <input type="tel" class="input" name="params[phone][]" placeholder="+7(999) 999-99-99" required="">
+            <button type="submit" class="btn btn_consult popup__button popup-btn btn_accent">
+              <span>записаться</span>
+              <div class="point-mark"><span></span><span></span></div>
+            </button>
+          </forms>
+          <span class="popup__separation"></span>
+          <div class="popup__bottom">
+            <div class="popup__bottom-column">
+              <p>Или свяжитесь с нами самостоятельно</p>
+              <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+            </div>
+            <div class="popup__bottom-column">
+              <a href="#" target="_blank" class="point-mark btn_social point-tg">
+              </a>
+              <a href="+799999999999" class="point-mark btn_social point-tel">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
