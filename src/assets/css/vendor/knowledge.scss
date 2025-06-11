@@ -1,0 +1,148 @@
+.knowledge {
+  @include sections("image3", "base");
+  overflow: hidden;
+
+  &__title {
+    max-width: 730px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    @media screen and (width<=1300px) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__block {
+    &:first-child {
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .btn_consult {
+      padding: 10px;
+      width: 100%;
+
+      .point-mark {
+        width: 80px;
+      }
+
+      @media screen and (width<=1300px) {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (width<=700px) {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+
+  &__item {
+    background-color: $light-color;
+    padding: 10px 30px 10px 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    @media screen and (width<=700px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 6px;
+      border-radius: 20px;
+      gap: 0;
+
+      &.swiper-slide {
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+
+        .knowledge__content {
+          justify-content: space-between;
+          height: 100%;
+        }
+
+        @media screen and (width<=360px) {
+          .knowledge__item__picture {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    &__picture {
+      width: clamp(16.75rem, 12.25rem + 12vw, 21.25rem);
+      aspect-ratio: 1/1;
+      flex-shrink: 0;
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+        border-radius: 24px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-subtitle {
+      font-size: clamp(1rem, 0.5rem + 1.3333vw, 1.5rem);
+      margin-block-end: 16px;
+    }
+
+    &-text {
+      font-size: clamp(0.875rem, 0.5rem + 1vw, 1.25rem);
+      opacity: 0.65;
+      margin-block-end: 36px;
+    }
+
+    .btn {
+      padding: 10px;
+      width: 100%;
+
+      .point-mark {
+        width: 60px;
+
+        &::before {
+          transform: rotate(-45deg);
+        }
+      }
+
+      &:hover {
+        .point-mark::before {
+          transform: rotate(0);
+        }
+      }
+
+      @media screen and (width<=700px) {
+        padding: 6px;
+
+        .point-mark {
+          width: 48px;
+        }
+      }
+    }
+
+    @media screen and (width<=700px) {
+      margin-block-start: 14px;
+    }
+  }
+}

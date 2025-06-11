@@ -293,6 +293,11 @@ html.burger-lock {
   background-image: url(/assets/img/icons/user-card.svg);
 }
 
+.point-arrow::before {
+  @include point-mark-psevdo;
+  background-image: url(/assets/img/icons/arrow-blue.svg);
+}
+
 .social-container {
   display: flex;
   align-items: center;
@@ -580,7 +585,7 @@ html.burger-lock {
 // @import "vendor/offers";
 // @import "vendor/reviews";
 @import "vendor/lechenie-form";
-// @import "vendor/baza-znaniy";
+@import "vendor/knowledge";
 @import "vendor/faq";
 @import "vendor/contacts";
 

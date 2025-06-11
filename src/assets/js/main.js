@@ -589,6 +589,41 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  //Slider KNOWLEDGE, turns on when mobile
+  knowledgeSwiper = document.querySelector(".knowledge");
+  if (knowledgeSwiper) {
+    const knowledgeList = knowledgeSwiper.querySelector('.knowledge__list');
+    const knowledgeItemArray = knowledgeList.querySelectorAll('.knowledge__item');
+    knowledgeSwiperCheck = false;
+    ['resize', 'load'].forEach((event) => {
+      window.addEventListener(event, function () {
+        if (window.innerWidth <= 700 && !knowledgeSwiperCheck) {
+          if (knowledgeItemArray && knowledgeItemArray.length > 0) {
+            knowledgeItemArray.forEach(item => {
+              item.classList.add('swiper-slide');
+            })
+          }
+          knowledgeSwiperCheck = new Swiper(knowledgeSwiper.querySelector('.knowledge__swiper'), {
+            direction: 'horizontal',
+            slidesPerView: 1.1,
+            grabCursor: true,
+            spaceBetween: 10
+          });
+        }
+        if (window.innerWidth > 700 && knowledgeSwiperCheck) {
+          const knowledgeItemArray = knowledgeList.querySelectorAll('.swiper-slide');
+          if (knowledgeItemArray && knowledgeItemArray.length > 0) {
+            knowledgeItemArray.forEach(item => {
+              item.classList.remove('swiper-slide');
+            })
+          }
+          knowledgeSwiperCheck.destroy(true, true);
+          knowledgeSwiperCheck = false
+        }
+      })
+    })
+  }
+
   //Slider Principles
   principlesSwiper = document.querySelector(".principles");
   if (principlesSwiper) {
