@@ -451,6 +451,19 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END AUTOCONTENT RESIZE  -- */
 
 
+  /* -- SCHEME SECTION  -- */
+  const scheme = document.querySelector('.scheme-work');
+  if (scheme) {
+    const titleArray = scheme.querySelectorAll('.scheme-work__top-container');
+    const contentArray = scheme.querySelectorAll('.scheme-work__bottom-container');
+
+    if (titleArray && contentArray) {
+      tabs('.scheme-work__item', titleArray, contentArray);
+    }
+  }
+  /* -- END SCHEME SECTION -- */
+
+
 
   /* -- SLIDERS  -- */
 
