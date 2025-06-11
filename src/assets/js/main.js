@@ -406,6 +406,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+  /* -- MYTHS SECTION  -- */
+  const myths = document.querySelector('.myths');
+  if (myths) {
+    const titleArray = myths.querySelectorAll('.myths__top-container');
+    const contentArray = myths.querySelectorAll('.myths__bottom-container');
+
+    if (titleArray && contentArray) {
+      tabs('.myths__item', titleArray, contentArray);
+    }
+  }
+  /* -- END MYTHS SECTION -- */
+
+
+
   /* -- DOCTOR  -- */
   //Doctor tabs
   const education = document.querySelector('.doctor-page__education');
@@ -421,16 +435,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   /* -- AUTOCONTENT RESIZE  -- */
-  const autocontent = document.querySelector('.autocontent');
-  if (autocontent) {
-    const titleArray = autocontent.querySelectorAll('.autocontent__subtitle__wrapper');
-    const contentArray = autocontent.querySelectorAll('.autocontent__bottom-container');
+  const autocontentArray = document.querySelectorAll('.autocontent');
+  if (autocontentArray && autocontentArray.length > 0) {
+    autocontentArray.forEach(autocontent => {
+      const titleArray = autocontent.querySelectorAll('.autocontent__subtitle__wrapper');
+      const contentArray = autocontent.querySelectorAll('.autocontent__bottom-container');
 
-    if (titleArray && contentArray) {
-      if (window.innerWidth <= 975) {
-        tabs('.autocontent', titleArray, contentArray);
+      if (titleArray && contentArray) {
+        if (window.innerWidth <= 975) {
+          tabs('.autocontent', titleArray, contentArray);
+        }
       }
-    }
+    })
   }
   /* -- END AUTOCONTENT RESIZE  -- */
 

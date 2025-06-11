@@ -5122,6 +5122,329 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 
+.myths {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background-color: #fff;
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  overflow: hidden;
+  position: relative;
+}
+.myths::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  aspect-ratio: 1/1;
+  background: url(/assets/img/section/circles-myths.svg) no-repeat center center;
+  background-size: cover;
+  bottom: -370px;
+  left: -17%;
+  min-width: 700px;
+}
+@media screen and (width <= 1200px) {
+  .myths::before {
+    content: none;
+  }
+}
+.myths__item {
+  padding: 10px 10px 10px 30px;
+  transition: padding 300ms;
+  background-color: #f3f9ff;
+  border-radius: 24px;
+  transition: background-color 400ms ease-out;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, background-color 400ms ease;
+  max-height: 1000px;
+  opacity: 1;
+}
+.myths__item.active {
+  background-color: #4995ec;
+}
+.myths__item.active p {
+  color: #fff;
+}
+.myths__item.active .myths__bottom-container {
+  padding-bottom: 20px;
+}
+.myths__item.active .myths__bottom-true p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: #4995ec;
+}
+.myths__item.hidden {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+.myths__item:not(:last-child) {
+  margin-block-end: 20px;
+}
+@media (width <= 900px) {
+  .myths__item:not(:last-child) {
+    margin-block-end: 10px;
+  }
+}
+.myths__item .myths__bottom-true p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: #4995ec;
+}
+.myths__bottom-text {
+  font-size: 18px;
+  line-height: 120%;
+  color: #fff;
+  margin-bottom: 20px;
+  transition: color 300ms ease-out;
+}
+.myths__bottom-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease-in-out;
+  font-size: 18px;
+  line-height: 120%;
+}
+.myths__bottom-item {
+  margin-bottom: 20px;
+}
+.myths__bottom-item p:first-child {
+  font-size: 18px;
+  line-height: 120%;
+  color: rgba(19, 58, 102, 0.5);
+  margin-bottom: 12px;
+}
+.myths__bottom-item div {
+  border-bottom: 1px solid #deedff;
+}
+.myths__bottom-item div span {
+  border-radius: 100%;
+  background-color: #4995ec;
+  width: 7px;
+  height: 7px;
+  display: block;
+  transform: translateY(3.5px);
+}
+.myths__bottom-items {
+  border-top: 1px solid #dbeafc;
+  padding-top: 31px;
+  margin-top: 10px;
+}
+.myths__bottom-true {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #fff;
+  display: inline-flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  margin-top: 10px;
+}
+.myths__bottom-true svg {
+  width: 20px;
+  aspect-ratio: 1/1;
+}
+.myths__bottom-advantage {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.myths__bottom-advantage svg {
+  margin: 15px;
+  max-width: 18px;
+  aspect-ratio: 1/1;
+  outline: 1px solid #fff;
+  outline-offset: 12px;
+  border-radius: 1px;
+}
+.myths__bottom-advantage .myths__bottom-text {
+  margin-bottom: 0;
+}
+.myths__bottom-advantage:not(:last-child) {
+  margin-bottom: 16px;
+}
+.myths__top {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.myths__top-text {
+  font-size: 20px;
+  line-height: 140%;
+  color: rgba(19, 58, 102, 0.65);
+  margin-bottom: 24px;
+  max-width: 262px;
+}
+.myths__top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+  transition: padding 300ms ease-out;
+  cursor: pointer;
+  gap: 8px;
+}
+.myths__top-container.active .myths__btn_open span:last-of-type {
+  transform: rotate(0);
+}
+.myths__btn_open {
+  width: 80px;
+  background-color: #fff;
+}
+.myths__btn_open span {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #4995ec;
+  transition: transform 400ms ease-in-out;
+}
+.myths__btn_open span:last-of-type {
+  transform: rotate(270deg);
+}
+@media screen and (width <= 800px) {
+  .myths__btn_open {
+    width: 58px;
+  }
+}
+.myths__subtitle {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 116%;
+  transition: color 300ms ease-out;
+}
+.myths__subtitle__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.myths-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border-bottom: none;
+  transition: padding 300ms ease-out;
+  cursor: pointer;
+}
+.myths__connection-name {
+  font-size: 18px;
+  line-height: 120%;
+  color: rgba(19, 58, 102, 0.5);
+  margin-bottom: 10px;
+}
+.myths__connection-item:first-child {
+  margin-bottom: 24px;
+}
+.myths__connection-item a {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  color: #4995ec;
+}
+.myths__wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media screen and (width <= 1200px) {
+  .myths__wrap {
+    gap: 0;
+  }
+}
+.myths__content {
+  width: 50%;
+}
+.myths__content-btn {
+  padding: 10px 10px 10px 36px;
+  transition: padding 300ms;
+  background: #f3f9ff;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  border: 1px solid #dfeaf6;
+  display: none;
+}
+.myths__content-btn .myths__btn_open {
+  width: 70px;
+  background: #f3f9ff;
+}
+.myths__content-btn.active span:last-of-type {
+  transform: rotate(270deg);
+}
+.myths__content-btn.active .myths__btn_open span:last-of-type {
+  transform: rotate(0);
+}
+@media (max-width: 1200px) {
+  .myths__wrap {
+    flex-direction: column;
+  }
+  .myths__content {
+    width: 100%;
+  }
+  .myths__top-text, .myths__connection {
+    display: none;
+  }
+  .myths__top {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media (width <= 768px) {
+  .myths__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 110%;
+  }
+  .myths__bottom-item {
+    margin-bottom: 16px;
+  }
+  .myths__bottom-item p:first-child {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .myths__bottom-items {
+    padding-top: 24px;
+  }
+  .myths__bottom-text {
+    font-size: 16px;
+    line-height: 136%;
+    color: #133a66;
+    margin-bottom: 16px;
+  }
+  .myths__item {
+    padding: 10px 10px 10px 20px;
+    border-radius: 16px;
+  }
+  .myths__btn_open {
+    width: 64px;
+  }
+  .myths__content-btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #4995ec;
+  }
+  .myths__content-btn .myths__btn_open {
+    width: 56px;
+  }
+  .myths__content p {
+    font-size: 16px;
+  }
+}
+@media (width <= 600px) {
+  .myths {
+    padding-inline: 10px;
+  }
+}
+
 .doctor-page__top {
   display: flex;
   gap: 20px;
@@ -6379,6 +6702,7 @@ thead .prices__table__title th:nth-child(1) {
 }
 .stocks-page__btn_more {
   background-color: #4995ec;
+  color: #fff;
   width: 100%;
 }
 
