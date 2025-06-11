@@ -624,6 +624,41 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  //Slider offers, turns on when mobile
+  offersSwiper = document.querySelector(".offers");
+  if (offersSwiper) {
+    const offersList = offersSwiper.querySelector('.offers__list');
+    const offersItemArray = offersList.querySelectorAll('.offers__item');
+    offersSwiperCheck = false;
+    ['resize', 'load'].forEach((event) => {
+      window.addEventListener(event, function () {
+        if (window.innerWidth <= 700 && !offersSwiperCheck) {
+          if (offersItemArray && offersItemArray.length > 0) {
+            offersItemArray.forEach(item => {
+              item.classList.add('swiper-slide');
+            })
+          }
+          offersSwiperCheck = new Swiper(offersSwiper.querySelector('.offers__swiper'), {
+            direction: 'horizontal',
+            slidesPerView: 1.1,
+            grabCursor: true,
+            spaceBetween: 10
+          });
+        }
+        if (window.innerWidth > 700 && offersSwiperCheck) {
+          const offersItemArray = offersList.querySelectorAll('.swiper-slide');
+          if (offersItemArray && offersItemArray.length > 0) {
+            offersItemArray.forEach(item => {
+              item.classList.remove('swiper-slide');
+            })
+          }
+          offersSwiperCheck.destroy(true, true);
+          offersSwiperCheck = false
+        }
+      })
+    })
+  }
+
   //Slider Principles
   principlesSwiper = document.querySelector(".principles");
   if (principlesSwiper) {
