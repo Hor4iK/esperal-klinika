@@ -53,6 +53,10 @@
       background: url(/assets/img/section/bg-section-3.webp), #fff;
       background-size: cover;
       background-position: center top;
+    } @else if $type == "image4" {
+      background: url(/assets/img/section/bg-section-4.webp), #fff;
+      background-size: cover;
+      background-position: center top;
     } @else if $type == "form" {
       background: url(/assets/img/section/bg-form.webp), #fff;
       background-size: cover;
