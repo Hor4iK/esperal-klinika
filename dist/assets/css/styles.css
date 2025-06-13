@@ -3503,6 +3503,28 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 
+.brigady-service {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background-color: #fff;
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+}
+.brigady-service .brigady__item_map {
+  padding: 96px 38px;
+}
+.brigady-service .brigady__map {
+  padding: 0;
+}
+.brigady-service .brigady__button {
+  display: flex;
+}
+@media screen and (width <= 950px) {
+  .brigady-service .brigady__item_map {
+    padding-inline: 0;
+    padding-block: 20px;
+    background-color: #fff;
+  }
+}
+
 .express {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
