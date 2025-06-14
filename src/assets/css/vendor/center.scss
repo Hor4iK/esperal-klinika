@@ -22,11 +22,13 @@
     position: relative;
     z-index: 2;
   }
+
   &__title {
     max-width: 1050px;
     line-height: 1.1;
     text-align: center;
   }
+
   &__caption {
     max-width: 815px;
     text-align: center;
@@ -36,6 +38,7 @@
       margin-block-end: 24px;
     }
   }
+
   &__tabs {
     width: 100%;
     display: grid;
@@ -55,6 +58,7 @@
       margin-block-end: 24px;
     }
   }
+
   &__tab {
     display: flex;
     justify-content: space-between;
@@ -197,6 +201,96 @@
 
     @media (width>800px) {
       display: none;
+    }
+  }
+}
+
+.center-service {
+  @include sections("linear", "base");
+  color: $color-white;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: url(/assets/img/intro/circles.svg);
+    background-position: center 170px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-white;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__gallery {
+    &__wrapper {
+      width: 100%;
+      justify-content: center;
+      margin-block: 20px 100px;
+
+      @media (width<=800px) {
+        width: 100%;
+        margin-block: 20px 40px;
+      }
+    }
+
+    &__item {
+      overflow: hidden;
+      border-radius: 25px;
+
+      a {
+        display: block;
+        width: clamp(18.75rem, 1.25rem + 40vw, 31.25rem);
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        border-radius: 25px;
+      }
+
+      picture {
+        display: block;
+
+        img {
+          object-fit: cover;
+          object-position: center center;
+        }
+      }
+    }
+
+    @media (width<=1800px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (width<=800px) {
+      gap: 0;
+      align-items: initial;
+      justify-content: initial;
+    }
+  }
+
+  &__button {
+    max-width: 565px;
+    width: 100%;
+
+    @media (width<=800px) {
+      padding: 6px;
+
+      .point-mark {
+        width: 48px;
+      }
     }
   }
 }

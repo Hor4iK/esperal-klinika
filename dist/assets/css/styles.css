@@ -2391,6 +2391,92 @@ html.burger-lock {
   }
 }
 
+.center-service {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.center-service::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url(/assets/img/intro/circles.svg);
+  background-position: center 170px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.center-service__title {
+  text-align: center;
+}
+.center-service__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.center-service__gallery__wrapper {
+  width: 100%;
+  justify-content: center;
+  margin-block: 20px 100px;
+}
+@media (width <= 800px) {
+  .center-service__gallery__wrapper {
+    width: 100%;
+    margin-block: 20px 40px;
+  }
+}
+.center-service__gallery__item {
+  overflow: hidden;
+  border-radius: 25px;
+}
+.center-service__gallery__item a {
+  display: block;
+  width: clamp(18.75rem, 1.25rem + 40vw, 31.25rem);
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.center-service__gallery__item picture {
+  display: block;
+}
+.center-service__gallery__item picture img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center center;
+  object-position: center center;
+}
+@media (width <= 1800px) {
+  .center-service__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (width <= 800px) {
+  .center-service__gallery {
+    gap: 0;
+    align-items: initial;
+    justify-content: initial;
+  }
+}
+.center-service__button {
+  max-width: 565px;
+  width: 100%;
+}
+@media (width <= 800px) {
+  .center-service__button {
+    padding: 6px;
+  }
+  .center-service__button .point-mark {
+    width: 48px;
+  }
+}
+
 .services {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;

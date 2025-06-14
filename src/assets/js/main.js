@@ -701,7 +701,7 @@ document.addEventListener('DOMContentLoaded', function () {
     slidersArray.forEach(slider => {
       sliderCheck = new Swiper(slider.querySelector('.slider-hl__swiper'), {
         direction: 'horizontal',
-        slidesPerView: 1.2,
+        slidesPerView: 1.1,
         grabCursor: true,
         spaceBetween: 10,
         navigation: {
