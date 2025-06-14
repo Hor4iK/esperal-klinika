@@ -6460,6 +6460,187 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 
+.methods-alko {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background-color: #fff;
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  overflow: hidden;
+}
+.methods-alko__top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 10px;
+  margin-block-end: clamp(1rem, -0.1194rem + 3.5821vw, 2.5rem);
+}
+.methods-alko__title {
+  max-width: 800px;
+  margin: 0;
+}
+.methods-alko__caption {
+  max-width: 370px;
+  opacity: 0.65;
+}
+@media screen and (width <= 900px) {
+  .methods-alko__caption {
+    display: none;
+  }
+}
+.methods-alko__list.swiper-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media screen and (width <= 900px) {
+  .methods-alko__list.swiper-wrapper {
+    gap: 10px;
+  }
+}
+@media screen and (width <= 650px) {
+  .methods-alko__list.swiper-wrapper {
+    gap: 0;
+    display: flex;
+  }
+}
+.methods-alko__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f3f9ff;
+  padding: 35px 40px 40px;
+  border-radius: 32px;
+}
+.methods-alko__item__wrapper-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.methods-alko__item__wrapper-title span {
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 12px;
+  color: #4995ec;
+  font-weight: 500;
+  font-size: 20px;
+}
+.methods-alko__item__wrapper-title .point-mark {
+  width: 40px;
+  background-color: #fff;
+}
+.methods-alko__item__wrapper-title .point-mark svg {
+  width: 16px;
+  aspect-ratio: 1/1;
+}
+@media (width > 900px) {
+  .methods-alko__item__wrapper-title .point-mark {
+    display: none;
+  }
+}
+@media screen and (width <= 900px) {
+  .methods-alko__item__wrapper-title {
+    flex-wrap: wrap;
+  }
+  .methods-alko__item__wrapper-title .methods-alko__item__title {
+    max-width: calc(100% - 40px);
+    width: 100%;
+  }
+  .methods-alko__item__wrapper-title span {
+    background-color: transparent;
+    color: #133a66;
+    opacity: 0.65;
+    font-size: 14px;
+    padding-inline: 0;
+  }
+}
+.methods-alko__item__title {
+  max-width: 50%;
+  font-weight: 600;
+  font-size: clamp(1.125rem, 0.5781rem + 1.75vw, 2rem);
+}
+.methods-alko__item__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-end: 60px;
+}
+.methods-alko__item__content li {
+  padding: 16px;
+  outline: 1px solid #dde6ee;
+  border-radius: 10px;
+  line-height: 1.2;
+}
+.methods-alko__item__content li.accent {
+  background-color: #4995ec;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.1;
+  padding-inline: 15px;
+  font-size: calc(clamp(1rem, 0.7143rem + 0.5714vw, 1.25rem) + 4px);
+}
+@media screen and (width <= 900px) {
+  .methods-alko__item__content li {
+    padding: 0;
+    outline: none;
+    border-radius: 0;
+  }
+  .methods-alko__item__content li:not(.accent) {
+    opacity: 0.65;
+  }
+  .methods-alko__item__content li.accent {
+    padding: 10px 12px;
+    border-radius: 8px;
+    order: 1;
+    margin-block-start: 16px;
+    font-size: 16px;
+  }
+  .methods-alko__item__content li:not(.accent)::after {
+    content: ",";
+  }
+}
+@media screen and (width <= 900px) {
+  .methods-alko__item__content {
+    gap: 0;
+  }
+}
+.methods-alko__item-button {
+  padding: 10px;
+}
+.methods-alko__item-button .point-mark {
+  width: 80px;
+}
+@media screen and (width <= 900px) {
+  .methods-alko__item-button {
+    padding: 6px;
+  }
+  .methods-alko__item-button .point-mark {
+    width: 48px;
+  }
+}
+@media screen and (width <= 900px) {
+  .methods-alko__item {
+    padding: 14px;
+    border-radius: 16px;
+  }
+}
+.methods-alko__separator {
+  display: block;
+  height: 2px;
+  background-color: #deedff;
+  position: relative;
+  margin-block: clamp(0.875rem, -0.0875rem + 2.2vw, 1.5625rem) clamp(0.875rem, -1.6625rem + 5.8vw, 2.6875rem);
+}
+.methods-alko__separator::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #4995ec;
+  left: 0;
+  top: -3px;
+  z-index: 2;
+}
+
 .doctor-page__top {
   display: flex;
   gap: 20px;

@@ -695,6 +695,41 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  //Slider methods-alko, turns on when mobile
+  methodsSwiper = document.querySelector(".methods-alko");
+  if (methodsSwiper) {
+    const methodsList = methodsSwiper.querySelector('.methods-alko__list');
+    const methodsItemArray = methodsList.querySelectorAll('.methods-alko__item');
+    methodsSwiperCheck = false;
+    ['resize', 'load'].forEach((event) => {
+      window.addEventListener(event, function () {
+        if (window.innerWidth <= 650 && !methodsSwiperCheck) {
+          if (methodsItemArray && methodsItemArray.length > 0) {
+            methodsItemArray.forEach(item => {
+              item.classList.add('swiper-slide');
+            })
+          }
+          methodsSwiperCheck = new Swiper(methodsSwiper.querySelector('.methods-alko__swiper'), {
+            direction: 'horizontal',
+            slidesPerView: 1.1,
+            grabCursor: true,
+            spaceBetween: 10
+          });
+        }
+        if (window.innerWidth > 650 && methodsSwiperCheck) {
+          const methodsItemArray = methodsList.querySelectorAll('.swiper-slide');
+          if (methodsItemArray && methodsItemArray.length > 0) {
+            methodsItemArray.forEach(item => {
+              item.classList.remove('swiper-slide');
+            })
+          }
+          methodsSwiperCheck.destroy(true, true);
+          methodsSwiperCheck = false
+        }
+      })
+    })
+  }
+
   //Sliders horizontal (3 desktop -> 1 mobile)
   slidersArray = document.querySelectorAll(".slider-hl");
   if (slidersArray) {
