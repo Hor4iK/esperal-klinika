@@ -5307,6 +5307,15 @@ thead .prices__table__title th:nth-child(1) {
 .text__content table button:hover {
   box-shadow: 1px 1px 5px -1px #4995ec;
 }
+.text__content > picture img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center center;
+  object-position: center center;
+  max-width: clamp(19.6875rem, 3.5rem + 37vw, 31.25rem);
+  border-radius: 12px;
+  overflow: hidden;
+}
 @media screen and (width <= 800px) {
   .text__content {
     flex-basis: 100%;
@@ -5481,10 +5490,25 @@ thead .prices__table__title th:nth-child(1) {
     flex-direction: column;
   }
 }
+.text-article__counters {
+  display: flex;
+  gap: 20px;
+  margin-block-end: 80px;
+}
+@media screen and (width <= 800px) {
+  .text-article__counters {
+    flex-direction: column;
+    gap: 10px;
+    margin-block-end: 30px;
+  }
+}
 .text-article .text__content h2 {
   font-size: clamp(1.5rem, -0.775rem + 5.2vw, 3.125rem);
   font-weight: 600;
   line-height: 1.1;
+}
+.text-article .text__content h2:first-of-type {
+  margin-block-start: 0;
 }
 @media screen and (width <= 975px) {
   .text-article .text__aside picture,
@@ -5723,6 +5747,17 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 
+@media screen and (width <= 470px) {
+  .copylink-btn {
+    padding: 24px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .copylink-btn span {
+    font-size: 24px;
+    margin: 0;
+  }
+}
 .copylink-btn:hover .point-mark svg path {
   fill: #4995ec;
 }
@@ -5737,6 +5772,17 @@ thead .prices__table__title th:nth-child(1) {
   transition: fill 300ms ease-out;
 }
 
+@media screen and (width <= 470px) {
+  .rating {
+    padding: 24px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .rating span {
+    font-size: 24px;
+    margin: 0;
+  }
+}
 .rating__body {
   display: flex;
   align-items: center;
@@ -5799,6 +5845,48 @@ thead .prices__table__title th:nth-child(1) {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+.counter {
+  background-color: #f3f9ff;
+  padding: 6px;
+  padding-inline-start: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 316px;
+}
+.counter p {
+  font-size: 16px;
+  color: rgba(19, 58, 102, 0.6509803922);
+}
+.counter p span {
+  font-weight: 500;
+  color: #133a66;
+}
+.counter .point-mark {
+  background-color: #fff;
+  width: 48px;
+}
+.counter .point-mark svg {
+  width: 18px;
+  aspect-ratio: 1/1;
+}
+@media screen and (width <= 800px) {
+  .counter {
+    background-color: #fff;
+    border: 1px solid #f3f9ff;
+  }
+  .counter .point-mark {
+    background-color: #f3f9ff;
+  }
+}
+@media screen and (width <= 500px) {
+  .counter {
+    max-width: none;
   }
 }
 
