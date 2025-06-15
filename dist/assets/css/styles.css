@@ -2772,7 +2772,7 @@ thead .services__table__title th:nth-child(1) {
     right: 14px;
   }
 }
-.principles__item.active {
+.principles__item.swiper-slide-active {
   background-color: #4995ec;
   color: #fff;
 }
@@ -2810,6 +2810,44 @@ thead .services__table__title th:nth-child(1) {
     background-color: #fff;
     padding: 0;
   }
+}
+
+.svg_text {
+  width: 800px;
+  height: 800px;
+  transition: 3s ease;
+  -webkit-mask-image: url("/assets/img/section/brain-opt.svg");
+  mask-image: url("/assets/img/section/brain-opt.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  position: relative;
+}
+.svg_text::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: calc(100% + 80px);
+  height: calc(100% + 80px);
+  left: -40px;
+  top: -40px;
+  background: radial-gradient(ellipse farthest-corner at top right, #0071f3 13%, #bbc8d7 48%);
+}
+
+.principles .principles__item:nth-child(1).swiper-slide-active .svg_text::before {
+  transform: rotate(-20deg);
+}
+.principles .principles__item:nth-child(2).swiper-slide-active .svg_text::before {
+  transform: rotate(90deg);
+}
+.principles .principles__item:nth-child(3).swiper-slide-active .svg_text::before {
+  transform: rotate(150deg);
+}
+.principles .principles__item:nth-child(4).swiper-slide-active .svg_text::before {
+  transform: rotate(210deg);
 }
 
 .calculator {
