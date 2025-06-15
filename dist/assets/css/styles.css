@@ -1118,7 +1118,7 @@ html.burger-lock {
   background-color: #fff;
   color: #4995ec;
 }
-.btn_light:hover, .btn_light:active {
+.btn_light:hover, .btn_light:focus, .btn_light:active {
   background-color: #f3f9ff;
   outline: 1px solid #4995ec;
   color: #4995ec;
@@ -6684,6 +6684,173 @@ thead .prices__table__title th:nth-child(1) {
 @media screen and (width <= 900px) {
   .cost {
     padding-inline: 10px;
+  }
+}
+
+.allocator {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background-color: #fff;
+  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+}
+.allocator__title {
+  margin-block-start: clamp(1.5rem, -3.4rem + 11.2vw, 5rem);
+}
+.allocator__subtitle {
+  font-size: clamp(1.5rem, -0.775rem + 5.2vw, 3.125rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-block: clamp(2.5rem, -0.4167rem + 6.6667vw, 5rem) clamp(1.25rem, -0.9375rem + 5vw, 3.125rem);
+}
+.allocator__block {
+  display: none;
+}
+.allocator__block.active {
+  display: block;
+}
+.allocator__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (width <= 800px) {
+  .allocator__list {
+    gap: 10px;
+  }
+}
+.allocator__item {
+  background-color: #f3f9ff;
+  padding: 10px;
+  max-width: 546px;
+}
+.allocator__item .point-mark {
+  width: 80px;
+  background-color: #fff;
+}
+.allocator__item .point-mark::before {
+  transform: rotate(-45deg);
+}
+.allocator__item:hover .point-mark::before {
+  transform: rotate(0);
+}
+@media screen and (width <= 900px) {
+  .allocator__item {
+    padding: 6px;
+  }
+  .allocator__item .point-mark {
+    width: 48px;
+  }
+}
+.allocator__categories {
+  max-width: 830px;
+}
+.allocator__categories-subtile {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-block-end: clamp(0.625rem, -0.5417rem + 2.6667vw, 1.625rem);
+}
+.allocator__categories-subtile span:last-child {
+  opacity: 0.5;
+}
+@media screen and (width <= 800px) {
+  .allocator__categories-subtile {
+    font-size: 14px;
+  }
+}
+.allocator__categories__list {
+  transition: padding 300ms;
+}
+.allocator__categories__list:not(:last-child) {
+  margin-block-end: 20px;
+}
+.allocator__categories__list.active .categories__btn_open::after {
+  transform: rotate(180deg);
+}
+@media (width <= 800px) {
+  .allocator__categories__list:not(:last-child) {
+    margin-block-end: 10px;
+  }
+}
+.allocator__categories .categories__top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border-bottom: none;
+  transition: padding 300ms ease-out, margin 300ms;
+  padding: 10px;
+  padding-inline-start: 26px;
+  background-color: #f3f9ff;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.allocator__categories .categories__top-container.active {
+  margin-block-end: 10px;
+}
+.allocator__categories .categories__top-container.active .services__btn_open span:last-of-type {
+  transform: rotate(0);
+}
+.allocator__categories .categories__top-container.active ~ .categories__bottom-container {
+  padding-block-end: 20px;
+  outline: 1px solid #f3f9ff;
+}
+@media (width <= 800px) {
+  .allocator__categories .categories__top-container.active ~ .categories__bottom-container {
+    padding-block-end: 0;
+  }
+}
+@media (width <= 800px) {
+  .allocator__categories .categories__top-container {
+    gap: 14px;
+    padding: 5px;
+    padding-inline-start: 16px;
+  }
+  .allocator__categories .categories__top-container .point-mark {
+    width: 46px;
+  }
+}
+.allocator__categories .categories__bottom-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease-in-out;
+  background-color: #f3f9ff;
+  border-radius: 16px;
+}
+.allocator__categories .categories__item {
+  padding: 20px 26px;
+  transition: background-color 300ms;
+  cursor: pointer;
+}
+.allocator__categories .categories__item.active {
+  background-color: #fff;
+}
+@media (width <= 800px) {
+  .allocator__categories .categories__item {
+    padding-inline: 16px;
+  }
+}
+.allocator__categories .categories__btn_open {
+  width: 60px;
+  background-color: #fff;
+  position: relative;
+}
+.allocator__categories .categories__btn_open::after {
+  content: "";
+  width: 14px;
+  height: 8px;
+  display: block;
+  background: url(/assets/img/icons/raskrytie.svg) no-repeat center center;
+  background-size: contain;
+  transition: transform 400ms ease-out;
+}
+@media (width <= 800px) {
+  .allocator__categories .categories__btn_open {
+    width: 58px;
+  }
+}
+@media screen and (width <= 800px) {
+  .allocator__categories {
+    font-size: 14px;
   }
 }
 

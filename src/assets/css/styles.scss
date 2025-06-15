@@ -148,6 +148,7 @@ html.burger-lock {
     color: $accent-color;
 
     &:hover,
+    &:focus,
     &:active {
       background-color: $light-color;
       outline: 1px solid $accent-color;
@@ -595,6 +596,7 @@ html.burger-lock {
 @import "vendor/offers";
 @import "vendor/guaranties";
 @import "vendor/cost";
+@import "vendor/allocator";
 @import "vendor/histories";
 @import "vendor/how-going";
 @import "vendor/methods-alko";

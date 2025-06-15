@@ -365,6 +365,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+  /* -- ALLOCATOR  -- */
+  const allocator = document.querySelector('.allocator');
+
+  if (allocator) {
+    const serviceTitle = allocator.querySelectorAll('.categories__top-container');
+    const serviceContent = allocator.querySelectorAll(".categories__bottom-container");
+
+    if (serviceTitle && serviceContent) {
+      tabs('.allocator__categories__list', serviceTitle, serviceContent);
+    }
+
+    const item = allocator.querySelector('.allocator__categories__list');
+    const categories = item.querySelectorAll('.categories__item');
+    const listTitle = item.querySelector('.categories__subtitle');
+    const categoriesContent = allocator.querySelectorAll(".allocator__block");
+
+    listTitle.textContent = categories[0].textContent;
+
+    categories.forEach(category => {
+      category.addEventListener('click', evt => {
+        const categoryTitle = evt.target.textContent;
+        listTitle.textContent = categoryTitle;
+      })
+    })
+    categoriesSwitch(allocator, categories, categoriesContent, ".categories__item.active", ".allocator__block.active");
+
+  }
+  /* -- END ALLOCATOR  -- */
+
+
+
   /* -- VACANCIES  -- */
   const vacancies = document.querySelector('.part-team');
   if (vacancies) {

@@ -1,0 +1,198 @@
+.allocator {
+  @include sections("light", "base");
+
+  &__title {
+    margin-block-start: clamp(1.5rem, -3.4rem + 11.2vw, 5rem);
+  }
+
+  &__content {
+  }
+
+  &__subtitle {
+    font-size: clamp(1.5rem, -0.775rem + 5.2vw, 3.125rem);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-block: clamp(2.5rem, -0.4167rem + 6.6667vw, 5rem)
+      clamp(1.25rem, -0.9375rem + 5vw, 3.125rem);
+  }
+
+  &__block {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media screen and (width<=800px) {
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    background-color: $light-color;
+    padding: 10px;
+    max-width: 546px;
+
+    .point-mark {
+      width: 80px;
+      background-color: $color-white;
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:hover {
+      .point-mark {
+        &::before {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    @media screen and (width<=900px) {
+      padding: 6px;
+
+      .point-mark {
+        width: 48px;
+      }
+    }
+  }
+
+  &__categories {
+    max-width: 830px;
+
+    &-subtile {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      margin-block-end: clamp(0.625rem, -0.5417rem + 2.6667vw, 1.625rem);
+
+      span {
+        &:last-child {
+          opacity: 0.5;
+        }
+      }
+
+      @media screen and (width<=800px) {
+        font-size: 14px;
+      }
+    }
+
+    &__list {
+      transition: padding 300ms;
+
+      &:not(:last-child) {
+        margin-block-end: 20px;
+      }
+
+      &.active {
+        .categories__btn_open::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      @media (width<=800px) {
+        &:not(:last-child) {
+          margin-block-end: 10px;
+        }
+      }
+    }
+
+    .categories__top-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      border-bottom: none;
+      transition: padding 300ms ease-out, margin 300ms;
+      padding: 10px;
+      padding-inline-start: 26px;
+      background-color: $light-color;
+      border-radius: 16px;
+      cursor: pointer;
+
+      &.active {
+        margin-block-end: 10px;
+
+        .services__btn_open span:last-of-type {
+          transform: rotate(0);
+        }
+
+        ~ .categories__bottom-container {
+          padding-block-end: 20px;
+          outline: 1px solid $light-color;
+
+          @media (width<=800px) {
+            padding-block-end: 0;
+          }
+        }
+      }
+
+      @media (width<=800px) {
+        gap: 14px;
+        padding: 5px;
+        padding-inline-start: 16px;
+
+        .point-mark {
+          width: 46px;
+        }
+      }
+    }
+
+    .categories__bottom-container {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 400ms ease-in-out;
+      background-color: $light-color;
+      border-radius: 16px;
+    }
+
+    .categories__item {
+      padding: 20px 26px;
+      transition: background-color 300ms;
+      cursor: pointer;
+
+      &.active {
+        background-color: $color-white;
+      }
+
+      @media (width<=800px) {
+        padding-inline: 16px;
+      }
+    }
+
+    .categories__btn {
+      &_open {
+        width: 60px;
+        background-color: $color-white;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 14px;
+          height: 8px;
+          display: block;
+          background: url(/assets/img/icons/raskrytie.svg) no-repeat center
+            center;
+          background-size: contain;
+          transition: transform 400ms ease-out;
+        }
+
+        @media (width<=800px) {
+          width: 58px;
+        }
+      }
+    }
+
+    @media screen and (width<=800px) {
+      font-size: 14px;
+    }
+  }
+}
