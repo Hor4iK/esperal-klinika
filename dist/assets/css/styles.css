@@ -5741,25 +5741,65 @@ thead .prices__table__title th:nth-child(1) {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row-reverse;
   border-radius: 8px;
   gap: 6px;
   padding: 25px 30px;
   background-color: rgba(255, 255, 255, 0.2);
+  outline: 1px solid transparent;
+  transition: outline 300ms ease-out, background-color 300ms;
 }
-.rating__body button {
+.rating__body:hover {
+  outline: 1px solid #4995ec;
+  background-color: #fff;
+}
+.rating__body label {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.2s ease;
 }
-.rating__body button svg {
+.rating__body label svg {
   width: 30px;
+  cursor: pointer;
   aspect-ratio: 1/1;
 }
-.rating__body button svg .star {
+.rating__body label svg .star {
+  transition: fill 0.3s linear;
   fill: #deedff;
 }
-.rating__body button svg .star.active {
-  fill: #fff;
+.rating__body label svg:hover {
+  transform: scale(1.1);
+}
+.rating__body label svg:hover .star {
+  fill: #ffd700;
+}
+.rating__body input[name=rat] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.rating__body input[name=rat]:checked ~ label .star, .rating__body input[name=rat] + label:hover ~ label .star {
+  fill: #ffd700;
+}
+.rating__body input[name=rat]:checked + label svg {
+  animation: starPulse 0.5s ease;
+}
+@keyframes starPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .myths {
