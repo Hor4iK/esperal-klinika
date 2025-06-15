@@ -298,6 +298,38 @@
         }
       }
     }
+
+    &__toolsbar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media screen and (width<=1000px) {
+        gap: 10px;
+      }
+    }
+
+    .lechenie-accent {
+      padding: 30px 40px 40px;
+      border-radius: 24px;
+
+      &__title {
+        font-size: 32px;
+        margin-block-end: 40px;
+      }
+
+      &__button {
+        padding: 8px;
+
+        span {
+          font-size: 16px;
+        }
+
+        .point-mark {
+          width: 54px;
+        }
+      }
+    }
   }
 
   .blockquote-expert {
@@ -340,6 +372,47 @@
   @media screen and (width<=975px) {
     picture {
       order: 3;
+    }
+  }
+}
+
+.text-article {
+  display: block;
+
+  &__title {
+    margin-block-start: clamp(1.5rem, -3.4rem + 11.2vw, 5rem);
+    max-width: 65%;
+  }
+
+  &__container {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (width<=975px) {
+      flex-direction: column;
+    }
+  }
+
+  .text__content {
+    h2 {
+      font-size: clamp(1.5rem, -0.775rem + 5.2vw, 3.125rem);
+      font-weight: 600;
+      line-height: 1.1;
+    }
+  }
+
+  @media screen and (width<=975px) {
+    .text__aside {
+      picture,
+      .lechenie-accent,
+      .preparation__plashka,
+      .calculator {
+        display: none;
+      }
+
+      &__toolsbar {
+        order: 4;
+      }
     }
   }
 }
@@ -594,6 +667,64 @@
 
       .autocontent__bottom-container {
         margin-block-start: 20px;
+      }
+    }
+  }
+}
+
+.copylink-btn {
+  &__text {
+  }
+
+  &:hover {
+    .point-mark svg path {
+      fill: $accent-color;
+    }
+  }
+
+  .point-mark {
+    width: 80px;
+
+    svg {
+      width: 24px;
+      aspect-ratio: 1/1;
+
+      path {
+        transition: fill 300ms ease-out;
+      }
+    }
+  }
+}
+
+.rating {
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    gap: 6px;
+    padding: 25px 30px;
+    background-color: rgb(255, 255, 255, 0.2);
+
+    &:hover {
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 30px;
+        aspect-ratio: 1/1;
+
+        .star {
+          fill: $light2-color;
+
+          &.active {
+            fill: $color-white;
+          }
+        }
       }
     }
   }

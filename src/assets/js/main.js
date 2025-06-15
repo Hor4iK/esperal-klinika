@@ -465,17 +465,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   /* -- HOW-GOING SECTION  -- */
-    const how = document.querySelector('.how-procedure');
-    if (how) {
-        const titleArray = how.querySelectorAll('.how-procedure__top-container');
-        const contentArray = how.querySelectorAll('.how-procedure__bottom-container');
+  const how = document.querySelector('.how-procedure');
+  if (how) {
+    const titleArray = how.querySelectorAll('.how-procedure__top-container');
+    const contentArray = how.querySelectorAll('.how-procedure__bottom-container');
 
-        if (titleArray && contentArray) {
+    if (titleArray && contentArray) {
 
-            tabs('.how-procedure__item', titleArray, contentArray);
-        }
+      tabs('.how-procedure__item', titleArray, contentArray);
     }
-    /* -- END HOW-GOING SECTION -- */
+  }
+  /* -- END HOW-GOING SECTION -- */
+
+
+
+  /* -- COPY BUTTON -- */
+  const copyBtns = document.querySelectorAll('.copylink-btn');
+  if (copyBtns && copyBtns.length > 0) {
+    copyBtns.forEach(copyBtn => {
+      copyBtn.addEventListener('click', () => {
+        const textBtn = this.querySelector('.copylink-btn__text');
+        const originalText = textBtn.textContent;
+        const currentUrl = window.location.href;
+        navigator.clipboard.writeText(currentUrl);
+        textBtn.textContent = 'Ссылка скопирована!';
+        setTimeout(() => {
+          textBtn.textContent = originalText;
+        }, 2000);
+      })
+    })
+  }
+  /* -- END COPY BUTTON -- */
 
 
 

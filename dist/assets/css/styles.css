@@ -5396,6 +5396,33 @@ thead .prices__table__title th:nth-child(1) {
 .text__aside .preparation__plashka .preparation__download .point-mark {
   width: 54px;
 }
+.text__aside__toolsbar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (width <= 1000px) {
+  .text__aside__toolsbar {
+    gap: 10px;
+  }
+}
+.text__aside .lechenie-accent {
+  padding: 30px 40px 40px;
+  border-radius: 24px;
+}
+.text__aside .lechenie-accent__title {
+  font-size: 32px;
+  margin-block-end: 40px;
+}
+.text__aside .lechenie-accent__button {
+  padding: 8px;
+}
+.text__aside .lechenie-accent__button span {
+  font-size: 16px;
+}
+.text__aside .lechenie-accent__button .point-mark {
+  width: 54px;
+}
 .text .blockquote-expert {
   display: flex;
   align-items: center;
@@ -5435,6 +5462,39 @@ thead .prices__table__title th:nth-child(1) {
 @media screen and (width <= 975px) {
   .text picture {
     order: 3;
+  }
+}
+
+.text-article {
+  display: block;
+}
+.text-article__title {
+  margin-block-start: clamp(1.5rem, -3.4rem + 11.2vw, 5rem);
+  max-width: 65%;
+}
+.text-article__container {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (width <= 975px) {
+  .text-article__container {
+    flex-direction: column;
+  }
+}
+.text-article .text__content h2 {
+  font-size: clamp(1.5rem, -0.775rem + 5.2vw, 3.125rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+@media screen and (width <= 975px) {
+  .text-article .text__aside picture,
+  .text-article .text__aside .lechenie-accent,
+  .text-article .text__aside .preparation__plashka,
+  .text-article .text__aside .calculator {
+    display: none;
+  }
+  .text-article .text__aside__toolsbar {
+    order: 4;
   }
 }
 
@@ -5661,6 +5721,45 @@ thead .prices__table__title th:nth-child(1) {
   .autocontent.active .autocontent__bottom-container {
     margin-block-start: 20px;
   }
+}
+
+.copylink-btn:hover .point-mark svg path {
+  fill: #4995ec;
+}
+.copylink-btn .point-mark {
+  width: 80px;
+}
+.copylink-btn .point-mark svg {
+  width: 24px;
+  aspect-ratio: 1/1;
+}
+.copylink-btn .point-mark svg path {
+  transition: fill 300ms ease-out;
+}
+
+.rating__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  gap: 6px;
+  padding: 25px 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.rating__body button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rating__body button svg {
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+.rating__body button svg .star {
+  fill: #deedff;
+}
+.rating__body button svg .star.active {
+  fill: #fff;
 }
 
 .myths {
