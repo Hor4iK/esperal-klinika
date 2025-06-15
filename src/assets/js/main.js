@@ -464,6 +464,20 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END SCHEME SECTION -- */
 
 
+  /* -- HOW-GOING SECTION  -- */
+    const how = document.querySelector('.how-procedure');
+    if (how) {
+        const titleArray = how.querySelectorAll('.how-procedure__top-container');
+        const contentArray = how.querySelectorAll('.how-procedure__bottom-container');
+
+        if (titleArray && contentArray) {
+
+            tabs('.how-procedure__item', titleArray, contentArray);
+        }
+    }
+    /* -- END HOW-GOING SECTION -- */
+
+
 
   /* -- SLIDERS  -- */
 
