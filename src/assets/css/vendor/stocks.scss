@@ -141,6 +141,7 @@
 .stocks {
   @include sections("light", "base");
   overflow: hidden;
+  transition: transform 900ms, opacity 400ms;
 
   &__title {
     max-width: 500px;

@@ -8,6 +8,7 @@
     grid-template-rows: 330px;
     grid-auto-rows: 330px;
     gap: 20px;
+    transition: transform 900ms, opacity 400ms;
 
     @media screen and (width<=1300px) {
       grid-auto-rows: 1fr;

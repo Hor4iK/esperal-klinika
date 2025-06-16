@@ -127,6 +127,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    transition: transform 900ms, opacity 400ms;
 
     &__wrapper {
       justify-content: center;
@@ -210,6 +211,7 @@
   color: $color-white;
   position: relative;
   overflow: hidden;
+  transition: transform 700ms, opacity 350ms;
 
   &::before {
     content: "";

@@ -2,6 +2,7 @@
   font-size: clamp(2rem, -0.0922rem + 5.3372vw, 4.75rem);
   font-weight: 600;
   line-height: 100%;
+  text-rendering: optimizeSpeed;
   margin-block-end: clamp(1rem, -0.1194rem + 3.5821vw, 2.5rem);
 
   span {
@@ -26,6 +27,15 @@
     padding: clamp(0.625rem, -1.2367rem + 4.2553vw, 1.875rem);
     background: $gradient;
     position: relative;
+
+    .intro__title {
+      min-width: 100%;
+      min-height: 9vh;
+
+      @media (width<=600px) {
+        min-height: 125px;
+      }
+    }
 
     @media screen and (width<=1170px) {
       .intro {
@@ -126,6 +136,7 @@
       &__cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        transition: transform 600ms, opacity 250ms;
         gap: 20px;
 
         @media screen and (width<=650px) {
@@ -420,6 +431,7 @@
   }
 
   &__image {
+    transition: transform 900ms, opacity 400ms;
     position: relative;
     width: 100%;
 

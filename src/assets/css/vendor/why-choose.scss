@@ -1,6 +1,7 @@
 .choose {
   @include sections("image2", "base");
   overflow: hidden;
+  transition: transform 900ms, opacity 400ms;
 
   &__title {
     max-width: 820px;

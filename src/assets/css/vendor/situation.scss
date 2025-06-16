@@ -1,6 +1,7 @@
 .situation {
   @include sections("image", "base");
   line-height: 1.2;
+  transition: transform 900ms, opacity 400ms;
 
   &__body {
     overflow: hidden;

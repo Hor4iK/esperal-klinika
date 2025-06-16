@@ -1621,6 +1621,7 @@ html.burger-lock {
   font-size: clamp(2rem, -0.0922rem + 5.3372vw, 4.75rem);
   font-weight: 600;
   line-height: 100%;
+  text-rendering: optimizeSpeed;
   margin-block-end: clamp(1rem, -0.1194rem + 3.5821vw, 2.5rem);
 }
 .main-title span {
@@ -1648,6 +1649,15 @@ html.burger-lock {
   padding: clamp(0.625rem, -1.2367rem + 4.2553vw, 1.875rem);
   background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
   position: relative;
+}
+.intro_main .intro__title {
+  min-width: 100%;
+  min-height: 9vh;
+}
+@media (width <= 600px) {
+  .intro_main .intro__title {
+    min-height: 125px;
+  }
 }
 @media screen and (width <= 1170px) {
   .intro_main .intro__block {
@@ -1732,6 +1742,7 @@ html.burger-lock {
 .intro_service .intro__cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  transition: transform 600ms, opacity 250ms;
   gap: 20px;
 }
 @media screen and (width <= 650px) {
@@ -1972,6 +1983,7 @@ html.burger-lock {
   font-size: clamp(1rem, 0.2553rem + 1.7021vw, 1.5rem);
 }
 .intro__image {
+  transition: transform 900ms, opacity 400ms;
   position: relative;
   width: 100%;
 }
@@ -2192,6 +2204,7 @@ html.burger-lock {
   background-position: center top;
   padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
   line-height: 1.2;
+  transition: transform 900ms, opacity 400ms;
 }
 .situation__body {
   overflow: hidden;
@@ -2373,6 +2386,7 @@ html.burger-lock {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  transition: transform 900ms, opacity 400ms;
 }
 .center-lecheniya__gallery__wrapper {
   justify-content: center;
@@ -2457,6 +2471,7 @@ html.burger-lock {
   color: #fff;
   position: relative;
   overflow: hidden;
+  transition: transform 700ms, opacity 350ms;
 }
 .center-service::before {
   content: "";
@@ -2984,6 +2999,7 @@ thead .services__table__title th:nth-child(1) {
   padding: 30px;
   overflow: hidden;
   position: relative;
+  transition: transform 800ms, opacity 300ms;
 }
 .calculator::after {
   content: "";
@@ -3499,6 +3515,7 @@ thead .services__table__title th:nth-child(1) {
   background-position: center top;
   padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
   overflow: hidden;
+  transition: transform 900ms, opacity 400ms;
 }
 .choose__title {
   max-width: 820px;
@@ -3779,6 +3796,7 @@ thead .services__table__title th:nth-child(1) {
   padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
   position: relative;
   overflow: hidden;
+  transition: transform 900ms, opacity 400ms;
 }
 .express__content {
   display: flex;
@@ -5008,7 +5026,7 @@ thead .services__table__title th:nth-child(1) {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   gap: 12px;
-  margin-block-end: clamp(3.75rem, 0rem + 10vw, 8.125rem);
+  margin-block-end: clamp(3.75rem, -1.3542rem + 11.6667vw, 8.125rem);
 }
 @media screen and (width <= 900px) {
   .installment__payment {
@@ -6560,6 +6578,7 @@ thead .prices__table__title th:nth-child(1) {
   grid-template-rows: 330px;
   grid-auto-rows: 330px;
   gap: 20px;
+  transition: transform 900ms, opacity 400ms;
 }
 @media screen and (width <= 1300px) {
   .guaranties__content {
@@ -9084,6 +9103,7 @@ thead .prices__table__title th:nth-child(1) {
   background-color: #fff;
   padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
   overflow: hidden;
+  transition: transform 900ms, opacity 400ms;
 }
 .stocks__title {
   max-width: 500px;
@@ -9772,6 +9792,56 @@ thead .prices__table__title th:nth-child(1) {
     grid-template-rows: 1fr 1fr;
     margin-block: 0;
   }
+}
+
+.down-fade.to_animate {
+  opacity: 0;
+  transform: translateY(50px);
+}
+.down-fade.to_animate.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.up-fade.to_animate {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+.up-fade.to_animate.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.left-fade.to_animate {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.left-fade.to_animate.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.right-fade.to_animate {
+  opacity: 0;
+  transform: translateX(50px);
+}
+.right-fade.to_animate.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.rotate-left.to_animate {
+  transform: rotate3d(0, 1, 0, 90deg);
+}
+.rotate-left.to_animate.animated {
+  transform: none;
+}
+
+.rotate-up.to_animate {
+  transform: rotate3d(0, 0, 1, 90deg);
+}
+.rotate-up.to_animate.animated {
+  transform: none;
 }
 
 .footer {
