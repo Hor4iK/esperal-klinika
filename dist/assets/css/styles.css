@@ -2727,6 +2727,11 @@ thead .services__table__title th:nth-child(1) {
   align-items: center;
   justify-content: center;
 }
+@media (width <= 1000px) {
+  .principles__block:last-child .svg_text {
+    max-width: 600px;
+  }
+}
 .principles__content {
   max-height: 750px;
   overflow: hidden;
@@ -2813,8 +2818,8 @@ thead .services__table__title th:nth-child(1) {
 }
 
 .svg_text {
-  width: 800px;
-  height: 800px;
+  width: 100%;
+  aspect-ratio: 1/1;
   transition: 3s ease;
   -webkit-mask-image: url("/assets/img/section/brain-opt.svg");
   mask-image: url("/assets/img/section/brain-opt.svg");
@@ -2834,19 +2839,20 @@ thead .services__table__title th:nth-child(1) {
   height: calc(100% + 80px);
   left: -40px;
   top: -40px;
+  transition: transform 300ms ease-out;
   background: radial-gradient(ellipse farthest-corner at top right, #0071f3 13%, #bbc8d7 48%);
 }
 
-.principles .principles__item:nth-child(1).swiper-slide-active .svg_text::before {
+.principles .svg_text.svg_text_slide-1::before {
   transform: rotate(-20deg);
 }
-.principles .principles__item:nth-child(2).swiper-slide-active .svg_text::before {
+.principles .svg_text.svg_text_slide-2::before {
   transform: rotate(90deg);
 }
-.principles .principles__item:nth-child(3).swiper-slide-active .svg_text::before {
+.principles .svg_text.svg_text_slide-3::before {
   transform: rotate(150deg);
 }
-.principles .principles__item:nth-child(4).swiper-slide-active .svg_text::before {
+.principles .svg_text.svg_text_slide-4::before {
   transform: rotate(210deg);
 }
 

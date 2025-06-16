@@ -12,6 +12,13 @@
       align-items: center;
       justify-content: center;
     }
+    @media (width<=1000px) {
+      &:last-child {
+        .svg_text {
+          max-width: 600px;
+        }
+      }
+    }
   }
 
   &__content {
@@ -108,8 +115,8 @@
 }
 
 .svg_text {
-  width: 800px;
-  height: 800px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
 
   transition: 3s ease;
   mask-image: url("/assets/img/section/brain-opt.svg");
@@ -126,7 +133,7 @@
     height: calc(100% + 80px);
     left: -40px;
     top: -40px;
-    // animation: test 5s linear forwards;
+    transition: transform 300ms ease-out;
     background: radial-gradient(
       ellipse farthest-corner at top right,
       #0071f3 13%,
@@ -135,37 +142,20 @@
   }
 }
 
-.principles  {
-  .principles__item:nth-child(1).swiper-slide-active {
-    .svg_text::before {
-      transform: rotate(-20deg);
-    }
+.principles {
+  .svg_text.svg_text_slide-1::before {
+    transform: rotate(-20deg);
   }
 
-  .principles__item:nth-child(2).swiper-slide-active {
-    .svg_text::before {
-      transform: rotate(90deg);
-    }
+  .svg_text.svg_text_slide-2::before {
+    transform: rotate(90deg);
   }
 
-  .principles__item:nth-child(3).swiper-slide-active {
-    .svg_text::before {
-      transform: rotate(150deg);
-    }
+  .svg_text.svg_text_slide-3::before {
+    transform: rotate(150deg);
   }
 
-  .principles__item:nth-child(4).swiper-slide-active {
-    .svg_text::before {
-      transform: rotate(210deg);
-    }
+  .svg_text.svg_text_slide-4::before {
+    transform: rotate(210deg);
   }
 }
-
-// @keyframes test {
-//   0% {
-//   }
-
-//   100% {
-//     transform: rotate(180deg);
-//   }
-// }

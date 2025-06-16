@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  /* -- ALLOCATOR  -- */
+  /* -- ALLOCATOR PAGE -- */
   const allocator = document.querySelector('.allocator');
 
   if (allocator) {
@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
     categoriesSwitch(allocator, categories, categoriesContent, ".categories__item.active", ".allocator__block.active");
 
   }
-  /* -- END ALLOCATOR  -- */
+  /* -- END ALLOCATOR PAGE -- */
 
 
 
@@ -727,8 +727,20 @@ document.addEventListener('DOMContentLoaded', function () {
   //Slider Principles
   principlesSwiper = document.querySelector(".principles");
   if (principlesSwiper) {
+    const svg = principlesSwiper.querySelector('.svg_text');
     principlesSwiperCheck = new Swiper(principlesSwiper.querySelector('.principles__swiper'), {
       direction: 'horizontal',
+      on: {
+        slideChange: function () {
+          if (svg) {
+            svg.className = 'svg_text';
+            svg.classList.add(`svg_text_slide-${this.activeIndex+1}`);
+          }
+        },
+        init: function () {
+          svg.classList.add(`svg_text_slide-${this.activeIndex+1}`);
+        }
+      },
       slidesPerView: 1.2,
       grabCursor: true,
       spaceBetween: 10,
@@ -741,6 +753,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
 
   //Slider Photos on About page
   gallerySwiper = document.querySelector(".intro_about");
