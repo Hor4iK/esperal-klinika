@@ -250,11 +250,17 @@ html.burger-lock {
     bottom: 12%;
     left: 3%;
     cursor: pointer;
+    display: block;
     z-index: 5;
     opacity: 0;
-    transition: opacity 400ms ease;
+    transition: opacity 400ms ease, scale 300ms ease-out;
+    border-radius: 50%;
 
-    a {
+    &:hover {
+      scale: 1.05;
+    }
+
+    div {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -262,11 +268,27 @@ html.burger-lock {
       aspect-ratio: 1/1;
       border-radius: 50%;
       background-color: $color-white;
-      outline: 1px solid $accent-color;
+      border: 1px solid $accent-color;
       position: relative;
 
+      &:focus,
+      &:active {
+      animation: breath 1s infinite ease;
+      animation-direction: alternate;
+    }
+
+    @keyframes breath {
+      0% {
+        outline: 0.001em solid #4995ec88;
+      }
+
+      100% {
+        outline: 0.45em solid #4995ec37;
+      }
+    }
+
       &::before {
-        content: '';
+        content: "";
         display: block;
         height: 1px;
         width: 8px;
@@ -276,7 +298,7 @@ html.burger-lock {
       }
 
       &::after {
-        content: '';
+        content: "";
         display: block;
         height: 1px;
         width: 8px;

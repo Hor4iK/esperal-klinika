@@ -1209,11 +1209,16 @@ html.burger-lock {
   bottom: 12%;
   left: 3%;
   cursor: pointer;
+  display: block;
   z-index: 5;
   opacity: 0;
-  transition: opacity 400ms ease;
+  transition: opacity 400ms ease, scale 300ms ease-out;
+  border-radius: 50%;
 }
-.btn_top a {
+.btn_top:hover {
+  scale: 1.05;
+}
+.btn_top div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1221,10 +1226,22 @@ html.burger-lock {
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: #fff;
-  outline: 1px solid #4995ec;
+  border: 1px solid #4995ec;
   position: relative;
 }
-.btn_top a::before {
+.btn_top div:focus, .btn_top div:active {
+  animation: breath 1s infinite ease;
+  animation-direction: alternate;
+}
+@keyframes breath {
+  0% {
+    outline: 0.001em solid rgba(73, 149, 236, 0.5333333333);
+  }
+  100% {
+    outline: 0.45em solid rgba(73, 149, 236, 0.2156862745);
+  }
+}
+.btn_top div::before {
   content: "";
   display: block;
   height: 1px;
@@ -1233,7 +1250,7 @@ html.burger-lock {
   border-radius: 2px;
   transform: rotate(-45deg) translateX(15%);
 }
-.btn_top a::after {
+.btn_top div::after {
   content: "";
   display: block;
   height: 1px;
