@@ -11,6 +11,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
     @media (width<=1000px) {
       &:last-child {
@@ -23,7 +24,9 @@
 
   &__content {
     max-height: 750px;
+    height: 100%;
     overflow: hidden;
+    display: block;
   }
 
   &__list {
@@ -46,6 +49,7 @@
     &.swiper-slide {
       display: flex;
       max-height: 450px;
+      overflow: hidden;
     }
 
     &::after {
@@ -106,18 +110,79 @@
     background-repeat: no-repeat;
   }
 
+  .svg-point {
+    position: absolute;
+    background-color: $light-color;
+    color: #5f7b9b;
+    z-index: 2;
+    cursor: default;
+
+    &:nth-of-type(1) {
+      top: 35%;
+      transform: translateX(50%);
+    }
+    &:nth-of-type(2) {
+      left: 125px;
+      transform: translateY(-120%);
+    }
+    &:nth-of-type(3) {
+      right: 120px;
+      bottom: 45%;
+    }
+    &:nth-of-type(4) {
+      bottom: 38%;
+    }
+  }
+
   @media (width<=1000px) {
     display: flex;
     flex-direction: column;
     gap: 0;
     @include sections("light");
+
+    .svg-point {
+      &:nth-of-type(1) {
+        top: 16%;
+        transform: translateX(50%);
+      }
+      &:nth-of-type(2) {
+        left: 105px;
+        transform: translateY(-120%);
+      }
+      &:nth-of-type(3) {
+        right: 120px;
+        bottom: 45%;
+      }
+      &:nth-of-type(4) {
+        bottom: 28%;
+      }
+    }
+  }
+  @media (width<=500px) {
+    .svg-point {
+      &:nth-of-type(1) {
+        top: 16%;
+        transform: translateX(50%);
+      }
+      &:nth-of-type(2) {
+        left: 30px;
+        transform: translateY(-120%);
+      }
+      &:nth-of-type(3) {
+        right: 30px;
+        bottom: 45%;
+      }
+      &:nth-of-type(4) {
+        bottom: 28%;
+      }
+    }
   }
 }
 
 .svg_text {
   width: 100%;
   aspect-ratio: 1 / 1;
-
+  overflow: hidden;
   transition: 3s ease;
   mask-image: url("/assets/img/section/brain-opt.svg");
   mask-repeat: no-repeat;
@@ -133,7 +198,7 @@
     height: calc(100% + 80px);
     left: -40px;
     top: -40px;
-    transition: transform 300ms ease-out;
+    transition: transform 450ms ease-out;
     background: radial-gradient(
       ellipse farthest-corner at top right,
       #0071f3 13%,
@@ -143,19 +208,27 @@
 }
 
 .principles {
-  .svg_text.svg_text_slide-1::before {
-    transform: rotate(-20deg);
+  .svg_text.svg_text_slide-1 {
+    &::before {
+      transform: rotate(-28deg);
+    }
   }
 
-  .svg_text.svg_text_slide-2::before {
-    transform: rotate(90deg);
+  .svg_text.svg_text_slide-2 {
+    &::before {
+      transform: rotate(210deg);
+    }
   }
 
-  .svg_text.svg_text_slide-3::before {
-    transform: rotate(150deg);
+  .svg_text.svg_text_slide-3 {
+    &::before {
+      transform: rotate(50deg);
+    }
   }
 
-  .svg_text.svg_text_slide-4::before {
-    transform: rotate(210deg);
+  .svg_text.svg_text_slide-4 {
+    &::before {
+      transform: rotate(150deg) translateY(20px) translateX(-65px);
+    }
   }
 }

@@ -906,6 +906,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+  /* -- POPUP CALCULATOR -- */
+  const popupCalculator = document.querySelector('.popup_calculator');
+
+  if (popupCalculator) {
+    const serviceTitle = popupCalculator.querySelectorAll('.chose__top-container');
+    const serviceContent = popupCalculator.querySelectorAll(".chose__bottom-container");
+
+    if (serviceTitle && serviceContent) {
+      tabs('.popup__chose-container', serviceTitle, serviceContent);
+    }
+
+    const item = popupCalculator.querySelector('.popup__chose-container');
+    const categories = item.querySelectorAll('.chose__item');
+    const listTitle = item.querySelector('.chose__subtitle');
+
+    listTitle.textContent = categories[0].textContent;
+
+    categories.forEach(category => {
+      category.addEventListener('click', evt => {
+        const categoryTitle = evt.target.textContent;
+        listTitle.textContent = categoryTitle;
+      })
+    })
+  }
+  /* -- END POPUP CALCULATOR -- */
+
+
+
   //view photos fancybox
   Fancybox.bind("[data-fancybox]");
 
