@@ -821,7 +821,7 @@ input[type=search]::-webkit-search-results-decoration {
 .menu_point::before {
   content: "";
   display: block;
-  background-image: url(/assets/img/icons/cuboid.svg);
+  background-image: url(../img/icons/cuboid.svg);
   background-position: center center;
   background-repeat: no-repeat;
   width: 13px;
@@ -898,7 +898,7 @@ input[type=search]::-webkit-search-results-decoration {
   right: 20px;
   width: 18px;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/icons/search.svg);
+  background-image: url(../img/icons/search.svg);
 }
 .search__input {
   width: 100%;
@@ -983,7 +983,7 @@ input[type=search]::-webkit-search-results-decoration {
   display: block;
   width: 18px;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/icons/search.svg);
+  background-image: url(../img/icons/search.svg);
 }
 .search.open .search__content {
   max-height: 500px;
@@ -1283,7 +1283,7 @@ html.burger-lock {
   background-repeat: no-repeat;
   width: 20px;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/icons/point-map.svg);
+  background-image: url(../img/icons/point-map.svg);
 }
 
 .point-tel::before {
@@ -1295,7 +1295,7 @@ html.burger-lock {
   background-repeat: no-repeat;
   width: 20px;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/icons/tel.svg);
+  background-image: url(../img/icons/tel.svg);
 }
 
 .point-tg::before {
@@ -1307,7 +1307,7 @@ html.burger-lock {
   background-repeat: no-repeat;
   width: 20px;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/icons/tg.svg);
+  background-image: url(../img/icons/tg.svg);
 }
 
 .point-wa::before {
@@ -1319,7 +1319,7 @@ html.burger-lock {
   background-repeat: no-repeat;
   width: 20px;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/icons/wa.svg);
+  background-image: url(../img/icons/wa.svg);
 }
 
 .point-plus::before {
@@ -1331,7 +1331,7 @@ html.burger-lock {
   background-repeat: no-repeat;
   width: 20px;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/icons/plus.svg);
+  background-image: url(../img/icons/plus.svg);
 }
 @media screen and (width <= 700px) {
   .point-plus::before {
@@ -1348,7 +1348,7 @@ html.burger-lock {
   background-repeat: no-repeat;
   width: 20px;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/icons/cuboid.svg);
+  background-image: url(../img/icons/cuboid.svg);
 }
 
 .point-card::before {
@@ -1360,7 +1360,7 @@ html.burger-lock {
   background-repeat: no-repeat;
   width: 20px;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/icons/user-card.svg);
+  background-image: url(../img/icons/user-card.svg);
 }
 
 .point-arrow::before {
@@ -1372,7 +1372,7 @@ html.burger-lock {
   background-repeat: no-repeat;
   width: 20px;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/icons/arrow-blue.svg);
+  background-image: url(../img/icons/arrow-blue.svg);
 }
 
 .social-container {
@@ -1550,7 +1550,7 @@ html.burger-lock {
   display: block;
   width: 16px;
   aspect-ratio: 1/1;
-  background: url(/assets/img/icons/checkbox.svg) no-repeat center center;
+  background: url(../img/icons/checkbox.svg) no-repeat center center;
   background-size: cover;
   opacity: 0;
   transition: opacity 200ms;
@@ -1605,7 +1605,7 @@ html.burger-lock {
   outline: 1px solid #4995ec;
 }
 .swiper-btn_left::before {
-  background-image: url(/assets/img/icons/arrow-blue.svg);
+  background-image: url(../img/icons/arrow-blue.svg);
 }
 .swiper-btn_right {
   background-color: #4995ec;
@@ -1614,7 +1614,7 @@ html.burger-lock {
   outline: 1px solid #4995ec;
 }
 .swiper-btn_right::before {
-  background-image: url(/assets/img/icons/arrow.svg);
+  background-image: url(../img/icons/arrow.svg);
 }
 
 .main-title {
@@ -1672,7 +1672,7 @@ html.burger-lock {
   flex-direction: column;
   gap: clamp(1rem, -0.25rem + 4vw, 2.5rem);
   padding: clamp(1.5rem, -1.4167rem + 9.3333vw, 5rem) clamp(0.875rem, -3.6042rem + 14.3333vw, 6.25rem) clamp(1.5rem, -2.4583rem + 12.6667vw, 6.25rem);
-  background: url(/assets/img/intro/bg-service.webp), #f3f9ff;
+  background: url(../img/intro/bg-service.webp), #f3f9ff;
   background-size: cover;
   background-position: center top;
 }
@@ -2006,7 +2006,7 @@ html.burger-lock {
   left: -132px;
   width: 130%;
   aspect-ratio: 1/1;
-  background: url(/assets/img/intro/circles-text.webp) no-repeat;
+  background: url(../img/intro/circles-text.webp) no-repeat;
   background-position: center center;
   background-size: contain;
 }
@@ -2051,7 +2051,7 @@ html.burger-lock {
     bottom: -134px;
     left: -55px;
     width: 130%;
-    background: url(/assets/img/intro/circles-mini.webp) no-repeat;
+    background: url(../img/intro/circles-mini.webp) no-repeat;
     background-position: center center;
     background-size: contain;
   }
@@ -2199,7 +2199,7 @@ html.burger-lock {
 
 .situation {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
-  background: url(/assets/img/section/bg-section.webp), #fff;
+  background: url(../img/section/bg-section.webp), #fff;
   background-size: cover;
   background-position: center top;
   padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
@@ -2271,7 +2271,7 @@ html.burger-lock {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url(/assets/img/intro/circles.svg);
+  background-image: url(../img/intro/circles.svg);
   background-position: center 600px;
   background-size: 113%;
   background-repeat: no-repeat;
@@ -2348,7 +2348,7 @@ html.burger-lock {
   position: absolute;
   width: 26px;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/icons/ellipse.svg);
+  background-image: url(../img/icons/ellipse.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 8px;
@@ -2409,7 +2409,7 @@ html.burger-lock {
   object-position: center center;
 }
 .center-lecheniya__gallery__item_more {
-  background: url(/assets/img/intro/circles-mini.png), #4995ec;
+  background: url(../img/intro/circles-mini.png), #4995ec;
   background-position: center center;
   background-size: 170%;
   background-repeat: no-repeat;
@@ -2478,7 +2478,7 @@ html.burger-lock {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url(/assets/img/intro/circles.svg);
+  background-image: url(../img/intro/circles.svg);
   background-position: center 170px;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -2879,7 +2879,7 @@ thead .services__table__title th:nth-child(1) {
 .principles__svg {
   width: 100%;
   aspect-ratio: 1/1;
-  background-image: url(/assets/img/section/brain-opt.svg);
+  background-image: url(../img/section/brain-opt.svg);
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2954,8 +2954,8 @@ thead .services__table__title th:nth-child(1) {
   aspect-ratio: 1/1;
   overflow: hidden;
   transition: 3s ease;
-  -webkit-mask-image: url("/assets/img/section/brain-opt.svg");
-  mask-image: url("/assets/img/section/brain-opt.svg");
+  -webkit-mask-image: url("../img/section/brain-opt.svg");
+  mask-image: url("../img/section/brain-opt.svg");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: contain;
@@ -3004,7 +3004,7 @@ thead .services__table__title th:nth-child(1) {
 .calculator::after {
   content: "";
   position: absolute;
-  background-image: url(/assets/img/section/circles-calculator.webp);
+  background-image: url(../img/section/circles-calculator.webp);
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -3466,7 +3466,7 @@ thead .services__table__title th:nth-child(1) {
   position: absolute;
   width: 40%;
   aspect-ratio: 1/1;
-  background: url(/assets/img/intro/circles-mini.png) no-repeat center center;
+  background: url(../img/intro/circles-mini.png) no-repeat center center;
   background-size: cover;
   top: -60%;
   left: -15%;
@@ -3481,7 +3481,7 @@ thead .services__table__title th:nth-child(1) {
   position: absolute;
   width: 40%;
   aspect-ratio: 1/1;
-  background: url(/assets/img/intro/circles-mini.png) no-repeat center center;
+  background: url(../img/intro/circles-mini.png) no-repeat center center;
   background-size: cover;
   right: -20%;
   bottom: -50%;
@@ -3510,7 +3510,7 @@ thead .services__table__title th:nth-child(1) {
 
 .choose {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
-  background: url(/assets/img/section/bg-section-2.webp), #fff;
+  background: url(../img/section/bg-section-2.webp), #fff;
   background-size: cover;
   background-position: center top;
   padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
@@ -3656,7 +3656,7 @@ thead .services__table__title th:nth-child(1) {
   font-size: clamp(1.125rem, 0.5781rem + 1.75vw, 2rem);
 }
 .brigady__item_order {
-  background: url(/assets/img/intro/circles-mini.png), linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
+  background: url(../img/intro/circles-mini.png), linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
   background-position: center center;
   background-size: 170%;
   background-repeat: no-repeat;
@@ -3827,7 +3827,7 @@ thead .services__table__title th:nth-child(1) {
   content: "";
   position: absolute;
   display: block;
-  background: url(/assets/img/section/test-section.webp) no-repeat center center;
+  background: url(../img/section/test-section.webp) no-repeat center center;
   background-size: contain;
   width: 1000px;
   aspect-ratio: 1/1;
@@ -3847,7 +3847,7 @@ thead .services__table__title th:nth-child(1) {
 }
 @media screen and (width <= 850px) {
   .express::after {
-    background: url(/assets/img/section/test-section-mini.webp) no-repeat center center;
+    background: url(../img/section/test-section-mini.webp) no-repeat center center;
     background-size: contain;
     width: 80%;
     left: 10%;
@@ -4164,7 +4164,7 @@ thead .services__table__title th:nth-child(1) {
   position: absolute;
   width: 40%;
   aspect-ratio: 1/1;
-  background: url(/assets/img/intro/circles-mini.png) no-repeat center center;
+  background: url(../img/intro/circles-mini.png) no-repeat center center;
   background-size: cover;
   top: -50%;
   left: -12%;
@@ -4179,7 +4179,7 @@ thead .services__table__title th:nth-child(1) {
   position: absolute;
   width: 40%;
   aspect-ratio: 1/1;
-  background: url(/assets/img/intro/circles-mini.png) no-repeat center center;
+  background: url(../img/intro/circles-mini.png) no-repeat center center;
   background-size: cover;
   right: -12%;
   bottom: -50%;
@@ -4228,7 +4228,7 @@ thead .services__table__title th:nth-child(1) {
 
 .lechenie {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
-  background: url(/assets/img/section/bg-form.webp), #fff;
+  background: url(../img/section/bg-form.webp), #fff;
   background-size: cover;
   background-position: center top;
   padding: 0;
@@ -4323,7 +4323,7 @@ thead .services__table__title th:nth-child(1) {
 
 .knowledge {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
-  background: url(/assets/img/section/bg-section-3.webp), #fff;
+  background: url(../img/section/bg-section-3.webp), #fff;
   background-size: cover;
   background-position: center top;
   padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
@@ -4845,7 +4845,7 @@ thead .services__table__title th:nth-child(1) {
 .contacts_s__block:has(.contacts_s__map) {
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(/assets/img/section/map-mini.webp);
+  background-image: url(../img/section/map-mini.webp);
   background-size: cover;
 }
 .contacts_s_small {
@@ -4965,7 +4965,7 @@ thead .services__table__title th:nth-child(1) {
   position: absolute;
   width: 40%;
   aspect-ratio: 1/1;
-  background: url(/assets/img/intro/circles-mini.png) no-repeat center center;
+  background: url(../img/intro/circles-mini.png) no-repeat center center;
   background-size: cover;
   top: -50%;
   left: -12%;
@@ -4980,7 +4980,7 @@ thead .services__table__title th:nth-child(1) {
   position: absolute;
   width: 40%;
   aspect-ratio: 1/1;
-  background: url(/assets/img/intro/circles-mini.png) no-repeat center center;
+  background: url(../img/intro/circles-mini.png) no-repeat center center;
   background-size: cover;
   right: -12%;
   bottom: -50%;
@@ -5878,7 +5878,7 @@ thead .prices__table__title th:nth-child(1) {
   right: 7px;
   top: 7px;
   display: block;
-  background: url(/assets/img/icons/raskrytie.svg) no-repeat center center;
+  background: url(../img/icons/raskrytie.svg) no-repeat center center;
   background-size: contain;
   transition: transform 400ms ease-out;
 }
@@ -6082,7 +6082,7 @@ thead .prices__table__title th:nth-child(1) {
   position: absolute;
   width: 50%;
   aspect-ratio: 1/1;
-  background: url(/assets/img/section/circles-myths.svg) no-repeat center center;
+  background: url(../img/section/circles-myths.svg) no-repeat center center;
   background-size: cover;
   bottom: -370px;
   left: -17%;
@@ -6566,7 +6566,7 @@ thead .prices__table__title th:nth-child(1) {
 
 .guaranties {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
-  background: url(/assets/img/section/bg-section-4.webp), #fff;
+  background: url(../img/section/bg-section-4.webp), #fff;
   background-size: cover;
   background-position: center top;
   padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
@@ -7020,7 +7020,7 @@ thead .prices__table__title th:nth-child(1) {
   width: 14px;
   height: 8px;
   display: block;
-  background: url(/assets/img/icons/raskrytie.svg) no-repeat center center;
+  background: url(../img/icons/raskrytie.svg) no-repeat center center;
   background-size: contain;
   transition: transform 400ms ease-out;
 }
@@ -7220,7 +7220,7 @@ thead .prices__table__title th:nth-child(1) {
   display: block;
   width: 745px;
   aspect-ratio: 1/1;
-  background: url(/assets/img/intro/circles.svg);
+  background: url(../img/intro/circles.svg);
   background-position-x: 0%;
   background-position-y: 0%;
   background-size: auto;
@@ -7936,7 +7936,7 @@ thead .prices__table__title th:nth-child(1) {
   left: -132px;
   width: 130%;
   aspect-ratio: 1/1;
-  background: url(/assets/img/intro/circles.svg) no-repeat;
+  background: url(../img/intro/circles.svg) no-repeat;
   background-position: center center;
   background-size: contain;
 }
@@ -9062,7 +9062,7 @@ thead .prices__table__title th:nth-child(1) {
   display: block;
   width: 500px;
   aspect-ratio: 1/1;
-  background: url(/assets/img/intro/circles.svg);
+  background: url(../img/intro/circles.svg);
   top: calc(50% - 250px);
   right: calc(50% - 250px);
   background-position: center center;
@@ -9643,7 +9643,7 @@ thead .prices__table__title th:nth-child(1) {
   width: 14px;
   height: 8px;
   display: block;
-  background: url(/assets/img/icons/raskrytie.svg) no-repeat center center;
+  background: url(../img/icons/raskrytie.svg) no-repeat center center;
   background-size: contain;
   transition: transform 400ms ease-out;
 }
