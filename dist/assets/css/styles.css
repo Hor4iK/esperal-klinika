@@ -1203,6 +1203,48 @@ html.burger-lock {
   background-color: #4995ec;
   transform: rotate(90deg);
 }
+.btn_top {
+  padding: 5px;
+  position: fixed;
+  bottom: 12%;
+  left: 3%;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+.btn_top a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #fff;
+  outline: 1px solid #4995ec;
+  position: relative;
+}
+.btn_top a::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 8px;
+  background-color: #4995ec;
+  border-radius: 2px;
+  transform: rotate(-45deg) translateX(15%);
+}
+.btn_top a::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 8px;
+  background-color: #4995ec;
+  border-radius: 2px;
+  transform: rotate(45deg) translateX(-15%);
+}
+.btn_top.active {
+  display: block;
+}
 
 .point-mark {
   display: flex;

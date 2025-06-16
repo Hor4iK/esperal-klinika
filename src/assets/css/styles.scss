@@ -243,6 +243,53 @@ html.burger-lock {
       }
     }
   }
+
+  &_top {
+    padding: 5px;
+    position: fixed;
+    bottom: 12%;
+    left: 3%;
+    cursor: pointer;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 400ms ease;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background-color: $color-white;
+      outline: 1px solid $accent-color;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 8px;
+        background-color: $accent-color;
+        border-radius: 2px;
+        transform: rotate(-45deg) translateX(15%);
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 8px;
+        background-color: $accent-color;
+        border-radius: 2px;
+        transform: rotate(45deg) translateX(-15%);
+      }
+    }
+
+    &.active {
+      display: block;
+    }
+  }
 }
 
 .point-mark {

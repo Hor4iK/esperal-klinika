@@ -734,11 +734,11 @@ document.addEventListener('DOMContentLoaded', function () {
         slideChange: function () {
           if (svg) {
             svg.className = 'svg_text';
-            svg.classList.add(`svg_text_slide-${this.activeIndex+1}`);
+            svg.classList.add(`svg_text_slide-${this.activeIndex + 1}`);
           }
         },
         init: function () {
-          svg.classList.add(`svg_text_slide-${this.activeIndex+1}`);
+          svg.classList.add(`svg_text_slide-${this.activeIndex + 1}`);
         }
       },
       slidesPerView: 1.2,
@@ -931,6 +931,37 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
   /* -- END POPUP CALCULATOR -- */
+
+
+  /* -- TOTOP -- */
+  const btnTop = document.querySelector('#toTop');
+  if (btnTop) {
+    document.addEventListener('scroll', evt => {
+      if (window.scrollY > window.innerHeight) {
+        if (!btnTop.classList.contains('active')) {
+          btnTop.classList.add('active');
+          setTimeout(() => {
+            btnTop.style.opacity = 1;
+          }, 0)
+        }
+      } else {
+        if (btnTop.classList.contains('active')) {
+          btnTop.style.opacity = 0;
+          setTimeout(() => {
+            btnTop.classList.remove('active');
+          }, 0)
+        }
+      }
+    })
+    btnTop.addEventListener('click', evt => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
+    })
+  }
+  /* -- END TOTOP -- */
 
 
 
