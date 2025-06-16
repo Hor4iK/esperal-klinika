@@ -8,7 +8,7 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-    background-image: url(/assets/img/intro/circles.svg);
+    background-image: url(../img/intro/circles.svg);
     background-position: center 600px;
     background-size: 113%;
     background-repeat: no-repeat;
@@ -87,7 +87,7 @@
       position: absolute;
       width: 26px;
       aspect-ratio: 1/1;
-      background-image: url(/assets/img/icons/ellipse.svg);
+      background-image: url(../img/icons/ellipse.svg);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 8px;
@@ -148,7 +148,7 @@
       }
 
       &_more {
-        background: url(/assets/img/intro/circles-mini.png), $accent-color;
+        background: url(../img/intro/circles-mini.png), $accent-color;
         background-position: center center;
         background-size: 170%;
         background-repeat: no-repeat;
@@ -218,7 +218,7 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-    background-image: url(/assets/img/intro/circles.svg);
+    background-image: url(../img/intro/circles.svg);
     background-position: center 170px;
     background-size: 100%;
     background-repeat: no-repeat;

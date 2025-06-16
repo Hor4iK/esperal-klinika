@@ -42,23 +42,23 @@
     } @else if $type == "linear" {
       @include inline-gradient;
     } @else if $type == "image" {
-      background: url(/assets/img/section/bg-section.webp), #fff;
+      background: url(../img/section/bg-section.webp), #fff;
       background-size: cover;
       background-position: center top;
     } @else if $type == "image2" {
-      background: url(/assets/img/section/bg-section-2.webp), #fff;
+      background: url(../img/section/bg-section-2.webp), #fff;
       background-size: cover;
       background-position: center top;
     } @else if $type == "image3" {
-      background: url(/assets/img/section/bg-section-3.webp), #fff;
+      background: url(../img/section/bg-section-3.webp), #fff;
       background-size: cover;
       background-position: center top;
     } @else if $type == "image4" {
-      background: url(/assets/img/section/bg-section-4.webp), #fff;
+      background: url(../img/section/bg-section-4.webp), #fff;
       background-size: cover;
       background-position: center top;
     } @else if $type == "form" {
-      background: url(/assets/img/section/bg-form.webp), #fff;
+      background: url(../img/section/bg-form.webp), #fff;
       background-size: cover;
       background-position: center top;
     } @else {

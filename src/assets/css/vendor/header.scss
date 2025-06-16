@@ -559,7 +559,7 @@
     &::before {
       content: "";
       display: block;
-      background-image: url(/assets/img/icons/cuboid.svg);
+      background-image: url(../img/icons/cuboid.svg);
       background-position: center center;
       background-repeat: no-repeat;
       width: 13px;
@@ -648,7 +648,7 @@
       right: 20px;
       width: 18px;
       aspect-ratio: 1/1;
-      background-image: url(/assets/img/icons/search.svg);
+      background-image: url(../img/icons/search.svg);
     }
   }
 
@@ -743,7 +743,7 @@
       display: block;
       width: 18px;
       aspect-ratio: 1 / 1;
-      background-image: url(/assets/img/icons/search.svg);
+      background-image: url(../img/icons/search.svg);
     }
   }
 

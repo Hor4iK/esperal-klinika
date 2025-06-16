@@ -35,7 +35,7 @@
     content: "";
     position: absolute;
     display: block;
-    background: url(/assets/img/section/test-section.webp) no-repeat center
+    background: url(../img/section/test-section.webp) no-repeat center
       center;
     background-size: contain;
     width: 1000px;
@@ -57,7 +57,7 @@
 
   @media screen and (width<=850px) {
     &::after {
-      background: url(/assets/img/section/test-section-mini.webp) no-repeat
+      background: url(../img/section/test-section-mini.webp) no-repeat
         center center;
       background-size: contain;
       width: 80%;

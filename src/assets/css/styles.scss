@@ -327,27 +327,27 @@ html.burger-lock {
 
 .point-map::before {
   @include point-mark-psevdo;
-  background-image: url(/assets/img/icons/point-map.svg);
+  background-image: url(../img/icons/point-map.svg);
 }
 
 .point-tel::before {
   @include point-mark-psevdo;
-  background-image: url(/assets/img/icons/tel.svg);
+  background-image: url(../img/icons/tel.svg);
 }
 
 .point-tg::before {
   @include point-mark-psevdo;
-  background-image: url(/assets/img/icons/tg.svg);
+  background-image: url(../img/icons/tg.svg);
 }
 
 .point-wa::before {
   @include point-mark-psevdo;
-  background-image: url(/assets/img/icons/wa.svg);
+  background-image: url(../img/icons/wa.svg);
 }
 
 .point-plus::before {
   @include point-mark-psevdo;
-  background-image: url(/assets/img/icons/plus.svg);
+  background-image: url(../img/icons/plus.svg);
   @media screen and (width<=700px) {
     background-size: 75%;
   }
@@ -355,17 +355,17 @@ html.burger-lock {
 
 .point-menu::before {
   @include point-mark-psevdo;
-  background-image: url(/assets/img/icons/cuboid.svg);
+  background-image: url(../img/icons/cuboid.svg);
 }
 
 .point-card::before {
   @include point-mark-psevdo;
-  background-image: url(/assets/img/icons/user-card.svg);
+  background-image: url(../img/icons/user-card.svg);
 }
 
 .point-arrow::before {
   @include point-mark-psevdo;
-  background-image: url(/assets/img/icons/arrow-blue.svg);
+  background-image: url(../img/icons/arrow-blue.svg);
 }
 
 .social-container {
@@ -561,7 +561,7 @@ html.burger-lock {
       display: block;
       width: 16px;
       aspect-ratio: 1/1;
-      background: url(/assets/img/icons/checkbox.svg) no-repeat center center;
+      background: url(../img/icons/checkbox.svg) no-repeat center center;
       background-size: cover;
       opacity: 0;
       transition: opacity 200ms;
@@ -622,7 +622,7 @@ html.burger-lock {
     }
 
     &::before {
-      background-image: url(/assets/img/icons/arrow-blue.svg);
+      background-image: url(../img/icons/arrow-blue.svg);
     }
   }
 
@@ -634,7 +634,7 @@ html.burger-lock {
     }
 
     &::before {
-      background-image: url(/assets/img/icons/arrow.svg);
+      background-image: url(../img/icons/arrow.svg);
     }
   }
 }
