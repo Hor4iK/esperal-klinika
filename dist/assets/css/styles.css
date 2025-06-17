@@ -9303,7 +9303,7 @@ thead .prices__table__title th:nth-child(1) {
 }
 
 .popup {
-  height: 100vh;
+  height: 100dvh;
   left: 50%;
   opacity: 0;
   pointer-events: none;
