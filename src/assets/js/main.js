@@ -110,8 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
           });
         });
-      } else {
-        autocontentList.querySelector('a').remove();
       }
     })
   }
@@ -964,6 +962,8 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -- END TOTOP -- */
 
 
+
+  /* -- OBSERVER -- */
   const observer = new IntersectionObserver((entries) => {
   let animationDelay = 0;
   entries.forEach(entry => {
@@ -991,7 +991,7 @@ if (animatedItems.length > 0) {
     observer.observe(item)
   })
 }
-
+/* -- END OBSERVER -- */
 
 
   //view photos fancybox
