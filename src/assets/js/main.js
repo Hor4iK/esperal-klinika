@@ -124,21 +124,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.header');
     const headerMobile = header.querySelector('.header__row.mobile');
 
-    burgerMenuArr.forEach(burgerMenu => {
-      burgerMenu.addEventListener("click", () => {
-        if (header.classList.contains('active')) {
-          headerMobile.classList.remove("active");
-          header.classList.remove("active");
-        } else {
-          headerMobile.classList.add("active");
-          header.classList.add("active");
-          let height = header.offsetHeight;
-          // headerMobile.style.height = 'calc(100vh - ' + height + 'px)';
-        }
-        // header.querySelector('.ham').classList.toggle("active");
-        document.querySelector('html').classList.toggle('burger-lock');
-      });
-    })
+    if (header && headerMobile) {
+      burgerMenuArr.forEach(burgerMenu => {
+        burgerMenu.addEventListener("click", () => {
+          if (header.classList.contains('active')) {
+            headerMobile.classList.remove("active");
+            header.classList.remove("active");
+          } else {
+            headerMobile.classList.add("active");
+            header.classList.add("active");
+            let height = header.offsetHeight;
+            // headerMobile.style.height = 'calc(100vh - ' + height + 'px)';
+          }
+          // header.querySelector('.ham').classList.toggle("active");
+          document.querySelector('html').classList.toggle('burger-lock');
+        });
+      })
+    }
   }
 
   const hideItems = document.querySelectorAll('.hide-items');
@@ -965,33 +967,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* -- OBSERVER -- */
   const observer = new IntersectionObserver((entries) => {
-  let animationDelay = 0;
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      if (entry.target.classList.contains("animation-group")) {
-        animationDelay = animationDelay + 100
-      } else {
-        animationDelay = 0;
+    let animationDelay = 0;
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains("animation-group")) {
+          animationDelay = animationDelay + 100
+        } else {
+          animationDelay = 0;
+        }
+        setTimeout(() => {
+          entry.target.classList.add("animated")
+        }, animationDelay);
+        observer.unobserve(entry.target)
       }
-      setTimeout(() => {
-        entry.target.classList.add("animated")
-      }, animationDelay);
-      observer.unobserve(entry.target)
-    }
+    });
+  }, {
+    threshold: 0.3,
+    rootMargin: '50px',
   });
-}, {
-  threshold: 0.3,
-  rootMargin: '50px',
-});
 
-const animatedItems = document.querySelectorAll(".to_animate")
+  const animatedItems = document.querySelectorAll(".to_animate")
 
-if (animatedItems.length > 0) {
-  animatedItems.forEach(item => {
-    observer.observe(item)
-  })
-}
-/* -- END OBSERVER -- */
+  if (animatedItems.length > 0) {
+    animatedItems.forEach(item => {
+      observer.observe(item)
+    })
+  }
+  /* -- END OBSERVER -- */
 
 
   //view photos fancybox
