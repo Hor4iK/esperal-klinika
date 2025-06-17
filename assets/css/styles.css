@@ -4853,6 +4853,7 @@ thead .services__table__title th:nth-child(1) {
   background-color: #fff;
   padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
   display: block;
+  transition: transform 800ms, opacity 300ms;
 }
 .contacts_s_small .contacts_s__body {
   display: flex;
