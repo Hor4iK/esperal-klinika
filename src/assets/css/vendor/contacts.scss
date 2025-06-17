@@ -9,6 +9,7 @@
     &__block {
       @include sections("light", "base");
     }
+
     &__description {
       opacity: 0.65;
       margin-block-end: 20px;
@@ -39,6 +40,7 @@
         gap: 10px;
       }
     }
+
     &__separator {
       display: block;
       height: 2px;
@@ -63,6 +65,7 @@
         z-index: 2;
       }
     }
+
     &__subtitle {
       margin-block-end: 12px;
       font-size: 18px;
@@ -75,6 +78,7 @@
         }
       }
     }
+
     &__link {
       padding: 6px;
       width: 100%;
@@ -112,6 +116,7 @@
         background-color: $light-color;
       }
     }
+
     &__button {
       & .point-mark {
         width: 80px;
@@ -121,6 +126,7 @@
         }
       }
     }
+
     &__block:has(.contacts_s__map) {
       background-position: center center;
       background-repeat: no-repeat;
@@ -131,6 +137,7 @@
     &_small {
       @include sections("light", "base");
       display: block;
+      transition: transform 800ms, opacity 300ms;
 
       .contacts_s__body {
         display: flex;
