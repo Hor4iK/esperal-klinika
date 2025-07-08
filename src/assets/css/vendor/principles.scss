@@ -26,7 +26,6 @@
     max-height: 750px;
     height: 100%;
     overflow: hidden;
-    display: block;
   }
 
   &__list {
@@ -48,7 +47,7 @@
 
     &.swiper-slide {
       display: flex;
-      max-height: 450px;
+      max-height: 336px;
       overflow: hidden;
     }
 
@@ -57,7 +56,7 @@
       position: absolute;
       content: "0" counter(item);
       display: block;
-      font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.25rem);
+      font-size: clamp(0.875rem, 0.525rem + 0.8vw, 1.125rem);
       font-weight: 600;
       color: #133a668c;
       background-color: $color-white;
@@ -89,7 +88,7 @@
   }
 
   &__subtitle {
-    font-size: clamp(1.25rem, 0.5938rem + 1.5vw, 2rem);
+    font-size: clamp(1.25rem, 0.725rem + 1.2vw, 1.625rem);
     font-weight: 600;
     line-height: 1.1;
     max-width: 50%;

@@ -179,7 +179,7 @@ html.burger-lock {
     padding: 10px;
 
     .point-mark {
-      width: 80px;
+      width: 70px;
 
       span {
         background-color: $color-white;
@@ -586,7 +586,7 @@ html.burger-lock {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: clamp(3.125rem, -2.0313rem + 7.5vw, 5rem);
+  width: clamp(3.125rem, 0.375rem + 4vw, 4.375rem);
   aspect-ratio: 1/1;
   position: relative;
   outline: 1px solid transparent;

@@ -1,13 +1,22 @@
 .header {
-  //@include container;
-  margin-block: $margin;
+  margin-block-end: $margin;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  background-color: $color-white;
+
+  @media screen and (width<=1000px) {
+    margin: $margin;
+    border-radius: 14px;
+  }
 
   .content {
-    background-color: $color-white;
-    border-radius: 30px;
-    padding: 20px;
+    padding: 18px 40px;
     display: flex;
     flex-direction: column;
+
+    @media (width<=600px) {
+      padding: 10px 10px 10px 18px;
+    }
   }
 
   &__row {
@@ -18,24 +27,13 @@
 
     &:first-of-type {
       @media screen and (width>700px) {
-        padding-block-end: 20px;
+        padding-block-end: 6px;
       }
     }
 
     &:last-of-type {
-      padding-block-start: 20px;
+      padding-block-start: 6px;
       position: relative;
-
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: 1px;
-        background-color: #dbe5f2;
-      }
 
       @media screen and (width<=1170px) {
         justify-content: center;
@@ -308,6 +306,7 @@
         .search__container {
           width: 20%;
           height: 100%;
+          max-width: 350px;
         }
       }
     }

@@ -28,11 +28,10 @@
     counter-increment: item;
 
     &::after {
-      content: "";
       position: absolute;
       content: "0" counter(item);
       display: block;
-      font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.25rem);
+      font-size: clamp(0.875rem, 0.525rem + 0.8vw, 1.125rem);
       font-weight: 600;
       color: #133a668c;
       background-color: $color-white;
@@ -43,11 +42,11 @@
     }
 
     &__title {
-      font-size: clamp(1.25rem, 0.625rem + 2vw, 2rem);
+      font-size: clamp(1.25rem, 0.725rem + 1.2vw, 1.625rem);
       font-weight: 600;
       line-height: 1.1;
       margin-inline-start: 30px;
-      margin-block-end: 120px;
+      margin-block-end: 60px;
       max-width: 50%;
     }
 

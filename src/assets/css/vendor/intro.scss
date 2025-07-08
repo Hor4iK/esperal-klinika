@@ -1,5 +1,5 @@
 .main-title {
-  font-size: clamp(2rem, -0.0922rem + 5.3372vw, 4.75rem);
+  font-size: clamp(2rem, -0.8rem + 6.4vw, 4rem);
   font-weight: 600;
   line-height: 100%;
   text-rendering: optimizeSpeed;
@@ -378,9 +378,10 @@
     width: 100%;
     position: relative;
     z-index: 2;
-    padding-block: clamp(1.25rem, -0.1493rem + 4.4776vw, 3.125rem)
-      clamp(0.875rem, -1.7369rem + 8.3582vw, 4.375rem);
-    padding-inline: clamp(0.875rem, -1.7369rem + 8.3582vw, 4.375rem);
+    padding-block: clamp(1.25rem, -1.375rem + 6vw, 3.125rem)
+      clamp(0.875rem, -4.025rem + 11.2vw, 4.375rem);
+    padding-inline: clamp(0.875rem, -4.025rem + 11.2vw, 4.375rem);
+    max-width: 900px;
     background-color: $color-white;
     border-radius: 30px;
 
@@ -390,11 +391,11 @@
   }
 
   &__caption {
-    margin-block-end: clamp(3.125rem, -2.0313rem + 16.3333vw, 11.375rem);
+    margin-block-end:clamp(3.125rem, -1.25rem + 10vw, 6.25rem);
   }
 
   &__button {
-    margin-block-start: 40px;
+    margin-block-start: 32px;
 
     @media screen and (width<=600px) {
       padding: 6px;
@@ -412,7 +413,7 @@
     margin-block-end: 40px;
 
     .point-mark {
-      width: clamp(3rem, 1rem + 5.3333vw, 5rem);
+      width: clamp(3rem, 1.95rem + 2.4vw, 3.75rem);
 
       &::before {
         width: 18px;
@@ -437,7 +438,8 @@
 
     picture {
       position: absolute;
-      bottom: -37px;
+      bottom: -4%;
+      max-height: 800px;
 
       img {
         position: relative;
@@ -453,6 +455,7 @@
         bottom: -28%;
         left: -132px;
         width: 130%;
+        max-height: 990px;
         aspect-ratio: 1 / 1;
         background: url(../img/intro/circles-text.webp) no-repeat;
         background-position: center center;

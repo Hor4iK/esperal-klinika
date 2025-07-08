@@ -193,7 +193,7 @@
     gap: clamp(0.75rem, -1.625rem + 6.3333vw, 3.125rem);
     margin-block-end: clamp(1rem, -0.1194rem + 3.5821vw, 2.5rem);
     align-items: flex-end;
-    justify-content: flex-start;
+    justify-content: space-between;
 
     @media screen and (width<=1100px) {
       flex-direction: column;
@@ -204,11 +204,16 @@
     p {
       max-width: 600px;
       opacity: 0.65;
+      margin-inline-end: clamp(12.5rem, 7rem + 8vw, 15rem);
 
       @media screen and (width<=600px) {
         font-size: 14px;
       }
     }
+  }
+
+  .swiper-btn-container {
+    top: calc(clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) + 58px);
   }
 
   &__title {
@@ -233,10 +238,28 @@
 
     &-picture {
       margin: 0;
+      height: 100%;
+      max-height: 400px;
+      aspect-ratio: 1 / 1.2;
+      overflow: hidden;
+      display: block;
+      border-radius: 24px;
+      width: auto;
+      background: none;
+      border-radius: none;
+
+      img {
+        height: 100%;
+      }
     }
 
     &-img {
       margin-block-end: 24px;
+      background-color: $color-white;
+      border-radius: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
     }
 
     &-top {
