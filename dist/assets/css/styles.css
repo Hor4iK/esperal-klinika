@@ -2336,6 +2336,11 @@ html.burger-lock {
   font-size: inherit;
   padding-inline-start: 10px;
 }
+@media (width <= 700px) {
+  .center-lecheniya__link {
+    margin-block-end: 24px;
+  }
+}
 .center-lecheniya__link:hover {
   scale: 1.035;
 }
@@ -2931,6 +2936,11 @@ thead .services__table__title th:nth-child(1) {
   color: #5f7b9b;
   z-index: 2;
   cursor: default;
+  transition: background-color 300ms, color 300ms;
+}
+.principles .svg-point.active {
+  background-color: #4995ec;
+  color: #fff;
 }
 .principles .svg-point:nth-of-type(1) {
   top: 35%;
@@ -2973,6 +2983,10 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 @media (width <= 500px) {
+  .principles .svg-point {
+    width: 26px;
+    font-size: 8px;
+  }
   .principles .svg-point:nth-of-type(1) {
     top: 16%;
     transform: translateX(50%);

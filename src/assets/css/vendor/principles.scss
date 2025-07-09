@@ -115,6 +115,12 @@
     color: #5f7b9b;
     z-index: 2;
     cursor: default;
+    transition: background-color 300ms, color 300ms;
+
+    &.active {
+      background-color: $accent-color;
+      color: $color-white;
+    }
 
     &:nth-of-type(1) {
       top: 35%;
@@ -159,6 +165,9 @@
   }
   @media (width<=500px) {
     .svg-point {
+      width: 26px;
+      font-size: 8px;
+
       &:nth-of-type(1) {
         top: 16%;
         transform: translateX(50%);
