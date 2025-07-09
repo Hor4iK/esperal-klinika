@@ -58,14 +58,14 @@
 
     &-name {
       font-weight: 600;
-      font-size: 24px;
+      font-size: clamp(1.125rem, 0.9792rem + 0.3333vw, 1.25rem);
       line-height: 116%;
       margin-bottom: 10px;
       padding: 20px;
     }
 
     &-prof {
-      font-size: 20px;
+      font-size: clamp(0.875rem, 0.5833rem + 0.6667vw, 1.125rem);
       line-height: 140%;
       opacity: 0.65;
       padding: 20px;
@@ -74,7 +74,7 @@
 
     &-experience {
       font-weight: 500;
-      font-size: 20px;
+      font-size: clamp(0.875rem, 0.5833rem + 0.6667vw, 1.125rem);
       line-height: 140%;
       color: $accent-color;
       background: $light-color;
@@ -132,13 +132,11 @@
 
       &-name {
         padding: 4px;
-        font-size: 18px;
         margin-bottom: 8px;
       }
 
       &-prof {
         padding: 4px;
-        font-size: 14px;
         line-height: 1.2;
         margin-bottom: 24px;
       }
@@ -157,7 +155,6 @@
         right: auto;
         left: 10px;
         bottom: 10px;
-        font-size: 14px;
         line-height: 140%;
         width: 102px;
         height: 38px;
@@ -224,6 +221,7 @@
   .doctors-page__item {
     padding-bottom: 10px;
     height: auto;
+    max-width: 405px;
 
     @media screen and (width<=600px) {
       padding: 6px;

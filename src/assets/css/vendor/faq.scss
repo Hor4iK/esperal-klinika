@@ -1,15 +1,13 @@
 .faq-section {
   @include sections("light", "base");
 
-  &__title {
-  }
-
   &__item {
     padding: 10px 10px 10px 36px;
     background-color: $light-color;
     border-radius: 24px;
     overflow: hidden;
-    transition: max-height 0.2s ease-out, background-color 300ms ease-out, color 250ms, padding 300ms;
+    transition: max-height 0.2s ease-out, background-color 300ms ease-out,
+      color 250ms, padding 300ms;
     max-height: 1000px;
 
     &.hidden {
@@ -24,7 +22,7 @@
       color: $color-white;
 
       .faq-section__bottom-container {
-            padding-top: 10px;
+        padding-top: 10px;
       }
     }
 
@@ -196,6 +194,10 @@
       cursor: pointer;
       display: none;
 
+      &.btn_more {
+        width: 100%;
+      }
+
       p {
         font-weight: 600;
         font-size: 24px;
@@ -208,13 +210,13 @@
         background: $light-color;
       }
 
+      .faq-section__btn_open span:last-of-type {
+          transform: rotate(0);
+        }
+
       &.active {
         span:last-of-type {
           transform: rotate(270deg);
-        }
-
-        .faq-section__btn_open span:last-of-type {
-          transform: rotate(0);
         }
       }
     }
@@ -233,15 +235,39 @@
 
     &-title {
       font-weight: 500;
-      font-size: 40px;
+      font-size: 36px;
       line-height: 110%;
       margin-bottom: 20px;
+      line-height: 1;
     }
 
     &-subtitle {
       font-size: 20px;
       line-height: 120%;
       margin-bottom: 80px;
+    }
+
+    .checkbox {
+      margin-block: 10px 24px;
+
+      &-mark {
+        border: 1px solid $accent-color;
+
+        &::before {
+          background: url(../img/icons/checkbox-accent.svg) center center / cover
+            no-repeat;
+        }
+      }
+
+      span {
+        color: #133a6680;
+        font-size: 16px;
+
+        a {
+          color: $color;
+          text-decoration: underline;
+        }
+      }
     }
   }
 

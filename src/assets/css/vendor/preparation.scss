@@ -4,8 +4,12 @@
 
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
+
+    @media (width<=1645px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 
     @media (width<=1300px) {
       gap: 0;
@@ -20,7 +24,7 @@
     &.swiper-slide {
       display: flex;
       flex-direction: column;
-      gap: 120px;
+      gap: 60px;
 
       @media (width<=950px) {
         padding: 14px 6px 6px;
@@ -40,7 +44,7 @@
     }
 
     &__title {
-      padding: 30px;
+      padding: 20px 40px;
       opacity: 0.5;
       text-align: center;
       border-radius: 8px;
@@ -112,7 +116,7 @@
 
   &__plashka {
     @include sections("linear", "base");
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 60px;
@@ -124,8 +128,7 @@
       position: absolute;
       width: 40%;
       aspect-ratio: 1/1;
-      background: url(../img/intro/circles-mini.png) no-repeat center
-        center;
+      background: url(../img/intro/circles-mini.png) no-repeat center center;
       background-size: cover;
       top: -60%;
       left: -15%;
@@ -140,8 +143,7 @@
       position: absolute;
       width: 40%;
       aspect-ratio: 1/1;
-      background: url(../img/intro/circles-mini.png) no-repeat center
-        center;
+      background: url(../img/intro/circles-mini.png) no-repeat center center;
       background-size: cover;
       right: -20%;
       bottom: -50%;
@@ -158,6 +160,7 @@
       font-size: clamp(2rem, 1.2969rem + 2.25vw, 3.125rem);
       max-width: 880px;
     }
+
     a {
       max-width: 565px;
       width: 100%;
@@ -167,6 +170,45 @@
           width: 80px;
         }
       }
+    }
+
+    &.desktop {
+      display: flex;
+      padding: 40px 20px 20px;
+      border-radius: 30px;
+      justify-content: space-between;
+      margin: 0;
+
+      &::before {
+        width: 135%;
+        inset: auto auto -32%;
+      }
+
+      &::after {
+        content: none;
+      }
+
+      p {
+        font-size: 36px;
+      }
+
+      a .point-mark {
+        width: 70px;
+      }
+    }
+
+    @media (width<=1645px) {
+      &:not(.desktop) {
+        display: flex;
+      }
+
+      &.desktop {
+        display: none;
+      }
+    }
+
+    @media (width<=500px) {
+      padding: 20px 14px;
     }
   }
 }

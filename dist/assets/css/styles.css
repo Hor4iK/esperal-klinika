@@ -2207,7 +2207,7 @@ html.burger-lock {
   background: url(../img/section/bg-section.webp), #fff;
   background-size: cover;
   background-position: center top;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   line-height: 1.2;
   transition: transform 900ms, opacity 400ms;
 }
@@ -2267,7 +2267,7 @@ html.burger-lock {
 .center-lecheniya {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   position: relative;
   overflow: hidden;
 }
@@ -2509,7 +2509,7 @@ html.burger-lock {
 .center-service {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -2596,7 +2596,7 @@ html.burger-lock {
 .services {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 @media (width <= 600px) {
   .services {
@@ -2835,7 +2835,7 @@ thead .services__table__title th:nth-child(1) {
 .principles__block {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   padding-block-end: 0;
 }
 .principles__block:last-child {
@@ -3154,7 +3154,7 @@ thead .services__table__title th:nth-child(1) {
 .doctors-page__container {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .doctors-page__title {
   margin-block-start: clamp(1.5rem, -2rem + 9.3333vw, 5rem);
@@ -3203,13 +3203,13 @@ thead .services__table__title th:nth-child(1) {
 }
 .doctors-page__item-name {
   font-weight: 600;
-  font-size: 24px;
+  font-size: clamp(1.125rem, 0.9792rem + 0.3333vw, 1.25rem);
   line-height: 116%;
   margin-bottom: 10px;
   padding: 20px;
 }
 .doctors-page__item-prof {
-  font-size: 20px;
+  font-size: clamp(0.875rem, 0.5833rem + 0.6667vw, 1.125rem);
   line-height: 140%;
   opacity: 0.65;
   padding: 20px;
@@ -3217,7 +3217,7 @@ thead .services__table__title th:nth-child(1) {
 }
 .doctors-page__item-experience {
   font-weight: 500;
-  font-size: 20px;
+  font-size: clamp(0.875rem, 0.5833rem + 0.6667vw, 1.125rem);
   line-height: 140%;
   color: #4995ec;
   background: #f3f9ff;
@@ -3270,12 +3270,10 @@ thead .services__table__title th:nth-child(1) {
   }
   .doctors-page__item-name {
     padding: 4px;
-    font-size: 18px;
     margin-bottom: 8px;
   }
   .doctors-page__item-prof {
     padding: 4px;
-    font-size: 14px;
     line-height: 1.2;
     margin-bottom: 24px;
   }
@@ -3291,7 +3289,6 @@ thead .services__table__title th:nth-child(1) {
     right: auto;
     left: 10px;
     bottom: 10px;
-    font-size: 14px;
     line-height: 140%;
     width: 102px;
     height: 38px;
@@ -3317,7 +3314,7 @@ thead .services__table__title th:nth-child(1) {
 .doctors-slider {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   overflow: hidden;
 }
 .doctors-slider__caption {
@@ -3354,6 +3351,7 @@ thead .services__table__title th:nth-child(1) {
 .doctors-slider .doctors-page__item {
   padding-bottom: 10px;
   height: auto;
+  max-width: 405px;
 }
 @media screen and (width <= 600px) {
   .doctors-slider .doctors-page__item {
@@ -3408,13 +3406,18 @@ thead .services__table__title th:nth-child(1) {
 .preparation {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   overflow: hidden;
 }
 .preparation__list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
+}
+@media (width <= 1645px) {
+  .preparation__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 @media (width <= 1300px) {
   .preparation__list {
@@ -3429,7 +3432,7 @@ thead .services__table__title th:nth-child(1) {
 .preparation__item.swiper-slide {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 60px;
 }
 @media (width <= 950px) {
   .preparation__item.swiper-slide {
@@ -3449,7 +3452,7 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 .preparation__item__title {
-  padding: 30px;
+  padding: 20px 40px;
   opacity: 0.5;
   text-align: center;
   border-radius: 8px;
@@ -3519,8 +3522,8 @@ thead .services__table__title th:nth-child(1) {
 .preparation__plashka {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
-  display: flex;
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 60px;
@@ -3573,13 +3576,46 @@ thead .services__table__title th:nth-child(1) {
     width: 80px;
   }
 }
+.preparation__plashka.desktop {
+  display: flex;
+  padding: 40px 20px 20px;
+  border-radius: 30px;
+  justify-content: space-between;
+  margin: 0;
+}
+.preparation__plashka.desktop::before {
+  width: 135%;
+  inset: auto auto -32%;
+}
+.preparation__plashka.desktop::after {
+  content: none;
+}
+.preparation__plashka.desktop p {
+  font-size: 36px;
+}
+.preparation__plashka.desktop a .point-mark {
+  width: 70px;
+}
+@media (width <= 1645px) {
+  .preparation__plashka:not(.desktop) {
+    display: flex;
+  }
+  .preparation__plashka.desktop {
+    display: none;
+  }
+}
+@media (width <= 500px) {
+  .preparation__plashka {
+    padding: 20px 14px;
+  }
+}
 
 .choose {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background: url(../img/section/bg-section-2.webp), #fff;
   background-size: cover;
   background-position: center top;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   overflow: hidden;
   transition: transform 900ms, opacity 400ms;
 }
@@ -3599,7 +3635,7 @@ thead .services__table__title th:nth-child(1) {
 .choose__item.swiper-slide {
   display: flex;
   flex-direction: column;
-  gap: 280px;
+  gap: 120px;
 }
 @media (width <= 950px) {
   .choose__item.swiper-slide {
@@ -3645,25 +3681,24 @@ thead .services__table__title th:nth-child(1) {
 .choose__content {
   max-width: 375px;
   line-height: 1.2;
+  padding-inline: 10px;
 }
 
 .brigady {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .brigady__title {
   max-width: 1050px;
 }
 .brigady__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
-  margin-block-end: 60px;
 }
 @media (width <= 1620px) {
   .brigady__list {
-    margin-block-end: 0;
     grid-template-columns: 1fr;
     gap: 10px;
   }
@@ -3678,17 +3713,6 @@ thead .services__table__title th:nth-child(1) {
   border-radius: 32px;
   aspect-ratio: 1/1;
 }
-@media (width <= 1620px) {
-  .brigady__item {
-    aspect-ratio: auto;
-  }
-}
-@media (width <= 950px) {
-  .brigady__item {
-    border-radius: 20px;
-    padding: 14px 14px 24px;
-  }
-}
 .brigady__item__wrapper-title {
   display: flex;
   justify-content: space-between;
@@ -3696,18 +3720,15 @@ thead .services__table__title th:nth-child(1) {
 }
 .brigady__item__wrapper-title .point-mark {
   background-color: #fff;
-  width: 65px;
+  width: 60px;
 }
 .brigady__item__wrapper-title .point-mark svg {
-  width: 24px;
+  width: 20px;
   aspect-ratio: 1/1;
 }
 @media (width <= 900px) {
   .brigady__item__wrapper-title .point-mark {
     width: 58px;
-  }
-  .brigady__item__wrapper-title .point-mark svg {
-    width: 20px;
   }
 }
 @media (width <= 900px) {
@@ -3719,7 +3740,7 @@ thead .services__table__title th:nth-child(1) {
 .brigady__item__title {
   max-width: 50%;
   font-weight: 600;
-  font-size: clamp(1.125rem, 0.5781rem + 1.75vw, 2rem);
+  font-size: clamp(1.125rem, 0.5417rem + 1.3333vw, 1.625rem);
 }
 .brigady__item_order {
   background: url(../img/intro/circles-mini.png), linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
@@ -3751,6 +3772,38 @@ thead .services__table__title th:nth-child(1) {
     display: none;
   }
 }
+.brigady__item_map {
+  background: url("../img/section/map-region.webp") center center/60% no-repeat, #f3f9ff;
+  aspect-ratio: auto;
+  justify-content: flex-end;
+}
+.brigady__item_map .brigady__content-list {
+  max-width: 325px;
+  gap: 20px;
+}
+.brigady__item_map .brigady__content-list li p {
+  width: -moz-max-content;
+  width: max-content;
+}
+.brigady__item_map .brigady__content-item p {
+  font-size: clamp(1rem, 0.7083rem + 0.6667vw, 1.25rem);
+}
+@media (width < 1620px) {
+  .brigady__item_map {
+    display: none;
+  }
+}
+@media (width <= 1620px) {
+  .brigady__item {
+    aspect-ratio: auto;
+  }
+}
+@media (width <= 950px) {
+  .brigady__item {
+    border-radius: 20px;
+    padding: 14px 14px 24px;
+  }
+}
 .brigady__content-list {
   display: flex;
   flex-direction: column;
@@ -3764,7 +3817,7 @@ thead .services__table__title th:nth-child(1) {
 .brigady__content-item {
   display: flex;
   justify-content: space-between;
-  font-size: 24px;
+  font-size: clamp(1rem, 0.4167rem + 1.3333vw, 1.5rem);
   line-height: 1.16;
 }
 @media (width <= 600px) {
@@ -3837,7 +3890,7 @@ thead .services__table__title th:nth-child(1) {
 .brigady-service {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .brigady-service .brigady__item_map {
   padding: 96px 38px;
@@ -3856,10 +3909,16 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 
+@media (width >= 1620px) {
+  .brigady__item.mobile,
+  .brigady__map.mobile {
+    display: none;
+  }
+}
 .express {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   position: relative;
   overflow: hidden;
   transition: transform 900ms, opacity 400ms;
@@ -3874,7 +3933,10 @@ thead .services__table__title th:nth-child(1) {
 }
 .express__caption {
   opacity: 0.65;
-  margin-block-end: clamp(2.5rem, -0.5rem + 8vw, 6rem);
+  margin-block-end: clamp(2.5rem, -0.4167rem + 6.6667vw, 5rem);
+}
+.express__button .point-mark {
+  width: 70px;
 }
 @media screen and (width <= 850px) {
   .express__button {
@@ -3898,7 +3960,7 @@ thead .services__table__title th:nth-child(1) {
   width: 1000px;
   aspect-ratio: 1/1;
   left: 44%;
-  top: -24%;
+  top: -28%;
 }
 @media screen and (width <= 1150px) {
   .express {
@@ -3932,7 +3994,7 @@ thead .services__table__title th:nth-child(1) {
 .scheme-work {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .scheme-work__list {
   display: flex;
@@ -4084,7 +4146,7 @@ thead .services__table__title th:nth-child(1) {
   object-fit: cover;
 }
 .scheme-work__btn_open {
-  width: 80px;
+  width: 60px;
   background-color: #fff;
 }
 .scheme-work__btn_open span {
@@ -4100,7 +4162,7 @@ thead .services__table__title th:nth-child(1) {
 }
 .scheme-work__subtitle {
   font-weight: 600;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 110%;
   transition: color 300ms ease-out;
 }
@@ -4115,10 +4177,10 @@ thead .services__table__title th:nth-child(1) {
   content: "0" counter(item);
   border: 1px solid #dfeaf6;
   border-radius: 8px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  aspect-ratio: 1/1;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 110%;
   color: #4995ec;
   display: flex;
@@ -4211,65 +4273,64 @@ thead .services__table__title th:nth-child(1) {
   .scheme-work {
     padding-inline: 10px;
   }
+  .scheme-work__top {
+    width: 100%;
+  }
 }
 
 .lechenie-accent {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
-  padding: 0;
-  padding: clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
+  padding-inline: clamp(0.875rem, -5.75rem + 15.1429vw, 7.5rem);
   overflow: hidden;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #fff;
 }
 .lechenie-accent::before {
   content: "";
   position: absolute;
-  width: 40%;
+  width: 52%;
   aspect-ratio: 1/1;
-  background: url(../img/intro/circles-mini.png) no-repeat center center;
+  background: url(../img/intro/circles.svg) no-repeat center center;
   background-size: cover;
   top: -50%;
-  left: -12%;
+  left: -5%;
+  transform: rotate(96deg);
 }
 @media (width <= 500px) {
   .lechenie-accent::before {
     content: none;
   }
 }
-.lechenie-accent::after {
-  content: "";
-  position: absolute;
-  width: 40%;
-  aspect-ratio: 1/1;
-  background: url(../img/intro/circles-mini.png) no-repeat center center;
-  background-size: cover;
-  right: -12%;
-  bottom: -50%;
-}
-@media (width <= 500px) {
-  .lechenie-accent::after {
-    content: none;
-  }
-}
 .lechenie-accent__body {
   position: relative;
   z-index: 2;
-  max-width: 645px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+@media screen and (width <= 700px) {
+  .lechenie-accent__body {
+    flex-direction: column;
+  }
+  .lechenie-accent__body .lechenie-accent__title {
+    margin-block-end: 60px;
+    text-align: center;
+  }
 }
 .lechenie-accent__title {
-  font-size: clamp(2rem, 1.0357rem + 2.5714vw, 3.125rem);
-  margin-block-end: 60px;
+  font-size: clamp(2rem, 1.125rem + 2vw, 2.875rem);
+  line-height: 1;
   font-weight: 600;
-  text-align: center;
+  max-width: 465px;
+  text-align: left;
 }
 .lechenie-accent__form {
   display: flex;
   flex-direction: column;
   gap: 26px;
+  max-width: 645px;
 }
 @media screen and (width <= 800px) {
   .lechenie-accent__form {
@@ -4282,6 +4343,9 @@ thead .services__table__title th:nth-child(1) {
 }
 .lechenie-accent__input:active, .lechenie-accent__input:focus {
   outline: 1px solid #fff;
+}
+.lechenie-accent__button .point-mark {
+  width: 80px;
 }
 @media screen and (width <= 800px) {
   .lechenie-accent__button {
@@ -4392,7 +4456,7 @@ thead .services__table__title th:nth-child(1) {
   background: url(../img/section/bg-section-3.webp), #fff;
   background-size: cover;
   background-position: center top;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   overflow: hidden;
 }
 .knowledge__title {
@@ -4421,7 +4485,7 @@ thead .services__table__title th:nth-child(1) {
   width: 100%;
 }
 .knowledge__block .btn_consult .point-mark {
-  width: 80px;
+  width: 70px;
 }
 @media screen and (width <= 1300px) {
   .knowledge__block .btn_consult {
@@ -4436,6 +4500,7 @@ thead .services__table__title th:nth-child(1) {
 @media screen and (width <= 700px) {
   .knowledge__list {
     flex-direction: row;
+    align-items: stretch;
     gap: 0;
   }
 }
@@ -4445,6 +4510,7 @@ thead .services__table__title th:nth-child(1) {
   border-radius: 30px;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 @media screen and (width <= 700px) {
@@ -4458,11 +4524,16 @@ thead .services__table__title th:nth-child(1) {
   .knowledge__item.swiper-slide {
     height: auto;
     display: flex;
-    justify-content: flex-start;
   }
   .knowledge__item.swiper-slide .knowledge__content {
     justify-content: space-between;
     height: 100%;
+  }
+  .knowledge__item.swiper-slide .knowledge__content .btn {
+    margin: 0;
+  }
+  .knowledge__item.swiper-slide .knowledge__item__picture {
+    flex-shrink: 1;
   }
 }
 @media screen and (width <= 700px) and (width <= 360px) {
@@ -4471,9 +4542,12 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 .knowledge__item__picture {
-  width: clamp(16.75rem, 12.25rem + 12vw, 21.25rem);
-  aspect-ratio: 1/1;
+  aspect-ratio: 1.2/1;
   flex-shrink: 0;
+  max-width: 340px;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
 }
 .knowledge__item__picture img {
   -o-object-fit: cover;
@@ -4491,15 +4565,17 @@ thead .services__table__title th:nth-child(1) {
 .knowledge__content-subtitle {
   font-size: clamp(1rem, 0.5rem + 1.3333vw, 1.5rem);
   margin-block-end: 16px;
+  margin-block-start: 20px;
 }
 .knowledge__content-text {
   font-size: clamp(0.875rem, 0.5rem + 1vw, 1.25rem);
   opacity: 0.65;
-  margin-block-end: 36px;
+  margin-block-end: 40px;
 }
 .knowledge__content .btn {
   padding: 10px;
   width: 100%;
+  margin-block-end: 20px;
 }
 .knowledge__content .btn .point-mark {
   width: 60px;
@@ -4522,12 +4598,21 @@ thead .services__table__title th:nth-child(1) {
   .knowledge__content {
     margin-block-start: 14px;
   }
+  .knowledge__content-subtitle {
+    margin-block-start: 0;
+  }
+  .knowledge__content-text {
+    margin-block-end: 10px;
+  }
+  .knowledge__content div {
+    padding-inline: 8px;
+  }
 }
 
 .faq-section {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .faq-section__item {
   padding: 10px 10px 10px 36px;
@@ -4689,6 +4774,9 @@ thead .services__table__title th:nth-child(1) {
   cursor: pointer;
   display: none;
 }
+.faq-section__content-btn.btn_more {
+  width: 100%;
+}
 .faq-section__content-btn p {
   font-weight: 600;
   font-size: 24px;
@@ -4699,11 +4787,11 @@ thead .services__table__title th:nth-child(1) {
   width: 70px;
   background: #f3f9ff;
 }
+.faq-section__content-btn .faq-section__btn_open span:last-of-type {
+  transform: rotate(0);
+}
 .faq-section__content-btn.active span:last-of-type {
   transform: rotate(270deg);
-}
-.faq-section__content-btn.active .faq-section__btn_open span:last-of-type {
-  transform: rotate(0);
 }
 .faq-section__forms {
   max-width: 745px;
@@ -4717,14 +4805,32 @@ thead .services__table__title th:nth-child(1) {
 }
 .faq-section__form-title {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 110%;
   margin-bottom: 20px;
+  line-height: 1;
 }
 .faq-section__form-subtitle {
   font-size: 20px;
   line-height: 120%;
   margin-bottom: 80px;
+}
+.faq-section__form .checkbox {
+  margin-block: 10px 24px;
+}
+.faq-section__form .checkbox-mark {
+  border: 1px solid #4995ec;
+}
+.faq-section__form .checkbox-mark::before {
+  background: url(../img/icons/checkbox-accent.svg) center center/cover no-repeat;
+}
+.faq-section__form .checkbox span {
+  color: rgba(19, 58, 102, 0.5019607843);
+  font-size: 16px;
+}
+.faq-section__form .checkbox span a {
+  color: #133a66;
+  text-decoration: underline;
 }
 @media (width <= 768px) {
   .faq-section__subtitle {
@@ -4787,7 +4893,7 @@ thead .services__table__title th:nth-child(1) {
 .contacts {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .contacts_s {
   display: grid;
@@ -4797,7 +4903,7 @@ thead .services__table__title th:nth-child(1) {
 .contacts_s__block {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .contacts_s__description {
   opacity: 0.65;
@@ -4917,7 +5023,7 @@ thead .services__table__title th:nth-child(1) {
 .contacts_s_small {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   display: block;
   transition: transform 800ms, opacity 300ms;
 }
@@ -5134,7 +5240,7 @@ thead .services__table__title th:nth-child(1) {
 .prices {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .prices__item {
   padding: 20px;
@@ -5366,7 +5472,7 @@ thead .prices__table__title th:nth-child(1) {
 .text {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   display: flex;
   gap: 20px;
   font-size: calc(clamp(1rem, 0.7143rem + 0.5714vw, 1.25rem) - 2px);
@@ -6140,7 +6246,7 @@ thead .prices__table__title th:nth-child(1) {
 .myths {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   overflow: hidden;
   position: relative;
 }
@@ -6463,7 +6569,7 @@ thead .prices__table__title th:nth-child(1) {
 .offers {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   overflow: hidden;
 }
 .offers__title {
@@ -6636,7 +6742,7 @@ thead .prices__table__title th:nth-child(1) {
   background: url(../img/section/bg-section-4.webp), #fff;
   background-size: cover;
   background-position: center top;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   overflow: hidden;
 }
 .guaranties__content {
@@ -6732,7 +6838,7 @@ thead .prices__table__title th:nth-child(1) {
 .cost {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .cost__title {
   text-align: center;
@@ -6938,7 +7044,7 @@ thead .prices__table__title th:nth-child(1) {
 .allocator {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .allocator__title {
   margin-block-start: clamp(1.5rem, -3.4rem + 11.2vw, 5rem);
@@ -7105,7 +7211,7 @@ thead .prices__table__title th:nth-child(1) {
 .histories {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   overflow: hidden;
   position: relative;
 }
@@ -7245,7 +7351,7 @@ thead .prices__table__title th:nth-child(1) {
 .how-procedure {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .how-procedure__list {
   display: flex;
@@ -7726,7 +7832,7 @@ thead .prices__table__title th:nth-child(1) {
 .methods-alko {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   overflow: hidden;
 }
 .methods-alko__top {
@@ -8120,7 +8226,7 @@ thead .prices__table__title th:nth-child(1) {
 .doctor-page__container {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 @media screen and (width <= 600px) {
   .doctor-page__container {
@@ -8483,7 +8589,7 @@ thead .prices__table__title th:nth-child(1) {
 .part-team {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .part-team__item {
   padding: 10px 10px 10px 36px;
@@ -8671,7 +8777,7 @@ thead .prices__table__title th:nth-child(1) {
 .photos {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .photos__title {
   margin-block-start: clamp(1.5rem, -2rem + 9.3333vw, 5rem);
@@ -8741,7 +8847,7 @@ thead .prices__table__title th:nth-child(1) {
 .licenses {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .licenses__title {
   margin-block-start: clamp(1.5rem, -2rem + 9.3333vw, 5rem);
@@ -8811,7 +8917,7 @@ thead .prices__table__title th:nth-child(1) {
 .legal-information {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .legal-information__title {
   max-width: 500px;
@@ -9035,7 +9141,7 @@ thead .prices__table__title th:nth-child(1) {
 .stocks-page {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .stocks-page__title {
   margin-block-start: clamp(1.5rem, -2rem + 9.3333vw, 5rem);
@@ -9057,6 +9163,7 @@ thead .prices__table__title th:nth-child(1) {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
   padding: 0;
+  border-radius: clamp(1.5rem, 1.0625rem + 1vw, 1.875rem);
   padding: 30px 40px 40px;
   color: #fff;
   overflow: hidden;
@@ -9168,7 +9275,7 @@ thead .prices__table__title th:nth-child(1) {
 .stocks {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   overflow: hidden;
   transition: transform 900ms, opacity 400ms;
 }
@@ -9200,7 +9307,7 @@ thead .prices__table__title th:nth-child(1) {
 .blog-page {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background-color: #fff;
-  padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem) clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem) clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+  padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
 }
 .blog-page__title {
   margin-block-start: clamp(1.5rem, -2rem + 9.3333vw, 5rem);

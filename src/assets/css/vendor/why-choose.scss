@@ -19,7 +19,7 @@
     &.swiper-slide {
       display: flex;
       flex-direction: column;
-      gap: 280px;
+      gap: 120px;
 
       @media (width<=950px) {
         padding: 6px 6px 13px;
@@ -67,5 +67,6 @@
   &__content {
     max-width: 375px;
     line-height: 1.2;
+    padding-inline: 10px;
   }
 }

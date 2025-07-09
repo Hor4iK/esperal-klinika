@@ -1241,6 +1241,13 @@
                 </li>
               </ul>
             </div>
+            <div class="preparation__plashka desktop">
+              <p>Скачайте план обязательного обследования для вашего удобства</p>
+              <a href="" class="btn btn_call btn_light preparation__download" download="">
+                <span>скачать ПДФ</span>
+                <div class="point-mark point-plus"></div>
+              </a>
+            </div>
           </div>
         </div>
         <div class="preparation__plashka">
@@ -1350,7 +1357,7 @@
               </li>
             </ul>
           </div>
-          <div class="brigady__item">
+          <div class="brigady__item mobile">
             <div class="brigady__item__wrapper-title">
               <p class="brigady__item__title">Время прибытия</p>
               <div class="point-mark">
@@ -1375,13 +1382,21 @@
               </li>
             </ul>
           </div>
-          <div class="brigady__item brigady__item_order">
-            <button class="briragy__button popup-btn" data-path="popup-consult">
-              <p>вызвать врача</p>
-            </button>
+          <div class="brigady__item brigady__item_map">
+            <ul class="brigady__content-list">
+              <li class="brigady__content-item">
+                <p class="brigady__subtitle">Центральный район</p>
+                <p class="brigady__description">15-20 мин</p>
+              </li>
+              <span class="brigady__separator"></span>
+              <li class="brigady__content-item">
+                <p class="brigady__subtitle">Западный район</p>
+                <p class="brigady__description">20-30 мин</p>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="brigady__map">
+        <div class="brigady__map mobile">
           <picture>
             <source srcset="./assets/img/section/map-region.webp" type="image/webp" />
             <img alt="" title="" loading="lazy" src="./assets/img/section/map-region.png" />
@@ -1818,7 +1833,8 @@
               <label class="checkbox">
                 <input type="checkbox" checked="checked" required="">
                 <span class="checkbox-mark"></span>
-                <span>Даю согласие на обработку персональных данных</span>
+                <span>Нажимая кнопку я соглашаюсь с <a href="#">политикой конфединциальности</a> и <a
+                    href="#">пользовательским соглашением</a></span>
               </label>
               <button type="submit" class="btn btn_consult btn_accent lechenie__button">
                 <span>отправить</span>
@@ -1831,7 +1847,7 @@
           </div>
         </div>
         <div class="faq-section__content">
-          <ul class="faq-section__list">
+          <ul class="faq-section__list pag-list">
             <li class="faq-section__item">
               <div class="faq-section__top-container">
                 <div class="faq-section__subtitle__wrapper">
@@ -1951,73 +1967,12 @@
                   <p>Константинопольский Константин Константинович, главный врач клиники</p>
                 </div>
               </div>
-            </li>
-            <li class="faq-section__item">
-              <div class="faq-section__top-container">
-                <div class="faq-section__subtitle__wrapper">
-                  <p class="faq-section__subtitle">Можно ли вылечить алкоголизм?</p>
-                </div>
-                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
-              </div>
-              <div class="faq-section__bottom-container">
-                <div class="faq-section__bottom-text">
-                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
-                    Длительное
-                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
-                    предотвращать
-                    рецидивы.</p>
-                </div>
-                <div class="faq-section__bottom-name">
-                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
-                </div>
-              </div>
-            </li>
-            <li class="faq-section__item">
-              <div class="faq-section__top-container">
-                <div class="faq-section__subtitle__wrapper">
-                  <p class="faq-section__subtitle">Можно ли вылечить алкоголизм?</p>
-                </div>
-                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
-              </div>
-              <div class="faq-section__bottom-container">
-                <div class="faq-section__bottom-text">
-                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
-                    Длительное
-                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
-                    предотвращать
-                    рецидивы.</p>
-                </div>
-                <div class="faq-section__bottom-name">
-                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
-                </div>
-              </div>
-            </li>
-            <li class="faq-section__item">
-              <div class="faq-section__top-container">
-                <div class="faq-section__subtitle__wrapper">
-                  <p class="faq-section__subtitle">Как долго длится лечение алкоголизма?</p>
-                </div>
-                <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
-              </div>
-              <div class="faq-section__bottom-container">
-                <div class="faq-section__bottom-text">
-                  <p>Алкоголизм считается неизлечимым заболеванием, но его можно эффективно контролировать.
-                    Длительное
-                    воздержание и поддержание здорового образа жизни могут помочь управлять симптомами и
-                    предотвращать
-                    рецидивы.</p>
-                </div>
-                <div class="faq-section__bottom-name">
-                  <p>Константинопольский Константин Константинович, главный врач клиники</p>
-                </div>
-              </div>
-    
             </li>
           </ul>
-          <div class="faq-section__content-btn">
+          <button class="faq-section__content-btn btn_more">
             <p>смотреть еще</p>
-            <button class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></button>
-          </div>
+            <div class="faq-section__btn faq-section__btn_open point-mark"><span></span><span></span></div>
+          </button>
     
         </div>
       </div>

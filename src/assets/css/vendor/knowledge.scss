@@ -31,7 +31,7 @@
       width: 100%;
 
       .point-mark {
-        width: 80px;
+        width: 70px;
       }
 
       @media screen and (width<=1300px) {
@@ -42,11 +42,13 @@
 
   &__list {
     display: flex;
+
     flex-direction: column;
     gap: 20px;
 
     @media screen and (width<=700px) {
       flex-direction: row;
+      align-items: stretch;
       gap: 0;
     }
   }
@@ -57,6 +59,7 @@
     border-radius: 30px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
 
     @media screen and (width<=700px) {
@@ -69,12 +72,19 @@
       &.swiper-slide {
         height: auto;
         display: flex;
-        justify-content: flex-start;
 
         .knowledge__content {
           justify-content: space-between;
           height: 100%;
+
+          .btn {
+            margin: 0;
+          }
         }
+
+        .knowledge__item__picture {
+            flex-shrink: 1;
+          }
 
         @media screen and (width<=360px) {
           .knowledge__item__picture {
@@ -85,9 +95,12 @@
     }
 
     &__picture {
-      width: clamp(16.75rem, 12.25rem + 12vw, 21.25rem);
-      aspect-ratio: 1/1;
+      aspect-ratio: 1.2 / 1;
       flex-shrink: 0;
+      max-width: 340px;
+      height: 100%;
+      border-radius: 24px;
+      overflow: hidden;
 
       img {
         object-fit: cover;
@@ -106,17 +119,19 @@
     &-subtitle {
       font-size: clamp(1rem, 0.5rem + 1.3333vw, 1.5rem);
       margin-block-end: 16px;
+      margin-block-start: 20px;
     }
 
     &-text {
       font-size: clamp(0.875rem, 0.5rem + 1vw, 1.25rem);
       opacity: 0.65;
-      margin-block-end: 36px;
+      margin-block-end: 40px;
     }
 
     .btn {
       padding: 10px;
       width: 100%;
+      margin-block-end: 20px;
 
       .point-mark {
         width: 60px;
@@ -143,6 +158,18 @@
 
     @media screen and (width<=700px) {
       margin-block-start: 14px;
+
+      &-subtitle {
+        margin-block-start: 0;
+      }
+
+      &-text {
+        margin-block-end: 10px;
+      }
+
+      div {
+        padding-inline: 8px ;
+      }
     }
   }
 }

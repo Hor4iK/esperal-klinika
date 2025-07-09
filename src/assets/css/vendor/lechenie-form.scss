@@ -1,37 +1,20 @@
 .lechenie-accent {
-  @include sections("linear");
-  padding: clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem);
+  @include sections("linear", 'base');
+  padding-inline: clamp(0.875rem, -5.75rem + 15.1429vw, 7.5rem);
   overflow: hidden;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: $color-white;
 
   &::before {
     content: "";
     position: absolute;
-    width: 40%;
+    width: 52%;
     aspect-ratio: 1/1;
-    background: url(../img/intro/circles-mini.png) no-repeat center center;
+    background: url(../img/intro/circles.svg) no-repeat center center;
     background-size: cover;
     top: -50%;
-    left: -12%;
-
-    @media (width<=500px) {
-      content: none;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 40%;
-    aspect-ratio: 1/1;
-    background: url(../img/intro/circles-mini.png) no-repeat center center;
-    background-size: cover;
-    right: -12%;
-    bottom: -50%;
+    left: -5%;
+    transform: rotate(96deg);
 
     @media (width<=500px) {
       content: none;
@@ -41,23 +24,39 @@
   &__body {
     position: relative;
     z-index: 2;
-    max-width: 645px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    @media screen and (width<=700px) {
+      flex-direction: column;
+
+      .lechenie-accent__title {
+        margin-block-end: 60px;
+        text-align: center;
+      }
+    }
   }
+
   &__title {
-    font-size: clamp(2rem, 1.0357rem + 2.5714vw, 3.125rem);
-    margin-block-end: 60px;
+    font-size: clamp(2rem, 1.125rem + 2vw, 2.875rem);
+    line-height: 1;
     font-weight: 600;
-    text-align: center;
+    max-width: 465px;
+    text-align: left;
   }
+
   &__form {
     display: flex;
     flex-direction: column;
     gap: 26px;
+    max-width: 645px;
 
     @media screen and (width<=800px) {
       gap: 20px;
     }
   }
+
   &__input {
     background-color: transparent;
     border: 1px solid #ffffff80;
@@ -67,7 +66,12 @@
       outline: 1px solid $color-white;
     }
   }
+
   &__button {
+    .point-mark {
+      width: 80px;
+    }
+
     @media screen and (width<=800px) {
       padding: 6px;
 

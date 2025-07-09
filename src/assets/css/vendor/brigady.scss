@@ -5,17 +5,12 @@
     max-width: 1050px;
   }
 
-  &__body {
-  }
-
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
-    margin-block-end: 60px;
 
     @media (width<=1620px) {
-      margin-block-end: 0;
       grid-template-columns: 1fr;
       gap: 10px;
     }
@@ -31,15 +26,6 @@
     border-radius: 32px;
     aspect-ratio: 1/1;
 
-    @media (width<=1620px) {
-      aspect-ratio: auto;
-    }
-
-    @media (width<=950px) {
-      border-radius: 20px;
-      padding: 14px 14px 24px;
-    }
-
     &__wrapper-title {
       display: flex;
       justify-content: space-between;
@@ -47,19 +33,15 @@
 
       & .point-mark {
         background-color: $color-white;
-        width: 65px;
+        width: 60px;
 
         & svg {
-          width: 24px;
+          width: 20px;
           aspect-ratio: 1/1;
         }
 
         @media (width<=900px) {
           width: 58px;
-
-          & svg {
-            width: 20px;
-          }
         }
       }
 
@@ -72,7 +54,7 @@
     &__title {
       max-width: 50%;
       font-weight: 600;
-      font-size: clamp(1.125rem, 0.5781rem + 1.75vw, 2rem);
+      font-size: clamp(1.125rem, 0.5417rem + 1.3333vw, 1.625rem);
     }
 
     &_order {
@@ -107,6 +89,40 @@
         display: none;
       }
     }
+
+    &_map {
+      background: url("../img/section/map-region.webp") center center / 60%
+          no-repeat,
+        #f3f9ff;
+      aspect-ratio: auto;
+      justify-content: flex-end;
+
+      .brigady__content-list {
+        max-width: 325px;
+        gap: 20px;
+
+        li p {
+          width: max-content;
+        }
+      }
+
+      .brigady__content-item p {
+        font-size: clamp(1rem, 0.7083rem + 0.6667vw, 1.25rem);
+      }
+
+      @media (width<1620px) {
+        display: none;
+      }
+    }
+
+    @media (width<=1620px) {
+      aspect-ratio: auto;
+    }
+
+    @media (width<=950px) {
+      border-radius: 20px;
+      padding: 14px 14px 24px;
+    }
   }
 
   &__content-list {
@@ -122,7 +138,7 @@
   &__content-item {
     display: flex;
     justify-content: space-between;
-    font-size: 24px;
+    font-size: clamp(1rem, 0.4167rem + 1.3333vw, 1.5rem);
     line-height: 1.16;
 
     @media (width<=600px) {
@@ -217,5 +233,12 @@
       padding-block: 20px;
       background-color: $color-white;
     }
+  }
+}
+
+@media (width>=1620px) {
+  .brigady__item.mobile,
+  .brigady__map.mobile {
+    display: none;
   }
 }

@@ -67,9 +67,9 @@
   }
 
   @if $padding == "base" {
-    padding: clamp(1.5rem, -0.5263rem + 5.8947vw, 5rem)
-      clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem)
-      clamp(1.5rem, -1.25rem + 8vw, 6.25rem);
+    padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem)
+      clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem)
+      clamp(1.5rem, -2rem + 8vw, 5rem);
   } @else {
     padding: $padding;
   }

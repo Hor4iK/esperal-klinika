@@ -23,6 +23,7 @@
 
   &__item {
     @include sections("linear");
+    border-radius: clamp(1.5rem, 1.0625rem + 1vw, 1.875rem);
     padding: 30px 40px 40px;
     color: $color-white;
     overflow: hidden;

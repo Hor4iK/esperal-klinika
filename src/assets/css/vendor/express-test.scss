@@ -12,11 +12,17 @@
     position: relative;
     z-index: 2;
   }
+
   &__caption {
     opacity: 0.65;
-    margin-block-end: clamp(2.5rem, -0.5rem + 8vw, 6rem);
+    margin-block-end: clamp(2.5rem, -0.4167rem + 6.6667vw, 5rem);
   }
+
   &__button {
+    .point-mark {
+      width: 70px;
+    }
+
     @media screen and (width<=850px) {
       padding: 6px;
       & .point-mark {
@@ -41,7 +47,7 @@
     width: 1000px;
     aspect-ratio: 1 / 1;
     left: 44%;
-    top: -24%;
+    top: -28%;
   }
 
   @media screen and (width<=1150px) {

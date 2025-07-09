@@ -414,9 +414,24 @@ document.addEventListener('DOMContentLoaded', function () {
   if (faq) {
     const titleArray = faq.querySelectorAll('.faq-section__top-container');
     const contentArray = faq.querySelectorAll('.faq-section__bottom-container');
+    const pagList = faq.querySelector('.pag-list');
+    const moreBtn = faq.querySelector('.btn_more');
 
     if (titleArray && contentArray) {
       tabs('.faq-section__item', titleArray, contentArray);
+    }
+
+    if (pagList && moreBtn) {
+      pagList.classList.add('pag-active');
+
+      HiddenElementsInit(pagList, 4, moreBtn);
+      moreBtn.addEventListener("click", (evt) => {
+        hiddenElements = hiddenItems(pagList);
+        for (let i = 0; i < hiddenElements.length; i++) {
+          hiddenElements[i].classList.remove("hide");
+        }
+        moreBtn.classList.remove("active");
+      })
     }
   }
   /* -- END FAQ  -- */
