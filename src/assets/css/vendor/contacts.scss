@@ -30,9 +30,9 @@
     &__content-list {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
       background-color: $color-white;
-      margin-block-end: 142px;
+      margin-block-end: 50px;
       border-radius: 20px;
 
       @media screen and (width<=950px) {
@@ -89,6 +89,13 @@
         padding: 0;
         color: inherit;
         background-color: inherit;
+
+        span {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 1;
+        }
+
         &:hover {
           color: inherit;
           background-color: inherit;

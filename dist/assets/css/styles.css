@@ -4801,7 +4801,7 @@ thead .services__table__title th:nth-child(1) {
   flex-direction: column;
   background-color: #f3f9ff;
   border-radius: 30px;
-  padding: 50px;
+  padding: 40px 50px;
 }
 .faq-section__form-title {
   font-weight: 500;
@@ -4925,9 +4925,9 @@ thead .services__table__title th:nth-child(1) {
 .contacts_s__content-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   background-color: #fff;
-  margin-block-end: 142px;
+  margin-block-end: 50px;
   border-radius: 20px;
 }
 @media screen and (width <= 950px) {
@@ -4980,6 +4980,11 @@ thead .services__table__title th:nth-child(1) {
     padding: 0;
     color: inherit;
     background-color: inherit;
+  }
+  .contacts_s__link span {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
   }
   .contacts_s__link:hover {
     color: inherit;
