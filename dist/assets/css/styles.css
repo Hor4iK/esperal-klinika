@@ -9731,7 +9731,7 @@ thead .prices__table__title th:nth-child(1) {
 }
 
 .popup__form {
-  margin-block: 30px 20px;
+  margin-block: 40px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -10104,6 +10104,33 @@ thead .prices__table__title th:nth-child(1) {
     grid-template-columns: auto;
     grid-template-rows: 1fr 1fr;
     margin-block: 0;
+  }
+}
+
+.popup[data-target=popup-consult] .popup__form {
+  gap: 20px 10px;
+}
+.popup[data-target=popup-consult] .checkbox {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-block-end: 100px;
+}
+.popup[data-target=popup-consult] .checkbox span {
+  color: rgba(19, 58, 102, 0.5647058824);
+}
+.popup[data-target=popup-consult] .checkbox .checkbox-mark {
+  border: 1px solid #4995ec;
+}
+.popup[data-target=popup-consult] .checkbox .checkbox-mark::before {
+  background: url(../img/icons/checkbox-accent.svg) center center/cover no-repeat;
+}
+.popup[data-target=popup-consult] .checkbox a {
+  color: #133a66;
+  text-decoration: underline;
+}
+@media (width <= 800px) {
+  .popup[data-target=popup-consult] .checkbox {
+    margin-block-end: 30px;
   }
 }
 

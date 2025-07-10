@@ -91,9 +91,6 @@
   }
 }
 
-.popup__content {
-}
-
 .popup__title {
   max-width: 700px;
 }
@@ -121,7 +118,7 @@
 }
 
 .popup__form {
-  margin-block: 30px 20px;
+  margin-block: 40px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -555,6 +552,40 @@
       grid-template-columns: auto;
       grid-template-rows: 1fr 1fr;
       margin-block: 0;
+    }
+  }
+}
+
+.popup[data-target="popup-consult"] {
+  .popup__form {
+    gap: 20px 10px;
+  }
+
+  .checkbox {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-block-end: 100px;
+
+    span {
+      color: #133a6690;
+    }
+
+    .checkbox-mark {
+      border: 1px solid $accent-color;
+
+      &::before {
+        background: url(../img/icons/checkbox-accent.svg) center center / cover
+          no-repeat;
+      }
+    }
+
+    a {
+      color: $color;
+      text-decoration: underline;
+    }
+
+    @media (width<=800px) {
+      margin-block-end: 30px;
     }
   }
 }
