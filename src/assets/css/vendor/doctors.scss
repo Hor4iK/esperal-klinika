@@ -11,8 +11,12 @@
   &__items {
     gap: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin-block-end: 40px;
+
+    @media (max-width: 1600px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @media (max-width: 1364px) {
       grid-template-columns: repeat(2, 1fr);
@@ -27,7 +31,7 @@
 
   &__item {
     align-items: stretch;
-    background: $light-color;
+    background-color: $light-color;
     border-radius: 30px;
     padding: 10px 10px 30px 10px;
     text-decoration: none;
@@ -35,8 +39,13 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    position: relative;
+    transition: box-shadow 300ms;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: 1px 1px 10px -2px $accent-color;
       .doctors-page__item-detailed {
         background-color: $accent-color;
 
@@ -61,14 +70,14 @@
       font-size: clamp(1.125rem, 0.9792rem + 0.3333vw, 1.25rem);
       line-height: 116%;
       margin-bottom: 10px;
-      padding: 20px;
+      padding-inline: 20px;
     }
 
     &-prof {
       font-size: clamp(0.875rem, 0.5833rem + 0.6667vw, 1.125rem);
       line-height: 140%;
       opacity: 0.65;
-      padding: 20px;
+      padding-inline: 20px;
       margin-bottom: 30px;
     }
 
@@ -80,8 +89,8 @@
       background: $light-color;
       border-radius: 10px;
       position: absolute;
-      top: 16px;
-      right: 16px;
+      bottom: 16px;
+      left:  16px;
       width: 146px;
       height: 55px;
       display: flex;
@@ -90,12 +99,18 @@
     }
 
     &-detailed {
-      padding: 10px;
+      padding: 0;
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      width: fit-content;
 
       .point-mark {
-        width: 60px;
+        width: 50px;
 
         svg {
+          width: 10px;
+          aspect-ratio: 1/1;
           transition: rotate 300ms ease-out;
         }
       }
@@ -142,7 +157,6 @@
       }
 
       &-detailed {
-        padding: 6px;
 
         .point-mark {
           width: 48px;

@@ -1,7 +1,7 @@
 .doctor-page {
   &__top {
     display: flex;
-    gap: 20px;
+    gap: clamp(0.625rem, -1.875rem + 5.7143vw, 3.125rem);
 
     @media screen and (width<=600px) {
       gap: 10px;
@@ -21,6 +21,7 @@
       display: flex;
       gap: 10px;
       justify-content: space-between;
+      margin-block-end: 50px;
 
       @media (max-width: 915px) {
         flex-direction: column;
@@ -72,8 +73,6 @@
 
     &-info {
       width: 50%;
-      background: $light-color;
-      padding: 45px 50px 50px 50px;
       border-radius: 60px;
     }
 
@@ -89,6 +88,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        overflow: hidden;
 
         @media screen and (width<=600px) {
           border-radius: 16px;
@@ -114,7 +114,7 @@
           height: auto;
           object-fit: contain;
           position: absolute;
-          bottom: 0;
+          bottom: -20px;
         }
       }
     }
@@ -124,7 +124,7 @@
       font-size: 20px;
       line-height: 136%;
       color: rgba(19, 58, 102, 0.65);
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
 
     &-job,
@@ -151,10 +151,10 @@
 
       p:first-child {
         font-weight: 400;
-        font-size: calc($font-size - 2px);
+        font-size: calc($font-size - 4px);
         line-height: 120%;
         color: rgba(19, 58, 102, 0.5);
-        margin-bottom: 12px;
+        margin-bottom: 8px;
 
         @media (max-width: 768px) {
           margin-bottom: 8px;
@@ -163,7 +163,7 @@
     }
 
     &-price {
-      margin-bottom: 40px;
+      margin-bottom: 10px;
 
       p:first-child {
         font-weight: 400;
@@ -635,7 +635,7 @@
   font-size: 20px;
   line-height: 1.2;
   color: inherit;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 
   @media (max-width: 768px) {
     font-size: 16px;

@@ -3189,8 +3189,13 @@ thead .services__table__title th:nth-child(1) {
 .doctors-page__items {
   gap: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin-block-end: 40px;
+}
+@media (max-width: 1600px) {
+  .doctors-page__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media (max-width: 1364px) {
   .doctors-page__items {
@@ -3206,7 +3211,7 @@ thead .services__table__title th:nth-child(1) {
 }
 .doctors-page__item {
   align-items: stretch;
-  background: #f3f9ff;
+  background-color: #f3f9ff;
   border-radius: 30px;
   padding: 10px 10px 30px 10px;
   text-decoration: none;
@@ -3214,17 +3219,22 @@ thead .services__table__title th:nth-child(1) {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+  position: relative;
+  transition: box-shadow 300ms;
 }
-.doctors-page__item:hover .doctors-page__item-detailed {
+.doctors-page__item:hover, .doctors-page__item:focus, .doctors-page__item:active {
+  box-shadow: 1px 1px 10px -2px #4995ec;
+}
+.doctors-page__item:hover .doctors-page__item-detailed, .doctors-page__item:focus .doctors-page__item-detailed, .doctors-page__item:active .doctors-page__item-detailed {
   background-color: #4995ec;
 }
-.doctors-page__item:hover .doctors-page__item-detailed span {
+.doctors-page__item:hover .doctors-page__item-detailed span, .doctors-page__item:focus .doctors-page__item-detailed span, .doctors-page__item:active .doctors-page__item-detailed span {
   color: #fff;
 }
-.doctors-page__item:hover .doctors-page__item-detailed .point-mark svg {
+.doctors-page__item:hover .doctors-page__item-detailed .point-mark svg, .doctors-page__item:focus .doctors-page__item-detailed .point-mark svg, .doctors-page__item:active .doctors-page__item-detailed .point-mark svg {
   rotate: 45deg;
 }
-.doctors-page__item:hover .doctors-page__item-picture img {
+.doctors-page__item:hover .doctors-page__item-picture img, .doctors-page__item:focus .doctors-page__item-picture img, .doctors-page__item:active .doctors-page__item-picture img {
   scale: 1.015;
 }
 .doctors-page__item-name {
@@ -3232,13 +3242,13 @@ thead .services__table__title th:nth-child(1) {
   font-size: clamp(1.125rem, 0.9792rem + 0.3333vw, 1.25rem);
   line-height: 116%;
   margin-bottom: 10px;
-  padding: 20px;
+  padding-inline: 20px;
 }
 .doctors-page__item-prof {
   font-size: clamp(0.875rem, 0.5833rem + 0.6667vw, 1.125rem);
   line-height: 140%;
   opacity: 0.65;
-  padding: 20px;
+  padding-inline: 20px;
   margin-bottom: 30px;
 }
 .doctors-page__item-experience {
@@ -3249,8 +3259,8 @@ thead .services__table__title th:nth-child(1) {
   background: #f3f9ff;
   border-radius: 10px;
   position: absolute;
-  top: 16px;
-  right: 16px;
+  bottom: 16px;
+  left: 16px;
   width: 146px;
   height: 55px;
   display: flex;
@@ -3258,12 +3268,19 @@ thead .services__table__title th:nth-child(1) {
   justify-content: center;
 }
 .doctors-page__item-detailed {
-  padding: 10px;
+  padding: 0;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .doctors-page__item-detailed .point-mark {
-  width: 60px;
+  width: 50px;
 }
 .doctors-page__item-detailed .point-mark svg {
+  width: 10px;
+  aspect-ratio: 1/1;
   transition: rotate 300ms ease-out;
 }
 .doctors-page__item-picture {
@@ -3302,9 +3319,6 @@ thead .services__table__title th:nth-child(1) {
     padding: 4px;
     line-height: 1.2;
     margin-bottom: 24px;
-  }
-  .doctors-page__item-detailed {
-    padding: 6px;
   }
   .doctors-page__item-detailed .point-mark {
     width: 48px;
@@ -8118,7 +8132,7 @@ thead .prices__table__title th:nth-child(1) {
 
 .doctor-page__top {
   display: flex;
-  gap: 20px;
+  gap: clamp(0.625rem, -1.875rem + 5.7143vw, 3.125rem);
 }
 @media screen and (width <= 600px) {
   .doctor-page__top {
@@ -8137,6 +8151,7 @@ thead .prices__table__title th:nth-child(1) {
   display: flex;
   gap: 10px;
   justify-content: space-between;
+  margin-block-end: 50px;
 }
 @media (max-width: 915px) {
   .doctor-page__top-ratings {
@@ -8185,8 +8200,6 @@ thead .prices__table__title th:nth-child(1) {
 }
 .doctor-page__top-info {
   width: 50%;
-  background: #f3f9ff;
-  padding: 45px 50px 50px 50px;
   border-radius: 60px;
 }
 .doctor-page__top-picture {
@@ -8201,6 +8214,7 @@ thead .prices__table__title th:nth-child(1) {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 @media screen and (width <= 600px) {
   .doctor-page__top-picture picture {
@@ -8227,14 +8241,14 @@ thead .prices__table__title th:nth-child(1) {
   -o-object-fit: contain;
   object-fit: contain;
   position: absolute;
-  bottom: 0;
+  bottom: -20px;
 }
 .doctor-page__top-text {
   font-weight: 400;
   font-size: 20px;
   line-height: 136%;
   color: rgba(19, 58, 102, 0.65);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 .doctor-page__top-job, .doctor-page__top-experience, .doctor-page__top-scientist {
   margin-bottom: 20px;
@@ -8257,10 +8271,10 @@ thead .prices__table__title th:nth-child(1) {
 }
 .doctor-page__top-job p:first-child, .doctor-page__top-experience p:first-child, .doctor-page__top-scientist p:first-child {
   font-weight: 400;
-  font-size: calc(clamp(1rem, 0.7143rem + 0.5714vw, 1.25rem) - 2px);
+  font-size: calc(clamp(1rem, 0.7143rem + 0.5714vw, 1.25rem) - 4px);
   line-height: 120%;
   color: rgba(19, 58, 102, 0.5);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (max-width: 768px) {
   .doctor-page__top-job p:first-child, .doctor-page__top-experience p:first-child, .doctor-page__top-scientist p:first-child {
@@ -8268,7 +8282,7 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 .doctor-page__top-price {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .doctor-page__top-price p:first-child {
   font-weight: 400;
@@ -8679,7 +8693,7 @@ thead .prices__table__title th:nth-child(1) {
   font-size: 20px;
   line-height: 1.2;
   color: inherit;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 @media (max-width: 768px) {
   .top-job__text,
