@@ -9388,9 +9388,16 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 .stocks-page__btn_more {
-  background-color: #4995ec;
-  color: #fff;
   width: 100%;
+  border: 1px solid #4995ec;
+}
+.stocks-page__btn_more .point-mark {
+  width: 70px;
+}
+@media (width < 800px) {
+  .stocks-page__btn_more .point-mark {
+    width: 48px;
+  }
 }
 
 .stocks {
