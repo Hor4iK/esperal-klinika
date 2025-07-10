@@ -39,7 +39,7 @@
   max-width: 900px;
   border-radius: 30px;
   position: relative;
-  padding: 50px 60px 60px;
+  padding: 40px 50px 50px;
   scale: 0.3;
   transition: scale 0.4s ease;
   background-color: $color-white;
@@ -94,9 +94,6 @@
 .popup__content {
 }
 
-.popup__form {
-}
-
 .popup__title {
   max-width: 700px;
 }
@@ -124,7 +121,7 @@
 }
 
 .popup__form {
-  margin-block: 60px;
+  margin-block: 30px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -243,7 +240,7 @@
         padding-inline-start: 36px;
 
         .point-mark {
-          width: 80px;
+          width: 70px;
 
           svg {
             width: 24px;
@@ -405,6 +402,7 @@
 
     &__item {
       padding: 20px 26px;
+      font-size: clamp(0.875rem, 0.625rem + 0.5714vw, 1.125rem);
       transition: background-color 300ms;
       cursor: pointer;
 
