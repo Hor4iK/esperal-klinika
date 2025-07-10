@@ -1,5 +1,5 @@
 .lechenie-accent {
-  @include sections("linear", 'base');
+  @include sections("linear", "base");
   padding-inline: clamp(0.875rem, -5.75rem + 15.1429vw, 7.5rem);
   overflow: hidden;
   position: relative;
@@ -88,6 +88,7 @@
 
   &__body {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     gap: clamp(1.25rem, -9.25rem + 28vw, 11.5rem);
 
@@ -103,7 +104,11 @@
   }
 
   &__title {
-    margin-block-end: clamp(2.5rem, -0.6071rem + 8.2857vw, 6.125rem);
+    margin: 0;
+
+    @media screen and (width<=1000px) {
+      margin-block-end: 40px;
+    }
   }
 
   &__block {
@@ -143,7 +148,6 @@
 
   &__input {
     background-color: $color-white;
-    margin-block-end: 20px;
 
     @media screen and (width<=900px) {
       margin-block-end: 10px;
@@ -155,6 +159,11 @@
     font-size: clamp(0.875rem, 0.7679rem + 0.2857vw, 1rem);
     color: #133a6680;
 
+    a {
+      color: $color;
+      text-decoration: underline;
+    }
+
     & .checkbox-mark {
       border: 1px solid $accent-color;
       &::before {
@@ -162,7 +171,8 @@
         background-color: $accent-color;
         background-size: cover;
         background-position: center center;
-        border: 2px solid $accent-color;
+        background: url(../img/icons/checkbox-accent.svg) center center / cover
+          no-repeat;
       }
     }
 
@@ -172,9 +182,13 @@
   }
 
   &__button {
+    .point-mark {
+      width: 60px;
+    }
     @media screen and (width<=1200px) {
+      padding: 6px;
+
       & .point-mark {
-        padding: 6px;
         width: 48px;
       }
     }

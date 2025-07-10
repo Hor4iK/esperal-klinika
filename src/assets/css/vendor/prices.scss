@@ -53,7 +53,7 @@
     }
   }
   &__subtitle {
-    font-size: clamp(1.25rem, 0.5rem + 2vw, 2rem);
+    font-size: clamp(1.25rem, 0.5rem + 2vw, 1.625rem);
     font-weight: 600;
 
     &__wrapper {
@@ -65,7 +65,7 @@
       width: 100%;
 
       span:not(.services__subtitle) {
-        font-size: $font-size-20-16;
+        font-size: clamp(0.875rem, 0.625rem + 0.5714vw, 1.125rem);
         opacity: 0.65;
       }
 
@@ -79,12 +79,10 @@
   }
 
   &__bottom-container {
-    // max-height: 0;
     overflow: hidden;
     transition: max-height 400ms ease-in-out;
   }
-  &__inner {
-  }
+
   &__table {
     width: 100%;
 
@@ -246,9 +244,11 @@
       line-height: 1;
       color: $accent-color;
       margin-block-start: 20px;
+      margin-inline-start: 30px;
 
       span {
         font-weight: 400;
+        font-size: 18px;
         margin: 0;
       }
 

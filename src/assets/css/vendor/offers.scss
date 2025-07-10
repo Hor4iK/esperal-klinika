@@ -11,7 +11,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 
-    @media screen and (width<=1300px) {
+    @media screen and (width<=1550px) {
       display: flex;
       flex-direction: column;
       gap: 24px;
@@ -24,7 +24,7 @@
       flex-direction: column;
       justify-content: space-between;
 
-      @media screen and (width>1300px) {
+      @media screen and (width>1550px) {
         max-width: 560px;
       }
     }
@@ -37,7 +37,7 @@
         width: 80px;
       }
 
-      @media screen and (width<=1300px) {
+      @media screen and (width<=1550px) {
         display: none;
       }
     }
@@ -60,6 +60,7 @@
     border-radius: 30px;
     display: flex;
     justify-content: center;
+     align-items: center;
     gap: 30px;
 
     @media screen and (width<=700px) {
@@ -85,12 +86,19 @@
           }
         }
       }
+
+      .offers__item__picture {
+        flex-shrink: 1;
+      }
     }
 
     &__picture {
-      width: clamp(16.75rem, 12.25rem + 12vw, 21.25rem);
-      aspect-ratio: 1/1;
+      aspect-ratio: 1.2 / 1;
       flex-shrink: 0;
+      max-width: 340px;
+      height: 100%;
+      border-radius: 24px;
+      overflow: hidden;
 
       img {
         object-fit: cover;
@@ -109,17 +117,19 @@
     &-subtitle {
       font-size: clamp(1rem, 0.5rem + 1.3333vw, 1.5rem);
       margin-block-end: 16px;
+      margin-block-start: 20px;
     }
 
     &-text {
       font-size: clamp(0.875rem, 0.5rem + 1vw, 1.25rem);
       opacity: 0.65;
-      margin-block-end: 36px;
+      margin-block-end: 40px;
     }
 
     .btn {
       padding: 10px;
       width: 100%;
+      margin-block-end: 20px;
 
       .point-mark {
         width: 60px;
@@ -146,6 +156,18 @@
 
     @media screen and (width<=700px) {
       margin-block-start: 14px;
+
+      &-subtitle {
+        margin-block-start: 0;
+      }
+
+      &-text {
+        margin-block-end: 10px;
+      }
+
+      div {
+        padding-inline: 8px ;
+      }
     }
   }
 
@@ -155,20 +177,21 @@
       flex-direction: column;
       gap: 20px;
 
-      @media screen and (width<=1300px) {
+      @media screen and (width<=1550px) {
         gap: 10px;
       }
-    }
-
-    &-item {
     }
 
     &-link {
       background-color: $light-color;
       padding: 10px;
 
+      span {
+        font-size: clamp(1rem, 0.75rem + 0.5714vw, 1.25rem);
+      }
+
       .point-mark {
-        width: 80px;
+        width: 70px;
         background-color: $color-white;
 
         &::before {

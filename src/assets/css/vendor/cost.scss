@@ -129,8 +129,8 @@
     }
 
     &__content {
-      max-width: 416px;
-      margin-block: 40px 80px;
+      max-width: 420px;
+      margin-block: 30px 40px;
       text-align: center;
 
       ul {
@@ -139,15 +139,16 @@
         gap: 10px;
 
         li {
-          padding: 16px;
+          padding: 14px;
           outline: 1px solid #dde6ee;
           border-radius: 10px;
+          line-height: 1;
         }
       }
 
       &-subtitle {
         color: $accent-color;
-        margin-block-end: 30px;
+        margin-block-end: 20px;
         font-size: clamp(1.25rem, 1rem + 0.6667vw, 1.5rem);
         font-weight: 500;
         line-height: 1.2;
@@ -176,8 +177,13 @@
       width: 100%;
 
       .point-mark {
-        width: 80px;
+        width: 70px;
       }
+
+      span {
+        font-size: clamp(1rem, 0.5rem + 1.1429vw, 1.5rem);
+      }
+
       @media screen and (width<=900px) {
         padding: 6px;
         .point-mark {

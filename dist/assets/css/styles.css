@@ -1686,13 +1686,13 @@ html.burger-lock {
 .intro_service .intro__body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 80px 20px;
+  gap: 60px 20px;
 }
 .intro_service .intro__title {
   max-width: 700px;
 }
 .intro_service .intro__block {
-  gap: 20px;
+  gap: 12px;
   margin: 0;
 }
 .intro_service .intro__block p {
@@ -1753,6 +1753,9 @@ html.burger-lock {
     display: flex;
     gap: initial;
   }
+}
+.intro_service .intro__block .point-mark {
+  width: clamp(3rem, 1.95rem + 2.4vw, 4.375rem);
 }
 .intro_service .btn_call {
   outline: 1px solid #dbeafc;
@@ -4380,6 +4383,7 @@ thead .services__table__title th:nth-child(1) {
 }
 .lechenie__body {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: clamp(1.25rem, -9.25rem + 28vw, 11.5rem);
 }
@@ -4394,7 +4398,12 @@ thead .services__table__title th:nth-child(1) {
   max-width: 745px;
 }
 .lechenie__title {
-  margin-block-end: clamp(2.5rem, -0.6071rem + 8.2857vw, 6.125rem);
+  margin: 0;
+}
+@media screen and (width <= 1000px) {
+  .lechenie__title {
+    margin-block-end: 40px;
+  }
 }
 .lechenie__block {
   display: flex;
@@ -4431,7 +4440,6 @@ thead .services__table__title th:nth-child(1) {
 }
 .lechenie__input {
   background-color: #fff;
-  margin-block-end: 20px;
 }
 @media screen and (width <= 900px) {
   .lechenie__input {
@@ -4443,6 +4451,10 @@ thead .services__table__title th:nth-child(1) {
   font-size: clamp(0.875rem, 0.7679rem + 0.2857vw, 1rem);
   color: rgba(19, 58, 102, 0.5019607843);
 }
+.lechenie .checkbox a {
+  color: #133a66;
+  text-decoration: underline;
+}
 .lechenie .checkbox .checkbox-mark {
   border: 1px solid #4995ec;
 }
@@ -4451,16 +4463,21 @@ thead .services__table__title th:nth-child(1) {
   background-color: #4995ec;
   background-size: cover;
   background-position: center center;
-  border: 2px solid #4995ec;
+  background: url(../img/icons/checkbox-accent.svg) center center/cover no-repeat;
 }
 @media screen and (width <= 900px) {
   .lechenie .checkbox {
     margin-block: 24px 16px;
   }
 }
+.lechenie__button .point-mark {
+  width: 60px;
+}
 @media screen and (width <= 1200px) {
-  .lechenie__button .point-mark {
+  .lechenie__button {
     padding: 6px;
+  }
+  .lechenie__button .point-mark {
     width: 48px;
   }
 }
@@ -4481,7 +4498,7 @@ thead .services__table__title th:nth-child(1) {
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
-@media screen and (width <= 1300px) {
+@media screen and (width <= 1550px) {
   .knowledge__wrapper {
     display: flex;
     flex-direction: column;
@@ -4501,7 +4518,7 @@ thead .services__table__title th:nth-child(1) {
 .knowledge__block .btn_consult .point-mark {
   width: 70px;
 }
-@media screen and (width <= 1300px) {
+@media screen and (width <= 1550px) {
   .knowledge__block .btn_consult {
     display: none;
   }
@@ -5144,7 +5161,7 @@ thead .services__table__title th:nth-child(1) {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
   background: linear-gradient(134.71deg, #4995ec 0%, #83cae8 99.741%);
   padding: 0;
-  padding: clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem);
+  padding: clamp(1.5rem, -0.75rem + 5.1429vw, 3.75rem) 20px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -5161,6 +5178,7 @@ thead .services__table__title th:nth-child(1) {
   background-size: cover;
   top: -50%;
   left: -12%;
+  transform: rotate(105deg);
 }
 @media (width <= 500px) {
   .installment::before {
@@ -5183,13 +5201,16 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 .installment__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   position: relative;
   z-index: 2;
   max-width: 568px;
 }
 .installment__title {
-  font-size: clamp(2rem, 1.0357rem + 2.5714vw, 3.125rem);
+  font-size: clamp(2rem, 1.125rem + 2vw, 2.875rem);
   margin-block-end: 20px;
 }
 @media screen and (width <= 600px) {
@@ -5198,7 +5219,8 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 .installment__description {
-  margin-block-end: 50px;
+  max-width: 400px;
+  margin-block-end: 30px;
 }
 @media screen and (width <= 600px) {
   .installment__description {
@@ -5206,6 +5228,8 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 .installment__caption {
+  opacity: 0.8;
+  font-size: clamp(0.875rem, 0.625rem + 0.5714vw, 1.125rem);
   margin-block-end: 24px;
 }
 @media screen and (width <= 600px) {
@@ -5218,7 +5242,7 @@ thead .services__table__title th:nth-child(1) {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   gap: 12px;
-  margin-block-end: clamp(3.75rem, -1.3542rem + 11.6667vw, 8.125rem);
+  margin-block-end: 60px;
 }
 @media screen and (width <= 900px) {
   .installment__payment {
@@ -5232,9 +5256,11 @@ thead .services__table__title th:nth-child(1) {
   align-items: center;
   justify-content: center;
   background-color: #fff;
+  aspect-ratio: 4/2.5;
 }
 .installment__method svg {
-  max-width: 75px;
+  max-width: 65px;
+  width: 100%;
 }
 @media screen and (width <= 900px) {
   .installment__method {
@@ -5247,8 +5273,30 @@ thead .services__table__title th:nth-child(1) {
 .installment__button .point-mark {
   width: 80px;
 }
+@media screen and (width > 900px) {
+  .installment__button {
+    background-color: transparent;
+    color: #fff;
+  }
+  .installment__button span {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 1.2;
+    margin: 0;
+    position: relative;
+  }
+  .installment__button span::after {
+    content: ">";
+    padding-left: 5px;
+  }
+  .installment__button .point-mark {
+    display: none;
+  }
+}
 @media screen and (width <= 900px) {
   .installment__button {
+    width: 100%;
     padding: 6px;
   }
   .installment__button .point-mark {
@@ -5306,7 +5354,7 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 .prices__subtitle {
-  font-size: clamp(1.25rem, 0.5rem + 2vw, 2rem);
+  font-size: clamp(1.25rem, 0.5rem + 2vw, 1.625rem);
   font-weight: 600;
 }
 .prices__subtitle__wrapper {
@@ -5318,7 +5366,7 @@ thead .services__table__title th:nth-child(1) {
   width: 100%;
 }
 .prices__subtitle__wrapper span:not(.services__subtitle) {
-  font-size: clamp(1rem, 0.7917rem + 0.6667vw, 1.25rem);
+  font-size: clamp(0.875rem, 0.625rem + 0.5714vw, 1.125rem);
   opacity: 0.65;
 }
 @media (width <= 800px) {
@@ -5474,9 +5522,11 @@ thead .prices__table__title th:nth-child(1) {
   line-height: 1;
   color: #4995ec;
   margin-block-start: 20px;
+  margin-inline-start: 30px;
 }
 .prices__btn_more span {
   font-weight: 400;
+  font-size: 18px;
   margin: 0;
 }
 .prices__btn_more svg {
@@ -6276,9 +6326,9 @@ thead .prices__table__title th:nth-child(1) {
   aspect-ratio: 1/1;
   background: url(../img/section/circles-myths.svg) no-repeat center center;
   background-size: cover;
-  bottom: -370px;
+  bottom: -450px;
   left: -17%;
-  min-width: 700px;
+  min-width: 820px;
 }
 @media screen and (width <= 1200px) {
   .myths::before {
@@ -6289,7 +6339,7 @@ thead .prices__table__title th:nth-child(1) {
   padding: 10px 10px 10px 30px;
   transition: padding 300ms;
   background-color: #f3f9ff;
-  border-radius: 24px;
+  border-radius: 16px;
   transition: background-color 400ms ease-out;
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease, background-color 400ms ease;
@@ -6318,7 +6368,7 @@ thead .prices__table__title th:nth-child(1) {
   padding: 0;
 }
 .myths__item:not(:last-child) {
-  margin-block-end: 20px;
+  margin-block-end: 10px;
 }
 @media (width <= 900px) {
   .myths__item:not(:last-child) {
@@ -6429,7 +6479,7 @@ thead .prices__table__title th:nth-child(1) {
   transform: rotate(0);
 }
 .myths__btn_open {
-  width: 80px;
+  width: 60px;
   background-color: #fff;
 }
 .myths__btn_open span {
@@ -6450,7 +6500,7 @@ thead .prices__table__title th:nth-child(1) {
 }
 .myths__subtitle {
   font-weight: 500;
-  font-size: 22px;
+  font-size: clamp(1.125rem, 1rem + 0.2857vw, 1.25rem);
   line-height: 116%;
   transition: color 300ms ease-out;
 }
@@ -6486,6 +6536,8 @@ thead .prices__table__title th:nth-child(1) {
   color: #4995ec;
 }
 .myths__wrap {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   gap: 30px;
@@ -6539,8 +6591,6 @@ thead .prices__table__title th:nth-child(1) {
 }
 @media (width <= 768px) {
   .myths__subtitle {
-    font-weight: 500;
-    font-size: 18px;
     line-height: 110%;
   }
   .myths__bottom-item {
@@ -6599,7 +6649,7 @@ thead .prices__table__title th:nth-child(1) {
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
-@media screen and (width <= 1300px) {
+@media screen and (width <= 1550px) {
   .offers__wrapper {
     display: flex;
     flex-direction: column;
@@ -6611,7 +6661,7 @@ thead .prices__table__title th:nth-child(1) {
   flex-direction: column;
   justify-content: space-between;
 }
-@media screen and (width > 1300px) {
+@media screen and (width > 1550px) {
   .offers__block:first-child {
     max-width: 560px;
   }
@@ -6623,7 +6673,7 @@ thead .prices__table__title th:nth-child(1) {
 .offers__block .btn_consult .point-mark {
   width: 80px;
 }
-@media screen and (width <= 1300px) {
+@media screen and (width <= 1550px) {
   .offers__block .btn_consult {
     display: none;
   }
@@ -6645,6 +6695,7 @@ thead .prices__table__title th:nth-child(1) {
   border-radius: 30px;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 @media screen and (width <= 700px) {
@@ -6670,10 +6721,18 @@ thead .prices__table__title th:nth-child(1) {
     width: auto;
   }
 }
+@media screen and (width <= 700px) {
+  .offers__item .offers__item__picture {
+    flex-shrink: 1;
+  }
+}
 .offers__item__picture {
-  width: clamp(16.75rem, 12.25rem + 12vw, 21.25rem);
-  aspect-ratio: 1/1;
+  aspect-ratio: 1.2/1;
   flex-shrink: 0;
+  max-width: 340px;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
 }
 .offers__item__picture img {
   -o-object-fit: cover;
@@ -6691,15 +6750,17 @@ thead .prices__table__title th:nth-child(1) {
 .offers__content-subtitle {
   font-size: clamp(1rem, 0.5rem + 1.3333vw, 1.5rem);
   margin-block-end: 16px;
+  margin-block-start: 20px;
 }
 .offers__content-text {
   font-size: clamp(0.875rem, 0.5rem + 1vw, 1.25rem);
   opacity: 0.65;
-  margin-block-end: 36px;
+  margin-block-end: 40px;
 }
 .offers__content .btn {
   padding: 10px;
   width: 100%;
+  margin-block-end: 20px;
 }
 .offers__content .btn .point-mark {
   width: 60px;
@@ -6722,13 +6783,22 @@ thead .prices__table__title th:nth-child(1) {
   .offers__content {
     margin-block-start: 14px;
   }
+  .offers__content-subtitle {
+    margin-block-start: 0;
+  }
+  .offers__content-text {
+    margin-block-end: 10px;
+  }
+  .offers__content div {
+    padding-inline: 8px;
+  }
 }
 .offers__links-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-@media screen and (width <= 1300px) {
+@media screen and (width <= 1550px) {
   .offers__links-list {
     gap: 10px;
   }
@@ -6737,8 +6807,11 @@ thead .prices__table__title th:nth-child(1) {
   background-color: #f3f9ff;
   padding: 10px;
 }
+.offers__links-link span {
+  font-size: clamp(1rem, 0.75rem + 0.5714vw, 1.25rem);
+}
 .offers__links-link .point-mark {
-  width: 80px;
+  width: 70px;
   background-color: #fff;
 }
 .offers__links-link .point-mark::before {
@@ -6978,8 +7051,8 @@ thead .prices__table__title th:nth-child(1) {
   line-height: 1.2;
 }
 .cost__item__content {
-  max-width: 416px;
-  margin-block: 40px 80px;
+  max-width: 420px;
+  margin-block: 30px 40px;
   text-align: center;
 }
 .cost__item__content ul {
@@ -6988,13 +7061,14 @@ thead .prices__table__title th:nth-child(1) {
   gap: 10px;
 }
 .cost__item__content ul li {
-  padding: 16px;
+  padding: 14px;
   outline: 1px solid #dde6ee;
   border-radius: 10px;
+  line-height: 1;
 }
 .cost__item__content-subtitle {
   color: #4995ec;
-  margin-block-end: 30px;
+  margin-block-end: 20px;
   font-size: clamp(1.25rem, 1rem + 0.6667vw, 1.5rem);
   font-weight: 500;
   line-height: 1.2;
@@ -7019,7 +7093,10 @@ thead .prices__table__title th:nth-child(1) {
   width: 100%;
 }
 .cost__item-button .point-mark {
-  width: 80px;
+  width: 70px;
+}
+.cost__item-button span {
+  font-size: clamp(1rem, 0.5rem + 1.1429vw, 1.5rem);
 }
 @media screen and (width <= 900px) {
   .cost__item-button {
@@ -7454,6 +7531,11 @@ thead .prices__table__title th:nth-child(1) {
   position: relative;
   z-index: 2;
 }
+@media screen and (width <= 1645px) {
+  .how-procedure__plashka.desktop {
+    display: none;
+  }
+}
 .how-procedure__top-container {
   display: flex;
   justify-content: space-between;
@@ -7556,7 +7638,7 @@ thead .prices__table__title th:nth-child(1) {
   position: relative;
 }
 .how-procedure__btn_open {
-  width: 80px;
+  width: 60px;
   background-color: #fff;
 }
 .how-procedure__btn_open span {
@@ -7572,7 +7654,7 @@ thead .prices__table__title th:nth-child(1) {
 }
 .how-procedure__subtitle {
   font-weight: 600;
-  font-size: 32px;
+  font-size: clamp(1.25rem, 0.875rem + 0.8571vw, 1.625rem);
   line-height: 110%;
   transition: color 300ms ease-out;
 }
@@ -7587,8 +7669,8 @@ thead .prices__table__title th:nth-child(1) {
   content: "0" counter(item);
   border: 1px solid #dfeaf6;
   border-radius: 8px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  aspect-ratio: 1/1;
   font-weight: 500;
   font-size: 24px;
   line-height: 110%;
@@ -7597,6 +7679,11 @@ thead .prices__table__title th:nth-child(1) {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+@media (width < 700px) {
+  .how-procedure__subtitle__wrapper::before {
+    width: 48px;
+  }
 }
 .how-procedure-container {
   display: flex;
@@ -7650,7 +7737,7 @@ thead .prices__table__title th:nth-child(1) {
   margin-bottom: 60px;
 }
 .how-procedure__details-title .point-mark {
-  width: 80px;
+  width: clamp(2.75rem, 1.4375rem + 3vw, 4.0625rem);
   background-color: #fff;
 }
 .how-procedure__details-title .point-mark svg {
@@ -7665,7 +7752,8 @@ thead .prices__table__title th:nth-child(1) {
 }
 .how-procedure__details-subtitle {
   margin-block-end: 10px;
-  font-size: 24px;
+  font-size: clamp(1rem, 0.5rem + 1.1429vw, 1.5rem);
+  margin: 0;
   line-height: 1.16;
 }
 .how-procedure__details-subtitle--ops {
@@ -7693,8 +7781,8 @@ thead .prices__table__title th:nth-child(1) {
 }
 .how-procedure__details__title {
   font-weight: 600;
-  color: #4995ec;
-  font-size: clamp(1rem, 0.6875rem + 1vw, 1.5rem);
+  color: #133a66;
+  font-size: clamp(1.25rem, 0.875rem + 0.8571vw, 1.625rem);
   margin-inline-start: 10px;
 }
 .how-procedure__details-content {
@@ -7714,6 +7802,11 @@ thead .prices__table__title th:nth-child(1) {
 .how-procedure__button:hover {
   color: #fff;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.368627451);
+}
+@media (width > 1645px) {
+  .how-procedure__button {
+    display: none;
+  }
 }
 @media screen and (width <= 700px) {
   .how-procedure__button {
@@ -7798,7 +7891,6 @@ thead .prices__table__title th:nth-child(1) {
 }
 @media (width <= 768px) {
   .how-procedure__subtitle {
-    font-size: 20px;
     line-height: 110%;
   }
   .how-procedure__subtitle__wrapper::before {
@@ -7823,15 +7915,12 @@ thead .prices__table__title th:nth-child(1) {
     line-height: 136%;
     margin-bottom: 20px;
   }
-  .how-procedure__bottom .how-procedure__btn_open {
-    width: 58px;
-  }
   .how-procedure__bottom .how-procedure__bottom-transfer {
     padding: 10px 12px;
     font-size: 18px;
   }
   .how-procedure .how-procedure__btn_open {
-    width: 58px;
+    width: 48px;
   }
   .how-procedure .how-procedure__details__title {
     color: #133a66;
@@ -7846,6 +7935,10 @@ thead .prices__table__title th:nth-child(1) {
   .how-procedure {
     padding-inline: 10px;
   }
+}
+
+.how-procedure__plashka.preparation__plashka.desktop::before {
+  inset: auto auto -112%;
 }
 
 .methods-alko {

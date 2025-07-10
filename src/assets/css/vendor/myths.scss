@@ -11,9 +11,9 @@
     background: url(../img/section/circles-myths.svg) no-repeat center
       center;
     background-size: cover;
-    bottom: -370px;
+    bottom: -450px;
     left: -17%;
-    min-width: 700px;
+    min-width: 820px;
 
     @media screen and (width<=1200px) {
       content: none;
@@ -24,7 +24,7 @@
     padding: 10px 10px 10px 30px;
     transition: padding 300ms;
     background-color: $light-color;
-    border-radius: 24px;
+    border-radius: 16px;
     transition: background-color 400ms ease-out;
     overflow: hidden;
     transition: max-height 0.3s ease, opacity 0.3s ease,
@@ -59,7 +59,7 @@
     }
 
     &:not(:last-child) {
-      margin-block-end: 20px;
+      margin-block-end:10px;
 
       @media (width<=900px) {
         margin-block-end: 10px;
@@ -193,7 +193,7 @@
   }
 
   &__btn_open {
-    width: 80px;
+    width: 60px;
     background-color: $color-white;
 
     span {
@@ -216,7 +216,7 @@
 
   &__subtitle {
     font-weight: 500;
-    font-size: 22px;
+    font-size: clamp(1.125rem, 1rem + 0.2857vw, 1.25rem);
     line-height: 116%;
     transition: color 300ms ease-out;
 
@@ -262,6 +262,8 @@
   }
 
   &__wrap {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -327,8 +329,6 @@
 
   @media (width <= 768px) {
     &__subtitle {
-      font-weight: 500;
-      font-size: 18px;
       line-height: 110%;
     }
 

@@ -1,6 +1,6 @@
 .installment {
   @include sections("linear");
-  padding: clamp(1.25rem, -1.6447rem + 8.4211vw, 6.25rem);
+  padding: clamp(1.5rem, -0.75rem + 5.1429vw, 3.75rem) 20px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -17,6 +17,7 @@
     background-size: cover;
     top: -50%;
     left: -12%;
+    transform: rotate(105deg);
 
     @media (width<=500px) {
       content: none;
@@ -39,13 +40,16 @@
   }
 
   &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     position: relative;
     z-index: 2;
     max-width: 568px;
   }
   &__title {
-    font-size: clamp(2rem, 1.0357rem + 2.5714vw, 3.125rem);
+    font-size: clamp(2rem, 1.125rem + 2vw, 2.875rem);
     margin-block-end: 20px;
 
     @media screen and (width<=600px) {
@@ -53,13 +57,16 @@
     }
   }
   &__description {
-    margin-block-end: 50px;
+    max-width: 400px;
+    margin-block-end: 30px;
 
     @media screen and (width<=600px) {
       margin-block-end: 40px;
     }
   }
   &__caption {
+    opacity: 0.8;
+    font-size: clamp(0.875rem, 0.625rem + 0.5714vw, 1.125rem);
     margin-block-end: 24px;
 
     @media screen and (width<=600px) {
@@ -71,7 +78,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     gap: 12px;
-    margin-block-end: clamp(3.75rem, -1.3542rem + 11.6667vw, 8.125rem);
+    margin-block-end: 60px;
 
     @media screen and (width<=900px) {
       gap: 6px;
@@ -84,10 +91,12 @@
     align-items: center;
     justify-content: center;
     background-color: $color-white;
+    aspect-ratio: 4/2.5;
 
     svg {
-        max-width: 75px;
-      }
+      max-width: 65px;
+      width: 100%;
+    }
 
     @media screen and (width<=900px) {
       padding: 10px;
@@ -102,7 +111,31 @@
     .point-mark {
       width: 80px;
     }
+
+    @media screen and (width>900px) {
+      background-color: transparent;
+      color: $color-white;
+
+      span {
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 1.2;
+        margin: 0;
+        position: relative;
+
+        &::after {
+          content: ">";
+          padding-left: 5px;
+        }
+      }
+
+      .point-mark {
+        display: none;
+      }
+    }
     @media screen and (width<=900px) {
+      width: 100%;
       padding: 6px;
 
       .point-mark {
