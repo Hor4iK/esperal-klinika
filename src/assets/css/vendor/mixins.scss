@@ -57,6 +57,10 @@
       background: url(../img/section/bg-section-4.webp), #fff;
       background-size: cover;
       background-position: center top;
+    } @else if $type == "service" {
+      background: url(../img/section/bg-section-service.webp), $light-color;
+      background-size: cover;
+      background-position: center top;
     } @else if $type == "form" {
       background: url(../img/section/bg-form.webp), #fff;
       background-size: cover;

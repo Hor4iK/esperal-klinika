@@ -5,11 +5,8 @@
     margin-block-start: clamp(1.5rem, -3.4rem + 11.2vw, 5rem);
   }
 
-  &__content {
-  }
-
   &__subtitle {
-    font-size: clamp(1.5rem, -0.775rem + 5.2vw, 3.125rem);
+    font-size: clamp(1.5rem, 0.125rem + 3.1429vw, 2.875rem);
     font-weight: 600;
     line-height: 1.1;
     margin-block: clamp(2.5rem, -0.4167rem + 6.6667vw, 5rem)
@@ -152,6 +149,7 @@
       transition: max-height 400ms ease-in-out;
       background-color: $light-color;
       border-radius: 16px;
+      box-shadow: -2px 3px 8px 0px rgba(5, 52, 102, 0.02),-8px 12px 14px 0px rgba(5, 52, 102, 0.02),-19px 26px 19px 0px rgba(5, 52, 102, 0.01),-33px 47px 23px 0px rgba(5, 52, 102, 0),-52px 73px 25px 0px rgba(5, 52, 102, 0);
     }
 
     .categories__item {

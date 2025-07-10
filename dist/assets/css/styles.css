@@ -1671,13 +1671,15 @@ html.burger-lock {
   }
 }
 .intro_service {
+  border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
+  background: url(../img/section/bg-section-service.webp), #f3f9ff;
+  background-size: cover;
+  background-position: center top;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: clamp(1rem, -0.25rem + 4vw, 2.5rem);
   padding: clamp(1.5rem, -1.4167rem + 9.3333vw, 5rem) clamp(0.875rem, -3.6042rem + 14.3333vw, 6.25rem) clamp(1.5rem, -2.4583rem + 12.6667vw, 6.25rem);
-  background: url(../img/intro/bg-service.webp), #f3f9ff;
-  background-size: cover;
-  background-position: center top;
 }
 .intro_service .cards {
   grid-column-start: 1;
@@ -1715,6 +1717,7 @@ html.burger-lock {
   color: #4995ec;
   font-size: calc(clamp(1rem, 0.7143rem + 0.5714vw, 1.25rem) + 4px);
   line-height: 1;
+  margin-block-end: clamp(1.25rem, 0.625rem + 1.4286vw, 1.875rem);
 }
 .intro_service .intro__content__title span {
   display: block;
@@ -1809,7 +1812,7 @@ html.burger-lock {
 .intro_about .intro__body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 80px 20px;
+  gap: 40px 20px;
   margin-block-start: clamp(1.5rem, -2rem + 9.3333vw, 5rem);
 }
 .intro_about .intro__title {
@@ -1853,9 +1856,9 @@ html.burger-lock {
   }
 }
 .intro_about .intro__gallery__item {
-  width: clamp(18.75rem, 13.2813rem + 17.5vw, 25.3125rem);
+  width: clamp(18.75rem, 3.4375rem + 35vw, 34.0625rem);
   flex-shrink: 0;
-  aspect-ratio: 1/1;
+  aspect-ratio: 4/3.5;
   overflow: hidden;
   border-radius: 25px;
 }
@@ -1882,20 +1885,23 @@ html.burger-lock {
   justify-content: space-between;
   row-gap: clamp(1.25rem, 0rem + 3.3333vw, 2.5rem);
   background-color: #f3f9ff;
-  line-height: 1.2;
+  line-height: 1;
+  padding: 40px;
 }
 .intro_about .intro__content__title {
   color: #4995ec;
   font-size: calc(clamp(1rem, 0.7143rem + 0.5714vw, 1.25rem) + 4px);
   line-height: 1;
+  margin-block-end: 30px;
 }
 .intro_about .intro__content__title span {
   display: block;
   text-align: left;
   font-weight: 600;
   line-height: 1;
-  font-size: clamp(2.5rem, 0.75rem + 4vw, 3.75rem);
-  margin-block-end: 20px;
+  font-size: clamp(2.5rem, 1.625rem + 2vw, 3.375rem);
+  line-height: 1;
+  margin-block-end: 18px;
 }
 .intro_about .intro__content__separator {
   display: block;
@@ -1919,11 +1925,14 @@ html.burger-lock {
   padding-inline-end: clamp(0.875rem, -3.6042rem + 14.3333vw, 6.25rem);
 }
 @media screen and (width <= 650px) {
+  .intro_about .intro__content {
+    padding: 24px;
+  }
   .intro_about .intro__content__title span {
     margin-block-end: 12px;
   }
   .intro_about .intro__content__separator {
-    margin-block-end: 60px;
+    margin-block-end: 40px;
   }
 }
 @media screen and (width <= 600px) {
@@ -5042,7 +5051,7 @@ thead .services__table__title th:nth-child(1) {
   }
 }
 .contacts_s__button .point-mark {
-  width: 80px;
+  width: 70px;
 }
 @media (width <= 1200px) {
   .contacts_s__button .point-mark {
@@ -6637,7 +6646,9 @@ thead .prices__table__title th:nth-child(1) {
 
 .offers {
   border-radius: clamp(1.5rem, -0.1791rem + 5.3731vw, 3.75rem);
-  background-color: #fff;
+  background: url(../img/section/bg-section-3.webp), #fff;
+  background-size: cover;
+  background-position: center top;
   padding: clamp(1.5rem, -1.375rem + 6.5714vw, 4.375rem) clamp(0.875rem, -4.5rem + 12.2857vw, 6.25rem) clamp(1.5rem, -2rem + 8vw, 5rem);
   overflow: hidden;
 }
@@ -6839,9 +6850,8 @@ thead .prices__table__title th:nth-child(1) {
 }
 .guaranties__content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 330px;
-  grid-auto-rows: 330px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 270px;
   gap: 20px;
   transition: transform 900ms, opacity 400ms;
 }
@@ -6903,28 +6913,11 @@ thead .prices__table__title th:nth-child(1) {
   color: #4995ec;
   font-size: clamp(1rem, 0.6875rem + 1vw, 1.5rem);
   margin-inline-start: 10px;
+  margin-inline-end: 40px;
   text-transform: lowercase;
 }
 .guaranties__item__content {
   line-height: 1.2;
-}
-.guaranties__item:nth-child(1) {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-.guaranties__item:nth-child(2) {
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-.guaranties__item:nth-child(3) {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-}
-.guaranties__item:nth-child(4) {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
 }
 
 .cost {
@@ -7146,7 +7139,7 @@ thead .prices__table__title th:nth-child(1) {
   margin-block-start: clamp(1.5rem, -3.4rem + 11.2vw, 5rem);
 }
 .allocator__subtitle {
-  font-size: clamp(1.5rem, -0.775rem + 5.2vw, 3.125rem);
+  font-size: clamp(1.5rem, 0.125rem + 3.1429vw, 2.875rem);
   font-weight: 600;
   line-height: 1.1;
   margin-block: clamp(2.5rem, -0.4167rem + 6.6667vw, 5rem) clamp(1.25rem, -0.9375rem + 5vw, 3.125rem);
@@ -7265,6 +7258,7 @@ thead .prices__table__title th:nth-child(1) {
   transition: max-height 400ms ease-in-out;
   background-color: #f3f9ff;
   border-radius: 16px;
+  box-shadow: -2px 3px 8px 0px rgba(5, 52, 102, 0.02), -8px 12px 14px 0px rgba(5, 52, 102, 0.02), -19px 26px 19px 0px rgba(5, 52, 102, 0.01), -33px 47px 23px 0px rgba(5, 52, 102, 0), -52px 73px 25px 0px rgba(5, 52, 102, 0);
 }
 .allocator__categories .categories__item {
   padding: 20px 26px;
