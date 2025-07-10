@@ -5934,7 +5934,7 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 .text-article .text__content h2 {
-  font-size: clamp(1.5rem, -0.775rem + 5.2vw, 3.125rem);
+  font-size: clamp(1.5rem, 0.125rem + 3.1429vw, 2.875rem);
   font-weight: 600;
   line-height: 1.1;
 }
@@ -8704,7 +8704,7 @@ thead .prices__table__title th:nth-child(1) {
   border-radius: 24px;
 }
 .part-team__item:not(:last-child) {
-  margin-block-end: 20px;
+  margin-block-end: 12px;
 }
 .part-team__bottom-container {
   max-height: 0;
@@ -8944,6 +8944,10 @@ thead .prices__table__title th:nth-child(1) {
   background-color: #f3f9ff;
   width: 100%;
 }
+.photos__btn_more .point-mark {
+  background-color: #fff;
+  width: clamp(3rem, 1rem + 4.5714vw, 5rem);
+}
 @media screen and (width <= 1100px) {
   .photos__btn_more {
     padding: 6px;
@@ -9036,10 +9040,13 @@ thead .prices__table__title th:nth-child(1) {
   border-radius: 24px;
 }
 .legal-information__item:not(:last-child) {
-  margin-block-end: 20px;
+  margin-block-end: 12px;
 }
 .legal-information__item.active {
   padding-bottom: 30px;
+}
+.legal-information__item.active .legal-information__bottom-container {
+  border-top: 1px solid #dde6ee;
 }
 .legal-information-container {
   display: flex;
@@ -9093,6 +9100,7 @@ thead .prices__table__title th:nth-child(1) {
   max-height: 0;
   overflow: hidden;
   transition: max-height 400ms ease-in-out;
+  margin-top: 10px;
 }
 .legal-information__bottom-title {
   opacity: 0.65;
@@ -9124,8 +9132,6 @@ thead .prices__table__title th:nth-child(1) {
 }
 .legal-information__bottom-title {
   padding-top: 40px;
-  margin-top: 10px;
-  border-top: 1px solid #dde6ee;
   max-width: 800px;
 }
 .legal-information__bottom-subtitle {
@@ -9136,7 +9142,7 @@ thead .prices__table__title th:nth-child(1) {
   margin-bottom: 30px;
 }
 .legal-information__btn_open {
-  width: 80px;
+  width: 60px;
   background-color: #fff;
 }
 .legal-information__btn_open span {
@@ -9151,8 +9157,8 @@ thead .prices__table__title th:nth-child(1) {
   transform: rotate(270deg);
 }
 .legal-information__subtitle {
-  font-weight: 500;
-  font-size: 24px;
+  font-weight: 600;
+  font-size: clamp(1.125rem, 0.625rem + 1.1429vw, 1.625rem);
   line-height: 116%;
 }
 .legal-information__subtitle__wrapper {
@@ -9189,11 +9195,6 @@ thead .prices__table__title th:nth-child(1) {
   }
 }
 @media (width <= 768px) {
-  .legal-information__subtitle {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 110%;
-  }
   .legal-information__wrap {
     padding-top: 24px;
   }
@@ -9466,8 +9467,8 @@ thead .prices__table__title th:nth-child(1) {
   scale: 1.015;
 }
 .blog-page__item-name {
-  font-weight: 600;
-  font-size: 24px;
+  font-weight: 400;
+  font-size: clamp(1rem, 0.5rem + 1.1429vw, 1.5rem);
   line-height: 116%;
   margin-bottom: 10px;
   padding: 20px;
@@ -9478,6 +9479,11 @@ thead .prices__table__title th:nth-child(1) {
   opacity: 0.65;
   padding: 20px;
   margin-bottom: 30px;
+}
+.blog-page__item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .blog-page__item-detailed {
   padding: 10px;
@@ -9517,7 +9523,6 @@ thead .prices__table__title th:nth-child(1) {
   }
   .blog-page__item-name {
     padding: 4px;
-    font-size: 18px;
     margin-bottom: 8px;
   }
   .blog-page__item-prof {
@@ -9551,11 +9556,11 @@ thead .prices__table__title th:nth-child(1) {
   }
   .blog-page__item-img {
     flex-shrink: 0;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1.1/1;
     max-height: clamp(12.5rem, 1.25rem + 20vw, 21.25rem);
   }
   .blog-page__item-picture {
-    aspect-ratio: 1/1;
+    aspect-ratio: 1.1/1;
     height: 100%;
     margin: 0;
   }
@@ -9578,7 +9583,13 @@ thead .prices__table__title th:nth-child(1) {
   background-color: #f3f9ff;
 }
 .blog-page__btn_more .point-mark {
+  width: 70px;
   background-color: #fff;
+}
+@media (width < 800px) {
+  .blog-page__btn_more .point-mark {
+    width: 50px;
+  }
 }
 
 .popup {

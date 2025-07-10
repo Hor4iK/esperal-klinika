@@ -6,9 +6,6 @@
     max-width: 880px;
   }
 
-  &__body {
-  }
-
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -87,11 +84,15 @@
     border-radius: 24px;
 
     &:not(:last-child) {
-      margin-block-end: 20px;
+      margin-block-end: 12px;
     }
 
     &.active {
       padding-bottom: 30px;
+
+      .legal-information__bottom-container {
+        border-top: 1px solid #dde6ee;
+      }
     }
   }
 
@@ -162,6 +163,7 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 400ms ease-in-out;
+      margin-top: 10px;
     }
 
     &-title {
@@ -202,8 +204,6 @@
 
     &-title {
       padding-top: 40px;
-      margin-top: 10px;
-      border-top: 1px solid #dde6ee;
       max-width: 800px;
     }
 
@@ -217,7 +217,7 @@
   }
 
   &__btn_open {
-    width: 80px;
+    width: 60px;
     background-color: $color-white;
 
     span {
@@ -235,8 +235,8 @@
   }
 
   &__subtitle {
-    font-weight: 500;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: clamp(1.125rem, 0.625rem + 1.1429vw, 1.625rem);
     line-height: 116%;
 
     &__wrapper {
@@ -283,12 +283,6 @@
   }
 
   @media (width <=768px) {
-    &__subtitle {
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 110%;
-    }
-
     &__wrap {
       padding-top: 24px;
     }
